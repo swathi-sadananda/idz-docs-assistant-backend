@@ -1,0 +1,43 @@
+{
+  "name": "idz-doc-assistant",
+  "version": "1.0.0",
+  "description": "Interactive AI assistant for IBM Developer for z/OS documentation",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "index-docs": "node backend/indexer/index-documents.js",
+    "start": "node backend/server.js",
+    "install-all": "npm install && cd frontend && npm install"
+  },
+  "keywords": [
+    "documentation",
+    "ai",
+    "assistant",
+    "dita",
+    "ibm",
+    "z/os"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "xml2js": "^0.6.2",
+    "openai": "^4.20.1",
+    "chromadb": "^1.7.3",
+    "langchain": "^0.1.0",
+    "@langchain/openai": "^0.0.14",
+    "@langchain/community": "^0.0.20",
+    "glob": "^10.3.10",
+    "marked": "^11.1.1",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}

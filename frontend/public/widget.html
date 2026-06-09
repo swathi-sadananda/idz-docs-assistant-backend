@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDz Documentation Assistant Widget</title>
+  <style>
+    /* Widget Container */
+    #idz-docs-assistant-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* Floating Button */
+    .idz-assistant-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0f62fe 0%, #0043ce 100%);
+      border: none;
+      box-shadow: 0 4px 12px rgba(15, 98, 254, 0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .idz-assistant-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(15, 98, 254, 0.6);
+    }
+
+    .idz-assistant-button svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
+
+    /* Notification Badge */
+    .idz-assistant-badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #da1e28;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* Chat Window */
+    .idz-assistant-window {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 400px;
+      height: 600px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: slideUp 0.3s ease;
+    }
+
+    .idz-assistant-window.open {
+      display: flex;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Header */
+    .idz-assistant-header {
+      background: linear-gradient(135deg, #0f62fe 0%, #0043ce 100%);
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .idz-assistant-header h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .idz-assistant-header p {
+      margin: 4px 0 0 0;
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .idz-assistant-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 4px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .idz-assistant-close:hover {
+      opacity: 1;
+    }
+
+    /* Messages Container */
+    .idz-assistant-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    /* Message Bubble */
+    .idz-message {
+      margin-bottom: 16px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .idz-message.user {
+      flex-direction: row-reverse;
+    }
+
+    .idz-message-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #0f62fe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .idz-message.user .idz-message-avatar {
+      background: #8a3ffc;
+    }
+
+    .idz-message-content {
+      max-width: 75%;
+      background: white;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .idz-message.user .idz-message-content {
+      background: #0f62fe;
+      color: white;
+    }
+
+    .idz-message-text {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Steps Display */
+    .idz-steps {
+      margin-top: 12px;
+      padding: 12px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    .idz-step {
+      padding: 8px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .idz-step:last-child {
+      border-bottom: none;
+    }
+
+    .idz-step-number {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: #0f62fe;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    /* Sources */
+    .idz-sources {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+    .idz-source-link {
+      display: inline-block;
+      color: #0f62fe;
+      text-decoration: none;
+      margin-right: 12px;
+      padding: 4px 8px;
+      background: #e8f4ff;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+
+    .idz-source-link:hover {
+      background: #d0e8ff;
+    }
+
+    /* Input Area */
+    .idz-assistant-input {
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      gap: 8px;
+    }
+
+    .idz-assistant-input input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 24px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .idz-assistant-input input:focus {
+      border-color: #0f62fe;
+    }
+
+    .idz-assistant-send {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #0f62fe;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .idz-assistant-send:hover {
+      background: #0043ce;
+    }
+
+    .idz-assistant-send:disabled {
+      background: #c6c6c6;
+      cursor: not-allowed;
+    }
+
+    /* Typing Indicator */
+    .idz-typing {
+      display: flex;
+      gap: 4px;
+      padding: 12px 16px;
+    }
+
+    .idz-typing-dot {
+      width: 8px;
+      height: 8px;
+      background: #8d8d8d;
+      border-radius: 50%;
+      animation: typing 1.4s infinite;
+    }
+
+    .idz-typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .idz-typing-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typing {
+      0%, 60%, 100% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Suggestions */
+    .idz-suggestions {
+      padding: 12px 20px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .idz-suggestion-chip {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 4px 4px 4px 0;
+      background: #f4f4f4;
+      border: 1px solid #e0e0e0;
+      border-radius: 16px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .idz-suggestion-chip:hover {
+      background: #e8f4ff;
+      border-color: #0f62fe;
+      color: #0f62fe;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .idz-assistant-window {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 120px);
+        bottom: 90px;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Widget Container -->
+  <div id="idz-docs-assistant-widget">
+    <!-- Floating Button -->
+    <button class="idz-assistant-button" id="idz-assistant-toggle">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.38 0-2.68-.31-3.86-.86l-.28-.15-2.9.49.49-2.9-.15-.28C4.31 14.68 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
+        <circle cx="9" cy="12" r="1"/>
+        <circle cx="12" cy="12" r="1"/>
+        <circle cx="15" cy="12" r="1"/>
+      </svg>
+      <span class="idz-assistant-badge" style="display: none;">1</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="idz-assistant-window" id="idz-assistant-window">
+      <!-- Header -->
+      <div class="idz-assistant-header">
+        <div>
+          <h3>IDz Documentation Assistant</h3>
+          <p>Ask me anything about IBM Developer for z/OS</p>
+        </div>
+        <button class="idz-assistant-close" id="idz-assistant-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Messages -->
+      <div class="idz-assistant-messages" id="idz-messages">
+        <!-- Welcome message -->
+        <div class="idz-message assistant">
+          <div class="idz-message-avatar">AI</div>
+          <div class="idz-message-content">
+            <p class="idz-message-text">
+              👋 Hi! I'm your IDz documentation assistant. I can help you with:
+              <br><br>
+              • Answering questions about features
+              <br>• Providing step-by-step guides
+              <br>• Explaining concepts
+              <br>• Finding relevant documentation
+              <br><br>
+              What would you like to know?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggestions -->
+      <div class="idz-suggestions" id="idz-suggestions">
+        <div class="idz-suggestion-chip">How do I debug COBOL?</div>
+        <div class="idz-suggestion-chip">What's new in 17.0.5?</div>
+        <div class="idz-suggestion-chip">Setup remote connection</div>
+      </div>
+
+      <!-- Input -->
+      <div class="idz-assistant-input">
+        <input 
+          type="text" 
+          id="idz-input" 
+          placeholder="Ask a question..."
+          autocomplete="off"
+        />
+        <button class="idz-assistant-send" id="idz-send">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 2l18 8-18 8V2zm2 13.5V12l8-2-8-2V4.5L16 10 4 15.5z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Widget JavaScript
+    (function() {
+      const API_ENDPOINT = window.IDZ_ASSISTANT_CONFIG?.apiEndpoint || 'http://localhost:3000/api';
+      
+      const widget = document.getElementById('idz-docs-assistant-widget');
+      const toggleBtn = document.getElementById('idz-assistant-toggle');
+      const closeBtn = document.getElementById('idz-assistant-close');
+      const window = document.getElementById('idz-assistant-window');
+      const messagesContainer = document.getElementById('idz-messages');
+      const input = document.getElementById('idz-input');
+      const sendBtn = document.getElementById('idz-send');
+      const suggestionsContainer = document.getElementById('idz-suggestions');
+
+      let conversationId = null;
+
+      // Toggle window
+      toggleBtn.addEventListener('click', () => {
+        window.classList.toggle('open');
+        if (window.classList.contains('open')) {
+          input.focus();
+        }
+      });
+
+      closeBtn.addEventListener('click', () => {
+        window.classList.remove('open');
+      });
+
+      // Send message
+      async function sendMessage() {
+        const message = input.value.trim();
+        if (!message) return;
+
+        // Add user message
+        addMessage(message, 'user');
+        input.value = '';
+        sendBtn.disabled = true;
+
+        // Show typing indicator
+        const typingId = showTyping();
+
+        try {
+          const response = await fetch(`${API_ENDPOINT}/chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              message,
+              conversationId,
+              context: {
+                page: window.location.pathname,
+                url: window.location.href
+              }
+            })
+          });
+
+          const data = await response.json();
+          conversationId = data.conversationId;
+
+          removeTyping(typingId);
+          addMessage(data.response, 'assistant', {
+            sources: data.sources,
+            steps: data.steps,
+            suggestions: data.suggestions
+          });
+
+        } catch (error) {
+          removeTyping(typingId);
+          addMessage('Sorry, I encountered an error. Please try again.', 'assistant');
+          console.error('Chat error:', error);
+        } finally {
+          sendBtn.disabled = false;
+        }
+      }
+
+      sendBtn.addEventListener('click', sendMessage);
+      input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+      });
+
+      // Add message to chat
+      function addMessage(text, sender, extras = {}) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `idz-message ${sender}`;
+        
+        const avatar = document.createElement('div');
+        avatar.className = 'idz-message-avatar';
+        avatar.textContent = sender === 'user' ? 'U' : 'AI';
+        
+        const content = document.createElement('div');
+        content.className = 'idz-message-content';
+        
+        const textP = document.createElement('p');
+        textP.className = 'idz-message-text';
+        textP.textContent = text;
+        content.appendChild(textP);
+
+        // Add steps if present
+        if (extras.steps && extras.steps.length > 0) {
+          const stepsDiv = document.createElement('div');
+          stepsDiv.className = 'idz-steps';
+          extras.steps.forEach((step, i) => {
+            const stepDiv = document.createElement('div');
+            stepDiv.className = 'idz-step';
+            stepDiv.innerHTML = `<span class="idz-step-number">${i + 1}</span>${step}`;
+            stepsDiv.appendChild(stepDiv);
+          });
+          content.appendChild(stepsDiv);
+        }
+
+        // Add sources if present
+        if (extras.sources && extras.sources.length > 0) {
+          const sourcesDiv = document.createElement('div');
+          sourcesDiv.className = 'idz-sources';
+          sourcesDiv.innerHTML = '<strong>Sources:</strong><br>';
+          extras.sources.forEach(source => {
+            const link = document.createElement('a');
+            link.className = 'idz-source-link';
+            link.href = source.url;
+            link.textContent = source.title;
+            link.target = '_blank';
+            sourcesDiv.appendChild(link);
+          });
+          content.appendChild(sourcesDiv);
+        }
+
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(content);
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+
+      // Typing indicator
+      function showTyping() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'idz-message assistant';
+        typingDiv.id = 'typing-indicator';
+        
+        const avatar = document.createElement('div');
+        avatar.className = 'idz-message-avatar';
+        avatar.textContent = 'AI';
+        
+        const content = document.createElement('div');
+        content.className = 'idz-message-content';
+        content.innerHTML = '<div class="idz-typing"><div class="idz-typing-dot"></div><div class="idz-typing-dot"></div><div class="idz-typing-dot"></div></div>';
+        
+        typingDiv.appendChild(avatar);
+        typingDiv.appendChild(content);
+        messagesContainer.appendChild(typingDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        return 'typing-indicator';
+      }
+
+      function removeTyping(id) {
+        const typing = document.getElementById(id);
+        if (typing) typing.remove();
+      }
+
+      // Suggestion chips
+      suggestionsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('idz-suggestion-chip')) {
+          input.value = e.target.textContent;
+          sendMessage();
+        }
+      });
+
+      // Initialize
+      console.log('IDz Documentation Assistant loaded');
+    })();
+  </script>
+</body>
+</html>
