@@ -16,19 +16,26 @@ class SearchService {
 
     try {
       console.log('Initializing search service...');
-      const docsPath = process.env.DOCS_PATH || path.join(__dirname, '../../..');
+      const docsPath = process.env.DOCS_PATH || path.join(__dirname, '../docs');
+      console.log('Looking for docs in:', docsPath);
       
       // Find and parse DITA files
       const ditaFiles = await this.parser.findDITAFiles(docsPath);
       console.log(`Found ${ditaFiles.length} DITA files`);
       
-      // Parse a subset for demo (parsing all files takes time)
-      const filesToParse = ditaFiles.slice(0, 50);
+      // Parse more files for better search results
+      const filesToParse = ditaFiles.slice(0, 100);
+      console.log(`Parsing ${filesToParse.length} files...`);
       
       for (const file of filesToParse) {
         try {
+          // Skip conref files (reusable content references)
+          if (file.includes('conref') || file.includes('_conrefs')) {
+            continue;
+          }
+          
           const doc = await this.parser.parseDITAFile(file);
-          if (doc) {
+          if (doc && doc.content && doc.content.length > 50) {
             this.documentsCache.push(doc);
           }
         } catch (error) {
