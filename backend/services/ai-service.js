@@ -5,14 +5,20 @@ dotenv.config();
 
 class AIService {
   constructor() {
+    // Check which AI service to use
+    this.useHuggingFace = !!process.env.HUGGINGFACE_API_KEY;
+    this.useOpenAI = !!process.env.OPENAI_API_KEY;
     this.useLocalLLM = process.env.USE_LOCAL_LLM === 'true';
     
-    if (!this.useLocalLLM) {
+    if (this.useOpenAI && !this.useLocalLLM) {
       this.openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY
       });
       this.model = process.env.OPENAI_MODEL || 'gpt-4';
-    } else {
+    } else if (this.useHuggingFace) {
+      this.huggingFaceKey = process.env.HUGGINGFACE_API_KEY;
+      this.huggingFaceModel = process.env.HUGGINGFACE_MODEL || 'mistralai/Mistral-7B-Instruct-v0.2';
+    } else if (this.useLocalLLM) {
       this.localEndpoint = process.env.LOCAL_LLM_ENDPOINT || 'http://localhost:11434';
     }
 
@@ -43,8 +49,12 @@ class AIService {
       let responseText;
       if (this.useLocalLLM) {
         responseText = await this.generateLocalLLMResponse(messages);
-      } else {
+      } else if (this.useHuggingFace) {
+        responseText = await this.generateHuggingFaceResponse(messages);
+      } else if (this.useOpenAI) {
         responseText = await this.generateOpenAIResponse(messages);
+      } else {
+        throw new Error('No AI service configured. Please set HUGGINGFACE_API_KEY, OPENAI_API_KEY, or USE_LOCAL_LLM=true');
       }
 
       // Update conversation history
@@ -117,8 +127,12 @@ TIPS:
       let response;
       if (this.useLocalLLM) {
         response = await this.generateLocalLLMResponse(messages);
-      } else {
+      } else if (this.useHuggingFace) {
+        response = await this.generateHuggingFaceResponse(messages);
+      } else if (this.useOpenAI) {
         response = await this.generateOpenAIResponse(messages);
+      } else {
+        throw new Error('No AI service configured');
       }
 
       return this.parseStepByStepResponse(response, relevantDocs);
@@ -161,8 +175,12 @@ Please provide:
       let response;
       if (this.useLocalLLM) {
         response = await this.generateLocalLLMResponse(messages);
-      } else {
+      } else if (this.useHuggingFace) {
+        response = await this.generateHuggingFaceResponse(messages);
+      } else if (this.useOpenAI) {
         response = await this.generateOpenAIResponse(messages);
+      } else {
+        throw new Error('No AI service configured');
       }
 
       return this.parseExplanationResponse(response, relevantDocs);
@@ -203,6 +221,64 @@ Please provide:
 
     const data = await response.json();
     return data.response;
+  }
+
+  /**
+   * Generate Hugging Face response
+   */
+  async generateHuggingFaceResponse(messages) {
+    try {
+      // Format messages for Hugging Face
+      const prompt = messages.map(m => {
+        if (m.role === 'system') return m.content;
+        if (m.role === 'user') return `User: ${m.content}`;
+        return `Assistant: ${m.content}`;
+      }).join('\n\n');
+
+      const response = await fetch(
+        `https://api-inference.huggingface.co/models/${this.huggingFaceModel}`,
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.huggingFaceKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            inputs: prompt,
+            parameters: {
+              max_new_tokens: 500,
+              temperature: 0.7,
+              top_p: 0.95,
+              return_full_text: false
+            }
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const error = await response.text();
+        console.error('Hugging Face API error:', error);
+        throw new Error(`Hugging Face API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      // Handle different response formats
+      if (Array.isArray(data) && data[0]?.generated_text) {
+        return data[0].generated_text;
+      } else if (data.generated_text) {
+        return data.generated_text;
+      } else if (typeof data === 'string') {
+        return data;
+      }
+      
+      console.error('Unexpected Hugging Face response format:', data);
+      return 'I apologize, but I encountered an issue generating a response. Please try again.';
+      
+    } catch (error) {
+      console.error('Hugging Face generation error:', error);
+      throw new Error('Failed to generate response from Hugging Face');
+    }
   }
 
   /**
