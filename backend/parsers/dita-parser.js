@@ -347,10 +347,20 @@ class DITAParser {
       const results = [];
 
       // Parse and search through files
-      for (const file of ditaFiles.slice(0, 20)) { // Limit to first 20 files for performance
+      for (const file of ditaFiles.slice(0, 50)) { // Increased to 50 files for better results
         try {
+          // Skip conref files (reusable content references)
+          if (file.includes('conref') || file.includes('_conrefs')) {
+            continue;
+          }
+
           const doc = await this.parseDITAFile(file);
           if (!doc) continue;
+
+          // Skip if document has no meaningful content
+          if (!doc.content || doc.content.length < 50) {
+            continue;
+          }
 
           // Calculate relevance score
           let score = 0;
@@ -363,11 +373,17 @@ class DITAParser {
             
             // Boost score if keyword is in title
             if (doc.title.toLowerCase().includes(keywordLower)) {
+              score += 100; // Increased boost for title matches
+            }
+            
+            // Boost score if keyword is in shortdesc
+            if (doc.shortdesc && doc.shortdesc.toLowerCase().includes(keywordLower)) {
               score += 50;
             }
           });
 
-          if (score > 0) {
+          // Only include documents with meaningful scores
+          if (score > 20) {
             results.push({
               ...doc,
               score
