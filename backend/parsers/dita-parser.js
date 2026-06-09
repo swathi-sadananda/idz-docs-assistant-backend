@@ -337,6 +337,57 @@ class DITAParser {
     const pattern = path.join(directory, '**/*.ditamap');
     return await glob(pattern, { ignore: '**/node_modules/**' });
   }
+
+  /**
+   * Search DITA docs for keywords
+   */
+  async searchDocs(directory, keywords) {
+    try {
+      const ditaFiles = await this.findDITAFiles(directory);
+      const results = [];
+
+      // Parse and search through files
+      for (const file of ditaFiles.slice(0, 20)) { // Limit to first 20 files for performance
+        try {
+          const doc = await this.parseDITAFile(file);
+          if (!doc) continue;
+
+          // Calculate relevance score
+          let score = 0;
+          const searchText = `${doc.title} ${doc.shortdesc} ${doc.content}`.toLowerCase();
+          
+          keywords.forEach(keyword => {
+            const keywordLower = keyword.toLowerCase();
+            const count = (searchText.match(new RegExp(keywordLower, 'g')) || []).length;
+            score += count * 10;
+            
+            // Boost score if keyword is in title
+            if (doc.title.toLowerCase().includes(keywordLower)) {
+              score += 50;
+            }
+          });
+
+          if (score > 0) {
+            results.push({
+              ...doc,
+              score
+            });
+          }
+        } catch (error) {
+          // Skip files that fail to parse
+          continue;
+        }
+      }
+
+      // Sort by relevance score
+      results.sort((a, b) => b.score - a.score);
+      return results.slice(0, 5); // Return top 5 results
+
+    } catch (error) {
+      console.error('Search docs error:', error);
+      return [];
+    }
+  }
 }
 
 module.exports = DITAParser;

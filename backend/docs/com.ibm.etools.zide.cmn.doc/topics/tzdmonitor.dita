@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdmonitor" xml:lang="en-us">
+<title>Monitoring remote system resources</title>
+<shortdesc>Use the <uicontrol>Monitor</uicontrol> action to view the
+contents and properties of remote objects and configure polling options
+to refresh remote objects every 5 - 200 seconds.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>remote system explorer<indexterm>monitor</indexterm></indexterm>
+<indexterm>remote monitor</indexterm><indexterm>monitoring remote
+objects</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>You can open the Remote Monitor on a remote system, subsystem,
+filter, or other remote system container (such as a data set, an HFS
+folder, or JES job) to view details and status of the resource. You
+can use this view, for example, to monitor the status of submitted
+jobs.</context><?Pub Caret 192?>
+<steps-unordered>
+<step><cmd>To open the Remote Monitor, select an object in the <wintitle>Remote
+Systems</wintitle> view and click <uicontrol>Monitor</uicontrol> on
+the menu.</cmd></step>
+<step><cmd>To configure polling options for an object, do these steps:</cmd>
+<substeps>
+<substep><cmd>Open the Remote Monitor on an object, such as <uicontrol>My
+Jobs</uicontrol>.</cmd></substep>
+<substep><cmd>Click the arrow beside <uicontrol>Poll Configuration</uicontrol>.</cmd>
+</substep>
+<substep><cmd>Select the <uicontrol>Poll</uicontrol> checkbox and
+then move the <uicontrol>Wait Interval</uicontrol> slider bar to set
+the refresh interval for the <wintitle>Remote Monitor</wintitle> view.</cmd>
+<info> You can set a value of 5 - 200 seconds. The monitor updates
+the status of the object at the interval you set.</info></substep>
+<substep><cmd>To stop polling the object, clear the <uicontrol>Poll</uicontrol> check
+box.</cmd></substep>
+</substeps>
+</step>
+</steps-unordered>
+<postreq>Monitoring and polling options are not saved from one session
+to another. After you disconnect from the remote system, the contents
+of the Remote Monitor and any polling options you set are cleared.</postreq>
+</taskbody>
+</task>
+<?Pub *0000002269?>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdprojinstfile" xml:lang="en-us">
+<title>Creating a project instance file</title><?Pub Caret -2?>
+<shortdesc>Project instance files define the set of projects to be
+downloaded when a user connects to the remote system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>project instance
+file</indexterm></indexterm><indexterm>project instance file</indexterm>
+<indexterm>configuring host-based projects<indexterm>project instance
+file</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>Each user who works with host-based projects must have a
+folder on the remote system that contains a set of project instance
+files. These folders must be direct subfolders of the path that is
+defined in the <codeph>&lt;containerPath></codeph> tag for <codeph>com.ibm.ftt.projects.configurations.HostBasedConfigurationFile</codeph> in
+the key mapping file. Each folder name must match the user ID of the
+particular user for whom the projects are defined. For more information
+about the key mapping file, see the related topics.<p>The user folders
+contain one project instance file for each project to be downloaded.
+The instance files must be encoded in UTF-8 and have an extension
+of <filepath>*.hbpin</filepath>.</p><note>To activate host-based projects
+for a particular user, at least one project instance file must exist
+in the user's folder.</note><p>The project instance file is an XML
+file that contains the following tags. For the project instance schema,
+see the related links.</p><codeblock>&lt;PROJECT-INSTANCE>
+ &lt;WSED-VERSION>7.0.0.0&lt;/WSED-VERSION>
+ &lt;PROJECT>
+    &lt;PROJECT-NAME><varname>overrideName</varname>&lt;/PROJECT-NAME>
+    &lt;PROJECT-DEF-PATH><varname>pathName</varname>&lt;/PROJECT-DEF-PATH>
+ &lt;/PROJECT>
+&lt;/PROJECT-INSTANCE></codeblock><dl><dlentry>
+<dt>&lt;WSED-VERSION></dt>
+<dd>The version of the schema syntax. This tag must contain 7.0.0.0,
+as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;PROJECT-NAME></dt>
+<dd>Is optional and specifies an override to the project name.</dd>
+</dlentry><dlentry>
+<dt>&lt;PROJECT-DEF-PATH></dt>
+<dd>Refers to a project definition file with a path relative to the
+PROJECT-HOME folder, not the folder that contains the instance file
+that is being parsed.</dd>
+</dlentry></dl> </context>
+<example>The following figure illustrates how to set up a project
+instance file:<ul>
+<li>The editor shows a project instance file called <filepath>mvsproject1.hbpin</filepath>.
+In this file, the &lt;PROJECT-NAME> tag overrides the project name,
+and the &lt;PROJECT-DEF-PATH> tag refers to the project definition
+file <filepath>PROJDEFFOLDER/mvsproject1def</filepath>. </li>
+<li>To the right of the editor, the <wintitle>Remote Systems</wintitle> view
+shows a folder that is called <filepath>PROJDEFFOLDER</filepath> containing
+the project definition file <filepath>mvsproject1def.hbppd</filepath>.
+Notice that the &lt;PROJ-FULL-PATH> tag does not include the file
+extension <filepath>.hbppd</filepath> when it refers to this file.</li>
+<li>To the left of the editor, the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> view shows the
+host-based project corresponding to the instance file <filepath>mvsproject1.hbpin</filepath>.
+Notice that the &lt;PROJECT-NAME> tag is used to give the project
+a new name that contains German characters. The German UTF-8 characters
+are not displayed correctly in the text editor but are correct in
+the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view. Had
+the &lt;PROJECT-NAME> tag not been used to override the project name,
+it would be called mvsproject1def.</li>
+</ul><fig id="ProjInst">
+<image href="../images/ProjInst.gif" placement="break"><alt>Project
+instance file points to project definition file</alt></image>
+</fig> </example>
+<postreq><note othertype="Next" type="other"><xref
+href="tzdprojdeffile.dita" type="task"></xref></note></postreq>
+</taskbody>
+<related-links>
+<link href="rzdprojinstschema.dita" type="reference"></link>
+<link format="dita" href="rzdkeymap.dita" scope="local" type="reference">
+</link>
+</related-links>
+<?tm 1435190794 0?>
+</task>
+<?Pub *0000004352?>

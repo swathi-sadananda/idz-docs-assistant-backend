@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdshareproj" xml:lang="en-us">
+<title>Importing and exporting <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects</title><?Pub Caret -2?>
+<shortdesc>You can share <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects
+with others by exporting them from your workspace and importing them
+into another's workspace.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS projects<indexterm>sharing</indexterm></indexterm>
+<indexterm>sharing z/OS projects</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" />
+allows for sharing of workstation-based <ph otherprops="IDz">(as opposed to host-based) </ph><tm tmtype="reg" trademark="z/OS">z/OS</tm> projects with other users by exporting them to an archive
+file, placing the archive file in some accessible location, and then importing the archive file into
+another workspace. When you export a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project, the
+archive file contains the complete project: properties, definitions, subprojects, and resources.
+When the project is then imported into another workspace, it is identical to the original project,
+with the possible exception of the project name and subproject high-level qualifier.<note>Exporting
+and importing <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects apply to workstation-based <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects only. These actions are not valid for local
+projects<ph otherprops="IDz"> or host-based projects</ph>. <ph rev="7601"><tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> subprojects use a different mechanism for import and
+export and are not included in an exported <tm tmtype="reg" trademark="z/OS">z/OS</tm> project. For
+information about exporting and importing <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> subprojects, see the related links.</ph></note></context>
+<steps-unordered>
+<step><cmd><xref href="tzdexpproj.dita" type="task" /></cmd></step>
+<step><cmd><xref href="tzdimpproj.dita" type="task" /></cmd></step>
+</steps-unordered>
+</taskbody>
+<related-links rev="7601" otherprops="IDz">
+<link href="../../com.ibm.uss.projects.doc/topics/navinstalling.dita" type="topic" />
+<link href="../../com.ibm.uss.projects.doc/topics/importingatpfproject_t.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000002641?><?tm 1665694021094 11 z/OS||UNIX ?>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdcmn065" xml:lang="en-us">
+<title>Opening a remote file</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Opening a remote file</navtitle>
+</titlealts>
+<abstract><shortdesc>You can open a remote file for browsing, editing, or viewing in the default
+editor for the file.</shortdesc><ul>
+<li>Browsing a file opens it in read-only mode in the editor.</li>
+<li>Editing a file opens it for write access.</li>
+<li>Viewing a file opens it for write access without locking the file.</li>
+</ul>For more information about using the editors, see the related links.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>browsing a remote file</indexterm>
+<indexterm>remote file<indexterm>browsing</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>editing a remote file</indexterm>
+<indexterm>remote file<indexterm>editing</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>viewing a remote file</indexterm>
+<indexterm>remote file<indexterm>viewing</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>You must be connected to the remote system and locate the file you want to open.<p>You can
+set several preferences that control what happens when you open a file:<ul>
+<li><ph conref="zide_conrefs.dita#zide_conrefs/choose_default_editor_action"/></li>
+<li>To open a warning window when you edit a file that does not have a property group, select
+<uicontrol>Show missing property group warning message on opening files</uicontrol> on the
+<wintitle>MVS Files</wintitle> preference page. Property group association is not verified for
+sequential data sets.</li>
+<li>Opening large files (greater than 2500 KB) can cause out-of-memory errors and a forced shutdown
+of the workbench. Use the <uicontrol>Show warning message on opening files</uicontrol> setting on
+the <wintitle>z/OS Solutions</wintitle> preference page to enable the product to check the size of
+files and display a warning when they are larger than the specified threshold.<note type="tip">You
+can check the size of a file before you open it by opening the <wintitle>Properties</wintitle> view.
+This view shows the file size for remote resources in bytes or in kilobytes.</note></li>
+</ul>For more information about these preferences, see the related
+topics.<?tm 1435190813 1?></p></section>
+<section>
+<title id="browse">Browsing a file</title>
+<ol id="browse_steps">
+<li>In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view,
+select a file. </li>
+<li>From the menu, click <uicontrol>Browse</uicontrol>. <itemgroup>The file is opened in read-only
+mode for you to view.<note rev="803">If you browse a load module file, non-displayable characters
+that range from 0x00 to 0x3F and 0xFF are replaced with a dot (.). CRLF characters are added to the
+file records. All editor browse functions are available when you browse a load module
+file.</note></itemgroup>
+</li>
+</ol>
+</section>
+<section>
+<title id="edit">Editing a file</title>
+<p>If you associate a file with a property group and specify the SYSLIB in the property group
+settings, then the editor resolves dependencies in the file. If a file does not have a property
+group that is associated with it, then you are prompted to create one or to associate one with the
+file. For more information about creating a property group and setting properties that are required
+to resolve dependencies, see the related topics.</p>
+<ol id="edit_steps">
+<li> In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view,
+select a file. <ul>
+<li>To edit the file with the default editor, double-click the file or right-click and select
+<uicontrol>Open</uicontrol> from the menu.</li>
+<li>To open the file with a different editor, right-click it and select <uicontrol>Open
+With</uicontrol> from the menu.</li>
+</ul><itemgroup rev="851">If you open a COBOL or PL/I partitioned data set member that does not have
+a property group, the <wintitle>Missing Property Group</wintitle> window prompts you to create one
+or associate one with the file. This window opens only if the content type of the file is
+<uicontrol>COBOL Source File</uicontrol> or <uicontrol>PL/I Source File</uicontrol>. For more
+information about content types, see the related topics.</itemgroup>
+</li>
+<li rev="851">To open the file without associating a property group, click
+<uicontrol>OK</uicontrol>.</li>
+<li rev="851"> To create or associate a property group, choose one of the following actions: <ul>
+<li><uicontrol>Create and associate a property group</uicontrol> Opens the property group editor and
+sets the <uicontrol>Application language</uicontrol> to COBOL or PL/I, according to the content
+type. Use this editor to create a property group and associate it with the file.</li>
+<li><uicontrol>Create and associate a property group with the parent data set</uicontrol> or
+<uicontrol>Create and associate a property group with the parent subproject</uicontrol> Opens the
+property group editor and sets the <uicontrol>Application language</uicontrol> to COBOL or PL/I. Use
+this editor to create a property group and associate it with the data set or the <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject that contains the file.<note id="tabsRemoved" type="tip">If you
+select COBOL or PL/I, the property group editor does not show unrelated tabs. If you choose COBOL,
+for example, all other categories, such as PL/I and Assembler, are disabled, and their tabs are
+removed from the editor.</note></li>
+<li><uicontrol>Associate an existing property group</uicontrol> Opens the <wintitle>Associate
+Property Group</wintitle> window. Choose a property group from the list and click
+<uicontrol>OK</uicontrol>.</li>
+<li><uicontrol>Associate an existing property group with the parent data set</uicontrol> or
+<uicontrol>Associate an existing property group with the parent subproject</uicontrol>. Opens the
+<wintitle>Associate Property Group</wintitle> window. Choose a property group from the list and
+click <uicontrol>OK</uicontrol>.</li>
+</ul><itemgroup>If you choose to associate an existing property group, the file is opened after the
+association is made. If you choose to create a property group, then you must request the
+<uicontrol>Open</uicontrol> or <uicontrol>Open with</uicontrol> action again.</itemgroup>
+</li>
+</ol>
+<p>The file opens in the editor. The file is locked on the remote system while you are editing
+it.</p>
+<p>If the file does not have a mapping definition, the file type scanner examines the file contents
+to determine the file type. The scanner then adds the determined file type extension to the file
+name and opens the file with the default editor. For example, if you double-click a file named
+<filepath>MYJCL</filepath>, the product scans the file to determine the file type, assigns the
+<filepath>.jcl</filepath> file type extension to it, and then opens it in the JCL Editor.</p>
+</section>
+<section>
+<title id="view">Viewing a file</title>
+<p>The <uicontrol>View</uicontrol> action opens a file in the default editor, but does not lock the
+file. You can change the file while you are viewing it, but to save your changes you must specify a
+new data set member name.</p>
+<p id="lock_status">You can see the lock status of a remote file by looking in the
+<wintitle>Properties</wintitle> view for the file. A locked file shows a user ID in the
+<uicontrol>Lock Owner</uicontrol> row of the properties table. An unlocked file shows no user ID in
+this row.<image href="../images/lock.gif" placement="break">
+<alt>Remote file Properties with and without a lock owner.</alt>
+</image></p>
+<ol id="view_steps">
+<li>In the <wintitle>Remote Systems</wintitle> or <wintitle>z/OS Projects</wintitle> view,
+right-click the sequential data set or partitioned data set member name and click
+<uicontrol>View</uicontrol>. <itemgroup>The file opens in the default editor. The <uicontrol>Lock
+Owner</uicontrol> field of the <wintitle>Properties</wintitle> view remains empty or, if another
+user locked the file, shows the user ID of that user.</itemgroup></li>
+<li> Change the file, if necessary. <itemgroup>Some editor actions that require automatic saves,
+such as <uicontrol>Save and Syntax Check</uicontrol><ph otherprops="IDz"> and
+<uicontrol>Refactor</uicontrol></ph>, are disabled when you open a file by using the
+<uicontrol>View</uicontrol> action.</itemgroup>
+</li>
+<li>Close the file.<itemgroup>If you changed the file, you are prompted to save it by using the
+<wintitle>Save As</wintitle> window for the editor in which the file was opened.</itemgroup></li>
+</ol>
+</section>
+</body>
+<related-links>
+<link href="tzdmvspref.dita" type="task"><linktext>Setting preferences for MVS
+Files</linktext></link>
+<link format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-content-type.htm"
+scope="peer" type="reference"><linktext>Content Types preference page</linktext></link>
+<link href="tzdpscreate.dita" type="topic"><linktext>Creating and editing property
+groups</linktext></link>
+<link href="tzdpsassign.dita" type="topic"><linktext>Associating and overriding property
+groups</linktext></link>
+<link href="tzdmvsdiscover.dita"><linktext>Detecting the MVS file type</linktext></link>
+<link href="tzdcmn035.dita#tzdcmn035"><linktext>Mapping data sets and partitioned data set
+members</linktext></link>
+<link href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdcmn024.dita" type="concept"
+><linktext>Editing source program files</linktext></link>
+<link href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdebegetstart_cobol.dita"
+scope="peer" type="concept"><linktext>COBOL Editor</linktext></link>
+<link href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdebegetstart_jcl.dita"
+scope="peer" type="concept"><linktext>JCL Editor</linktext></link>
+<link href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdebegetstart_pli.dita"
+scope="peer" type="concept"><linktext>PL/I Editor</linktext></link>
+<link href="../../com.ibm.etools.rdz.language.editors.doc/topics/rexx_editor_intro_c.dita"
+scope="peer" type="concept"><linktext>REXX Editor</linktext></link>
+</related-links>
+</topic>
+<?Pub *0000002930?>

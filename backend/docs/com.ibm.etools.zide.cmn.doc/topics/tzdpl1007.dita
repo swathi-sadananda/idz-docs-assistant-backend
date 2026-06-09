@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdpl1007" xml:lang="en-us">
+<title>Integrating <tm tmtype="reg" trademark="Db2">Db2</tm> support
+with remote COBOL and PL/I programs</title><?Pub Caret -2?>
+<shortdesc>You can integrate <tm tmtype="reg" trademark="Db2">Db2</tm> support
+into your build procedures for remote COBOL and PL/I programs.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Db2 support with PL/I</indexterm><indexterm>PL/I<indexterm>using
+Db2 support</indexterm></indexterm><indexterm>Db2 support with COBOL</indexterm>
+<indexterm>COBOL<indexterm>using Db2 support</indexterm></indexterm>
+<indexterm>using Db2 support with COBOL</indexterm><indexterm>using
+Db2 support with PL/I</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To use <tm tmtype="reg" trademark="Db2">Db2</tm> precompilation
+support with remote COBOL and PL/I programs:</stepsection>
+<step><cmd>Edit the property group that is associated with the remote
+COBOL or PL/I program.</cmd></step>
+<step><cmd>Click the <uicontrol>COBOL</uicontrol> or <uicontrol>PL/I</uicontrol> tab
+to open the <wintitle>COBOL Settings</wintitle> or <wintitle>PL/I
+Settings</wintitle> page. </cmd></step>
+<step><cmd>On the <wintitle>Runtime Environments</wintitle> page,
+select the <uicontrol>Db2</uicontrol> checkbox.</cmd><stepresult>This
+action enables use of the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor.</stepresult>
+</step>
+<step importance="optional"><cmd>If you want to use a separate <tm
+tmtype="reg" trademark="Db2">Db2</tm> precompiler, do these steps: </cmd>
+<substeps>
+<substep><cmd>Open the <wintitle>Procedures and Steps</wintitle> page
+of the <wintitle>COBOL Settings</wintitle> or <wintitle>PL/I Settings</wintitle>.</cmd>
+</substep>
+<substep><cmd>Select either <uicontrol>ELAXFCOP</uicontrol> (for COBOL)
+or <uicontrol>ELAXFPLP</uicontrol> for PL/I and then click <uicontrol>Enable
+Procedure</uicontrol>.</cmd></substep>
+</substeps>
+</step>
+</steps>
+<postreq>If you are using a separate <tm tmtype="reg" trademark="Db2">Db2</tm> precompiler,
+you can specify the properties for the precompiler by selecting a
+step under the ELAXFCOP or ELAXFPLP procedure. The <uicontrol>Step
+Options</uicontrol> area opens so that you can specify the properties
+and options to be passed to the <tm tmtype="reg" trademark="Db2">Db2</tm> precompiler.</postreq>
+</taskbody>
+<related-links>
+<link href="tzdpscreate.dita" type="topic"></link>
+<link href="tzdcmn151.dita" type="task"></link>
+<link format="dita" href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita" scope="local"
+type="topic" otherprops="Wazi"/>
+<link href="rzdembed.dita" type="reference"></link>
+</related-links>
+<?tm 1435190819 7?>
+</task>
+<?Pub *0000003006?>

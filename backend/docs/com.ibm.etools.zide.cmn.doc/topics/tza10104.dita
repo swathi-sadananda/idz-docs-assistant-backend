@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tza10104" xml:lang="en-us">
+<!--Moved from reference directory to tasks directory in RDz 8.0-->
+<?Pub Caret -2?>
+<title>Setting preferences for COBOL code templates</title>
+<titlealts>
+<navtitle>Setting preferences for COBOL code templates</navtitle>
+<searchtitle>Setting preferences for COBOL code templates</searchtitle>
+</titlealts>
+<shortdesc>You can modify, add, or delete COBOL template code and
+comments.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>setting preferences for COBOL code templates</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><p>You can change the existing comment of the template or generated code, add comments or code to a
+template, use code or comments from an existing XML file, or save one or more features to an XML
+file. You can restore the product defaults for the templates. <ph otherprops="IDz">You can also
+enable bidirectional visual editing.</ph></p></context>
+<steps>
+<stepsection>To configure generated COBOL code and comments, complete
+the following steps:</stepsection>
+<step>
+<cmd>On the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>COBOL</uicontrol>
+<uicontrol>Features</uicontrol>
+<uicontrol>Code Templates</uicontrol>
+</menucascade>.</cmd>
+<stepresult>A list of the currently configured COBOL templates for comments and code are displayed.
+The existing comment templates under <uicontrol>Comments</uicontrol> are as follows:<ul>
+<li><uicontrol>Copybook Comment</uicontrol></li>
+<li><uicontrol>Program Comment</uicontrol></li>
+<li><uicontrol>Data Division Comment</uicontrol></li>
+<li><uicontrol>Environment Division Comment</uicontrol></li>
+<li><uicontrol>ID Division Comment</uicontrol></li>
+<li><uicontrol>Procedure Division Comment</uicontrol></li>
+</ul>The existing code templates under <uicontrol>Code</uicontrol> are as follows:<ul>
+<li><uicontrol>Copybook</uicontrol></li>
+<li><uicontrol>Program</uicontrol></li>
+<li><uicontrol>Data Division</uicontrol></li>
+<li><uicontrol>Environment Division</uicontrol></li>
+<li><uicontrol>ID Division</uicontrol></li>
+<li><uicontrol>Procedure Division</uicontrol></li>
+</ul></stepresult>
+</step>
+<step><cmd>Perform one or more of the following tasks:</cmd>
+<choicetable relcolwidth="1 4">
+<chhead>
+<choptionhd>Task</choptionhd>
+<chdeschd>Steps</chdeschd></chhead>
+<chrow>
+<choption>Change a template</choption>
+<chdesc><ol>
+<li>Select a name under <uicontrol>Comments</uicontrol> or <uicontrol>Code</uicontrol>.</li>
+<li>Click the <uicontrol>Edit</uicontrol> button. The <q><wintitle>Edit
+template</wintitle></q> window opens.</li>
+<li>Edit the template, and click <uicontrol>OK</uicontrol>.</li>
+<li>Click the <uicontrol>Apply</uicontrol> button.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Import a template</choption>
+<chdesc><ol>
+<li>Click the <uicontrol>Import</uicontrol> button. The <wintitle>Open</wintitle> window
+opens.</li>
+<li>Select an XML file, and click <uicontrol>Open</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Export a template</choption>
+<chdesc><ol>
+<li>Click the <uicontrol>Export All</uicontrol> button, or select
+one or more features and click the <uicontrol>Export</uicontrol> button.
+The <q><wintitle>Export COBOL features</wintitle></q> window opens.</li>
+<li>Specify the location and file name of the XML file to be created,
+and click <uicontrol>Save</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Restore template defaults</choption>
+<chdesc><ol>
+<li>Click the <uicontrol>Restore Defaults</uicontrol> button. The <wintitle>Confirm
+Restore Defaults</wintitle> window opens.</li>
+<li>Click <uicontrol>OK</uicontrol>. All COBOL feature customizations
+are removed. The template defaults of a product are restored.</li>
+</ol></chdesc></chrow>
+<chrow otherprops="IDz">
+<choption>Enable bidirectional editing</choption>
+<chdesc>Select the <uicontrol>Enable BiDi Visual Editing</uicontrol> checkbox.</chdesc>
+</chrow>
+</choicetable>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190835 0?>
+</task>
+<?Pub *0000004236?>

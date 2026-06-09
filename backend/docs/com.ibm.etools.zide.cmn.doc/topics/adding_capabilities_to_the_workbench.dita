@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<task id="adding_capabilities_to_the_workbench" xml:lang="en-us" rev="150">
+<title>Adding capabilities to the workbench</title>
+<shortdesc><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full" /> is configured to enable a set of capabilities that support traditional mainframe development in Assembler, COBOL, and PL/I languages. The Eclipse workbench includes additional capabilities that support development in other languages such as C/C++ and <tm trademark="Java" tmtype="tm">Java</tm>. Use the <menucascade>
+<uicontrol>General</uicontrol>
+<uicontrol>Capabilities</uicontrol>
+</menucascade> preference page to enable other capabilities that are not exposed in the default
+<keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> client
+configuration.</shortdesc>
+<taskbody>
+<prereq>The default <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> capabilities are
+an enhancement added in <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> version 15.0 to
+filter out preferences, perspectives, views, or wizards that are not relevant to traditional
+mainframe development in Assembler, COBOL, and PL/I languages. If you open <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> version 15.0 on a
+workspace that was created in an earlier version, and you notice the absence of preferences,
+perspectives, views, or wizards that you are accustomed to seeing, follow the instructions to enable
+the default Eclipse capabilities.</prereq>
+<context>
+<p>When you start <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> the first time
+using a new workspace, the following Capabilities are enabled in <menucascade>
+<uicontrol>Preferences</uicontrol>
+<uicontrol>General</uicontrol>
+<uicontrol>Capabilities</uicontrol>
+</menucascade>:<ul outputclass="checkoff">
+<li><menucascade>
+<uicontrol>CICS Application Development</uicontrol>
+<uicontrol>CICS Application Development</uicontrol>
+</menucascade></li>
+<li><uicontrol>Db2 for z/OS Development</uicontrol></li>
+<li><menucascade>
+<uicontrol>Development</uicontrol>
+<uicontrol>Debug Support</uicontrol>
+</menucascade></li>
+<li><uicontrol>IBM Debug Tool Plugins</uicontrol></li>
+<li><menucascade>
+<uicontrol>Team</uicontrol>
+<uicontrol>Core Team Support</uicontrol>
+</menucascade></li>
+</ul></p>
+<note>
+<ul>
+<li>To create plug-ins or work with <tm trademark="Java" tmtype="tm">Java</tm> source, XML files, or JSON files, enable the appropriate capabilities.</li>
+<li>To list all perspectives and wizards, including those from disabled capabilities, select the
+<uicontrol>Show All</uicontrol> option on the
+<menucascade><uicontrol>Window</uicontrol><uicontrol>Open
+Perspective</uicontrol><uicontrol>Other</uicontrol></menucascade>
+<wintitle>Open Perspective</wintitle> window or the <uicontrol>Show All Wizards</uicontrol> option
+on the
+<menucascade><uicontrol>File</uicontrol><uicontrol>New</uicontrol><uicontrol>Other</uicontrol></menucascade>
+<q><wintitle>Select a wizard</wintitle></q> window.</li>
+</ul>
+</note>
+<note type="other" othertype="Limitations">
+<p>When the <tm trademark="Java" tmtype="tm">Java</tm> Development capability is disabled, the following limitations apply:</p>
+<ul>
+<li>In the Resource perspective double-clicking on a file or selecting a file and pressing F3 does
+not open the file in an editor. In addition, there is no <uicontrol>Open</uicontrol> or
+<uicontrol>Open With</uicontrol> menu action. To enable these functions, enable the <tm trademark="Java" tmtype="tm">Java</tm> Development capability.</li>
+<li>Some <tm trademark="Java" tmtype="tm">Java</tm> wizards such as those for creating a new <tm trademark="Java" tmtype="tm">Java</tm> Class or <tm trademark="Java" tmtype="tm">Java</tm> Interface continue to show in the <menucascade><uicontrol>File</uicontrol><uicontrol>New</uicontrol><uicontrol>Other</uicontrol></menucascade>
+<q><wintitle>Select a wizard</wintitle></q> window.</li>
+</ul>
+</note>
+</context>
+<steps-unordered>
+<step>
+<cmd>To add capabilities to the workbench:</cmd>
+<substeps>
+<substep>
+<cmd>Open the Capabilities preference page.</cmd>
+</substep>
+<substep>
+<cmd>Select the capabilities you want to add.</cmd>
+</substep>
+<substep>
+<cmd>Click <uicontrol>Apply and Close</uicontrol>.</cmd>
+</substep>
+</substeps>
+</step>
+<step>
+<cmd>To enable the default Eclipse capabilities, rather than the default <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> capabilities,
+click <uicontrol>Restore Defaults</uicontrol> and then click <uicontrol>Apply and
+Close</uicontrol>.</cmd>
+<stepresult>The following capabilities are the Eclipse defaults:<ul outputclass="checkoff">
+<li><menucascade>
+<uicontrol>Development</uicontrol>
+<uicontrol>Debug Support</uicontrol>
+</menucascade><ul outputclass="checkoff">
+<li><uicontrol>Ant Development</uicontrol></li>
+<li><uicontrol>Debug Support</uicontrol></li>
+<li><uicontrol>Java Development</uicontrol></li>
+<li><uicontrol>Plug-in Development</uicontrol></li>
+</ul></li>
+<li><menucascade>
+<uicontrol>Team</uicontrol>
+</menucascade><ul outputclass="checkoff">
+<li><uicontrol>Core Team Support</uicontrol></li>
+<li><uicontrol>CVS Support</uicontrol></li>
+</ul></li>
+</ul></stepresult>
+</step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-capabilitiespref.htm" scope="peer" format="HTML">
+<linktext>Capabilities</linktext>
+</link>
+<link href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/tasks/tasks-1a.htm" scope="peer" format="HTML">
+<linktext>Working with perspectives</linktext>
+</link>
+</related-links>
+</task><?tm 1665693531595 7 Java ?>

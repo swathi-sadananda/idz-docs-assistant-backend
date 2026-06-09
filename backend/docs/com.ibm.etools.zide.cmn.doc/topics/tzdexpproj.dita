@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdexpproj" xml:lang="en-us">
+<title>Exporting a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</title><?Pub Caret -2?>
+<shortdesc>You can export a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+to share with other users.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS projects<indexterm>exporting</indexterm></indexterm>
+<indexterm>exporting z/OS projects</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must have a workstation-based <tm tmtype="reg" trademark="z/OS">z/OS</tm> project in the
+<ph conref="zide_conrefs.dita#zide_conrefs/view" /> view. This action is not valid for local<ph otherprops="IDz"> or host-based</ph> projects.<note rev="7601"><tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> subprojects use a different mechanism for export and are
+not included in an exported <tm tmtype="reg" trademark="z/OS">z/OS</tm> project. For more
+information about exporting <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> subprojects, see the related topics.</note></prereq>
+<steps>
+<stepsection>To export a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project,
+do these steps:</stepsection>
+<step><cmd>Select a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+in the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view.</cmd>
+</step>
+<step><cmd>Select <uicontrol>Export z/OS Project</uicontrol> from
+the menu.</cmd><stepresult>A <wintitle>Save as</wintitle> window opens.</stepresult>
+</step>
+<step><cmd>Browse to the folder where you want to save the project
+archive file and type a file name in the <uicontrol>File name</uicontrol> field.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Save</uicontrol>.</cmd></step>
+</steps>
+<postreq>Now you can share the archive file location with other users
+who can import the project into their workspaces.</postreq>
+</taskbody>
+<related-links>
+<link href="tzdimpproj.dita" type="task" />
+<link href="../../com.ibm.uss.projects.doc/topics/exportingatpfproject_t.dita" rev="7601" type="task" />
+</related-links>
+
+</task><?Pub *0000002324?><?tm 1665694013528 10 z/OS||UNIX ?>

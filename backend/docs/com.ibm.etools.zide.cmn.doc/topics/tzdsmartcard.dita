@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsmartcard" rev="751" xml:lang="en-us">
+<title>Creating a connection for client certificate authentication</title>
+<shortdesc>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> remote
+systems environment supports client certificate authentication for
+users who must connect to a remote system with a device such as an
+integrated circuit card (like Smart Card).</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>client certificate authentication</indexterm>
+<indexterm>remote system<indexterm>client certificate authentication</indexterm></indexterm>
+<indexterm>integrated circuit card</indexterm><indexterm>Smart Card</indexterm>
+<indexterm>security device</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Your security device must be connected to your workstation
+and logged on to your local system according to your site requirements.</prereq>
+<steps>
+<stepsection>To create a connection to a remote system for client
+certificate authentication, do these steps:</stepsection>
+<step><cmd><xref
+href="clicert.dita"
+type="task">Set preferences for client certificate authentication.</xref></cmd>
+</step>
+<step><cmd><xref href="tzdcmn032.dita" type="topic">Create a connection
+to the remote system</xref>. </cmd></step>
+<step><cmd>Select <uicontrol>certificate</uicontrol> from the <uicontrol>Authentication
+method</uicontrol> list.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn032.dita" type="topic"/>
+</related-links>
+<?tm 1337269556 0?>
+</task>
+<?Pub *0000001839?>

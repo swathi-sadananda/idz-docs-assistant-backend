@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn043" xml:lang="en-us">
+<title>Creating a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</title>
+<abstract><shortdesc>Follow these steps to create a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> project.</shortdesc> To create a local <tm trademark="z/OS" tmtype="reg">z/OS</tm> project, see <xref href="tzdcmn042.dita" />.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>z/OS project<indexterm>creating</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<steps>
+<step><cmd>Open the <ph conref="zide_conrefs.dita#zide_conrefs/perspective" /> perspective.</cmd>
+</step>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view, right-click and select
+<menucascade><uicontrol>New</uicontrol><uicontrol>z/OS Project</uicontrol></menucascade>.</cmd>
+<stepresult>The <wintitle>New z/OS Project</wintitle> wizard opens.</stepresult></step>
+<step><cmd>In the <uicontrol>Project name</uicontrol> field, enter a name for the
+project.</cmd></step>
+<step><cmd>Choose one of these options:</cmd>
+<choices>
+<choice><uicontrol>Create an MVS subproject</uicontrol>: If you select this option, the
+<wintitle>New MVS Subproject</wintitle> wizard opens.</choice>
+<choice><uicontrol>Create a z/OS UNIX System Services subproject</uicontrol>: If you select this
+option, the <wintitle>New z/OS UNIX Subproject</wintitle> wizard opens.<note otherprops="ZOD">This
+option is not supported in <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" />.</note></choice>
+<choice><uicontrol>Do not create a subproject now</uicontrol>: If you select this option, the wizard
+closes and a new project with the specified name is added to the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view. You can add subprojects later.</choice>
+</choices>
+</step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>.</cmd></step>
+</steps>
+<example>
+<image placement="break" href="../animations/zosproject.gif">
+<alt>Animation illustrating how to create a z/OS project</alt>
+</image>
+</example>
+</taskbody>
+<related-links>
+<link format="dita" href="../../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" scope="local" type="task" />
+<link href="tzdnewsubproject.dita" type="task" />
+<link href="../../com.ibm.uss.projects.doc/topics/creatinganewtpfproject_t.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000002310?><?tm 1665694008722 4 z/OS ?>

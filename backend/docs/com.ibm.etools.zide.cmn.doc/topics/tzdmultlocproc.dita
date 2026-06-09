@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdmultlocproc" rev="760" xml:lang="en-us">
+<title>Using multiple local preprocessors</title><?Pub Caret -2?>
+<shortdesc>You can process your source files with multiple local,
+site-developed preprocessors.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preprocessors<indexterm>multiple</indexterm></indexterm>
+<indexterm>multiple preprocessors</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must define a property group on a local or remote system.</prereq>
+<context>Multiple local preprocessor support is available for the
+following compilation or syntax check operations:<ul>
+<li>Local syntax check of a local file.<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"
+/></li>
+<li>Build of a local project.</li>
+<li>Show Dependencies on a local project or local file.<note>Only
+files that were not created by a preprocess step can be considered
+dependencies. If a preprocess step creates several include files that
+are eventually passed to another preprocessor or the compiler, those
+generated include files are not considered dependencies.</note></li>
+<li>Local syntax check of a remote file.</li>
+</ul><p>You
+can specify up to 10 local preprocessors for a single build operation.</p></context>
+<steps>
+<stepsection>To define and enable multiple local preprocessors:</stepsection>
+<step><cmd>Open a property group in the property group editor.</cmd>
+</step>
+<step><cmd>Open the <wintitle>Local Preprocessors</wintitle> page
+of the <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local
+PLI Settings</wintitle>.</cmd><info>The <wintitle>Local Preprocessors</wintitle> page
+contains two sections: the <uicontrol>Preprocessors</uicontrol> section
+shows all preprocessors in the property group. There are two ways
+to work with this list:<ul>
+<li>Select the checkbox next to a preprocessor name to enable the
+preprocessor to execute before a compilation or syntax check operation.
+This action is called <term>selecting a preprocessor</term>. The preprocessor
+is activated for execution only when the checkbox is selected.</li>
+<li>Select the preprocessor name in the list to display the options
+that are set for it in the <uicontrol>Preprocessor Options</uicontrol> section.
+This action is called <term>highlighting a preprocessor</term>.</li>
+</ul>The <uicontrol>Preprocessor Options</uicontrol> section shows
+the options for the selected preprocessor. On this page, you can do
+the following tasks:<ul>
+<li><xref href="tzdaddpreproc.dita" type="task"></xref></li>
+<li><xref href="tzdeditpreproc.dita" type="task"></xref></li>
+<li><xref href="tzdrempreproc.dita" type="task"></xref></li>
+<li><xref href="tzdsamepreproc.dita" type="task"></xref></li>
+<li><xref href="tzdselpreproc.dita" type="task"></xref></li>
+</ul></info></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol> to save the changes
+you made.</cmd></step>
+</steps>
+<example>The source program <filepath>mysource.cob</filepath> has different synonyms for COPY. The
+programmer writes a preprocessor, named <filepath>preproc1.exe</filepath> that processes
+<codeph>–GET</codeph> statements in the source. The output of that preprocessor is an XML file named
+<filepath>mysource_PP1.xml</filepath> and a DECK file named <filepath>mysource_PP1.dek</filepath>
+that is passed on to the next step.<p>The output file <filepath>mysource_PP1.dek</filepath> contains
+<codeph>–INC</codeph> statements that also must be processed. The programmer chooses to use the
+<codeph>–INC</codeph> preprocessor for the second preprocessor step. The output of that step is an
+XML file named <filepath>mysource_PP2.xml</filepath> and a DECK file named
+<filepath>mysource_PP2.dek</filepath> that is passed on to the compiler.</p><p>The compiler receives
+<filepath>mysource_PP2.dek</filepath> from the second preprocessor step. By now, the
+<codeph>–GET</codeph> statements and the <codeph>–INC</codeph> statements are removed from the
+source, and the DECK file that is being processed contains only valid COBOL statements.</p><p>To set
+up the preprocessor steps in a property group for this scenario, the programmer adds two
+preprocessor definitions, in the following order, to the property group for compiling the source:<ol>
+<li><uicontrol>Remove -GET</uicontrol><p>The Remove -GET preprocessor has the following preprocessor
+options specified:<sl>
+<sli><uicontrol>Preprocessor Description: </uicontrol> Remove -GET</sli>
+<sli><uicontrol>Preprocessor Name (fully qualified):</uicontrol>
+<filepath>C:\mypreprocs\preproc1.exe</filepath></sli>
+<sli><uicontrol>Preprocessor Output File Name:</uicontrol>
+<filepath>${resource_fn}_PP1.dek</filepath></sli>
+<sli><uicontrol>Support Error Feedback:</uicontrol> The checkbox is selected.</sli>
+<sli><uicontrol>Error Feedback XML file Name:</uicontrol>
+<filepath>${resource_fn}_PP1.xml</filepath></sli>
+</sl></p></li>
+<li><uicontrol>Remove -INC</uicontrol><p>The Remove -INC preprocessor has the following preprocessor
+options specified:<sl>
+<sli><uicontrol>Preprocessor Description: </uicontrol> Remove -INC</sli>
+<sli><uicontrol>Preprocessor Name (fully qualified):</uicontrol>
+<filepath>“${bundle:com.ibm.systemz.preprocessor.include}/bin/<varname>operatingSystem</varname>/PPINCL01</filepath></sli>
+<sli><uicontrol>Preprocessor Output File Name:</uicontrol>
+<filepath>${resource_fn}_PP2.dek</filepath></sli>
+<sli><uicontrol>Support Error Feedback:</uicontrol> The checkbox is selected.</sli>
+<sli><uicontrol>Error Feedback XML file Name:</uicontrol>
+<filepath>${resource_fn}_PP2.xml</filepath></sli>
+</sl></p></li>
+</ol></p></example>
+</taskbody>
+<related-links>
+<link href="tzdpscreate.dita" type="topic"></link>
+<link format="dita" href="tzdincpreproc.dita" scope="local" type="task">
+</link>
+</related-links>
+<?tm 1435190822 0?>
+</task>
+<?Pub *0000006107?>

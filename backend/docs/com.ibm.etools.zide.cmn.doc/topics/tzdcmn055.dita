@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn055" xml:lang="en-us">
+<title>Checking syntax locally</title><?Pub Caret -2?>
+<shortdesc>You can check COBOL and PL/I syntax locally.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>syntax<indexterm>checking<indexterm>local</indexterm></indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>
+<note type="other" othertype="Limitations" id="lcs-limitations">
+<ul>
+<li>Local syntax check is deprecated. This action is available only on Windows.</li>
+<li><ph conref="czdsyntax.dita#czdsyntax/sosi-local-syntax-check"/></li>
+</ul>
+</note>
+</prereq>
+<context><p>You can use several methods for requesting a local syntax check.</p><p conref="zide_platform_conrefs.dita#zide_conrefs/windows"/></context>
+<steps-unordered>
+<step><cmd><xref href="tzdlsclocalfilepv.dita" type="task" /></cmd>
+</step>
+<step><cmd><xref href="tzdlsclocalfilelpex.dita" type="task" /></cmd>
+</step>
+<step><cmd><xref href="tzdlscremotefilepv.dita" type="task" /></cmd>
+</step>
+<step><cmd><xref href="tzdlscremotefilelpex.dita" type="task" /></cmd>
+</step>
+<step><cmd><xref href="tzdlsccicsts.dita" type="task" /></cmd>
+</step>
+<step><cmd><xref href="tzdcmn156.dita" type="task" /></cmd></step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link href="czdcmn017.dita" type="concept" />
+<link href="czdcmn021.dita" type="concept" />
+<link href="czdcmn121.dita" type="concept" />
+</related-links>
+
+</task>

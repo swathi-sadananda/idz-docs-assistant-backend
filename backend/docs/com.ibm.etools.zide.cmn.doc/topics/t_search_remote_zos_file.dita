@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="t_search_remote_zos_file" xml:lang="en-us">
+<title>Searching remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> files</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Searching remote z/OS files</navtitle>
+<searchtitle>Searching remote z/OS files</searchtitle>
+</titlealts><abstract><shortdesc>Use <wintitle>Remote z/OS File Search</wintitle> to search for content in a remote data
+set or data set member. <ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_desc"
+/></shortdesc></abstract>
+<prolog><metadata>
+<keywords><indexterm>z/OS files<indexterm>searching</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>searches<indexterm>remote z/OS files</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>ISPF search-for</indexterm></keywords>
+<keywords><indexterm>ISPF option 3.14</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><ul>
+<li>Connect to a remote system.</li>
+<li>To support logging search requests in the <filepath>audit.log</filepath> file,
+the server must be version 9.1 or later.</li>
+</ul></prereq>
+<steps>
+<step><cmd>To open the <wintitle>Remote z/OS File Search</wintitle> window:</cmd>
+<choices>
+<choice>Press Ctrl+I.</choice>
+<choice>Select <menucascade><uicontrol>Search</uicontrol><uicontrol>Remote
+z/OS File</uicontrol></menucascade> from the menu bar.</choice>
+<choice>Click <uicontrol>Search</uicontrol> <image href="../images/search.gif" placement="inline"><alt>Search icon</alt>
+</image> on the toolbar, and then click the <wintitle>Remote z/OS
+File Search</wintitle> tab.</choice>
+<choice>In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS
+Projects</wintitle> view, right-click the file or container to search,
+and then select <uicontrol>Search</uicontrol> from the menu. Click
+the <wintitle>Remote z/OS File Search</wintitle> tab.</choice>
+<choice>In the COBOL Editor, PL/I Editor, or <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor, highlight a string
+and press Ctrl+H. Click the <wintitle>Remote z/OS File Search</wintitle> tab.</choice>
+</choices>
+</step>
+<step>
+<cmd>In the <uicontrol>Search string</uicontrol> field, type a content string to search for.</cmd>
+<info><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_string"
+/><p rev="1413">You can type a search qualifier to customize the search string. For example,
+<codeblock rev="1413">
+&lt; : PREFIX
+> : SUFFIX
+&lt; and > : WORD</codeblock></p><p rev="1413">When
+the meta character <codeph>&lt;</codeph> is used before a search string, the string will be
+qualified as <codeph>PREFIX</codeph>. When the meta character <codeph>></codeph> is used at the end
+of a search string, the string will be qualified as <codeph>SUFFIX</codeph>. When a search string
+has both meta characters <codeph>&lt;</codeph> and <codeph>></codeph>, the string will be qualified
+as <codeph>WORD</codeph></p><p rev="1413">
+<ul>
+<li><codeph>WORD</codeph> finds only those occurrences of the search string that are a word. A word
+is defined as being preceded and followed by a non-alphameric character.</li>
+<li><codeph>PREFIX</codeph> finds only those occurrences of the search string that are a prefix to a
+word. A prefix is defined as being preceded by a non-alphameric character and followed by an
+alphameric character.</li>
+<li><codeph>SUFFIX</codeph> finds only those occurrences of the search string that are a suffix to a
+word. A suffix is defined as being preceded by an alphameric character and followed by a
+non-alphameric character.</li>
+</ul>
+</p><p rev="1413">You can also use the separator <codeph>|</codeph> for multiple search
+strings.</p></info>
+</step>
+<step id="search_in">
+<cmd>Set <uicontrol>Search in</uicontrol> options to define the scope of a search. You can set the
+following search scope options:</cmd>
+<choices>
+<choice><uicontrol>System</uicontrol> to choose a remote system to search. This list shows only
+connected remote systems.</choice>
+<choice><uicontrol>Existing filters</uicontrol> shows all defined filters for the selected remote
+system.</choice>
+<choice><uicontrol>Data set names</uicontrol> to specify one or more data set names to search. <ul
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_dsn"
+><li/></ul></choice>
+</choices>
+</step>
+<step importance="optional"><cmd>You can also specify these search
+options:</cmd>
+<choices>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_hex"
+/></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_colrange"
+/></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_case"
+/></choice>
+</choices>
+</step>
+</steps>
+<result><p>The client processes a Remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> File Search as follows:<ol>
+<li>The client generates a batch ISPF Search-For request and submits it to the remote system. <ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schz0002_jobcard"/>
+<p>The JCL is submitted with the code page of the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem of the target connection. If the code page is <tm trademark="IBM" tmtype="reg"
+>IBM</tm>-037 and the search string is <userinput>$£àé</userinput>, for example, the last 2
+characters are handled as unknown characters. If the code page is <tm trademark="IBM" tmtype="reg"
+>IBM</tm>-1141 (French), they are converted correctly to <systemoutput>$#@{</systemoutput>, (that
+is, 0x5b, 0x7b, 0x7c, 0xc0 in their hexadecimal representation). If the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files subsystem is set to a DBCS code page, the ISPF Search-For request can
+find the results for a DBCS search string.</p></li>
+<li>When the tracing level for com.ibm.ftt.rse.mvs.client is set to
+FINEST on the <wintitle>Tracing</wintitle> preference page, the JCL
+for the command is written to the <filepath>.trace</filepath> file.</li>
+<li>When the job completes successfully, the client parses the search
+results and writes them to the <codeph>SUPERC.OUTDD</codeph> job data
+set.</li>
+<li> After parsing a successful result, the client purges the job.
+If the return code is greater than 1, the job is not purged. If the
+tracing level for com.ibm.ftt.rse.mvs.client is set to FINEST, the
+job ID, return code, and purge status are written to the <filepath>.trace</filepath> file. </li>
+<li>If the job fails, the client submits a next JCL if it exists.
+The client displays a warning message that lists the job IDs of any
+failed requests.</li>
+<li>The search results are displayed in the <wintitle>Remote z/OS
+Search</wintitle> results view using the same format as Remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> Search. The result view is
+updated after parsing the JCL output for each data set. When the search
+request generates a large number of search results, the client might
+take longer to download and parse the results. You can use the <uicontrol>Add
+Query</uicontrol> menu item to save the search query to the <uicontrol>My
+Favorites</uicontrol> folder of the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem.</li>
+</ol></p><p>When the server is version 9.1 or later, the server adds
+these entries to the <filepath>audit.log</filepath> file:<ul>
+<li>Before submitting the JCL: <msgph>&lt;user_id&gt;,SEARCH_FILE,&lt;search_dataset_name&gt;,&lt;search_query_string&gt;</msgph></li>
+<li>After the job completes: <msgph>&lt;user_id&gt;,SEARCH_FILE,&lt;search_dataset_name&gt;,&lt;search_query_string&gt;,&lt;return_code&gt;</msgph></li>
+</ul></p></result>
+<example>The following screen capture and sample code show a search query and the JCL that is
+generated. For more information about the ISPF Search-For utility and examples of ISPF Search-For
+query strings, see the <cite>ISPF User's Guide, Volume II</cite>.<image
+href="../images/search_zos_file.gif" placement="break" rev="1413">
+<alt>Sample <wintitle>Remote z/OS File Search</wintitle> query</alt>
+</image><codeblock rev="1413">
+//USERID1 JOB ,
+// MSGCLASS=H,MSGLEVEL=(1,1),TIME=(,4),REGION=144M,COND=(16,LT)
+//SUPERC   EXEC PGM=ISRSUPC, 
+//             PARM=('SRCHCMP,NOSEQ,ALLMEMS,ANYC') 
+//OUTDD   DD SYSOUT=* 
+//NEWDD    DD DISP=SHR,DSN=USERID.TEST
+//SYSIN    DD * 
+SRCHFOR 'A' 
+SRCHFORC 'B',+ 
+SRCHFORC 'C''D',+2
+SRCHFOR 'EF G',W  
+SELECT MEMBER1,MEMBER2,MEMBER3 
+/* 
+//
+</codeblock></example>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdcmn032.dita" scope="local" type="topic">
+</link>
+<link format="dita" href="tzdsetlog.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdsavesearch.dita" scope="local" type="task">
+</link>
+<link format="PDF" href="http://publibfp.boulder.ibm.com/epubs/pdf/isp2u200.pdf" scope="external"><linktext>ISPF User's Guide Volume II</linktext>
+<desc>(link opens a new window)</desc>
+</link>
+</related-links>
+
+</task><?Pub *0000007668?><?tm 1526987140987 11 z/OS||z Systems||MVS||IBM ?>

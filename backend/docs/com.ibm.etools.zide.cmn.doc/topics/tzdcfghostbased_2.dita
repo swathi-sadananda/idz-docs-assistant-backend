@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Inc?>
+<task conref="tzdcfghostbased.dita#tzdcfghostbased"
+id="tzdcfghostbased_2" xml:lang="en-us">
+<title>Configuring host-based projects</title><?Pub Caret -2?>
+<taskbody></taskbody>
+</task>
+<?Pub *0000000370?>

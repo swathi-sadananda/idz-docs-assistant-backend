@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN" "ibm-map.dtd">
+<map xml:lang="en-us"><title>Checking syntax and program dependencies</title>
+<topicref href="topics/tzdsyndep.dita" type="task">
+<topicref href="topics/tzdshowdep.dita" type="task"/>
+<topicref href="topics/czdsyntax.dita" type="concept"
+otherprops="IDz">
+<topicref href="topics/tzdcmn055.dita" type="task">
+<topicref href="topics/tzdlscremotefilepv.dita" type="task"/>
+<topicref href="topics/tzdlscremotefilelpex.dita" type="task"> </topicref>
+<topicref href="topics/tzdlsccicsts.dita" type="task"/>
+<topicref href="topics/tzdlsclocalfilepv.dita" type="task"/>
+<topicref href="topics/tzdlsclocalfilelpex.dita" type="task"/>
+<topicref href="topics/tzdcmn156.dita" type="task"/>
+</topicref>
+<topicref href="topics/tzdcmn056.dita" type="task">
+<topicref href="topics/tzdcmn158.dita" type="task"/>
+<topicref href="../com.ibm.mvs.projects.doc/topics/checkingremotesyntax_t.dita"
+navtitle="Checking C++ syntax"/>
+</topicref>
+</topicref>
+<topicref href="topics/tzdcmn143.dita" type="task"/>
+</topicref>
+<!--resourcefully topicrefs-->
+<topicref href="topics/tzdcmn155.dita" navtitle="Using separate CICS translation"
+processing-role="resource-only" type="task"/>
+<topicref href="topics/tzdcicslevel.dita"
+navtitle="Setting the CICS level for COBOL and PL/I programs" processing-role="resource-only"
+type="task"/>
+</map>

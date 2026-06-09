@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Inc?>
+<task id="t_config_wb" xml:lang="en-us">
+<title>Configuring other Eclipse client options</title>
+<titlealts>
+<navtitle>Configuring other Eclipse client options</navtitle>
+<searchtitle>Configuring other Eclipse client options</searchtitle>
+</titlealts>
+<shortdesc>Configure the other <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> tools for your
+Eclipse client workspace.</shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>configure<indexterm>zIDE tools</indexterm><indexterm>workbench
+settings</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody></taskbody>
+</task>
+<?Pub *0000000717?>

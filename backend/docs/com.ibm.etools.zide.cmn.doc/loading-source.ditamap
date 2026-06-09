@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN" "ibm-map.dtd">
+<map xml:lang="en-us"><title>From z/OS</title>
+<!--From z/OS-->
+<topicref href="topics/from-zos.dita" navtitle="From z/OS" type="topic">
+<topicref href="topics/tzdcmn032.dita" type="topic">
+<topicref href="topics/tzdsmartcard.dita" type="task"/>
+<topicref href="topics/configuring_pkcs12.dita"/>
+<topicref href="topics/t_connect_interactive_ispf_gateway.dita" type="topic"/>
+<topicref href="topics/tzchgpw.dita" navtitle="Changing your password" type="task"/>
+<topicref href="topics/tzdcmn037.dita" type="task"/>
+<topicref href="topics/tzdcmn038.dita" type="task"/>
+</topicref>
+<!--Searching a remote z/OS system-->
+<topicref href="topics/czdsearch.dita" navtitle="Finding files on a z/OS system" type="concept">
+<topicref href="topics/tzdcmn145.dita" type="topic"/>
+<topicref href="topics/t_set_other_srch_opts.dita" navtitle="Setting other search options"
+type="task"/>
+<topicref href="topics/tzhexsearch.dita"
+navtitle="Searching for hexadecimal values in remote z/OS files" type="task"/>
+<topicref href="topics/t_search_remote_zos_file.dita" navtitle="Searching remote z/OS files"
+type="task"/>
+<topicref href="topics/tzdcmn103.dita" type="topic"/>
+<topicref href="topics/t_export_search_results.dita" navtitle="Exporting search results" type="task"/>
+<topicref href="topics/t_editRerunSearch.dita" navtitle="Edit and rerun a search" type="task"/>
+<topicref href="topics/tzdsavesearch.dita" type="task"/>
+<topicref href="../com.ibm.cdz.remote.doc/toc_indexing.ditamap" format="ditamap"
+navtitle="Remote index search"/>
+<topicref href="topics/tzdretrieveds.dita" type="task">
+<topicref href="topics/t_retrieveds_remove.dita"
+navtitle="Removing data sets from Retrieved Data Sets" type="task"> </topicref>
+</topicref>
+<topicref format="dita" href="topics/tzdretrievemem.dita" navtitle="Retrieving members"
+scope="local" type="topic"/>
+<topicref href="topics/tzdretrievemem_quickedit.dita" navtitle="Finding members for quick edit"
+type="task"/>
+</topicref>
+<topicref href="topics/grouping_and_sorting.dita" navtitle="Grouping and sorting files" type="task">
+<topicref format="dita" href="topics/tzdmvsprop.dita" navtitle="MVS Files subsystem" scope="local"
+type="task">
+<topicref href="topics/tzdmvsdetails.dita" type="task"/>
+</topicref>
+<topicref href="topics/tzdfiltermvs.dita" type="task"/>
+<topicref href="topics/t_member_filter.dita" navtitle="Creating a member filter" type="task"/>
+<topicref href="topics/tzdlargefilter.dita" navtitle="Working with large partitioned data sets"
+type="task"> </topicref>
+<topicref format="dita" href="topics/tzdlargepds.dita"
+navtitle="Working with large partitioned data sets" scope="local" type="task"/>
+<topicref href="topics/tzdmvsdiscover.dita" navtitle="Detecting the MVS file Type" type="task"/>
+<topicref href="topics/t_filters.dita" navtitle="Sorting filters" type="task"/>
+</topicref>
+<topicref href="topics/tzdcmn039.dita" linking="none" type="task">
+<topicref href="topics/r_dschar.dita" navtitle="Data set characteristics" type="reference"/>
+<topicref href="topics/rzddsa.dita" type="reference"/>
+<topicref href="topics/tzdcmn082.dita" type="task"/>
+<topicref format="dita" href="topics/allocateVSAM.dita" navtitle="Allocating VSAM data sets"
+scope="local" type="task">
+<topicref href="topics/allocateLike.dita" navtitle="Allocating VSAM data sets" type="task"/>
+<topicref href="topics/rzvsamchar.dita" navtitle="VSAM data set characteristics" type="reference"/>
+</topicref>
+</topicref>
+<topichead navtitle="Other actions on MVS files">
+<topicref href="topics/tzdcompare.dita" type="task">
+<topicref href="topics/t_compare_lang_pref.dita"
+navtitle="Setting language-specific preferences for comparing files" type="task"> </topicref>
+<topicref href="topics/t_compare_files.dita" navtitle="Comparing a file with a previous version"
+type="task"> </topicref>
+</topicref>
+<topicref href="topics/tzdcmn065.dita" type="topic"/>
+<topicref href="topics/t_copy_remote_files.dita" linking="none" navtitle="Copying remote files"
+type="task">
+<topicref href="topics/tzdcopylmod.dita" navtitle="Copying a load module" type="task"/>
+<topicref href="topics/czdcopyundef.dita" navtitle="Copying files with undefined format"
+type="concept"> </topicref>
+</topicref>
+<topicref href="topics/tzddeletefile.dita" type="task"/>
+<topicref href="topics/t_migrate_recall.dita" navtitle="Migrating and recalling data sets"
+type="topic"/>
+<topicref href="topics/t_explore_gens.dita" navtitle="Exploring PDSEv2 member generations"
+type="task"/>
+<topicref href="topics/tzdalias.dita" type="task">
+<topicref href="topics/tzddelalias.dita" type="task"/>
+<topicref href="topics/tzdeditalias.dita" type="topic"/>
+</topicref>
+<topicref href="topics/tzdgdg.dita" type="task">
+<topicref href="topics/tzdgdgview.dita" type="task"/>
+<topicref href="topics/tzdgdgdef.dita" type="task"/>
+<topicref href="topics/tzdgdsalloc.dita" type="task"/>
+</topicref>
+<topicref href="topics/tzhidearch.dita" navtitle="Hiding archived data sets" type="task"/>
+<topicref href="topics/t_compress_pds.dita" navtitle="Compressing partitioned data sets" type="task"/>
+<topicref href="topics/c_non_standard_names.dita" navtitle="Data sets with nonstandard names"
+type="concept"/>
+<topicref href="topics/tzdmonitor.dita" type="task"/>
+</topichead>
+<!--z/OS UNIX Files and Shells-->
+<topicref href="../com.ibm.etools.zos.subsystem.uss.doc/toc_usssubsystem.ditamap" format="ditamap"
+navtitle="Accessing z/OS UNIX System Services"/>
+<!--JES-->
+<topicref href="../com.ibm.etools.zos.subsystem.jes.doc/toc_jobmonitor.ditamap" format="ditamap"
+navtitle="JES subsystem"/>
+<!--TSO-->
+<topicref href="topics/c_tso_subsystem.dita" navtitle="TSO subsystem" type="concept">
+<topicref href="topics/issuing_tso_commands_t.dita" type="task"/>
+<topicref href="topics/tzdtsosave.dita" type="task"/>
+</topicref>
+<topicref href="../com.ibm.host.connect.s3270.doc/host.connect.s3270.content.ditamap"
+format="ditamap" navtitle="Remote Connection Emulator"/>
+</topicref>
+<!--resource-only topicrefs-->
+<topicref href="../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" processing-role="resource-only"
+navtitle="Switching to a new perspective" type="task"/>
+<topicref href="topics/tzdcmn056.dita" processing-role="resource-only" type="task"/>
+<topicref href="topics/source_of_generated_jcl_topic.dita" processing-role="resource-only"
+type="topic"/>
+<topicref href="../com.ibm.etools.rdz.language.editors.doc/topics/czdcmn024.dita"
+processing-role="resource-only" type="concept"/>
+<topicref href="../com.ibm.etools.rdz.troubleshooting.doc/topics/ts_rseg1242.dita" processing-role="resource-only" type="reference"/>
+<topicref href="topics/czdcmn016.dita" navtitle="Building your code" processing-role="resource-only"
+type="concept"/>
+</map>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_rename_ds" xml:lang="en-us">
+<title>Renaming a data set or member</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Renaming a data set or member</navtitle>
+<searchtitle>Renaming a data set or member</searchtitle>
+</titlealts>
+<shortdesc>When you rename a data set or member in an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject, it is also renamed on the remote
+system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>rename<indexterm>data set or member</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>data set<indexterm>rename</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>member<indexterm>rename</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>Select a data set or member in the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</cmd></step>
+<step><cmd>Select <uicontrol>Rename</uicontrol> from the menu.</cmd>
+</step>
+<step><cmd>In the <wintitle>Rename Resource</wintitle> window, type
+a new name for the data set or member and click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>The resource is renamed in the subproject and on the remote
+system.<note> The rename action provides no indication that a change
+is made on the remote system. Even though there is no indication,
+the change is made and saved on the remote system in the original
+data set or member.</note></stepresult></step>
+</steps>
+</taskbody>
+<?tm 1435190834 1?>
+</task>
+<?Pub *0000001647?>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdbidiinh" xml:lang="en-us">
+<title>How bidirectional settings are inherited</title><?Pub Caret -2?>
+<shortdesc>The bidirectional format that is specified on a higher
+level is inherited automatically by a lower level. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional settings<indexterm>inheritance</indexterm></indexterm>
+<indexterm>inheritance<indexterm>bidirectional settings</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<p>You can define bidirectional settings on different levels of the
+Remote System Explorer hierarchy:<ul>
+<li><tm tmtype="tm" trademark="MVS">MVS</tm> Files</li>
+<li><tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> files</li>
+<li>Data set mappings</li>
+<li>Individual data sets and files</li>
+</ul><uicontrol>Inherit from properties</uicontrol> (<tm tmtype="tm" trademark="MVS">MVS</tm>) or <uicontrol>Inherit from</uicontrol> (<tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm>)
+indicates the high-level resource from which currently active bidirectional
+properties are inherited. You can override these inherited properties
+by using the instructions in the following topics:</p>
+<ul>
+<li><xref href="tzdbidicodep.dita" type="task" /></li>
+<li><xref href="tzdbidipds.dita" type="task" /></li>
+<li><xref href="tzdbidimap.dita" type="task" /></li>
+<li><xref href="tzdbidiuss.dita" type="task" /></li>
+</ul>
+<note othertype="Next" type="other"><xref href="tzdbidicodep.dita" type="task" /></note>
+</conbody>
+
+</concept><?Pub *0000001843?><?tm 1670257711151 6 z/OS||UNIX||MVS ?>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdp2h" xml:lang="en-us">
+<title>Connecting a local project to a remote system</title><?Pub Caret -2?>
+<shortdesc>You can connect a local project to a remote system and
+map local files to remote data sets.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>remote synchronization</indexterm><indexterm>connecting
+a local project to a remote system</indexterm><indexterm>local project<indexterm>connecting
+to a remote system</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><note type="attention">The remote synchronization function is deprecated.</note>A local
+project is one in which resources are created and stored locally. You can create a local <tm tmtype="reg" trademark="z/OS">z/OS</tm> project, for example, when you want to use the <tm trademark="z/OS" tmtype="reg">z/OS</tm> tools with COBOL, PL/I, or Assembler source that is stored in a Git repository. Some <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> tools, such as
+Enterprise Service Tools, create local projects that contain host-based resources. The following
+examples of local projects contain host-based resources:<ul>
+<li>A local <tm tmtype="reg" trademark="z/OS">z/OS</tm> project that contains COBOL, PL/I, or
+Assembler resources</li>
+<li>A local clone of a Git repository that contains COBOL, PL/I, or Assembler resources</li>
+<li>An Enterprise Service Tools single-service project that supports web services for <tm tmtype="reg" trademark="CICS">CICS</tm>; SOAP for <tm tmtype="reg" trademark="CICS">CICS</tm>; an
+<tm tmtype="tm" trademark="IMS" tmclass="IGNORE">IMS</tm> SOAP gateway; or batch, TSO, or <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> System Services applications</li>
+</ul><p>While the resources in these types of projects are created locally, they are often intended
+for transfer to a remote system. <term>Remote synchronization</term> is a set of tools that you can
+use to quickly transfer resources from a local project to a remote system in a systematic,
+repeatable way. It includes the following tools:</p><ul>
+<li>A menu command for creating a connection from a local project to a remote system.</li>
+<li>A mapping editor for associating local files with their remote counterparts.</li>
+<li>Options for either manually or automatically synchronizing the project with the remote
+system.</li>
+</ul></context>
+</taskbody>
+<related-links>
+<link href="czdcmn021.dita" type="concept" />
+</related-links>
+
+</task><?Pub *0000003310?><?tm 1665694017249 9 z/OS||UNIX||IMS||CICS ?>

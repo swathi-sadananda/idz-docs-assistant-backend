@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn050" xml:lang="en-us">
+<title>Creating a partitioned data set member and adding it to an <tm
+tmtype="tm" trademark="MVS">MVS</tm> subproject</title><?Pub Caret -2?>
+<titlealts>
+<searchtitle>Creating a PDS member and adding it to an MVS subproject</searchtitle>
+</titlealts>
+<shortdesc>Follow these steps to create a partitioned data set member
+and add it to an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS subproject<indexterm>adding a new partitioned
+data set member</indexterm></indexterm></keywords>
+<keywords><indexterm>subproject, MVS<indexterm>adding a new partitioned
+data set member</indexterm></indexterm></keywords>
+<keywords><indexterm>partitioned data set member<indexterm>creating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>member, partitioned data set<indexterm>creating</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a remote system.</prereq>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, navigate
+to the partitioned data set in which you want to create the new member.</cmd>
+</step>
+<step><cmd>Select the data set. </cmd></step>
+<step><cmd>Select <menucascade><uicontrol>New</uicontrol><uicontrol>Create
+Member</uicontrol></menucascade></cmd><stepresult>A window opens,
+showing the data set name that the new member is created in. You are
+prompted to enter the new name.</stepresult></step>
+<step><cmd>Type the new member name. </cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>The new
+member name is displayed in the window.</stepresult></step>
+<step><cmd>Open the new member in the editor.</cmd></step>
+<step><cmd>Edit the file.</cmd></step>
+<step><cmd>Right-click the new member.</cmd></step>
+<step><cmd>Select <uicontrol>Add to Subproject</uicontrol>.</cmd></step>
+<step><cmd>Type or select the subproject name.</cmd></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn049.dita" type="topic"></link>
+<link href="tzdcmn051.dita" type="task"></link>
+<link href="tzdcmn082.dita" type="task"></link>
+</related-links>
+<?tm 1435190833 2?>
+</task>
+<?Pub *0000002448?>

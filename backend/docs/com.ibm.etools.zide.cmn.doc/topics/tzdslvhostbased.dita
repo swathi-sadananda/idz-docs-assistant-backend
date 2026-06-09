@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdslvhostbased" xml:lang="en-us">
+<title>Solving problems with host-based projects</title>
+<shortdesc>Most problems with host-based projects are the result of improper configuration on the
+remote system, such as incorrect paths to definition files or errors in the syntax of the definition
+files themselves. Because these problems usually show up as missing host-based projects,
+subprojects, or files, which are easily overlooked, error messages help with problem determination. </shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>host-based projects<indexterm>solving problems</indexterm></indexterm>
+<indexterm>solving problems<indexterm>host-based projects</indexterm></indexterm>
+<indexterm>troubleshooting<indexterm>host-based projects</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context>For severe problems, a window box opens with a detailed message of the error condition and
+the host-based project stops loading. Project creation actions that precede the error are not rolled
+back, but, disconnecting from the remote system removes the projects from the workstation. For less
+severe problems, such as a file listed in a subproject not being found, the message is logged in the
+<filepath>CommonBaseEvents</filepath> log file. Users might not be aware of any such problem until
+they notice the missing file and look into the log.<dl>
+<dlentry>
+<dt>Problems with references to definition files</dt>
+<dd>If a definition file contains an error in a reference to another definition file or to a folder,
+such as typographical error or an error in a file path name, an error message indicates which file
+was not found and which file contained the error.</dd>
+</dlentry>
+<dlentry>
+<dt>Problems with syntax in definition files</dt>
+<dd>If a definition file contains an error in the XML tags, such as a typographical error or a
+missing end tag, the XML parser throws an exception and an error message indicates the definition
+file that contains the error.</dd>
+</dlentry>
+<dlentry>
+<dt>Problems with references to resources</dt>
+<dd>If a definition file refers to a partitioned data set, data set member, or sequential data set
+that cannot be found, either because the definition file contains a typographical error or the file
+does not exist, the subproject is created, but the file in error is not. An error message in the
+<filepath>CommonBaseEvents</filepath> log (provided the logging level is set to SEVERE or lower for
+the com.ibm.ftt.projects.core.impl logger) indicates which file was not found.</dd>
+</dlentry>
+</dl></context>
+</taskbody>
+<?tm 1316710767 0?>
+</task>
+<?Pub *0000003039?>

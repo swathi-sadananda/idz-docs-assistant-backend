@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcustbld" rev="760" xml:lang="en-us">
+<title>Creating a custom build process</title>
+<shortdesc>You can use the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> extensible
+error feedback mechanism to create a custom build process. This mechanism
+allows for linking multiple preprocessors by capturing the feedback
+from one preprocessor for use as an input to another.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>capturing and displaying</indexterm></indexterm>
+<indexterm>custom build process</indexterm><indexterm>linking multiple
+preprocessors</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Read about the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/>
+<xref href="czderrorfeedback.dita"/>. This mechanism allows for capturing error feedback from a
+program and display it in the Remote Error List. It is also the mechanism that allows for linking
+multiple preprocessors.</prereq>
+<steps>
+<stepsection>To set up a custom build process that involves multiple
+preprocessors:</stepsection>
+<step><cmd><xref href="tzdefclient.dita">Set up the client for error
+feedback.</xref></cmd></step>
+<step><cmd><xref format="dita" href="tzdmultlocproc.dita" scope="local"
+type="task">Link multiple preprocessors by using the Local Preprocessors
+property page</xref>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link href="tzdefotherlang.dita" type="task"></link>
+<link href="tzdefclient.dita" type="task"></link>
+<link href="tzdefcobolpli.dita" type="task"></link>
+<link href="tzdefpreprocessor.dita" type="task"></link>
+</related-links>
+<?tm 1337269568 0?>
+</task>
+<?Pub *0000002123?>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdsearch" xml:lang="en-us">
+<title>Finding files on a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system</title>
+<?Pub Caret -2?>
+<shortdesc>You can use several tools for searching and locating remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> resources.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>search tools</indexterm>
+<indexterm>searching z/OS resources</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody>
+<p>When you search a <tm trademark="z/OS" tmtype="reg">z/OS</tm> system by using the Search menu item, the default search window is <wintitle>Remote z/OS Search</wintitle>:<image placement="break" href="../images/search_menu.png" scale="75">
+<alt>The search menu item opens the Remote z/OS Search window by default</alt>
+</image>You can change the default to the <wintitle>Remote z/OS File Search</wintitle> window by
+setting the <parmname>-DDEFAULT_REMOTE_ZOS_FILE_SEARCH=true</parmname> parameter in the
+<filepath>zee.env</filepath> configuration file. For more information about setting parameters in
+<filepath>zee.env</filepath>, see <ph otherprops="Wazi"><xref href="../../com.ibm.guide.hostconfig.doc/topics/rsedenvvars.dita#rsedenvvars" /> in </ph>the
+<cite>Host Configuration Guide</cite>.</p>
+<p />
+<table><title>Remote resource search tools</title><tgroup cols="4">
+<colspec colname="col1" />
+<colspec colname="col2" />
+<colspec colname="col3" />
+<colspec colname="col4" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">If you know</entry>
+<entry colname="col2">If you want to know</entry>
+<entry colname="col3">Use this tool</entry>
+<entry colname="col4">Link to more information</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">The content of a data set or member, or a partial name</entry>
+<entry colname="col2">Where that content occurs or the full name</entry>
+<entry colname="col3">Remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> Search</entry>
+<entry colname="col4"><xref format="dita" href="tzdcmn145.dita" scope="local" type="topic" /></entry>
+</row>
+<row>
+<entry colname="col1">The content of a data set or member and a full or partial file name</entry>
+<entry colname="col2">Where that content occurs</entry>
+<entry colname="col3">Remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> File Search</entry>
+<entry colname="col4"><xref format="dita" href="t_search_remote_zos_file.dita" scope="local" type="task" /></entry>
+</row>
+<row>
+<entry colname="col1">A full or partial data set name</entry>
+<entry colname="col2">How to find it</entry>
+<entry colname="col3">Retrieve Data Set</entry>
+<entry colname="col4"><xref format="dita" href="tzdretrieveds.dita" scope="local" type="task" /></entry>
+</row>
+<row>
+<entry colname="col1">A full or partial partitioned data set member name</entry>
+<entry colname="col2">How to find it</entry>
+<entry colname="col3">Find Member</entry>
+<entry colname="col4"><xref format="dita" href="tzdretrievemem.dita" scope="local" type="topic" /></entry>
+</row>
+<row>
+<entry colname="col1">The data set filter and a full or partial data set name</entry>
+<entry colname="col2">How to find it in a large filter</entry>
+<entry colname="col3">Locate Data Set</entry>
+<entry colname="col4"><xref format="dita" href="tzdlargefilter.dita" scope="local" type="task" /></entry>
+</row>
+<row>
+<entry colname="col1">The name of a partitioned data set (PDS) and part of the member name</entry>
+<entry colname="col2">How to find it in a large PDS</entry>
+<entry colname="col3">Locate Member</entry>
+<entry colname="col4"><xref format="dita" href="tzdlargepds.dita" scope="local" type="task" /></entry>
+</row>
+<row>
+<entry colname="col1">A job name</entry>
+<entry colname="col2">How to find it</entry>
+<entry colname="col3">Retrieve Job</entry>
+<entry colname="col4"><xref format="dita" href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/tzdretrievejob.dita" scope="local" type="task" /></entry>
+</row>
+</tbody>
+</tgroup></table>
+</conbody>
+
+</concept><?Pub *0000003649?><?tm 1665693999828 5 z/OS ?>

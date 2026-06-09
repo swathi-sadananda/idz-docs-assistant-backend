@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="t_migrate_recall" xml:lang="en-us">
+<title>Migrating and recalling data sets</title>
+<titlealts>
+<navtitle>Migrating and recalling data sets</navtitle>
+<searchtitle>Migrating and recalling data sets</searchtitle>
+</titlealts>
+<shortdesc>You can migrate a data set to a migration volume, and recall a migrated data set.
+Migrating an <tm tmtype="tm" trademark="MVS">MVS</tm> data set moves it to a migration volume.
+Recalling a migrated <tm tmtype="tm" trademark="MVS">MVS</tm> data set moves it back to a target
+volume.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>data set<indexterm>migrate</indexterm></indexterm>
+<indexterm>recall</indexterm>
+</keywords>
+<keywords>
+<indexterm>migrate<indexterm>data set</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>recall<indexterm>data set</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section id="migratingadataset">
+<title>Migrating a data set</title>
+<note type="tip">Ensure that the remote system supports data set migration and that your user ID is
+authorized to migrate and recall data sets.</note>
+<ol id="migrate_steps">
+<li>In the <tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem or in an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject, select a data set.</li>
+<li>Right-click and click <uicontrol>Migrate</uicontrol>. <itemgroup>A progress window opens while
+the data set is being migrated. After the data set is migrated, its icon changes to <image
+href="../icons/pds_migrated.gif" placement="inline"><alt>Icon for migrated partitioned data
+set</alt></image> to indicate its migrated status. In the <wintitle>Properties</wintitle> view for
+the data set, the <menucascade><uicontrol>Misc</uicontrol><uicontrol>Type</uicontrol>
+</menucascade> property changes to <systemoutput>Migrated Data Set</systemoutput>.</itemgroup>
+</li>
+</ol>
+</section>
+<section id="recallingadataset">
+<title>Recalling a data set</title>
+<ol id="recall_steps">
+<li>In the <tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem or in an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject, do one of these steps: <ol>
+<li>Right-click a migrated data set, and click <uicontrol>HRECALL</uicontrol>. </li>
+<li>Double-click a migrated data set.<itemgroup>A confirmation window opens. Click
+<uicontrol>Yes</uicontrol> to recall the data set or <uicontrol>No</uicontrol> to cancel the
+operation.</itemgroup></li>
+</ol>
+<itemgroup>A progress window opens while the data set is being recalled. After the data set is
+recalled, its icon changes to indicate that the data set is accessible.</itemgroup></li>
+</ol>
+</section>
+</body>
+<related-links>
+<link format="html" href="../../../SSLTBW_2.3.0/com.ibm.zos.v2r3.arcd000/xhmig.htm" scope="peer">
+<linktext>HMIGRATE: Migrating data sets</linktext>
+</link>
+<link format="html" href="../../../SSLTBW_2.3.0/com.ibm.zos.v2r3.arcd000/hrecal2.htm" scope="peer">
+<linktext>HRECALL: Recalling data sets</linktext>
+</link>
+<?Pub Caret 0?>
+</related-links>
+<?tm 1435190816 6?>
+</topic>
+<?Pub *0000003400?>

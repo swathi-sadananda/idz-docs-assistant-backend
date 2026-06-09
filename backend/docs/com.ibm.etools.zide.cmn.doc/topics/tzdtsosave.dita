@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdtsosave" xml:lang="en-us">
+<title>Saving a TSO session</title>
+<shortdesc>You save TSO sessions to retrieve your output later or
+take advantage of more editing features, such as Compare (to compare
+multiple outputs) or Print.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Saving a TSO session</indexterm><indexterm>TSO
+session, saving</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To save your TSO session, follow these steps:</stepsection>
+<step><cmd><xref href="issuing_tso_commands_t.dita">Issue a TSO command from the
+TSO command shell.</xref></cmd></step>
+<step><cmd>Repeat the previous step for as many commands as you want
+to enter.</cmd></step>
+<step><cmd>From the menu in the TSO command shell, select <uicontrol>Export
+Shell Output</uicontrol>. </cmd><stepresult>A window opens, prompting
+you to choose the location on which to save the output on your workstation.
+A default file name that you can change is provided.</stepresult></step>
+<step><cmd>After you specify the location and file name, click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>The session output is saved in the TSO Commands node of
+the remote system in the <wintitle>Remote Systems</wintitle> view.</stepresult>
+</step>
+</steps>
+<postreq>To open a saved session and work with the output, double-click
+the session name that is listed under TSO Commands. You can print
+the session or select multiple saved sessions to compare the outputs
+of each.</postreq>
+</taskbody>
+<related-links>
+<link href="issuing_tso_commands_t.dita" type="task"></link>
+</related-links>
+</task>
+<?Pub *0000001793?>

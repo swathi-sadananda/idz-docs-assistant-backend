@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzchgpw" xml:lang="en-us">
+<title>Changing your password</title>
+<titlealts>
+<navtitle>Changing your password</navtitle>
+<searchtitle>Changing your password on a z/OS system</searchtitle>
+</titlealts>
+<shortdesc>You can change your password on a remote <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> system to which you are connected.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>password<indexterm>changing</indexterm></indexterm>
+<indexterm>changing your password</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to the remote system on which you want
+to change your password.</prereq>
+<steps>
+<step><cmd>From the <wintitle>Remote Systems</wintitle> view, right-click
+the connection name.</cmd></step>
+<step><cmd>From the menu, select <uicontrol>Change Password.</uicontrol></cmd>
+<info>You must be connected to the remote system for this menu item
+to be enabled.</info><stepresult>The <wintitle>Change Password</wintitle> window
+opens. This window displays the following information:<ul>
+<li><uicontrol>Host name:</uicontrol> The name of the remote system.</li>
+<li><uicontrol>User ID:</uicontrol> The user ID for which you are
+changing your password.</li>
+<li><uicontrol>Current password expires on:</uicontrol> The date on
+which your current password expires.</li>
+<li><uicontrol>Cycle in days:</uicontrol> The number of days before
+your new password expires.</li>
+</ul></stepresult></step><?Pub Caret 44?>
+<step>
+<cmd>In the <uicontrol>New password</uicontrol> field, type your new password.</cmd>
+<info>Passwords are limited to 30 characters.</info>
+</step>
+<step><cmd>In the <uicontrol>Re-enter to confirm</uicontrol> field,
+type your password again.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to change your password.</cmd>
+</step>
+</steps>
+</taskbody>
+<?tm 1435190807 1?>
+</task>
+<?Pub *0000002019?>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn051" xml:lang="en-us">
+<title>Removing a file from an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject</title>
+<?Pub Caret -2?>
+<shortdesc>The <uicontrol>Remove from Subproject</uicontrol> action removes a data set or
+partitioned data set member from a subproject but does not delete it from the remote
+system.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>MVS subproject<indexterm>Removing a partitioned data set member</indexterm></indexterm>
+<indexterm>subproject, MVS<indexterm>Removing a partitioned data set member</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context>
+<note type="tip">If you added a partitioned data set member to a subproject, you can remove it
+individually. If you added the entire partitioned data set, you cannot remove individual members of
+the partitioned data set.</note>
+</context>
+<steps>
+<stepsection>To remove a resource from a subproject:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, select the resource that
+you want to remove.</cmd></step>
+<step><cmd>Right-click and select <uicontrol>Remove from Subproject</uicontrol>.</cmd>
+</step>
+<step><cmd>When prompted to confirm the action, click <uicontrol>Yes</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn049.dita" type="topic"/>
+<link href="tzdcmn050.dita" type="task"/>
+</related-links>
+<?tm 1435190833 1?>
+</task>
+<?Pub *0000001638?>

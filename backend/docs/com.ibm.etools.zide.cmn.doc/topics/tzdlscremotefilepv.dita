@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdlscremotefilelpex" xml:lang="en-us">
+<title>Local syntax check of a remote file from the <wintitle>z/OS
+Projects</wintitle> view</title><?Pub Caret -2?>
+<shortdesc>When you request a local syntax check for a remote COBOL
+or PL/I file, the syntax check operation searches the remote system
+for all dependencies (such as copybooks and include files) and caches
+these files in a temporary location in your workspace. The list of
+files is also stored as a property of the remote file. This search
+and temporary caching enables a syntax check operation to complete
+without requiring you to add the dependent files to your <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local syntax check<indexterm>remote file from
+z/OS Projects or Enterprise Projects view</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>Before you check syntax locally,
+you might need to set local build options. You must do this action only once and only if you want to
+override the default values.<p>
+<note>This procedure outlines the default behavior for local syntax check. You can also request the
+syntax check operation to look in your subproject for dependent files. To get this behavior, select
+the <uicontrol>Syntax Check</uicontrol> option in the <wintitle>Preferences</wintitle> window. For
+more information, see the related links.</note>
+</p><note
+conref="tzdlscremotefilelpex.dita#tzdlscremotefilelpex/restriction_local_syntax_check"/></prereq>
+<steps>
+<stepsection>To do a local syntax check of a remote file from the <wintitle>z/OS
+Projects</wintitle> view, follow these steps:</stepsection>
+<step><cmd>Select the member that contains the code you want to check.</cmd>
+</step>
+<step><cmd>Right-click and select <uicontrol>Syntax Check > Local</uicontrol> <ph
+rev="80">or press Ctrl+Alt+L.</ph></cmd><stepresult>The <wintitle>Check
+Dependencies</wintitle> window prompts you to refresh dependencies
+for the remote file. </stepresult></step>
+<step importance="optional"><cmd>If you have reason to believe that
+the dependencies changed since the last syntax check, click <uicontrol>Refresh
+dependencies and then perform a syntax check</uicontrol>. Otherwise,
+click <uicontrol>Syntax check only</uicontrol>.</cmd><info>To review
+the list of dependencies before proceeding, click <uicontrol>Dependent
+files</uicontrol>. The window expands to show the list of dependent
+files and the date and time of the last refresh.<note>The <uicontrol>Dependent
+files</uicontrol> button is present only if you previously requested
+a refresh dependencies for the file.</note></info></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>The local
+compiler is started to perform the syntax check. When the syntax check
+is completed, any errors are displayed in the Remote Error List. If
+there are no errors, control is returned to you and you can continue
+working.</stepresult></step>
+</steps>
+<result>The following error messages represent some common problems
+with local syntax check of remote files. These messages might appear
+in the <wintitle>Refresh Dependencies Problems</wintitle> window.
+Click the <uicontrol>Details</uicontrol> button to display the specific
+error message.<ul>
+<li><msgph>JES subsystem is not connected. Connect to the subsystem
+and retry the operation.</msgph> This message might appear if the
+JES subsystem is not connected.</li>
+<li><msgph>The submitted job has ended with a JCL error. Check the
+build properties and retry the operation.</msgph> This message might
+appear if, for example, you specified a partitioned data set in the
+SYSLIB that does not exist.</li>
+</ul></result>
+</taskbody>
+<related-links>
+<link href="tzdshowdep.dita" type="task"></link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1435190836 1?>
+</task>
+<?Pub *0000004260?>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdsmartlog" xml:lang="en-us">
+<title>Smart logical ordering scheme</title><?Pub Caret -2?>
+<shortdesc>The smart logical layout scheme was introduced into the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+to overcome restrictions of the logical ordering scheme and to provide
+for the special requirements of programming languages.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>smart logical ordering scheme</indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<p>The smart logical layout was introduced in the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+to solve two main problems:</p>
+<dl><dlentry>
+<dt>Round-trip problem</dt>
+<dd>The implicit (logical) reordering algorithm has known restrictions
+that do not allow for correct handling of some strings that contain
+bidirectional text. As a result, users cannot easily generate certain
+presentations. These restrictions also create ambiguity during visual
+to logical conversion, which is performed when data is downloaded
+from a <tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm> remote
+system to a <tm tmtype="tm" trademark="Windows">Windows</tm> or <tm tmtype="tm" trademark="Java">Java</tm> client. </dd>
+</dlentry><dlentry>
+<dt>Complex expressions handling</dt>
+<dd>Text that is written in formal languages (such as programming
+languages) must obey rules that dictate the order of different tokens
+according to the appropriate syntax. If some of the tokens contain
+right-to-left (RTL) letters, the reordering that is performed for
+presentation according to the regular algorithm might cause the tokens
+to be displayed in an order different from the syntactical order.
+As a result, structured bidirectional data can be broken by visual-to-logical
+conversion, which is unaware of the data structure. Assume, for example,
+that a COBOL file on an <tm tmtype="tm" trademark="MVS">MVS</tm> system
+contains the following line of code in which the tokens are Arabic
+or Hebrew: <codeblock>STRING "token1", "token2", "token3", "token4"</codeblock>After
+visual-to-logical conversion, this row looks correct (the same as
+on the host) in any logical editor, but is stored in the opposite
+order:<codeblock>STRING "token4", "token3", "token2", "token1"</codeblock></dd>
+</dlentry></dl>
+<section><title>Solving the round-trip problem</title><p>To solve
+the round-trip problem, the bidirectional conversion algorithm is
+supplied with a special option. When this option is specified (that
+is, when the smart logical client layout is defined by a <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> user),
+bidirectional text with potential ambiguity is preceded automatically
+by LRM or RLM marks. These marks are also called <term>intra-token
+marks</term>.</p></section>
+<section><title>Solving the problem of complex expressions handling</title><p>Resolution
+of complex expressions problems is also based on use of LRM marks.
+Unfortunately, it is not possible to resolve this problem with a generic
+solution because resolution depends on particular language syntax.
+Visual-to-logical conversion for source programs that are written
+in COBOL, C/C++, PL/I, HLASM, and XML was extended to support LRM
+marks insertion, when smart logical client layout is defined by the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> user.
+Marks that are introduced by the smart logical algorithm to solve
+language-dependent syntax problems are called <term>inter-token marks</term>.</p><note othertype="Next" type="other"><xref href="czdbiditools.dita" type="concept" /></note></section>
+</conbody>
+
+</concept><?Pub *0000004079?><?tm 1670257711777 4 zSeries||Windows||MVS||Java ?>

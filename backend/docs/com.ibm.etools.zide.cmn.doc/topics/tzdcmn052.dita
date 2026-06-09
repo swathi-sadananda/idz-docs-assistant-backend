@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<task id="tzdcmn052" xml:lang="en-us">
+<title>Refreshing a folder that contains <tm trademark="z/OS" tmtype="reg">z/OS</tm>-based
+files</title>
+<?Pub Caret -2?>
+<shortdesc>Follow these steps to update the list of <tm trademark="z/OS" tmtype="reg"
+>z/OS</tm>-based data sets and members in a folder.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>z/OS-based files<indexterm>refreshing a folder</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>You must be <xref href="tzdcmn032.dita">connected to the remote system</xref> and working in
+the <wintitle>Remote System Explorer</wintitle> perspective or the <ph
+conref="zide_conrefs.dita#zide_conrefs/perspective"/> perspective.</prereq>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, expand the entry for the remote system
+of interest. </cmd></step>
+<step><cmd>Expand the entry for each folder that contains the folder of interest.</cmd></step>
+<step><cmd>Right-click the folder of interest.</cmd></step>
+<step><cmd>Click <uicontrol>Refresh</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" type="task"/>
+<link href="tzdcmn050.dita" type="task"/>
+<link href="tzdcmn049.dita" type="topic"/>
+<link href="tzdcmn051.dita" type="task"/>
+</related-links>
+</task><?Pub *0000001641?><?tm 1665694009451 2 z/OS ?>

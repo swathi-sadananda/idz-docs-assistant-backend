@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdbidiuss" xml:lang="en-us">
+<title>Setting bidirectional conversion support for <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> System Services</title>
+<?Pub Caret -2?>
+<shortdesc><tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> files that contain bidirectional data must use
+bidirectional conversion tables to perform code page conversion for correctly transferring
+bidirectional data between the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system and the
+workstation.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>bidirectional support<indexterm>z/OS UNIX System Services</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context>You can use three methods to specify these options:<ul>
+<li>You can use a bidirectional conversion table specific to the current resource.</li>
+<li>You can inherit the bidirectional settings from a parent resource.</li>
+<li>You can use manual bidirectional settings.</li>
+</ul><note>Editing a remote C/C++ resource that has bidirectional conversion options causes the
+following message to open: <msgph>You are trying to open a bidirectional file in Remote C/C++
+Editor. The z Systems LPEX Editor is the recommended editor for proper handling of bidirectional
+files.</msgph></note></context>
+<steps-unordered>
+<stepsection>Do one of the following tasks:</stepsection>
+<step><cmd>To apply a bidirectional conversion table to a <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> file or folder, do these steps:</cmd>
+<substeps>
+<substep><cmd>In the <wintitle>Remote Systems</wintitle> view, right-click a <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> file or folder under a <tm tmtype="reg" trademark="z/OS">z/OS</tm> connection. </cmd></substep>
+<substep><cmd>Click <uicontrol>Properties</uicontrol>.</cmd><stepresult>The
+<wintitle>Properties</wintitle> window opens.</stepresult></substep>
+<substep><cmd>Click <uicontrol>Bidirectional Settings</uicontrol> in the list on the
+left.</cmd></substep>
+<substep><cmd>Select the <uicontrol>Use bidirectional conversion</uicontrol> checkbox.
+</cmd><stepresult>This option enables the remaining fields on the window. If the current resource
+cannot inherit bidirectional properties from a parent (because, for example, the parent resource
+does not use bidirectional conversion) the <uicontrol>Resource inherits attributes from a
+parent</uicontrol> button remains disabled.</stepresult></substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol> to apply the changes.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>To inherit bidirectional settings, do these steps: </cmd>
+<substeps>
+<substep><cmd>Click <uicontrol>Resource inherits attributes from a
+parent</uicontrol>.</cmd></substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol> to apply the changes.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>To specify bidirectional settings for the resource, click <uicontrol>Resource has its own
+set of bidirectional attributes</uicontrol>.</cmd><info> You can specify bidirectional attributes by
+using a bidirectional conversion table or by using manual settings:</info><choices>
+<choice>To use a bidirectional conversion table, do these steps: <ol>
+<li>Click <uicontrol>Bidirectional Conversion Table</uicontrol>. This option enables the field and
+the <uicontrol>Browse</uicontrol> and <uicontrol>New</uicontrol> buttons.</li>
+<li>Enter the name of a bidirectional conversion file you created, or click
+<uicontrol>Browse</uicontrol> to look for and select a conversion file or <uicontrol>New</uicontrol>
+to create a table. Click <uicontrol>OK</uicontrol> to apply the changes.</li>
+</ol></choice>
+<choice>To use manual bidirectional settings, click <uicontrol>Manual Settings</uicontrol>. Click
+<uicontrol>OK</uicontrol> to apply the changes.</choice>
+</choices></step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link href="czdbidiinh.dita" type="concept" />
+</related-links>
+
+</task><?Pub *0000004437?><?tm 1670257713217 10 z/OS||UNIX ?>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdefcobol" xml:lang="en-us">
+<title>COBOL snippet for generating error feedback XML file</title><?Pub
+Caret -2?>
+<shortdesc>The following COBOL program snippet demonstrates a few
+concepts that you might find helpful when you create your own preprocessor.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>COBOL snippet</indexterm><indexterm>generating
+an XML file</indexterm></indexterm><indexterm>XML file for error feedback<indexterm>generating</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The snippet sets up file variables for the input file
+for the preprocessor. SYSIN is used to as the input variable. By default,
+the SYSIN variable is set when the JCL for invocation is generated.
+The file variables for SYSXMLSD and SYSOUT are declared as well.</p><p>The
+PERFORM Extract-DDDSN statement in the snippet performs a paragraph
+that calls DYNQUERY. The output of DYNQUERY is similar to the output
+of <xref format="dita" href="rzdefc.dita" scope="local" type="reference">ZFLDATA.</xref> 
+The processing is different, and it is written in Assembler. If your
+site does not have a C compiler, but you have <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/HLASM_fam"/>,
+you might decide to call DYNQUERY from your preprocessor to retrieve
+the data set name from a DD name.</p><p>The PERFORM Write-xml-line
+statement performs a paragraph that writes the lines of an XML file
+in UTF-8. If you write your XML file in UTF-8, make sure to include
+ERRWDZ as one of the qualifiers in the <uicontrol>Data Set Qualifier
+for Compiler Errors</uicontrol> entry field when you add a step for
+your preprocessor in the Property Group Editor.</p><codeblock>
+       Identification DIVISION.
+         Program-ID. MPREPROC.
+       Environment DIVISION.
+        Input-output section.
+         File-control.
+           Select in-file
+               Assign to SYSIN
+      *         Organization is line sequential
+               File status is in-file-status.
+           Select out-file
+               Assign to outfile
+      *         Organization is line sequential
+               File status is out-file-status.
+           Select xml-file
+               Assign to SYSXMLSD
+      *         Organization is line sequential
+               File status is xml-file-status.
+       Data Division.
+        File section.
+        Fd in-file
+             label records are standard
+      *       recording mode is f
+             record contains 80 characters
+             block contains 0 records
+             data record is Input-data.
+        01 Input-data pic x(80).
+        Fd out-file
+             label records are standard
+      *       recording mode is f
+             record contains 80 characters
+             block contains 0 records
+             data record is output-data.
+        01 output-data pic x(80).
+        Fd xml-file
+             label records are standard
+      *       recording mode is v
+      *      16383 - word for storing the record length
+             record varying from 1 to 16379 characters
+               DEPENDING ON xml-length
+             block contains 0 records
+             data record is xml-data.
+        01 xml-data pic x(16379).
+      *
+      *  To run this, use a ddname
+      *  //OUTFILE DD DSN=[DATASET](MEMBER),DISP=SHR
+      *
+       Working-Storage Section.
+        01 Source-name pic x(54).
+        01 Target-name pic x(54).
+        01 Reverse-data pic x(16379).
+        01 Temp-data pic x(16379).
+        01 Nat-data pic n(16379) USAGE National.
+        01 Num-chars pic 99999.
+        01 xml-length pic 9(5).
+        01 Program-flags.
+          05 in-file-status pic xx value "00".
+            88 inputfile-success value "00".
+          05 out-file-status pic xx value "00".
+            88 outputfile-success value "00".
+          05 xml-file-status pic xx value "00".
+            88 xmlfile-success value "00".
+          05 In-file-count pic 999.
+          05 Out-file-count pic 999.
+          05 Input-eof pic x value " ".
+          05 line-cursor pic 99999.
+          05 line-cursor-end pic 99999.
+
+          =================
+          =================
+          =================
+        01 ddname-routine-data.
+          05 ddname pic x(8).
+          05 dsn pic x(54).
+          05 spacestart pic 99.
+          05 spaceend pic 99.
+          =================
+          =================
+          =================
+       Procedure DIVISION .
+        mainline SECTION.
+          =================
+          =================
+          =================
+           PERFORM Extract-dsnnames
+      * Open the input and output files
+           OPEN INPUT in-file
+           if not inputfile-success
+             display 'Error opening input file ' in-file-status
+             stop run
+           end-if
+           OPEN OUTPUT out-file
+           if not outputfile-success
+             display 'Error opening output file ' out-file-status
+             stop run
+           end-if
+           OPEN OUTPUT xml-file
+           if not xmlfile-success
+             display 'Error opening xml file ' xml-file-status
+             stop run
+           end-if
+          =================
+          =================
+          =================
+           Perform until Input-eof IS EQUAL TO "1"
+          =================
+          =================
+          =================
+               READ in-file into Temp-data at end move "1" to Input-eof
+               END-READ
+               IF Input-eof IS EQUAL TO "0"
+                 PERFORM Process-line
+               End-IF
+           End-perform.
+          =================
+          =================
+          =================
+           PERFORM Generate-xml-end-package
+           goback
+           .
+      * Output: Source-name, Target-name
+        Extract-dsnnames.
+           MOVE SPACES to ddname
+           MOVE "SYSIN" to ddname
+           PERFORM Extract-DDDSN
+           MOVE SPACES to Source-name
+           MOVE dsn to Source-name
+           MOVE SPACES to ddname
+           MOVE "OUTFILE" to ddname
+           PERFORM Extract-DDDSN
+           MOVE SPACES to Target-name
+           MOVE dsn to Target-name
+           .
+      * Input: DDNAME
+      * Output: DSN
+        Extract-DDDSN.
+           MOVE SPACES TO dsn
+           CALL "DYNQUERY" USING DDNAME, DSN.
+           IF RETURN-CODE > 0 THEN
+             DISPLAY "Error retrieving DSN for DDNAME " DDNAME
+             DISPLAY "Return Code = " RETURN-CODE
+             EVALUATE RETURN-CODE
+               WHEN 1080
+                 DISPLAY "DD for " DDNAME " was not found"
+                 STOP RUN
+               WHEN OTHER
+                 STOP RUN
+             END-EVALUATE
+           END-IF
+           PERFORM Remove-DSN-Spaces
+          =================
+          =================
+          =================
+        Generate-xml-end-package.
+           MOVE SPACES TO Temp-data
+           MOVE end-package TO Temp-data
+           PERFORM Write-xml-line
+          =================
+          =================
+          =================
+
+
+        Write-xml-line.
+      *    Assume text to be written to xml-file is in Temp-data
+      *    Convert text to UTF-8 text
+           Move Temp-data to Nat-data
+           Move Function Display-of(Nat-data, 01208)
+             to xml-data
+      *    Calculate length of UTF-8 text
+           Move Function Reverse(Temp-data) to Reverse-data
+           Move 0 to Num-chars
+           INSPECT Function Reverse(Temp-data)
+             TALLYING Num-chars FOR LEADING SPACES
+           Compute Num-chars = Function Length(Temp-data) - Num-chars
+           Compute xml-length = Function LENGTH(
+             Function Display-of(Nat-data(1:Num-chars),
+                                 01208)
+           )
+           WRITE xml-data
+           .
+       End program MPREPROC.
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="rzdefschema.dita" type="reference"></link>
+<link href="rzdefassembler.dita" type="reference"></link>
+<link href="tzdefclient.dita" type="task"></link>
+<link href="czderrorfeedback.dita" type="concept"></link>
+</related-links>
+<?tm 1435190823 0?>
+</reference>
+<?Pub *0000008347?>

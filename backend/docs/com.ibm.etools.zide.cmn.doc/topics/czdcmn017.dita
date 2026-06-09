@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><!--Container topic--><concept id="czdcmn017" xml:lang="en-us">
+<title><tm tmtype="reg" trademark="z/OS">z/OS</tm> projects</title><?Pub Caret -2?>
+<shortdesc>A <tm tmtype="reg" trademark="z/OS">z/OS</tm> project allows
+a set of resources (contained in <tm tmtype="tm" trademark="MVS">MVS</tm> or <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> System
+Services subprojects) to be gathered and handled as a unit. </shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>z/OS projects<indexterm>defining</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody>
+<p><tm tmtype="reg" trademark="z/OS">z/OS</tm> projects serve primarily as a tool for organizing and
+working with multiple load modules. A <tm tmtype="reg" trademark="z/OS">z/OS</tm> project is
+essentially a folder that contains one or more related subprojects.</p>
+</conbody>
+<related-links>
+<link href="czdcmn021.dita" type="concept" />
+<link href="tzdcmn043.dita" type="task" />
+<link href="tzdshareproj.dita" type="task" />
+<link href="tzdrenproj.dita" type="task" />
+</related-links>
+
+</concept><?Pub *0000001560?><?tm 1665693998994 7 z/OS||UNIX||MVS ?>

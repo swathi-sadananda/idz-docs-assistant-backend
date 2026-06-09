@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbidicfg" xml:lang="en-us">
+<title>Configuring bidirectional support</title>
+<?Pub Caret -2?>
+<shortdesc>You can configure <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> for bidirectional
+support.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>bidirectional support<indexterm>configuring</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>bidirectional support<indexterm>z Systems LPEX editor</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<steps>
+<step><cmd>To configure the product:</cmd><substeps>
+<substep><cmd>On the <wintitle>Preferences</wintitle> window, select <uicontrol>Bidirectional
+Development</uicontrol>.</cmd></substep>
+<substep><cmd>Choose one of these options:</cmd></substep>
+</substeps><choices>
+<choice>Select the <uicontrol>Search and Replace bidirectional text in local files</uicontrol> check
+box to replace the standard Eclipse <wintitle>File Search</wintitle> window with its bidirectional
+counterpart that supports smart logical and visual layouts.</choice>
+<choice>Select the <uicontrol>Compare local files, containing bidirectional text</uicontrol> check
+box to replace the <wintitle>Text Compare</wintitle> window that is used for comparison of local and
+remote files with Visual Text Compare, which supports smart logical file comparison.</choice>
+</choices></step>
+<step><cmd>To configure smart logical data editing in the <tm tmtype="reg" trademark="z Systems">z
+Systems</tm> LPEX editor:</cmd><substeps>
+<substep><cmd>On the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>General</uicontrol>
+<uicontrol>Editors</uicontrol>
+<uicontrol>File Association</uicontrol>
+</menucascade>.</cmd></substep>
+<substep><cmd>From the list of file types, click <uicontrol>*.*</uicontrol> or select individual
+file types that include bidirectional data.</cmd></substep>
+<substep><cmd>In the <wintitle>Associated Editors</wintitle> pane, click
+<uicontrol>Add</uicontrol>.</cmd></substep>
+<substep><cmd>On the <wintitle>Editor Selection</wintitle> window, click <uicontrol>Internal
+Editors</uicontrol>, select <uicontrol>z Systems LPEX Editor</uicontrol>, and then click
+<uicontrol>OK</uicontrol>.</cmd></substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol> on the <wintitle>Preferences</wintitle> window to save
+the configuration changes.</cmd></substep>
+</substeps></step>
+</steps>
+<postreq><xref href="tzdbidiedit.dita" type="task"/></postreq>
+</taskbody>
+<?tm 1435190799 2?>
+</task>
+<?Pub *0000003161?>

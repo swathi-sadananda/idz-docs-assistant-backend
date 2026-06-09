@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdp2hman" xml:lang="en-us">
+<title>Synchronizing manually</title>
+<shortdesc>Follow these steps to manually synchronize a local project
+or file with a remote system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>synchronizing manually</indexterm></keywords>
+<keywords><indexterm>remote synchronization<indexterm>manual</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><note type="attention">The remote synchronization function
+is deprecated.</note></context><?Pub Caret -1?>
+<steps>
+<step><cmd>Right-click the project or file.</cmd></step>
+<step><cmd>Select <menucascade><uicontrol>Team</uicontrol><uicontrol>Synchronize
+with remote</uicontrol></menucascade>.</cmd></step>
+</steps>
+<result><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> checks
+for changes in the selected resources and displays the <wintitle>Synchronize</wintitle> perspective.
+The <wintitle>Synchronize</wintitle> perspective displays the resources
+in which changes occurred and indicates the direction in which the
+change must be synchronized. <p>In the <wintitle>Synchronize</wintitle> perspective,
+there are four possible states, as shown in the following table. You
+can compare resource content between the local workspace copy and
+the remote copy, or simply push the change out to the appropriate
+location. <table><title>Possible states for resources in which changes
+occurred</title>
+<tgroup cols="3"><colspec colname="col1" colwidth="29*"/><colspec
+colname="col2" colwidth="133*"/><colspec colname="col3" colwidth="134*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Symbol</entry>
+<entry colname="col2">Meaning</entry>
+<entry colname="col3">Possible actions</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><image href="../images/outgoing.png"
+placement="inline"><alt>Gray arrow that points right</alt></image></entry>
+<entry colname="col2">An outbound change. This outbound change is
+a change that occurred only in the local workspace. </entry>
+<entry colname="col3"><ul>
+<li>Copy the local file to the host by using the <uicontrol>Copy changes
+to host</uicontrol> action. </li>
+<li>Replace the local file by using the <uicontrol>Override changes
+to local</uicontrol> action.</li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1"><image href="../images/incoming.png"
+placement="inline"><alt>Blue arrow that points left</alt></image></entry>
+<entry colname="col2">An incoming change. An incoming change indicates
+that a change occurred only on the host. </entry>
+<entry colname="col3"><ul>
+<li>Copy the remote resource to the local project by using the <uicontrol>Copy
+changes to local</uicontrol> action. </li>
+<li>Replace the remote resource by using the <uicontrol>Override changes
+on host</uicontrol> action.</li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1"><image href="../images/conflicting.png"
+placement="inline"><alt>Red arrow that points left and right</alt>
+</image></entry>
+<entry colname="col2">Conflicting changes. Conflicting changes indicate
+that changes were made both to the remote version and the local copy.
+The conflict must be resolved to continue. </entry>
+<entry colname="col3">You can resolve the conflict by taking the following
+actions:<ul>
+<li>Indicating that you inspected the conflicts (usually by using
+the compare editor) and resolved any differences by using the <uicontrol>Mark
+as Merged</uicontrol> action.</li>
+<li>Replacing the local copy with remote contents by using the <uicontrol>Override
+changes to local</uicontrol> action.</li>
+<li>Replacing the remote copy with the local contents by using the <uicontrol>Override
+changes on host</uicontrol> action.</li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1"><image href="../images/newlymapped.png"
+placement="inline"><alt>Red arrow that points left and right with
+a plus sign</alt></image></entry>
+<entry colname="col2">An item that is newly mapped and never inspected
+before. </entry>
+<entry colname="col3">This item is considered a conflict and must
+be resolved as a conflicted resource. </entry>
+</row>
+</tbody>
+</tgroup>
+</table></p></result>
+</taskbody>
+<?tm 1337269572 0?>
+</task>
+<?Pub *0000004405?>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdgdg" rev="751" xml:lang="en-us">
+<title>Viewing and working with generation data groups</title><?Pub
+Caret -2?>
+<shortdesc>You can display and work with generation data groups in
+the <wintitle>Remote Systems</wintitle> or <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> views.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>generation data group</indexterm><indexterm>generation
+data set</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+with generation data group resources.</prereq>
+<context>A <term>generation data group</term> (GDG) is a group of
+related data sets. Each data set within a GDG is called a <term>generation
+data set</term> (GDS) or generation. A <term>GDG base</term> is a
+catalog entry for a GDG, and represents a GDG. The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> GDG
+support allows for the display and manipulation of GDGs and GDSs in
+the <wintitle>Remote Systems</wintitle> view. The <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> and <wintitle>Remote
+z/OS Search</wintitle> views allow for displaying and working with
+GDSs. <p>All functions available for data sets are available for GDSs,
+except the following functions:<dl><dlentry>
+<dt>Add a GDG to a subproject</dt>
+<dd>You can add a GDS in a GDG to a subproject and perform any operations
+available for a data set, but you cannot add a GDG as a group to a
+subproject.</dd>
+</dlentry><dlentry>
+<dt>Search with a GDG </dt>
+<dd>The <uicontrol>Search</uicontrol> action is disabled for GDGs
+so that you cannot search in a GDG. Search results do not include
+GDGs. Search results do include GDSs, and you can perform any operation
+available for a data set.</dd>
+</dlentry><dlentry>
+<dt>Copy a GDG</dt>
+<dd>The <uicontrol>Copy</uicontrol> action is disabled for GDGs. You
+cannot copy an entire GDG.</dd>
+</dlentry><dlentry>
+<dt>Paste to a GDG</dt>
+<dd>The <uicontrol>Paste</uicontrol> action is disabled for GDGs.
+You cannot paste a data set into a GDG.</dd>
+</dlentry><dlentry>
+<dt>Rename a GDG</dt>
+<dd>The <uicontrol>Rename</uicontrol> action is disabled for GDGs.
+You cannot rename an entire GDG.</dd>
+</dlentry></dl></p></context>
+<steps-unordered>
+<stepsection>For more information about displaying and working with
+GDGs and GDSs, see the following topics.</stepsection>
+<step><cmd><xref href="tzdgdgview.dita" type="task"></xref></cmd></step>
+<step><cmd><xref href="tzdgdgdef.dita" type="task"></xref></cmd></step>
+<step><cmd><xref href="tzdgdsalloc.dita" type="task"></xref></cmd>
+</step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link format="html"
+href="https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.idad400/ch14.htm"
+scope="external" type="reference">
+<linktext>Processing Generation Data Groups</linktext>
+</link>
+</related-links>
+<?tm 1435190815 1?>
+</task>
+<?Pub *0000003250?>

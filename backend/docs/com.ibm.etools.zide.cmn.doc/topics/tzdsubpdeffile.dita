@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsubpdeffile" xml:lang="en-us">
+<title>Creating a subproject definition file</title><?Pub Caret -2?>
+<shortdesc>Subproject definition files define the set of resources
+that are required to build a single load module and are in the root
+project definition folder or one of its subfolders.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>subproject definition
+file</indexterm></indexterm><indexterm>subproject definition file</indexterm>
+<indexterm>configuring host-based projects<indexterm>subproject definition
+file</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Complete the tasks in <xref href="tzdprojdeffile.dita"
+type="task"></xref>.</prereq>
+<context>Subproject definition files must be encoded in UTF-8 and
+have an extension of <filepath>*.hbpsd</filepath>. They are XML files
+that contain the following tags:<codeblock>&lt;SUBPROJECT-STRUCTURE>
+  &lt;WSED-VERSION>7.0.0.0&lt;/WSED-VERSION>
+  &lt;SUBPROJECT>
+    &lt;SUBPROJECT-NAME><varname>mySubproject</varname>&lt;/SUBPROJECT-NAME>
+    &lt;SUBPROJECT-NATURE-LIST>
+      &lt;SUBPROJECT-NATURE>com.ibm.ftt.projects.zos.zosnature&lt;/SUBPROJECT-NATURE>
+    &lt;/SUBPROJECT-NATURE-LIST>
+    &lt;SUBPROJECT-PROPERTIES-LOCATION><varname>pathName</varname>&lt;/SUBPROJECT-PROPERTIES-LOCATION>
+    &lt;SUBPROJECT-TYPE>zos-subproject&lt;/SUBPROJECT-TYPE>
+    &lt;FOLDER-LIST>
+      &lt;FOLDER>
+        &lt;FOLDER-NAME><varname>hlq.name.type</varname>&lt;/FOLDER-NAME>
+        &lt;FOLDER-TYPE>pds&lt;/FOLDER-TYPE>
+        &lt;FOLDER-STATE>
+          &lt;STATE-IS-OFFLINE>false&lt;/STATE-IS-OFFLINE>
+          &lt;PHYSICAL-FOLDER>
+           &lt;FOLDER-NAME><varname>hlq.name.type</varname>&lt;/FOLDER-NAME>
+            &lt;FOLDER-PHYSICAL-PATH><varname>hlq.name.type</varname>&lt;/FOLDER-PHYSICAL-PATH>
+            &lt;FOLDER-TYPE>pds&lt;/FOLDER-TYPE>
+          &lt;/PHYSICAL-FOLDER>
+        &lt;/FOLDER-STATE>
+      &lt;/FOLDER>
+    &lt;/FOLDER-LIST>
+    &lt;FILE-LIST>
+      &lt;FILE>
+        &lt;FILE-NAME><varname>name.ext</varname>&lt;/FILE-NAME>
+        &lt;FILE-EXTENSION><varname>ext</varname>&lt;/FILE-EXTENSION>
+        &lt;FILE-NAME-NO-ENTENSION><varname>name</varname>&lt;/FILE-NAME-NO-EXTENSION>
+        &lt;FILE-TYPE>pds | sequential&lt;/FILE-TYPE>
+        &lt;FILE-STATE>
+          &lt;STATE-IS-OFFLINE>false&lt;/STATE-IS-OFFLINE>
+          &lt;PHYSICAL-FILE>
+            &lt;FILE-NAME><varname>name</varname>&lt;/FILE-NAME>
+            &lt;FILE-PHYSICAL-PATH><varname>hlq.name.type/name.ext</varname>&lt;/FILE-PHYSICAL-PATH>
+            &lt;FILE-TYPE>pds-member | sequential&lt;/FILE-TYPE>
+          &lt;/PHYSICAL-FILE>
+        &lt;/FILE-STATE>
+      &lt;/FILE>
+    &lt;/FILE-LIST>
+  &lt;/SUBPROJECT>
+&lt;/SUBPROJECT-STRUCTURE>
+</codeblock>The subproject definition file contains three kinds of
+tags:<ul>
+<li>Subproject tags define parameters for the subproject itself.</li>
+<li>Folder tags define partitioned data sets contained in the subproject.</li>
+<li>File tags define partitioned data set members and sequential data
+sets contained in the subproject.</li>
+</ul><note>The following list defines tags for which you must set
+specific required or optional values. For a complete description of
+the subproject definition tags, see the subproject definition schema
+under Related References.</note><dl><dlentry>
+<dt>&lt;WSED-VERSION></dt>
+<dd>The version of the schema syntax. This tag is required and must
+be 7.0.0.0 as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT-NAME></dt>
+<dd>Is required and specifies the name of the subproject, such as
+MYSUB.</dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT-NATURE></dt>
+<dd>Is required and must be com.ibm.ftt.projects.zos.zosnature, as
+shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT-PROPERTIES-LOCATION></dt>
+<dd>Is optional and points to the subproject properties definition
+file for this subproject. Specify a path name relative to the PROJECT-HOME
+directory. If this tag is included, the properties file it refers
+to overrides the default properties defined for the system connection.
+If this tag is omitted, the default properties for the system are
+used. Default system properties are set by selecting the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files node for a system in the <wintitle>Remote
+Systems</wintitle> view and clicking Properties from the menu. </dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT-TYPE></dt>
+<dd>Is required and must be <keyword>zos-subproject</keyword>, as
+shown. </dd>
+</dlentry><dlentry>
+<dt>&lt;FOLDER-LIST></dt>
+<dd>Contains one or more &lt;FOLDER> tags, which define partitioned
+data sets in the subproject:<dl><dlentry>
+<dt>&lt;FOLDER-NAME></dt>
+<dd>Is required and must specify the fully qualified name of a partitioned
+data set on the remote system, such as <filepath>LONGWEL.COBOL.SOURCE</filepath>.<note>For
+any file name in the subproject definition file, you can specify the
+substitution variable <codeph>&lt;;HLQ></codeph> for the high-level
+qualifier. This variable is replaced by the user's user ID at connect
+time. By using the <codeph>&lt;HLQ></codeph> substitution variable
+in the file references of a subproject, a single subproject can contain
+a different set of files according to which project instance file
+refers to its parent project. For an example of how to use this substitution
+variable in a subproject definition file, see <xref format="dita"
+href="tzdsubpdeffile.dita#tzdsubpdeffile/SubpDef" scope="local"
+type="fig"></xref>. </note></dd>
+</dlentry><dlentry>
+<dt>&lt;FOLDER-TYPE></dt>
+<dd> Is required and must be <keyword>pds</keyword>, as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;FOLDER-STATE></dt>
+<dd><dl><dlentry>
+<dt>&lt;STATE-IS-OFFLINE></dt>
+<dd>Is required and must be false, as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;PHYSICAL-FOLDER></dt>
+<dd><dl><dlentry>
+<dt>&lt;FOLDER-NAME></dt>
+<dd>Is required and specifies the fully qualified name of the partitioned
+data set on the remote system, such as <filepath>LONGWEL.COBOL.SOURCE</filepath>.</dd>
+</dlentry><dlentry>
+<dt>&lt;FOLDER-PHYSICAL-PATH></dt>
+<dd>Is required and specifies the fully qualified name of the partitioned
+data set on the remote system, such as <filepath>LONGWEL.COBOL.SOURCE</filepath>.</dd>
+</dlentry><dlentry>
+<dt>&lt;FOLDER-TYPE></dt>
+<dd>Is required and must be <keyword>pds</keyword>, as shown. </dd>
+</dlentry></dl></dd>
+</dlentry></dl></dd>
+</dlentry></dl></dd>
+</dlentry><dlentry>
+<dt>&lt;FILE-LIST></dt>
+<dd>Contains one or more &lt;FILE> tags, which define partitioned
+data set members or sequential data sets in the subproject:<dl><dlentry>
+<dt>&lt;FILE-NAME></dt>
+<dd>Is required and specifies the fully qualified name of the file
+resource on the remote system, including the mapped extension, such
+as <filepath>A.B.COBOL/HELLO.cbl</filepath> for a partitioned data
+set member on <tm tmtype="tm" trademark="MVS">MVS</tm> where <filepath>A.B.COBOL</filepath> is
+the partitioned data set name and <filepath>HELLO</filepath> is the
+member name. </dd>
+</dlentry><dlentry>
+<dt>&lt;FILE-EXTENSION></dt>
+<dd>Is required and specifies the extension that is defined by the
+file system mapping. <filepath>**COBOL</filepath> data sets, for example,
+have a <filepath>.cbl</filepath> extension. </dd>
+</dlentry><dlentry>
+<dt>&lt;FILE-NAME-NO-EXTENSION></dt>
+<dd>Is required and specifies the fully qualified file name without
+the extension, such as <filepath>HELLO</filepath>.</dd>
+</dlentry><dlentry>
+<dt> &lt;FILE-TYPE></dt>
+<dd>Is required and must be either <keyword>pds-member</keyword> or <keyword>sequential</keyword>,
+as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;FILE-STATE></dt>
+<dd><dl><dlentry>
+<dt>&lt;STATE-IS-OFFLINE></dt>
+<dd>Is required and must be false, as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;PHYSICAL-FILE></dt>
+<dd><dl><dlentry>
+<dt>&lt;FILE-NAME></dt>
+<dd>Is required and specifies the file name, such as <filepath>MYPGM.cbl</filepath>.</dd>
+</dlentry><dlentry>
+<dt> &lt;FILE-PHYSICAL-PATH></dt>
+<dd>Is required and specifies the fully qualified file path, such
+as <filepath>LONGWEL.TEST.COBOL/MYPGM.cbl</filepath>.</dd>
+</dlentry><dlentry>
+<dt>&lt;FILE-TYPE></dt>
+<dd>Is required and must be either <keyword>pds-member</keyword> or <keyword>sequential</keyword>,
+as shown.</dd>
+</dlentry></dl></dd>
+</dlentry></dl></dd>
+</dlentry></dl></dd>
+</dlentry></dl></context>
+<example>The following figure illustrates how to set up a subproject
+definition file:<ul>
+<li>The subproject definition file in the editor shows that the path
+to the project properties file is set to marciaaassemblerdebug.hbppr
+and the &lt;HLQ> substitution variable is used when you specify the
+first partitioned data set that the subproject contains. </li>
+<li>To the right of the editor, the <wintitle>Remote Systems</wintitle> view
+shows the subproject properties file referred to by the subproject
+definition file.</li>
+<li>To the left of the editor, the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> view shows that
+the HLQ of the partitioned data set referred to by the subproject
+definition file is resolved to the user ID used to connect to the
+remote system.</li>
+</ul><fig id="SubpDef"><title>Sample subproject definition</title>
+<image href="../images/SubpDef.gif" placement="break"><alt></alt>
+</image>
+</fig>  </example>
+<postreq><xref href="tzdsubppropfile.dita" type="task"></xref></postreq>
+</taskbody>
+<related-links>
+<link href="rzdsubpdefschema.dita" type="reference"></link>
+</related-links>
+<?tm 1435190795 2?>
+</task>
+<?Pub *0000009687?>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdgdgdef" rev="751" xml:lang="en-us">
+<title>Defining a generation data group</title><?Pub Caret -2?>
+<shortdesc>You can define a new generation data group (GDG) from the <wintitle>Remote
+Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>generation data group<indexterm>defining</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system.</prereq>
+<steps>
+<stepsection>To define a new generation data group in the <wintitle>Remote
+Systems</wintitle> view:</stepsection>
+<step><cmd>Select <uicontrol>MVS Files</uicontrol> and then click <menucascade>
+<uicontrol>New</uicontrol><uicontrol>Define Generation Data Group</uicontrol>
+</menucascade> on the menu.</cmd><stepresult>The <wintitle>Define
+Generation Data Group</wintitle> window opens.</stepresult></step>
+<step><cmd>Complete the fields on this window as follows:</cmd><info><dl>
+<dlentry>
+<dt><uicontrol>Connection Name</uicontrol></dt>
+<dd>Shows the name of the remote system to which you are connected.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Generation Data Group Name</uicontrol></dt>
+<dd rev="803">Specify a name for the GDG. You can select or type a
+high-level qualifier in the list. Type the data set name in the entry
+field.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Limit</uicontrol></dt>
+<dd>Specify the maximum number, 1 - 255, of generation data sets (GDS)
+that can be associated with the GDG.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Empty</uicontrol></dt>
+<dd>Specifies the action to be taken for the catalog entries for the
+GDG base when the number of generation data sets in the GDG base is
+equal to the limit value and another GDS is to be cataloged. The disposition
+of the actual data sets uncataloged from the GDG base is determined
+by the setting of the <uicontrol>Scratch</uicontrol> parameter for
+the GDG base. If the <uicontrol>Empty</uicontrol> option is selected,
+all GDS entries are removed from GDG base when you create a new GDS
+causes the GDG limit to be exceeded. Otherwise, only the oldest GDS
+entry is removed.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Scratch</uicontrol></dt>
+<dd>Specifies the action to be taken for a GDS when the data set is
+uncataloged from the GDG base as a result of empty processing. If
+the flag is selected, the GDS is deleted from all disks it occupies
+when uncataloged from the GDG base, regardless of whether it is SMS-managed
+or not. Otherwise, if the data set is a non-SMS managed data set it
+is not removed from any of the volumes it occupies, and if the data
+set is an SMS-managed data set it is recataloged as a non-VSAM data
+set, and is no longer associated with the GDG base. It is not deleted
+from any of the SMS-managed volumes it occupies.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Owner</uicontrol></dt>
+<dd>Identify the generation data set's owner. If this parameter is
+not specified, the user ID is the default owner ID.    </dd>
+</dlentry><dlentry>
+<dt><uicontrol>Days</uicontrol></dt>
+<dd>Specify the retention period for the generation data group that
+is being defined. Click <uicontrol>for</uicontrol> to define the number
+of days to retain the GDG up to 9999. Click <uicontrol>to</uicontrol> to
+define the data until which to retain the GDG in the form of <varname>[yyyy/]mm/dd.</varname>.
+If a retention period is not specified, the generation data group
+can be deleted at any time.</dd>
+</dlentry></dl>              </info></step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to define the new generation
+data group.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdgdg.dita" type="task"></link>
+<link href="tzdgdgview.dita" type="task"></link>
+<link href="tzdgdsalloc.dita" type="task"></link>
+</related-links>
+<?tm 1435190815 1?>
+</task>
+<?Pub *0000004038?>

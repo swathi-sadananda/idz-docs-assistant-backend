@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn115" xml:lang="en-us">
+<title>Removing user variables and variable values</title>
+<shortdesc>The windows for specifying user variables and variable
+values for JCL procedures allow for adding, editing, and removing
+user variables and parameters. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>user variables<indexterm>removing</indexterm></indexterm>
+<indexterm>variable values<indexterm>removing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>The same process can be used to remove user variables and
+values for JCL procedures on any of the <wintitle>JCL Substitution</wintitle> pages.
+The following process shows how to remove user variables and variable
+values for a COBOL program.</context>
+<steps>
+<step><cmd>To remove a user variable and variable value for a JCL
+procedure that is used with a COBOL program, open the <wintitle>COBOL
+Settings</wintitle> page of the property group editor. </cmd></step>
+<step><cmd>In the left pane of the window, select <uicontrol>JCL Substitution</uicontrol>.</cmd>
+</step>
+<step><cmd>Select the variable name and value that you want to remove.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Remove</uicontrol>.</cmd><stepresult>A
+confirmation window opens.</stepresult></step>
+<step><cmd>Click <uicontrol>Yes</uicontrol> to remove the variable
+name and value. </cmd><stepresult>The variable name and value are
+removed from the table. </stepresult></step>
+<step><cmd>Repeat these steps as necessary to remove any other variables
+and values you no longer want.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn113.dita" type="task"></link>
+<link href="tzdcmn114.dita" type="task"></link>
+</related-links>
+</task>
+<?Pub *0000001937?>

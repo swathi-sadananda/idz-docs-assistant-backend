@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn119" xml:lang="en-us">
+<title>Viewing the return code for a job</title>
+<shortdesc>You can see the return code for a job that completed.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>job return code<indexterm>viewing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>Select the job output that you want to view and then select <uicontrol>Open</uicontrol>. </cmd>
+<info><note>Since the output is displayed in the editor, you can view
+multiple sessions of job output at the same time.</note></info>
+<stepresult>The output is displayed. </stepresult></step>
+<step><cmd>Select <uicontrol>Find</uicontrol>.</cmd><stepresult>The <wintitle>Find</wintitle> window
+opens.</stepresult></step>
+<step><cmd>To look at the return code, specify the term to be searched
+as <userinput>RC=</userinput> and click <uicontrol>OK</uicontrol>.</cmd>
+<info><note>If the return code is nonzero, you might want to examine
+other parts of the job output to determine the problem.</note></info>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn117.dita" type="task"></link>
+<link href="tzdcmn118.dita" type="task"></link>
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference"/>
+</related-links>
+</task>
+<?Pub *0000001513?>

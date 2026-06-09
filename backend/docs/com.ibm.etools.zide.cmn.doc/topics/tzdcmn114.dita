@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn114" xml:lang="en-us">
+<title>Editing user variables and variable values</title>
+<shortdesc>The windows for specifying user variables and variable
+values for JCL procedures allow for editing, adding, and removing
+user variables and values. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>user variables<indexterm>editing</indexterm></indexterm>
+<indexterm>variable values<indexterm>editing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>The same process can be used to edit user variables and values
+for JCL procedures on any of the <uicontrol>JCL Substitution</uicontrol> pages.
+The following process shows how to edit user variables and variable
+values for a COBOL program.</context>
+<steps>
+<step><cmd>To edit a user variable and parameter value for a JCL procedure
+that is used with a COBOL program, open the <uicontrol>COBOL Settings</uicontrol> page
+of the property group editor. </cmd></step>
+<step><cmd>In the left pane of the window, select <uicontrol>JCL Substitution</uicontrol>.</cmd>
+</step>
+<step><cmd>Select the entry that you want to edit in the <uicontrol>User
+Variables</uicontrol>table.</cmd></step>
+<step><cmd>Click <uicontrol>Edit</uicontrol>. </cmd><stepresult>The <wintitle>Edit
+User Variable</wintitle> window opens.</stepresult></step>
+<step><cmd>Change the variable name in the <uicontrol>Variable name</uicontrol> field.</cmd>
+</step>
+<step><cmd>Change the value of the variable in the <uicontrol>Variable
+value</uicontrol> field.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>. </cmd><stepresult>The
+variable name and value are changed in the table. </stepresult></step>
+<step><cmd>Repeat steps 1-7 as necessary to edit the rest of your
+variables and values.</cmd></step>
+</steps>
+</taskbody>
+</task>
+<?Pub *0000002094?>

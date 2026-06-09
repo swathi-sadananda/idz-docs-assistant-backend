@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdcmn121" xml:lang="en-us">
+<title>Adding <tm tmtype="reg" trademark="CICS">CICS</tm> translation
+support to COBOL and PL/I applications</title><?Pub Caret -2?>
+<shortdesc>You can embed <codeph>EXEC CICS</codeph> statements into
+COBOL or PL/I code if you have a <tm tmtype="reg" trademark="CICS">CICS</tm> translator
+available. If your workbench is properly configured, these <codeph>EXEC
+CICS</codeph> statements are automatically expanded during syntax
+checks and compilations by your <tm tmtype="reg" trademark="CICS">CICS</tm> translator.</shortdesc>
+<conbody/>
+<related-links>
+<link href="rzdembed.dita" type="reference"></link>
+</related-links>
+<?tm 1435190819 7?>
+</concept>
+<?Pub *0000002714?>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map xml:lang="en-US">
+<title>Organizing source files with projects and subprojects</title>
+<!--Local projects-->
+<topicref href="topics/czdcmn021.dita" type="concept">
+<topicref href="topics/tzdcmn042.dita" type="topic"/>
+<topicref href="topics/tzdcmn059.dita" type="task"/>
+<topicref href="topics/tzdcmn048.dita" type="task"/>
+<!--DEPRECATED Remote synchronization-->
+<topicref href="topics/tzdp2h.dita" type="task" otherprops="IDz">
+<topicref href="topics/tzdp2henable.dita" type="task"/>
+<topicref href="topics/tzdp2hmap.dita" type="task">
+<topicref href="topics/rzdp2herr.dita" type="reference"/>
+</topicref>
+<topicref href="topics/tzdp2hsync.dita" type="task">
+<topicref href="topics/tzdp2hman.dita" type="task"/>
+<topicref href="topics/tzdp2hauto.dita" type="topic"/>
+</topicref>
+</topicref>
+</topicref>
+<!--z/OS projects-->
+<topicref href="topics/czdcmn017.dita" type="concept">
+<topicref href="topics/tzdcmn043.dita" type="task"/>
+<topicref format="dita" href="topics/tzdrenproj.dita" navtitle="Renaming a z/OS project"
+scope="local" type="task"/>
+<topicref href="topics/czdcmn018.dita" type="concept" otherprops="IDz">
+<topicref href="topics/tzdcmn044.dita" type="task"/>
+<topicref href="topics/tzdonline.dita" type="task"/>
+</topicref>
+<!--Exporting and importing projects-->
+<topicref href="topics/tzdshareproj.dita" type="task">
+<topicref href="topics/tzdexpproj.dita" type="task"/>
+<topicref href="topics/tzdimpproj.dita" type="task"/>
+</topicref>
+</topicref>
+<!--MVS subprojects-->
+<topicref href="topics/czdsubprojects.dita" type="concept">
+<topicref href="topics/tzdnewsubproject.dita" type="task"/>
+<topicref format="dita" href="topics/tzdchghlq.dita"
+navtitle="Changing the high-level qualifier of a subproject" scope="local" type="task"/>
+<topicref format="dita" href="topics/tzdchgrunenv.dita"
+navtitle="Changing the runtime environment of a subproject" scope="local" type="task"/>
+<topicref href="topics/tzdcopysubproject.dita" type="task"/>
+<topicref href="topics/tzdcmn049.dita" type="topic"/>
+<topicref href="topics/tzdcmn144.dita" type="task"/>
+<topicref href="topics/tzdcreateds.dita" type="task">
+<topicref href="topics/rzddsusage.dita" type="reference"/>
+</topicref>
+<topicref href="topics/tzdcreatemem.dita" type="task"/>
+<topicref href="topics/tzdcmn050.dita" type="task"/>
+<topicref href="topics/tzdcmn051.dita" type="task"/>
+<topicref href="topics/deleting_a_file.dita" type="task"/>
+<topicref href="topics/tzdcmn074.dita" type="task"/>
+<topicref href="topics/tzdcmn075.dita" type="task"/>
+<topicref href="topics/tzdcmn052.dita" type="task"/>
+<topicref href="topics/tzdcmn060.dita" type="task"/>
+<topicref href="topics/t_rename_ds.dita" navtitle="Renaming a data set or member" type="task"/>
+<topicref href="topics/tzdcmn048_2.dita" type="task"/>
+<topicref href="../com.ibm.mvs.projects.doc/toc_mvs_properties.ditamap" format="ditamap"
+navtitle="MVS subprojects"/>
+</topicref>
+</map>

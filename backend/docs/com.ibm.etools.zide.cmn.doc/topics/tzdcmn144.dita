@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn144" xml:lang="en-us">
+<title>Adding the dependencies of a program to an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Adding the dependencies of a program to an MVS subproject</navtitle>
+</titlealts>
+<shortdesc>You might want to organize your <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject to include all of the files that
+are required for a program. You can automatically add the dependencies
+of a COBOL or PL/I program in your <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS subproject<indexterm>adding dependencies</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>dependencies<indexterm>adding</indexterm><indexterm>MVS
+subproject</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must first add a COBOL or PL/I program to an <tm tmtype="tm" trademark="MVS">MVS</tm>
+subproject, and your program must not contain any syntax errors.<p otherprops="IDz">
+<note>If your program depends on a file that cannot be found, an error message is returned and the
+file is skipped. To ensure that files are not skipped, run a local syntax check on your program. If
+the syntax check does not produce any errors, then all the dependencies can be located and no files
+are skipped.</note>
+<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>
+</p></prereq>
+<steps>
+<step><cmd>Right-click the COBOL or PL/I program in the <wintitle>z/OS
+Projects</wintitle> view.</cmd><info>The <uicontrol>Show Dependencies</uicontrol> action
+is not supported for sequential data sets.</info></step>
+<step><cmd>Click <uicontrol>Show Dependencies</uicontrol> in the menu.</cmd>
+<stepresult>A window opens, listing the dependencies for the selected program.<note otherprops="IDz"
+>If the subproject you are working with belongs to a host-based project, you can only display the
+dependencies. You cannot add dependencies to a host-based subproject.</note></stepresult></step>
+<step><cmd>Select the dependencies that you want to add to your subproject
+in the list box.</cmd></step>
+<step><cmd>Select the <uicontrol>Add selected to subproject</uicontrol> check
+box.</cmd></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>.</cmd><stepresult>The
+selected dependencies are added to your <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.</stepresult>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdshowdep.dita" type="task"></link>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+<?tm 1435190832 5?>
+</task>
+<?Pub *0000002713?>

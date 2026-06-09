@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+<title>IBM Developer for z/OS on VS Code config</title>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/configure.html" format="html" scope="peer"
+navtitle="Configuring IBM Developer for z/OS on VS Code" locktitle="yes">
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_preferences.html" format="html"
+scope="peer" navtitle="Setting up for code editing" locktitle="yes">
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_propertygroup.html" format="html"
+scope="peer" navtitle="Setting property groups"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_compiler_options.html" format="html"
+navtitle="Setting compiler options" scope="peer"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_fileassociations.html" format="html"
+scope="peer" navtitle="Setting file associations"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_tabstops.html" format="html"
+scope="peer" navtitle="Setting language-specific tab stops and rulers"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_unreachablecodewarnings.html"
+format="html" scope="peer" navtitle="Enabling and disabling unreachable COBOL code warnings"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/customizing_the_outline_view.html"
+format="html" scope="peer" navtitle="Customizing the Outline view"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_maximum_line_length.html" format="html"
+navtitle="Setting language-specific maximum line length" scope="peer"/>
+</topicref>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/setting_user_build.html" format="html"
+scope="peer" navtitle="Setting up the user build"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/user_build_sandbox.html" format="html"
+navtitle="Setting up to run an IBM Dependency Based Build User Build on Wazi Sandbox" scope="peer"/>
+<topicref href="../com.ibm.open.debug.doc/topics/opendebug_connection.html" format="html"
+scope="peer" navtitle="Setting up for IBM Z Open Debug"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/zapp.html" format="html" scope="peer" navtitle="Experimental: Configure your applications with ZAPP files"/>
+<topicref href="../com.ibm.wazi.developer.vscode.doc/mvs_encoding.html" format="html" scope="peer"
+navtitle="MVS EBCDIC code pages and mappings files"/>
+</topicref>
+</map>

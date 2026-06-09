@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdrempreproc" rev="760" xml:lang="en-us">
+<title>Removing a preprocessor from a property group</title>
+<shortdesc>You can remove a local, site-developed preprocessor from
+a property group.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preprocessors<indexterm>removing from a property
+group</indexterm></indexterm><indexterm>removing a preprocessors from
+a property group</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must define a property group on a local or remote system.</prereq>
+<context>This action deletes a preprocessor definition from a property
+group. If you want to prevent a preprocessor from running, but keep
+the preprocessor definition, clear the checkbox next to the preprocessor
+name.</context>
+<steps>
+<stepsection>To remove a preprocessor from a property group:</stepsection>
+<step><cmd>Open a property group in the property group editor.</cmd>
+</step>
+<step><cmd>Open the <wintitle>Local Preprocessors</wintitle> page
+of <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local PL/I
+Settings</wintitle>.</cmd></step>
+<step><cmd>In the <uicontrol>Preprocessors</uicontrol> section, highlight
+the name of the preprocessor definition you want to delete. </cmd>
+</step>
+<step><cmd>Click <uicontrol>Remove</uicontrol>.</cmd><stepresult>The
+preprocessor definition is deleted from the property group.</stepresult>
+</step>
+<step><cmd>Click Ctrl+S to save your changes.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1337269567 0?>
+</task>
+<?Pub *0000001770?>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdretrievemem" rev="802" xml:lang="en-us">
+<title>Finding and editing members</title>
+<titlealts>
+<navtitle>Finding and editing members</navtitle>
+<searchtitle>Finding and editing partitioned data set members</searchtitle>
+</titlealts>
+<shortdesc>You can use the <uicontrol>Find Member</uicontrol> action
+to quickly find and edit a partitioned data set member.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>finding members<indexterm>editing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>You can take a shortcut to editing a partitioned data set
+member from the <wintitle>Find Member</wintitle> window by typing
+a specific member name and clicking <uicontrol>Open Member</uicontrol> or
+pressing Alt+O. The member is opened in the editor, and the member
+list retrieval process is bypassed.<note>For complete instructions
+for using the <wintitle>Find Member</wintitle> window, see <xref
+format="dita" href="tzdretrievemem.dita" scope="local" type="topic"></xref>.</note></context>
+<steps>
+<step><cmd>Open the <wintitle>Find Member</wintitle> window.</cmd>
+</step>
+<step><cmd>Type a specific partitioned data set member name and click <uicontrol>Open
+Member</uicontrol> or press Alt+O.</cmd><stepresult>The member is
+opened in an editor. If the member name you type does not exist, but
+the name is valid, the <wintitle>Confirm Member Creation</wintitle> window
+opens to prompt you to create a data set member and open it in the
+editor. <note><uicontrol>Open Member</uicontrol> is always enabled
+to facilitate the quick editing of a data set member. This button
+is enabled even when an invalid name message is displayed. When an
+invalid member name or pattern is entered in the <wintitle>Find Member</wintitle> window,
+the following message is displayed: <msgph>To open or create a member,
+enter a valid member name.</msgph></note></stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdmvspref.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdretrieveds.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdretrievemem.dita" scope="local" type="topic">
+</link>
+</related-links>
+<?tm 1287682669 0?>
+</task>
+<?Pub *0000002438?>

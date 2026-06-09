@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdcopyundef" xml:lang="en-us">
+<title>Copying files with undefined format</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Copying files with undefined format</navtitle>
+<searchtitle>Copying files with undefined format</searchtitle>
+</titlealts>
+<shortdesc>Restrictions apply when you copy files with undefined format.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>copying files with undefined format</indexterm>
+</keywords>
+<keywords><indexterm>copy<indexterm>files with undefined format</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>files with undefined format<indexterm>copy</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<p>Files with undefined format (RECFM=U) cannot be copied in <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword>.
+This restriction applies to the following cases:<ul>
+<li>Copying a file with RECFM=U from one remote system to another</li>
+<li>Copying a remote file with RECFM=U to a local file</li>
+<li>Copying a local file to a remote file with RECFM=U</li>
+<li>Copying a remote file with RECFM=U to a remote file with RECFM=F</li>
+<li>Copying a remote file with RECFM=F to a remote file with RECFM=U</li>
+</ul></p>
+</conbody>
+<?tm 1337269561 0?>
+</concept>
+<?Pub *0000001517?>

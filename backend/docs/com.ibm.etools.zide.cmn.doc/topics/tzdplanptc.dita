@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="tzdplanptc" xml:lang="en-us">
+<?acro_status spelling="0" grammar="0" style="15" terminology="9" terminologyAdmitted="0" reuse="0" total="24" score="181" status="yellow" ?>
+<title>Defining connections, configuration files, and preferences for push-to-client
+configuration</title>
+<titlealts>
+<navtitle>Defining connections, configuration files, and preferences</navtitle>
+<searchtitle>Defining connections, configuration files, and preferences for push-to-client
+configuration</searchtitle>
+</titlealts>
+<shortdesc>To set up connections, configuration files, and preferences for distribution in a
+push-to-client environment, define global and system configuration files.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>push-to-client configuration<indexterm>defining configurations</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>global configuration files</indexterm>
+</keywords>
+<keywords>
+<indexterm>system configuration files</indexterm>
+</keywords>
+<keywords>
+<indexterm>primary system</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody>
+<section><title>Global configuration files</title><term>Global</term> configuration files are
+managed on the <term>primary</term> remote system. The primary remote system is a <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> system that is defined during host installation and configuration as the
+controlling system for push-to-client configuration.<table><title>Global configuration
+files</title><desc> The global configuration files include these settings.<p outputclass="summary"
+>This table describes the global configuration files that can be distributed to client workstations
+by using the push-to-client feature. It provides the file type, a description, and a link to more
+information.</p></desc><tgroup cols="3">
+<colspec colname="col1"/>
+<colspec colname="col2"/>
+<colspec colname="col3"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">File Type</entry>
+<entry colname="col2">Description</entry>
+<entry colname="col3">More Information</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Eclipse Preferences</entry>
+<entry colname="col2">These configuration files are exported from the settings in the
+<wintitle>Preferences</wintitle> window of a workspace that is connected to the primary remote
+system. The push-to-client feature uses the base Eclipse export mechanism for preferences, which
+saves only changes to default values. Eclipse also exports different preferences to various discrete
+<filepath>.pref</filepath> files. The result is that the push-to-client feature exports and
+distributes only those Eclipse preference files that contain nondefault values. </entry>
+<entry colname="col3">
+<sl>
+<sli><xref format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-72.htm"
+scope="peer">Eclipse Preferences</xref></sli>
+<sli><xref format="dita" href="tzdcmn010.dita" scope="local" type="task"><tm tmtype="reg"
+trademark="z/OS">z/OS</tm> Preferences</xref></sli>
+</sl>
+</entry>
+</row>
+<row>
+<entry colname="col1">Remote System Connections</entry>
+<entry colname="col2">These configuration files are exported from the <wintitle>Remote
+Systems</wintitle> view of a workspace that is connected to the primary remote system. They include
+all remote system connections that are defined in this view.</entry>
+<entry colname="col3"><xref format="dita" href="tzdcmn032.dita" scope="local" type="topic"/></entry>
+</row>
+<row otherprops="IDz">
+<entry colname="col1">Menu Manager Files</entry>
+<entry colname="col2">These configuration files are exported from the files and settings that are
+created by using the Menu Manager preference pages in a workspace that is connected to the primary
+system. The configuration files include all user-defined Menu Manager menu and action files in the
+workspace.<note type="restriction">By using push-to-client, you can export only user-defined actions
+and menus. You cannot export any of the base file actions that are included with Menu Manager.
+</note></entry>
+<entry colname="col3"><xref
+href="../../com.ibm.tpf.toolkit.menumanager.doc/topics/menumanager_c.dita" scope="local"
+otherprops="IDz"/></entry>
+</row>
+<row otherprops="IDz">
+<entry colname="col1">Software Analyzer Configurations</entry>
+<entry colname="col2">These configuration files are exported from the Software Analyzer
+configurations that are defined on a workspace that is connected to the primary remote system. They
+include all software analysis configurations that are defined for each remote system.</entry>
+<entry colname="col3"><xref format="html"
+href="../../com.ibm.rsar.analysis.codereview.cobol.doc/topics/cac_anconfig_editor_scenarios.html"
+scope="peer" type="task">Creating software analysis configurations</xref></entry>
+</row>
+<row rev="95">
+<entry colname="col1">Snippets Configuration File</entry>
+<entry colname="col2">This configuration file is exported from the <wintitle>Snippets</wintitle>
+view in a workspace that is connected to the primary system. The code snippets are compressed into
+an archive file and uploaded to the primary remote system.<note type="important">When snippets are
+downloaded to a client workstation, all snippets are replaced by those that are downloaded from the
+remote system. The push-to-client feature cannot merge local snippets with those downloaded from the
+remote system.</note></entry>
+<entry colname="col3"><xref format="html"
+href="../../eclipse-docs/org.eclipse.wst.sse.doc.user_1.2.0.v201903222120/topics/csrcedt001.html" scope="peer" type="concept"
+>Snippets</xref></entry>
+</row>
+</tbody>
+</tgroup></table></section>
+<section><title>System configuration files</title><term>System</term> configuration files are
+managed on the primary remote system and on other remote systems to which users can connect.
+<table><title>System configuration files</title><desc>The system configuration files include these
+settings.<p outputclass="summary">This table describes the system configuration files that can be
+distributed to client workstations by using the push-to-client feature. It provides the file type, a
+description, and a link to more information.</p></desc><tgroup cols="3">
+<colspec colname="col1"/>
+<colspec colname="col2"/>
+<colspec colname="col3"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">File Type</entry>
+<entry colname="col2">Description</entry>
+<entry colname="col3">More Information</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Remote Index Locations</entry>
+<entry colname="col2">These configuration files are exported for each remote system connection that
+is defined on a workspace that is connected to the primary remote system. They include all remote
+index search locations that are defined for each remote system.</entry>
+<entry colname="col3"><xref format="html"
+href="../../com.ibm.cdz.remote.doc/topics/usingtheremoteindexsearch_t.html" scope="peer" type="task"
+>Using the remote index search</xref></entry>
+</row>
+<row>
+<entry colname="col1"><tm tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping Configuration
+Files</entry>
+<entry colname="col2">These configuration files are exported from the <wintitle>z/OS File System
+Mapping</wintitle> view of a workspace that is connected to the primary remote system. They include
+all <tm tmtype="reg" trademark="z/OS">z/OS</tm> file system mappings that are defined for each
+remote system that is defined in the <wintitle>Remote Systems</wintitle> view. The push-to-client
+feature can export three types of <tm tmtype="reg" trademark="z/OS">z/OS</tm> file system mapping
+configuration files:<ul>
+<li><tm tmtype="tm" trademark="MVS">MVS</tm> Files - System Mapping files are defined for a remote
+system.</li>
+<li otherprops="IDz"><tm tmtype="tm" trademark="MVS">MVS</tm> Files - Bidi Conversion Table files
+are defined for systems that use bidirectional conversion tables.</li>
+<li><tm tmtype="tm" trademark="MVS">MVS</tm> Files - Resource Mapping files are defined for specific
+data sets on a remote system.</li>
+</ul></entry>
+<entry colname="col3"><xref format="dita" href="tzdcmn035.dita" scope="local" type="task"/></entry>
+</row>
+<row>
+<entry colname="col1">Property Group Configuration Files - Property Groups</entry>
+<entry colname="col2">These configuration files are exported from the Property Group Manager for
+each remote system connection that is defined on a workspace that is connected to the primary remote
+system. They include all property groups that are defined for each remote system. </entry>
+<entry colname="col3"><xref format="dita" href="tzdpscreate.dita" scope="local" type="topic"
+/></entry>
+</row>
+<row>
+<entry colname="col1">Property Group Configuration Files - Default Values</entry>
+<entry colname="col2">These configuration files are created manually. They define the default
+property group values to be downloaded to the client workstation when it connects to a remote
+system.</entry>
+<entry colname="col3"><xref format="dita" href="tzdcfgpg.dita" scope="local" type="task"/></entry>
+</row>
+<row otherprops="IDz">
+<entry colname="col1">Host-based Project Configuration Files</entry>
+<entry colname="col2">These configuration files are created manually. They define <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> projects and <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects to be
+loaded into the <wintitle>z/OS Projects</wintitle> view when the client workstation connects to a
+remote system.</entry>
+<entry colname="col3"><xref format="dita" href="tzdcfghostbased.dita" scope="local" type="task"
+/></entry>
+</row>
+</tbody>
+</tgroup></table></section>
+</conbody>
+<?tm 1435190792 10?>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+</concept>
+<?Pub Caret 0?>
+<?Pub *0000010712?>

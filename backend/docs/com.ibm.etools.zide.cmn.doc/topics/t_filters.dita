@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="t_filters" xml:lang="en-us">
+<title>Sorting filters</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Sorting filters</navtitle>
+<searchtitle>Sorting filters</searchtitle>
+</titlealts><abstract>In the <wintitle>Remote Systems</wintitle> view,
+you can create filters to group resources, such as <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> System
+Services files, <tm tmtype="tm" trademark="MVS">MVS</tm> files, and
+JES jobs. Filters provide one way to quickly locate the resources
+you need. Filters can be grouped into pools. <shortdesc>You can use
+the <uicontrol>Sort</uicontrol> action to put groups of filters into
+alphabetical order in the <wintitle>Remote Systems</wintitle> view.</shortdesc></abstract>
+<prolog><metadata>
+<keywords><indexterm>filters<indexterm>sorting</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>sorting<indexterm>filters</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>The filters must be in the same filter pool. To display filter
+pools in the <wintitle>Remote Systems</wintitle> view, select the
+drop-down menu and then select <uicontrol>Show Filter Pools</uicontrol>.<image href="../images/ShowFilterPools.gif" placement="break"><alt>Show Filter
+Pools action on the Remote Systems view menu</alt></image>The filter
+pools are displayed in the view:<image href="../images/FilterPools.gif" placement="break"><alt>Filter pools in the MVS Files subsystem</alt>
+</image><note type="tip">You do not have to display filter pools to
+sort filters. You can use the <uicontrol>Sort</uicontrol> action even
+when filter pools are not shown. If you select filters from different
+pools, however, then some of the actions in the following procedure
+might be disabled.</note>To learn more about filters and filter pools,
+see the related concepts. To learn more about creating filters for <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> files, <tm tmtype="tm" trademark="MVS">MVS</tm> files, or JES jobs, see the related
+tasks.</prereq>
+<steps-unordered>
+<step><cmd>To sort a group of filters:</cmd>
+<substeps>
+<substep><cmd>In the <wintitle>Remote Systems</wintitle> view, expand
+a subsystem and select multiple filters in the same filter pool.</cmd>
+</substep>
+<substep><cmd>Right-click and click <uicontrol>Sort</uicontrol>.</cmd>
+<stepxmp><image href="../images/SortGroupOfFilters.gif" placement="break">
+<alt>Sorting a group of filters</alt></image></stepxmp><stepresult>The
+selected filters are sorted into alphabetical order:<image href="../images/SortedFilters1.gif" placement="break"><alt>Sorted
+filters</alt></image></stepresult></substep>
+</substeps>
+</step>
+<step><cmd>To sort a few filters relative to each other, select them
+individually in the <wintitle>Remote Systems</wintitle> view, and
+then right-click and click <uicontrol>Sort</uicontrol>.</cmd><stepxmp><image href="../images/SortFewFilters.gif" placement="break"><alt>Sorting
+a few filters</alt></image></stepxmp><stepresult>The selected filters
+are sorted, but the remaining filters are left in their previous order.<image href="../images/SortedFilters2.gif" placement="break"><alt>Sorted
+filters</alt></image></stepresult></step>
+<step><cmd>To move a filter in a filter pool or to a different filter
+pool, you can also drag it.</cmd><stepxmp><image href="../images/DragFilter1.gif" placement="break"><alt>Dragging filters
+to a new location</alt></image></stepxmp><stepresult>In this example,
+the selected filters are dropped into a different filter pool:<image href="../images/DragFilter2.gif" placement="break"><alt>Dropping filters
+to a different filter pool</alt></image></stepresult></step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link format="html" href="https://www.ibm.com/docs/en/explorer-for-zos/3.4?topic=guide-filters-filter-pools-filter-pool-references" scope="external" type="concept"><linktext>Filters, filter pools, and filter pool references</linktext>
+</link>
+<link format="dita" href="../../com.ibm.etools.zos.subsystem.uss.doc/topics/configuringtheconnection3_t.dita" scope="local" type="task" />
+<link format="dita" href="tzdfiltermvs.dita" scope="local" type="task" />
+<link format="dita" href="t_member_filter.dita" scope="local" type="task" />
+<link format="dita" href="tzdlargefilter.dita" scope="local" type="task" />
+<link format="dita" href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/tzdfilterjes.dita" scope="local" type="task" />
+</related-links>
+
+</task><?Pub *0000004724?><?tm 1665694006152 6 z/OS||UNIX||MVS ?>

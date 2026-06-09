@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbidisyn" xml:lang="en-us">
+<title>Setting local build options for smart logical COBOL and PL/I
+files</title>
+<shortdesc>By default, bidirectional-enabled projects use a setting
+that converts source and executable files to visual layout. </shortdesc>
+<taskbody>
+<context>This setting can cause errors if a source file contains an
+invisible LRM marker. When the following string is included in a COBOL
+program, for example, the compiler issues an error message: <msgnum>IGYGR1056</msgnum>,
+which indicates that the literal exceeds the length that is specified:<image
+href="../images/bidiliteral.gif" placement="break"><alt>Literal declaration
+that contains bidirectional characters</alt></image>Although the literal
+declaration is visually correct, the compiler counts the invisible
+LRM marker and issues the error message.</context>
+<steps>
+<stepsection>To prevent this type of error, set local build options
+as follows:</stepsection>
+<step><cmd>Open the <wintitle>Local COBOL Build Options</wintitle> or <wintitle>Local
+PL/I Build Options</wintitle> properties page.</cmd></step>
+<step><cmd>In the <uicontrol>Environment Variables</uicontrol> field,
+type the set statement <codeph>set bidiInput=Logical</codeph>.</cmd>
+<stepresult> This statement prevents your source from being converted
+to visual format before compilation.</stepresult></step>
+</steps>
+</taskbody>
+<?tm 1337269550 0?>
+</task>

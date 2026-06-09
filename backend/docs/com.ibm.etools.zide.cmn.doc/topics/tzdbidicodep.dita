@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbidicodep" xml:lang="en-us">
+<title>Setting bidirectional conversion support for an <tm tmtype="tm" trademark="MVS">MVS</tm>
+system</title>
+<?Pub Caret -2?>
+<shortdesc><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"
+/> provides special bidirectional properties for the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem to allow correct bidirectional layout conversions for <tm tmtype="tm" trademark="MVS"
+>MVS</tm> files that are transferred between the client and server.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>bidirectional support<indexterm>code pages</indexterm></indexterm>
+<indexterm>code pages</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context> There are two methods for specifying these bidirectional conversion options:<ul>
+<li>Use a bidirectional conversion table</li>
+<li>Use manual bidirectional settings</li>
+</ul></context>
+<steps>
+<stepsection>To apply bidirectional conversion support to an <tm tmtype="tm" trademark="MVS"
+>MVS</tm> Files subsystem, do these steps:</stepsection>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, right-click <uicontrol>MVS
+Files</uicontrol> under a <tm tmtype="reg" trademark="z/OS">z/OS</tm> connection </cmd>
+</step>
+<step><cmd>Click <uicontrol>Properties</uicontrol>.</cmd><stepresult>The
+<wintitle>Properties</wintitle> window opens.</stepresult></step>
+<step><cmd>Click <uicontrol>Code Pages</uicontrol> in the list on the left.</cmd></step>
+<step><cmd>Do one of the following steps:</cmd>
+<choices>
+<choice>To use a bidirectional conversion table, do these steps: <ol>
+<li>Click <uicontrol>Use the following Bidi Conversion Table (BCT)</uicontrol>. This option enables
+the field and the <uicontrol>Browse</uicontrol> button.</li>
+<li>Enter the name of a bidirectional conversion file you created or click
+<uicontrol>Browse</uicontrol> to look for and select a conversion file.</li>
+<li>To edit the current properties in the bidirectional conversion table, click
+<uicontrol>Copy</uicontrol>. The properties are copied to the <uicontrol>Current set of bidi
+options</uicontrol> table, and you can click <uicontrol>Edit</uicontrol> to change the values and
+<uicontrol>Save as</uicontrol> to save your changes to a new bidirectional conversion table.</li>
+</ol></choice>
+<choice>To use manual bidirectional settings, do these steps:<ol>
+<li>Click <uicontrol>Use the following manual bidi settings</uicontrol>. This option enables a set
+of default bidirectional settings.</li>
+<li>Click <uicontrol>Edit</uicontrol> to open a window that you can use to change the default
+settings.</li>
+<li>Click <uicontrol>Save as</uicontrol> to save the current settings to a new bidirectional
+conversion table.</li>
+</ol></choice>
+</choices>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to apply the changes.</cmd>
+</step>
+</steps>
+<postreq><xref href="tzdbidipds.dita" type="task"/></postreq>
+</taskbody>
+<related-links>
+<link href="czdbidiinh.dita" type="concept"/>
+</related-links>
+<?tm 1435190801 5?>
+</task>
+<?Pub *0000003441?>

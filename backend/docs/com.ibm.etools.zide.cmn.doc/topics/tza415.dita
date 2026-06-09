@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="cobol_templates" xml:lang="en-us">
+<title>Bidirectional COBOL templates</title>
+<shortdesc>When you create COBOL programs, you can enable bidirectional
+visual editing.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional COBOL templates</indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<p>If you create COBOL programs that enable bidirectional visual editing,
+the following conditions are set:</p>
+<ul>
+<li>The standard editors are replaced with editors that you can use
+to enter bidirectional data in Visual mode.</li>
+<li>Templates are generated in Smart Logical format. This format enables
+correct display of bidirectional strings in any logical editor. Smart
+Logical files must be converted to Visual format when they are uploaded
+to the host.</li>
+</ul>
+</conbody>
+</concept>
+<?Pub *0000001362?>

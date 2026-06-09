@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdbidiconv" xml:lang="en-us">
+<title>Bidirectional layout transformation (or bidirectional conversion)</title><?Pub Caret -2?>
+<shortdesc>Different systems and applications assume different bidirectional
+text layouts. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional layout transformation</indexterm>
+<indexterm>bidirectional conversion</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p>Earlier <tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm> applications,
+for example, usually assume that bidirectional text is stored in visual
+order (with various other bidirectional attributes). Most <tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm> software
+infrastructure was developed before common use of the logical ordering
+scheme and therefore ignores its existence. Newer development platforms,
+such as <tm tmtype="tm" trademark="Windows">Windows</tm> or <tm trademark="Java" tmtype="tm">Java</tm>/Swing, assume that bidirectional text is stored in a logical order and reorders the text for presentation according to a bidirectional algorithm generally following the one specified by Unicode. Most of the base software that is written on these platforms is not designed to support data that is stored in visual order. Because of these platform differences, exchanging bidirectional data between <tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm> and <tm tmtype="tm" trademark="Windows">Windows</tm> or <tm trademark="Java" tmtype="tm">Java</tm>/Swing platforms requires bidirectional text layout to be transformed to display, edit, or use the data on the target system. This process of transforming bidirectional text layout between incompatible systems is called <term>bidirectional conversion</term>.</p>
+<p>Many existing client/server applications assume that bidirectional
+conversion is the responsibility of bidirectional developers. This
+assumption causes problems of incompatibility and limitations because
+of the different algorithms that different developers use to make
+the conversion. </p>
+<p>The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> bidirectional
+language support tools free bidirectional developers from this task
+to save development effort and make bidirectional software more portable.
+These tools consist of a user interface for specifying host (<tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm>) and
+client bidirectional layouts. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+does bidirectional conversions automatically according to information
+you provide by using this interface. It is the bidirectional developer's
+responsibility to understand the bidirectional layouts that are used
+in your environment and to provide correct information about bidirectional
+layouts and encoding by using the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> user
+interface. Visual LTR layout is assumed as the default layout for
+remote systems, and Smart Logical LTR is assumed as the default layout
+for the client by most <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> components
+and tools.</p>
+<note othertype="Next" type="other"><xref href="czdsmartlog.dita" type="concept" /></note>
+</conbody>
+
+</concept><?Pub *0000003665?><?tm 1670257711099 16 zSeries||Windows||Java ?>

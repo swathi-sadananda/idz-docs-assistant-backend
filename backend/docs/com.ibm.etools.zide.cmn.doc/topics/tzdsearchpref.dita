@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsearchpref" xml:lang="en-us">
+<title>Setting preferences for <wintitle>Remote z/OS Search</wintitle></title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Setting preferences for Remote z/OS Search</navtitle>
+<searchtitle>Setting preferences for Remote z/OS Search</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>Remote z/OS Search</wintitle> preferences
+page to set options for remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> search
+results. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preferences<indexterm>remote z/OS search results</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>remote z/OS search results<indexterm>preferences</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>increments</indexterm></keywords>
+<keywords><indexterm>incremental search results</indexterm></keywords>
+<keywords><indexterm>preview search results</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schp0001_intro"></p></context>
+<steps>
+<step>
+<cmd>In the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>Remote Systems</uicontrol>
+<uicontrol>z/OS</uicontrol>
+<uicontrol>Remote z/OS Search</uicontrol>
+</menucascade>.</cmd>
+</step>
+<step><cmd>Specify the following options:</cmd><info><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schp0001_ruf"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schp0001_preview"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schp0001_time"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/schp0001_number"></p></info>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to save the preference
+settings.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190798 1?>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+</task>
+<?Pub *0000002200?>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czderrorfeedback" xml:lang="en-us">
+<title>Extensible error feedback mechanism</title><?Pub Caret -2?>
+<shortdesc>The error feedback mechanism captures and displays error
+messages that are generated during remote build, remote syntax check,
+or show dependencies of COBOL and PL/I language source files with
+the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor
+and <tm tmtype="reg" trademark="CICS">CICS</tm> translator. This mechanism
+can be extended to support custom preprocessors and more languages,
+such as Assembler.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>mechanism</indexterm><indexterm>extension</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<p>The base function of the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> error feedback
+mechanism supports error feedback for remote build, remote syntax check, or show dependencies of
+COBOL and PL/I language source files. Errors that result from a remote build or a remote syntax
+check of a COBOL or PL/I program are reported to the <wintitle>Remote Error List</wintitle>.</p>
+<note type="restriction">The error feedback mechanism supports remote
+build, remote syntax check, and show dependencies operations only.
+It does not support the <uicontrol>Generate JCL</uicontrol> actions.</note>
+<p>The error feedback process depends on an XML file that is created
+during COBOL or PL/I compilation with the Enterprise version of the
+COBOL or PL/I compiler. This base function supports error feedback
+with the Enterprise versions of COBOL and PL/I as they support the
+integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor and <tm
+tmtype="reg" trademark="CICS">CICS</tm> translator, thus allowing
+the errors from the coprocessor or translator to be fed back with
+the correct line numbers. This function is provided without any setup
+or user action required.</p>
+<p>This error feedback mechanism is extensible: with some setup on
+the client workspace, it can be extended to also provide error feedback
+from custom preprocessors and from other language source files, such
+as Assembler. The mechanism defines an XML schema that you can use
+to create an XML file to report errors from custom preprocessors or
+other languages in the <wintitle>Remote Error List</wintitle>. The
+following topics describe how to create and use this XML file.</p>
+<section><title>Error feedback for COBOL and PL/I</title><p>Error
+feedback for COBOL and PL/I depends on an XML file that is generated
+during the compilation or syntax check process on the remote system.
+The COBOL and PL/I compilers write the errors to any data set member
+or sequential data set that is referred to by the SYSXMLSD DD card
+in the JCL being used for compilation or syntax check.</p><p>During
+remote build, remote syntax check or show dependencies operations,
+the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+generates JCL to run the JCL procedures that the user specified in
+the properties and submits the generated JCL on behalf of the user.
+During JCL generation for these operations, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+allocates a sequential data set based on the <uicontrol>Data Set Qualifier
+for Compile Errors</uicontrol> field of the <wintitle>COBOL</wintitle> or <wintitle>PL/I
+Compile Step Options</wintitle> window and refers to it using the <codeph>SYSXMLSD
+DD</codeph> card to establish the handshake between the COBOL or PL/I
+compiler processes on the remote system and <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> compilation
+and syntax check operations. Because the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+allocates this data set, it also tracks it, locates it when the compilation
+or syntax check operation is complete, parses it, and populates the
+remote error list. </p></section>
+<section><title>Error feedback extension</title><p>The same scheme
+that is used for error feedback for COBOL and PL/I can be used to
+extend the error feedback scheme to support other languages and custom
+preprocessors. The error feedback extensibility scheme works only
+when you use the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> build
+process. The Related Tasks describe how to set up the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> client
+to take advantage of the extensible error feedback mechanism.</p></section>
+</conbody>
+<related-links>
+<link href="tzdcustbld.dita" type="task"></link>
+<link href="tzdefclient.dita" type="task"></link>
+</related-links>
+<?tm 1435190823 4?>
+</concept>
+<?Pub *0000005195?>

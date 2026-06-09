@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdeditpreproc" rev="760" xml:lang="en-us">
+<title>Editing a preprocessor definition</title>
+<shortdesc>You can edit a local, site-developed preprocessor definition
+in a property group.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preprocessors<indexterm>editing a preprocessor
+definition</indexterm></indexterm><indexterm>editing a preprocessor
+definition in a property group</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must define a property group on a local or remote system.</prereq>
+<steps>
+<stepsection>To edit a preprocessor definition in a property group:</stepsection>
+<step><cmd>Open a property group in the property group editor.</cmd>
+</step>
+<step><cmd>Open the <uicontrol>Local Preprocessors</uicontrol> page
+of <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local PL/I Settings</wintitle>.</cmd>
+</step>
+<step><cmd>In the <uicontrol>Preprocessors</uicontrol> section, highlight
+a preprocessor name.</cmd><stepresult>The fields in the <uicontrol>Preprocessor
+Options</uicontrol> section show the current options for the highlighted
+preprocessor.</stepresult></step>
+<step><cmd>Edit the fields. </cmd><info>See the context-sensitive
+help for a detailed description of the fields.</info></step>
+<step><cmd>Press Ctrl+S to save your changes.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1337269567 0?>
+</task>
+<?Pub *0000001646?>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdptcprefs" xml:lang="en-us">
+<title>Setting preferences for configuration updates</title>
+<titlealts>
+<navtitle>Configuration Files</navtitle>
+<searchtitle>Setting preferences for <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> configuration
+updates</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>Configuration Files</wintitle> preference
+page to set options for automatically updating your workspace when
+you connect to a remote system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>configuration and preference updates<indexterm>preferences</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><note
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/ptc0002_res"></note></context>
+<steps>
+<step>
+<cmd>In the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>Remote Systems</uicontrol>
+<uicontrol>Configuration Files</uicontrol>
+</menucascade>.</cmd>
+</step>
+<step><cmd>Select one of the following options:</cmd>
+<choices>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/ptc0002_not_all"></ph></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/ptc0002_not_rej"></ph></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/ptc0002_not_no"></ph></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/ptc0002_ccf"></ph><p><uicontrol>Clear
+Cached Files</uicontrol> is intended primarily for push-to-client
+administrators to use when they are preparing a push-to-client environment.
+It can also be used by non-administrators to resynchronize downloaded
+configurations with the remote system or group from which you downloaded
+them. For more information about resetting workspace configuration
+files, see the related links.</p></choice>
+</choices>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to save the settings.</cmd>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tz_ptc_reset.dita" scope="local" type="task">
+</link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1337269547 0?>
+</task>
+<?Pub *0000002590?>

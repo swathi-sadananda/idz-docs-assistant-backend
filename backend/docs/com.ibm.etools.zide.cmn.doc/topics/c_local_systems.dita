@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Inc?>
+<concept id="c_local_systems" xml:lang="en-us">
+<title>From the local workstation</title>
+<titlealts>
+<navtitle>From the local workstation</navtitle>
+<searchtitle>Loading files from the local workstation</searchtitle>
+</titlealts>
+<shortdesc>You can explore and search local systems in the <wintitle>Remote
+Systems</wintitle> view.</shortdesc><?Pub Caret 64?>
+<prolog><metadata>
+<keywords><indexterm>local systems</indexterm></keywords>
+</metadata></prolog>
+<conbody></conbody>
+</concept>
+<?Pub *0000000629?>

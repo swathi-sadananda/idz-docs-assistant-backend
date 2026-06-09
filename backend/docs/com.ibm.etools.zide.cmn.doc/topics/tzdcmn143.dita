@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn143" xml:lang="en-us">
+<title>Viewing the dependencies of a program</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Viewing the dependencies of a program</navtitle>
+</titlealts>
+<shortdesc rev="803">You can determine the dependencies that a certain
+COBOL, PL/I, or Assembler program has.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>dependencies<indexterm>viewing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>If you are checking the dependencies of a remote program,
+you must be connected to the remote system.</prereq>
+<context><p>You can perform a show dependencies operation on the following resource types:<ul>
+<li rev="150">COBOL and PL/I source files in a local <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+project on <tm tmtype="tm" trademark="Windows">Windows</tm> platforms.</li>
+<li>COBOL, PL/I, and Assembler source files in a partitioned data set in an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject or on a remote system.</li>
+</ul><ph rev="150">The show dependencies action is not supported for sequential data sets.</ph></p><p>If your program depends on a file that cannot be found, the file is simply ignored (skipped
+without warning). To ensure that files are not skipped, run a local syntax check on your program; if
+the syntax check does not produce any errors, all the dependencies can be located, and no files are
+skipped.<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></p><p rev="150">The <uicontrol>Show Dependencies</uicontrol> action is not supported for sequential
+data sets.</p></context>
+<steps-unordered>
+<step>
+<cmd>To check the dependencies of a program, right-click the program and click <uicontrol>Show
+Dependencies</uicontrol>.</cmd>
+</step>
+<step><cmd>To check the dependencies of all programs in a local project,
+right-click the project name and click <uicontrol>Show Dependencies</uicontrol>.</cmd>
+</step>
+</steps-unordered>
+<result rev="802">If a JCL error occurs or the job ends abnormally,
+an error message displays to help you solve the problem. From this
+message window, you can do one of the following steps:<ul>
+<li>Open the job output to view the error messages and return codes.</li>
+<li>Open the property group that is associated with the file to view
+the build properties currently in use.</li>
+</ul>If the job executes successfully, a window opens listing all
+dependencies for the program or project.</result>
+</taskbody>
+<related-links>
+<link href="tzdshowdep.dita" type="task" />
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+
+</task>

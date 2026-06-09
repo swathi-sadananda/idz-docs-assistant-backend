@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdlargepds" xml:lang="en-us">
+<title>Working with large partitioned data sets</title><?Pub Caret -2?>
+<titlealts>
+<searchtitle>Working with large PDSs</searchtitle>
+</titlealts>
+<shortdesc>To improve performance for large partitioned data sets,
+you can limit the number of members that are displayed in the <wintitle>Remote
+Systems</wintitle> view. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Remote Systems view<indexterm>working with large
+partitioned data sets</indexterm><indexterm>partitioned data sets<indexterm>large</indexterm></indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>To set preferences for working with large partitioned data
+sets, see <xref format="dita" href="tzdmvspref.dita" scope="local"
+type="task"></xref>.</prereq>
+<context>When the default settings for the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files subsystem are in effect and a partitioned
+data set is expanded, the <wintitle>Remote Systems</wintitle> view
+displays a maximum of 50 partitioned data set members. You can take
+the following actions to browse through the members of a large partitioned
+data set.<note>The examples use a smaller partitioned data set for
+purposes of illustration.</note></context>
+</taskbody>
+<task id="displayingmoremembers" xml:lang="en-us">
+<title>Displaying more members</title>
+<taskbody>
+<context>When you first expand a large partitioned data set, the members
+in excess of 50 are shown by using placeholders:<image
+href="../images/pdsplaceholder.gif" placement="break"><alt>Large partitioned
+data set placeholder</alt></image></context>
+<steps>
+<step><cmd>To show more members, double-click the placeholder.</cmd>
+<stepresult>The next 50 members are displayed, and a placeholder is
+shown for the previous 50 members: <image
+href="../images/pds2placeholders.gif" placement="break"><alt>Large
+partitioned data set with two placeholders</alt></image></stepresult>
+</step>
+<step><cmd>To continue to browse up and down through the members,
+double-click either the top or the bottom placeholders.</cmd><info>You
+can also browse through members by selecting a member name or placeholder
+and then pressing the keyboard shortcuts Ctrl+Home (top), Ctrl+End
+(bottom), Ctrl+PgUp (previous), or Ctrl+PgDn (next).</info></step>
+</steps>
+</taskbody>
+</task>
+<task id="locatingamember" xml:lang="en-us">
+<title>Locating a member</title>
+<taskbody>
+<context>The <uicontrol>Locate</uicontrol> menu item is also available
+on the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</context>
+<steps>
+<stepsection>To locate a specific member name, do these steps:</stepsection>
+<step><cmd>Select the partitioned data set name, and then select <uicontrol>Locate</uicontrol> from
+the menu or press keyboard shortcut Ctrl+L.</cmd></step>
+<step><cmd>In the <wintitle>Locate Member</wintitle> window, specify
+the member name that you want to locate and click <uicontrol>OK</uicontrol>.</cmd>
+<info>You can specify a partial member name, such as <userinput>MEM</userinput>.
+If the name you search for does not exist, the member name just before
+the search string is located. Previous searches are preserved and
+added to a list in the <wintitle>Locate Member</wintitle> window.
+You can select a previous search string from this list.</info>
+<stepresult>The member name is displayed and highlighted: <image
+href="../images/pdslocate.gif" placement="break"><alt>Located partitioned
+data set member</alt></image></stepresult></step>
+</steps>
+</taskbody>
+</task>
+<task id="changingthenumberofmemberstodisplay" xml:lang="en-us">
+<title>Changing the number of members to display</title>
+<taskbody>
+<steps-unordered>
+<stepsection>To change the numbers of members to display for a partitioned
+data set, do one of the following actions:</stepsection>
+<step><cmd>Select a place holder and then select <uicontrol>Show More</uicontrol> or <uicontrol>Show
+Less</uicontrol> from the menu. A window opens prompting you to specify
+the number of members to display.</cmd></step>
+<step><cmd>Select a partitioned data set name and then select <uicontrol>Properties</uicontrol> from
+the menu. On the <wintitle>Properties</wintitle> page, select <uicontrol>Expansion</uicontrol> and
+specify the number of members to display in the <uicontrol>Expansion
+page size</uicontrol> field.</cmd></step>
+</steps-unordered>
+</taskbody>
+</task>
+<?tm 1435190811 1?>
+</task>
+<?Pub *0000004608?>

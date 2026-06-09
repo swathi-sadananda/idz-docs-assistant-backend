@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdefotherlang" xml:lang="en-us">
+<title>Supporting error feedback for other languages</title><?Pub
+Caret -2?>
+<shortdesc>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+provides error feedback support for COBOL and PL/I, but you can set
+properties for supporting error feedback for other languages, such
+as Assembler.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>client setup</indexterm><indexterm>properties
+for other languages</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To set up properties to support error feedback for other
+languages, such as Assembler, do these steps:</stepsection>
+<step><cmd>From a properties window, open the language-specific <wintitle>Compile
+or Assemble Step Options</wintitle> window.</cmd><info>To open this
+window, do the following steps:</info>
+<substeps>
+<substep><cmd>From the <wintitle>Assembler Settings</wintitle>, <wintitle>COBOL
+Settings</wintitle>, or <wintitle>PL/I Settings</wintitle> page of
+the properties window, select the <uicontrol>Procedures and Steps</uicontrol> tab.</cmd>
+</substep>
+<substep><cmd>Select the procedure name for the compilation or assemble
+step.</cmd></substep>
+<substep><cmd>To enable the procedure, click <uicontrol>Enable procedure</uicontrol>.</cmd>
+<info>A procedure must be enabled before you can edit the step.</info>
+</substep>
+<substep><cmd>Click <uicontrol>Edit step</uicontrol> to open the <wintitle>Compile
+or Assemble Step Options</wintitle> window.</cmd></substep>
+</substeps>
+</step>
+<step><cmd>Select the <uicontrol>Support Error Feedback</uicontrol> check
+box.</cmd><stepresult>The <uicontrol>Data Set Qualifier for Compiler
+Errors</uicontrol> field is activated.</stepresult></step>
+<step><cmd>Specify the error feedback qualifier that is used by <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> to
+generate the SYSXMLSD DD card in the JCL.</cmd><info>Your error feedback
+program writes the error feedback XML file to the data set specified
+by the SYSXMLSD Card. If your error feedback program writes the XML
+file in UTF-8, make sure the qualifier name that is specified includes
+ERRWDZ. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> transfers
+files with ERRWDZ as a qualifier in binary format to avoid any code
+page translations. To handle the file transfer, a default mapping
+for **ERRWDZ is defined in the <tm tmtype="reg" trademark="z/OS">z/OS</tm> file
+system mappings. </info></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link href="tzdcustbld.dita" type="task"></link>
+<link href="tzdefcobolpli.dita" type="task"></link>
+<link href="tzdefpreprocessor.dita" type="task"></link>
+<link href="rzdefjclpreprocessor.dita" type="reference"></link>
+<link href="rzdefxmlpreprocessor.dita" type="reference"></link>
+</related-links>
+<?tm 1435190824 1?>
+</task>
+<?Pub *0000003303?>

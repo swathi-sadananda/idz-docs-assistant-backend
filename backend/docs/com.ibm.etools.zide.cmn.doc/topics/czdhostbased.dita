@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdhostbased" xml:lang="en-us">
+<title>Host-based projects</title><?Pub Caret -2?>
+<shortdesc>A host-based project is defined on a <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> system and downloaded to the workstation
+automatically when you connect to the remote system. Host-based projects
+enable an installation to define and automatically propagate projects
+on client workspaces from a central location. They provide a means
+for standardizing project definitions. A host-based project includes
+the project, its properties, and its member resources.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>projects<indexterm>host-based</indexterm></indexterm>
+<indexterm>host-based projects</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p>Use of host-based projects allows an administrator to tightly control
+project structure and behavior on the remote system, since certain
+actions are disabled for host-based projects. Renaming or deleting
+projects and subprojects, for example, adding or removing subproject
+members, and creating new remote projects or subprojects associated
+with host-based project systems are actions that are disabled for
+host-based projects. </p>
+<p>Because host-based projects are defined in a central location and
+downloaded to a workstation, there are some differences between how
+you use host-based projects and how you use workstation-based projects:</p>
+<ul>
+<li>Only the creator or authorized users of host-based projects can
+alter project properties and project structure. Their properties are
+defined and controlled on the remote system on which they are created.<note>Although
+properties for host-based subprojects can be changed in the user interface,
+they are not saved on the client after you disconnect from the remote
+system.</note></li>
+<li>You cannot control whether host-based projects are downloaded
+to your workstation when you connect. Host-based projects are defined
+so that they are automatically downloaded when you connect. </li>
+<li>Host-based projects cannot contain resources from multiple remote
+systems. All resources are on a single remote system.</li>
+<li>When you disconnect from a remote system, the host-based projects
+are removed from your <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</li>
+</ul>
+<p>Whether projects are host- or workstation-based is controlled by
+the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system. If you connect
+to multiple remote systems, your workspace might contain both host-
+and workstation-based projects.</p>
+<p>For instructions on configuring and using host-based projects,
+see the following topics:</p>
+<ul>
+<li><xref href="tzdcfghostbased.dita" type="task"></xref></li>
+<li><xref href="tzdusehostbased.dita" type="task"></xref></li>
+<li><xref href="tzdslvhostbased.dita" type="task"></xref></li>
+</ul>
+</conbody>
+<?tm 1435190830 2?>
+</concept>
+<?Pub *0000003102?>

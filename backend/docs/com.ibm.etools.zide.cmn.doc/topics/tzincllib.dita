@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzincllib" xml:lang="en-us" rev="150">
+<title>Defining libraries for local projects and files</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Defining libraries for local projects and files</navtitle>
+<searchtitle>Defining libraries for local projects and files</searchtitle>
+</titlealts>
+<abstract><shortdesc>You can define local or remote libraries that can be used for real-time syntax
+checking and open file operations in local Assembler, COBOL, PL/I, JCL, and REXX files that are open
+in the editor.</shortdesc>This topic describes how to define local and remote libraries for COBOL,
+PL/I, JCL, and REXX files. <ph conref="editor_options.dita#editor_options/hlasm-lpex-libs"
+/></abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>libraries<indexterm>remote</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>libraries<indexterm>local</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>remote libraries for local files</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section><title>Before you start</title>Define a local property group for a local COBOL, PL/I, JCL,
+or REXX file, or associate an existing local property group with the file on which you want to run
+operations, such as real-time syntax checking and open copybook or include file.</section>
+<p>When you run operations that require access to copybooks, include files, and procedures from
+local source files, the editors use property group settings to locate the files:<ul>
+<li>It locates local files by using the <uicontrol>SYSLIB</uicontrol> field (for INCLUDE statements)
+and the <uicontrol>PROCLIB</uicontrol> field (for PROC statements) or <uicontrol>Environment
+variables</uicontrol> field of the <wintitle>Local Compiler Options</wintitle> page for COBOL or
+PL/I files, <wintitle>Local JCL Options</wintitle> (for JCL Editor only) page for JCL files, and the
+<wintitle>Local REXX options</wintitle> page for REXX files. These fields specify an ordered list of
+local file paths to search for copybooks, include files, macros, or procedures.</li>
+<li>It locates remote copy, include, and procedure files by using the <wintitle>Copy
+Libraries</wintitle> page for COBOL, the <wintitle>Include Libraries</wintitle> page for PL/I or
+REXX, or the <wintitle>Remote JCL Options</wintitle> for page for JCL. </li>
+</ul></p>
+<p>The editors search these libraries in the following order:<ol>
+<li>If both local and remote libraries are defined in the property group, the editors search the
+local libraries first and then the remote libraries.</li>
+<li>If no local libraries are defined, the editors search only the remote libraries.</li>
+<li>If no remote libraries are defined, the editors search only the local libraries.</li>
+</ol></p>
+<section>
+<title>Defining local libraries</title>
+<ol>
+<li>To define libraries:</li>
+<li> In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, right-click a local project or
+file and click <menucascade>
+<uicontrol>Property Group</uicontrol>
+<uicontrol>Edit Associated Property Group</uicontrol>
+</menucascade>. <itemgroup>The property group editor opens.</itemgroup>
+</li>
+<li> Click the <uicontrol>COBOL</uicontrol>, <uicontrol>PL/I</uicontrol>,
+<uicontrol>JCL</uicontrol>, or <uicontrol>REXX</uicontrol> tab at the bottom of the editor. </li>
+<li> To set the local libraries, choose <uicontrol>Local Compiler Options</uicontrol>,
+<uicontrol>Local JCL Options</uicontrol> (JCL Editor only), or <uicontrol>Local REXX
+Options</uicontrol> from the list of categories on the left. </li>
+<li>In the <uicontrol>SYSLIB</uicontrol> field, specify the local file path of the library. To
+specify local libraries other than SYSLIB, use the <uicontrol>Environment variables</uicontrol>
+field.<note type="tip"><ph
+conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#local_options/glob"
+/></note></li>
+</ol>
+</section>
+<section id="definingremotelibraries">
+<title>Defining remote libraries</title>
+<p> When you define remote libraries for a local project or file, the following actions or features
+are disabled for that project or file:<ul>
+<li>Show remote dependencies</li>
+<li>Local preprocessor support</li>
+</ul></p>
+<ol>
+<li> To set the remote libraries, choose <uicontrol>Copy Libraries</uicontrol>, <uicontrol>Include
+Libraries</uicontrol>, <uicontrol>Remote JCL Options</uicontrol> (JCL Editor only), or
+<uicontrol>Remote Libraries</uicontrol> from the list of categories at the left. </li>
+<li> From the <uicontrol>Connection name</uicontrol> list, choose a remote system. </li>
+<li> Click <uicontrol>Add</uicontrol>, <uicontrol>Edit</uicontrol>, or <uicontrol>Remove</uicontrol>
+to add copy or include libraries to the table, edit the entries in the table, or remove entries from
+the table. <itemgroup>When you click <uicontrol>Add</uicontrol> or <uicontrol>Edit</uicontrol>, a
+window opens prompting you for a library name and a data set name.</itemgroup>
+</li>
+<li> In the <uicontrol>Library name</uicontrol> field, type a name for the library. <itemgroup>For
+example, type <userinput>SYSLIB</userinput>.</itemgroup>
+<itemgroup>
+<ul
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/pgi10001_table">
+<li/>
+</ul>
+</itemgroup>
+</li>
+<li> In the <uicontrol>Library path</uicontrol> field, type one or more partitioned data set names
+to search and click <uicontrol>OK</uicontrol>. <itemgroup>Separate multiple data set names with
+space, as in the following example. The editor searches the data sets in the order listed.
+</itemgroup>
+</li>
+</ol>
+<p>The following screen capture shows an example of remote copy libraries defined for a local
+project:<image href="../images/remoteLibrary.gif" placement="break" scale=".8">
+<alt>Screen capture of Copy Libraries defined for a local project.</alt>
+</image></p>
+</section>
+<section>
+<title>Defining PROCLIB libraries</title>
+<p>PROCLIB libraries are used to locate JCL procedure definitions.</p>
+<p>PROCLIB can be defined in:<ul>
+<li>Local JCL Options</li>
+<li>Remote JCL Options</li>
+</ul></p>
+<p>PROCLIB is used to resolve PROC references, similar to SYSLIB for INCLUDE statements.</p>
+</section>
+</body>
+<?tm 1435190825 4?>
+<related-links>
+<link format="html" href="https://mywiki.wooledge.org/glob" scope="external"><linktext>Bash glob
+features</linktext></link>
+</related-links>
+</topic>
+<?Pub *0000007044?>

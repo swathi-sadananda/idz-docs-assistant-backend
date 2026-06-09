@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzhexsearch" xml:lang="en-us">
+<title>Searching for hexadecimal values in remote <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> files</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Searching for hexadecimal values in remote z/OS files</navtitle>
+<searchtitle>Searching for hexadecimal values in remote z/OS files</searchtitle>
+</titlealts>
+<shortdesc>You can use the <wintitle>Remote z/OS Search</wintitle> window
+to search for hexadecimal content in remote <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> files.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>hexadecimal values<indexterm>search</indexterm></indexterm>
+<indexterm>search<indexterm>hexadecimal values</indexterm></indexterm>
+<indexterm>remote z/OS search<indexterm>hexadecimal values</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>In the <uicontrol>Content strings</uicontrol> field of
+the <wintitle>Remote z/OS Search</wintitle> window, type the hexadecimal
+escape sequence <userinput>\x<varname>hh</varname></userinput>.</cmd>
+<stepxmp>The following examples show hexadecimal escape sequences:<ul>
+<li>\x09 (tabulator)</li>
+<li>\x4A or \x4a (character J)</li>
+</ul>The code page that is used for hexadecimal escape sequences is
+the default host code page that is specified in the <wintitle>Code
+Page</wintitle> page of the <wintitle>Properties for MVS Files</wintitle> window.
+To open this window, select the <uicontrol>MVS Files</uicontrol> subsystem
+and click <uicontrol>Properties</uicontrol>.</stepxmp></step>
+<step><cmd>Select the <uicontrol>Regular expression</uicontrol> check
+box next to the <uicontrol>Content strings</uicontrol> field.</cmd>
+</step>
+<step><cmd>Complete the remaining fields as described in <xref
+format="dita" href="tzdcmn145.dita" scope="local" type="topic"></xref>.</cmd>
+</step>
+</steps>
+</taskbody>
+<?tm 1435190808 2?>
+</task>
+<?Pub *0000002093?>

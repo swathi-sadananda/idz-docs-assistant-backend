@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdsubppropschema" xml:lang="en-us">
+<title>Subproject property schema</title><?Pub Caret -2?>
+<shortdesc>The subproject property schema defines tags that are used
+to define a subproject property file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>subproject property
+schema</indexterm></indexterm><indexterm>subproject property schema</indexterm>
+<indexterm>configuring host-based projects<indexterm>subproject property
+schema</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  &lt;xsd:element name="ENTRYPOINT-LANG" type="xsd:string"/>
+  &lt;xsd:element name="LINK">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="LINK-PROC">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-STEP">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-LIBRARIES">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-APPEND-CHECKBOX">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-LOCATION">&lt;/xsd:element>
+        &lt;xsd:element ref="USER-SPEC-LINK-INST">&lt;/xsd:element>
+        &lt;xsd:element ref="INST">&lt;/xsd:element>
+        &lt;xsd:element ref="LOAD-MODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-USERVARS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-COMPILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="LISTINGOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSDEBUG">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="COPYLIBRARIES">&lt;/xsd:element>
+        &lt;xsd:element ref="SUPPORTERRORFEEDBACK">&lt;/xsd:element>
+        &lt;xsd:element ref="XMLOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME-PROGRAMPARMS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="C-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="BMS-STEP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="DBRMLOCATION" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="SYSEVENT" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-EMBEDDED-SQL" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="USER-SPEC-LINK-INST" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="USEIMS" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="STEP2" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="DATASETNAME" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="CPP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ADDED-STEPS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="COBOL-STEP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-STEP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-STEP-SUPPORT-ERRFDBK">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-STEP-XML-LOCATION">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-STEP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-STEP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-STEP-SUPPORT-ERRFDBK">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-STEP-XML-LOCATION">&lt;/xsd:element>
+        &lt;xsd:element ref="BMS-STEP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="BMS-STEP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="ASM-STEP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="ASM-STEP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="ASM-STEP-SUPPORT-ERRFDBK">&lt;/xsd:element>
+        &lt;xsd:element ref="ASM-STEP-XML-LOCATION">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-STEP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK-STEP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="RUN-STEP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="RUN-STEP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="CPP-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="CPP-ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="C-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="C-ADDITIONALJCL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MFS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MFS-COMPILE">&lt;/xsd:element>
+        &lt;xsd:element ref="MFS-USERVARS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="SUBPROJECT">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="WSED-VERSION">&lt;/xsd:element>
+        &lt;xsd:element ref="PROJECT-TYPE">&lt;/xsd:element>
+        &lt;xsd:element ref="JOB">&lt;/xsd:element>
+        &lt;xsd:element ref="ASM">&lt;/xsd:element>
+        &lt;xsd:element ref="BMS">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI">&lt;/xsd:element>
+        &lt;xsd:element ref="MFS">&lt;/xsd:element>
+        &lt;xsd:element ref="CPP">&lt;/xsd:element>
+        &lt;xsd:element ref="LINK">&lt;/xsd:element>
+        &lt;xsd:element ref="ENTRYPOINT">&lt;/xsd:element>
+        &lt;xsd:element ref="RUNTIME">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDED-STEPS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="SEPTRANSLATOR" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LOCAL-PREPROC">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="GENERATED-JCL" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="USER-VARIABLES">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="BMS-ASSEMBLE-DSECT" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="PLI-COMPILE">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-CICS">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-DB2">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-IMS">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-USERVARS">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-LOCAL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="CPP-COMPILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="MACROS">&lt;/xsd:element>
+        &lt;xsd:element ref="LISTINGOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="USERLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSEVENT">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-STEP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-EMBEDDED-SQL" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="BMS-STEP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME-STEP" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-STEP" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="USEC" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="USERLIB">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="XMLOUTPUT" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="RUNTIME-PROGRAMPARMS-RUNTIMEOPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="RUNTIME-RUNTIMEOPTIONS-PROGRAMPARMS">&lt;/xsd:element>
+        &lt;xsd:element ref="INBATCH">&lt;/xsd:element>
+        &lt;xsd:element ref="DEBUG">&lt;/xsd:element>
+        &lt;xsd:element ref="RUNTIME-PROC">&lt;/xsd:element>
+        &lt;xsd:element ref="RUNTIME-STEP">&lt;/xsd:element>
+        &lt;xsd:element ref="RUNTIME-OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="RUNTIME-PROGRAMPARMS">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="RUN-USERVARS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="COBOL-COMPILE">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-CICS">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-DB2">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-IMS">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-USERVARS">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-LOCAL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-LOCAL">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="LOCAL-PRE-CICS">&lt;/xsd:element>
+        &lt;xsd:element ref="LOCAL-PREPROC">&lt;/xsd:element>
+        &lt;xsd:element ref="ENV-VAR">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-EMBEDDED-SQL">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-DB2CONN">&lt;/xsd:element>
+        &lt;xsd:element ref="COBOL-DB2-OTHERSQLOPTS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ASM-STEP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PLI-IMS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USEIMS">&lt;/xsd:element>
+        &lt;xsd:element ref="LIBRARY">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="USEDB2" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="ADDITIONALJCL" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ASM-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="SYSDEBUG" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="COPYLIBRARIES" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="C-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="LOCAL-PRE-CICS" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-DB2CONN">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="RUN-STEP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="JOB">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="JOB-CARD">&lt;/xsd:element>
+        &lt;xsd:element ref="GENERATED-JCL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="LIBRARY" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="RUN-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="SYSLIB" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="BMS-ASSEMBLE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="BMS-ASSEMBLE-MAP">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="BMS-ASSEMBLE-DSECT">&lt;/xsd:element>
+        &lt;xsd:element ref="COPYLIBRARIES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PLI-DB2-OTHERSQLOPTS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-IMS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USEIMS">&lt;/xsd:element>
+        &lt;xsd:element ref="LIBRARY">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-STEP-XML-LOCATION">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PROJECT-TYPE" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="C-COMPILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="MACROS">&lt;/xsd:element>
+        &lt;xsd:element ref="LISTINGOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="USERLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSEVENT">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+        &lt;xsd:element ref="USEC">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-DB2CONN">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="CPP">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="CPP-COMPILE">&lt;/xsd:element>
+        &lt;xsd:element ref="C-COMPILE">&lt;/xsd:element>
+        &lt;xsd:element ref="CPP-USERVARS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="CPP-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="OPTIONS" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-STEP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="INCLIBRARIES" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PLI-DB2">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USEDB2">&lt;/xsd:element>
+        &lt;xsd:element ref="PRECOMPILER">&lt;/xsd:element>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="DBRMLOCATION">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSTSIN">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-DB2-OTHERSQLOPTS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="LINK-STEP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PLI-STEP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="OBJECTDECK" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="BMS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="BMS-ASSEMBLE">&lt;/xsd:element>
+        &lt;xsd:element ref="BMS-USERVARS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="WSED-VERSION" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-LIBRARIES">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="LISTINGOUTPUT" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="MAINMODULE" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="ASM-STEP-SUPPORT-ERRFDBK">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ENTRYPOINT">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="ENTRYPOINT-COBOL-NAME">&lt;/xsd:element>
+        &lt;xsd:element ref="ENTRYPOINT-PLI-NAME">&lt;/xsd:element>
+        &lt;xsd:element ref="ENTRYPOINT-ASM-NAME">&lt;/xsd:element>
+        &lt;xsd:element ref="ENTRYPOINT-CPP-NAME">&lt;/xsd:element>
+        &lt;xsd:element ref="ENTRYPOINT-LANG">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ASM">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="ASM-ASSEMBLE">&lt;/xsd:element>
+        &lt;xsd:element ref="ASM-USERVARS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-DB2">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USEDB2">&lt;/xsd:element>
+        &lt;xsd:element ref="PRECOMPILER">&lt;/xsd:element>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="DBRMLOCATION">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSTSIN">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-STEP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="STEPNAME" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-CICS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USECICS">&lt;/xsd:element>
+        &lt;xsd:element ref="SEPTRANSLATOR">&lt;/xsd:element>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ENTRYPOINT-ASM-NAME" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-LOCAL">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+        &lt;xsd:element ref="LOCAL-PRE-CICS">&lt;/xsd:element>
+        &lt;xsd:element ref="LOCAL-PREPROC">&lt;/xsd:element>
+        &lt;xsd:element ref="ENV-VAR">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-EMBEDDED-SQL">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-DB2CONN">&lt;/xsd:element>
+        &lt;xsd:element ref="PLI-DB2-OTHERSQLOPTS">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME-PROC" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-PROC" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="INST" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-APPEND-CHECKBOX" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="JOB-CARD" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="USECICS" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="BMS-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME-PROGRAMPARMS-RUNTIMEOPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ASM-STEP-XML-LOCATION">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="CPP-OPTIONS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ENTRYPOINT-COBOL-NAME">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="LOAD-MODULE" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="DEBUG" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="COBOL-CICS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USECICS">&lt;/xsd:element>
+        &lt;xsd:element ref="SEPTRANSLATOR">&lt;/xsd:element>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSLIB">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PLI-STEP-SUPPORT-ERRFDBK">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PLI-STEP-XML-LOCATION">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MACLIBRARIES" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="LINK-LOCATION">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MACROS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ENTRYPOINT-CPP-NAME" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PRECOMPILER" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="MFS-COMPILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="LISTINGOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="STEPNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="STEP2">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="LINK-STEP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="SUPPORTERRORFEEDBACK" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="ASM-STEP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ENTRYPOINT-PLI-NAME" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="RUNTIME-RUNTIMEOPTIONS-PROGRAMPARMS">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="INBATCH" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="PLI-COMPILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="LISTINGOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="SYSDEBUG">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="INCLIBRARIES">&lt;/xsd:element>
+        &lt;xsd:element ref="SUPPORTERRORFEEDBACK">&lt;/xsd:element>
+        &lt;xsd:element ref="XMLOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="SYSTSIN" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="RUN-STEP-ADDITIONALJCL">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MFS-USERVARS">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="USER-VARIABLES">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="COBOL-STEP-SUPPORT-ERRFDBK">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="ENV-VAR">
+    &lt;xsd:complexType>&lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="BMS-ASSEMBLE-MAP" type="xsd:string">&lt;/xsd:element>
+  &lt;xsd:element name="ASM-ASSEMBLE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MAINMODULE">&lt;/xsd:element>
+        &lt;xsd:element ref="DATASETNAME">&lt;/xsd:element>
+        &lt;xsd:element ref="OPTIONS">&lt;/xsd:element>
+        &lt;xsd:element ref="LISTINGOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="OBJECTDECK">&lt;/xsd:element>
+        &lt;xsd:element ref="MACLIBRARIES">&lt;/xsd:element>
+        &lt;xsd:element ref="SUPPORTERRORFEEDBACK">&lt;/xsd:element>
+        &lt;xsd:element ref="XMLOUTPUT">&lt;/xsd:element>
+        &lt;xsd:element ref="ADDITIONALJCL">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+&lt;/xsd:schema>
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="tzdsubppropfile.dita" type="task"></link>
+</related-links>
+<?tm 1435190796 0?>
+</reference>
+<?Pub *0000026481?>

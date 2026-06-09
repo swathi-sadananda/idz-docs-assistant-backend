@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdexpconfig" xml:lang="en-us">
+<title>Exporting push-to-client configuration files</title>
+<titlealts>
+<navtitle>Exporting push-to-client configuration files</navtitle>
+<searchtitle>Exporting push-to-client configuration files</searchtitle>
+</titlealts>
+<shortdesc>After you configure remote system connections, configuration files, and preferences for
+push-to-client configurations, you can export them to the remote system for distribution to client
+workspaces.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>push-to-client configuration<indexterm>exporting configurations</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>To export system or global configuration settings to the remote system, you must have write
+access to the push-to-client configuration files on the remote system. File permissions can be set
+for three types of users: owner, group, and other. File permissions for the push-to-client directory
+on the remote system are set by using the <cmdname>file.permission</cmdname> directive in the
+<filepath>pushtoclient.properties</filepath> file. The default setting allows read and write for
+owner (the user ID who created a file) and group, and read for other.</prereq>
+<context>Exporting configurations for push-to-client distribution generates configuration files and
+transfers them to the remote system. After the files are exported, they are automatically downloaded
+to client workstations when they connect to the remote system.<p
+conref="zide_conrefs.dita#zide_conrefs/ptc_config_list"/><note>Some configuration files, such as
+installation configuration files<ph otherprops="IDz">, host-based projects, </ph>and default values,
+are created manually on the remote system and not exported from the workstation. </note></context>
+<steps>
+<stepsection>To export push-to-client configuration files:</stepsection>
+<step><cmd>Switch to the model workspace as described in <xref format="dita"
+href="tzdptcmaster.dita" scope="local" type="task"/>.</cmd>
+<info>
+<p conref="zide_conrefs.dita#zide_conrefs/ptcmaster"/>
+</info>
+</step>
+<step><cmd>Connect to the remote system to which you want to export configuration files:</cmd>
+<substeps>
+<substep><cmd>Select the remote system in the <wintitle>Remote Systems</wintitle> view.</cmd>
+</substep>
+<substep><cmd>Click <uicontrol>Connect</uicontrol> on the menu.</cmd>
+</substep>
+</substeps>
+<info>
+<note type="remember">The push-to-client function supports only one primary system. Before you
+attempt to export configuration files, verify that you are connected to only one primary system. If
+you are exporting to a primary system that is different from the primary system to which you last
+exported configuration files (for example, if your site uses one primary system for testing and
+another for production), a window prompts you to verify that you are connected to the correct
+primary system.</note>
+</info></step>
+<step><cmd>From the workspace menu bar, click <menucascade><uicontrol>File</uicontrol>
+<uicontrol>Export</uicontrol></menucascade>.</cmd><stepresult>The <wintitle>Export</wintitle> window
+opens.</stepresult></step>
+<step><cmd>In the <wintitle>Export</wintitle> window, click <uicontrol>+</uicontrol> to expand
+<uicontrol>IBM z/OS Explorer</uicontrol>.</cmd>
+</step>
+<step><cmd>Select <uicontrol>Configuration Files</uicontrol>.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Next</uicontrol>.</cmd><stepresult><ul>
+<li>If the remote system is the primary system, the <wintitle>Global Configuration Files</wintitle>
+window opens.</li>
+<li>If the remote system is not the primary system, the <wintitle>System Configuration
+Files</wintitle> window opens.</li>
+</ul>Each of these windows contains two sections:<ul>
+<li><uicontrol>Global configuration</uicontrol> or <uicontrol>System configuration</uicontrol> lists
+configuration files that can be exported from the workstation to the remote system.</li>
+<li><uicontrol>Key mapping update</uicontrol> lists configuration files that are created on the
+remote system. You cannot export these files from the workstation.</li>
+</ul><ph rev="803">If the product is configured to support configuration groups, this window might
+also include a <uicontrol>Configuration group</uicontrol> list. Configuration groups are controlled
+on the remote system.</ph>.</stepresult></step>
+<?Pub Caret 712?>
+<step rev="803"><cmd>If the push-to-client environment is configured to support configuration
+groups, select the configuration group to which you want to export the configuration
+files.</cmd><info rev="v85">If the model workspace is not bound to a group, you can select a group
+from this list. If the workspace is bound to a group, the group name is displayed in this field and
+you cannot select a different group.</info><stepresult rev="91">Some configurations, such as Eclipse
+Preferences, offer you the opportunity to select specific configuration files to
+export.</stepresult></step>
+<step importance="optional" rev="91"><cmd>To see the list of configuration files, expand the
+configuration.</cmd></step>
+<step importance="optional"><cmd>To display the default locations and names of the configuration
+files on the remote system, select <uicontrol>Show export properties</uicontrol>.</cmd><stepresult>
+The following export properties are displayed:<ul>
+<li><uicontrol>Export Path:</uicontrol> The location on the remote system to which the configuration
+file is to be exported.</li>
+<li><uicontrol>File Mask:</uicontrol> The file name pattern for the configuration file, which is
+useful when many configuration files are saved in the same container.</li>
+<li><uicontrol>Encoding:</uicontrol> The encoding of the configuration file on the remote
+system.</li>
+</ul></stepresult></step>
+<step><cmd>Select the checkbox next to the configuration files you want to export and click
+<uicontrol>Next</uicontrol> or <uicontrol>Finish.</uicontrol></cmd>
+<stepresult> The configuration files are uploaded to the remote system. Some configurations, such as
+Software Analyzer Configurations, might offer you the opportunity to select specific configuration
+files to export. If you selected a configuration that provides this option, a window that lists
+available configuration files opens. </stepresult>
+</step>
+<step importance="optional"><cmd>Select the files that you want to export and click
+<uicontrol>OK</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="czdptc.dita" scope="local" type="concept"> </link>
+<link format="dita" href="rzdkeymap.dita" scope="local" type="reference"> </link>
+</related-links>
+<?tm 1435190796 1?>
+</task>
+<?Pub *0000006882?>

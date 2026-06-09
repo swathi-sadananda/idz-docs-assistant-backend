@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn039" xml:lang="en-us">
+<title>Allocating data sets</title><?Pub Caret -2?>
+<titlealts>
+<searchtitle>Allocating sequential and partitioned data sets (PDS)</searchtitle>
+</titlealts>
+<shortdesc rev="95">Allocating a data set creates a file on the remote
+system. You can create partitioned data sets (PDS), libraries (PDSE),
+version 2 libraries (PDSEv2), and sequential data sets.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>allocating data sets</indexterm></keywords>
+<keywords><indexterm>data sets<indexterm>allocating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>allocating partitioned data sets</indexterm>
+</keywords>
+<keywords><indexterm>partitioned data sets<indexterm>allocating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>allocating sequential data sets</indexterm>
+</keywords>
+<keywords><indexterm>sequential data sets<indexterm>allocating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>allocating PDSEv2 data sets</indexterm></keywords>
+<keywords><indexterm>PDSEv2 data sets<indexterm>allocating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>allocating PDSE data sets</indexterm></keywords>
+<keywords><indexterm>PDSE data sets<indexterm>allocating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>creating remote files</indexterm></keywords>
+<keywords><indexterm>remote files<indexterm>creating</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be <xref href="tzdcmn032.dita">connected to the remote
+system</xref> and working in the <ph
+conref="zide_conrefs.dita#zide_conrefs/perspective"></ph> perspective.</prereq>
+<context rev="95">You can use the <wintitle>New Data Set</wintitle> wizard
+to allocate these data set types:<ul>
+<li>Partitioned data set</li>
+<li>Partitioned data set extended (PDSE)</li>
+<li>Partitioned data set extended version 2 (PDSEv2)</li>
+<li>Sequential data set</li>
+</ul>These instructions provide general information about using this
+wizard to allocate data sets. For more information about a specific
+data set type, see the related topics or the context-sensitive help
+for the wizard.<note type="fastpath">If you have files on the local
+system, you can quickly add them to a partitioned data set or allocate
+a sequential data set by doing one of these steps:<ul>
+<li>To add a file to a partitioned data set, drag it from the local
+system to a partitioned data set name on the remote system. The <wintitle>Rename
+Resource</wintitle> window opens so that you can specify the member
+name.</li>
+<li>To allocate a sequential data set for a local file, drag it from
+the local system to a filter in the <uicontrol>MVS Files</uicontrol> subsystem.
+The <wintitle>Rename Resource</wintitle> window opens so that you
+can specify the data set name, and the <wintitle>New Data Set</wintitle> wizard
+opens so that you can specify data set characteristics.</li>
+</ul></note></context>
+<steps>
+<step><cmd>Select the <uicontrol>MVS Files</uicontrol> subsystem in
+the <wintitle>Remote Systems</wintitle> view or an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject in the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> view:</cmd>
+<choices>
+<choice>In the <wintitle>Remote Systems</wintitle> view, expand the
+remote system where you want to allocate the data set and select <uicontrol>MVS
+Files</uicontrol>.</choice>
+<choice>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+select an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.</choice>
+</choices>
+</step>
+<step><cmd>Right-click and select <menucascade><uicontrol>New</uicontrol>
+<uicontrol>Allocate Partitioned Data Set</uicontrol></menucascade> or <menucascade>
+<uicontrol>New</uicontrol><uicontrol>Allocate Sequential Data Set</uicontrol>
+</menucascade>.</cmd><info><note type="tip">You can also press Ctrl+1
+to allocate a partitioned data set or Ctrl+2 to allocate a sequential
+data set.</note></info><stepresult>The <wintitle>New Data Set</wintitle> wizard
+opens. The remainder of these instructions uses a partitioned data
+set as an example.</stepresult></step>
+<step><cmd>On the <wintitle>Allocate Partitioned Data Set</wintitle> page: </cmd>
+<substeps>
+<substep><cmd>In the <uicontrol>Connection name</uicontrol> field,
+select a remote system connection. The default value is the connection
+from which you opened the wizard.</cmd></substep>
+<substep><cmd>In the <uicontrol>Data set name</uicontrol> field, select
+or type the high-level qualifier for the data set from the list and
+then type the name that follows the combination of high-level qualifier
+and dot (.) character.</cmd><stepxmp>For example, if the high-level
+qualifier is <filepath>MYFILES</filepath> and if you want to allocate
+the data set <filepath>MYFILES.TEST.COBOL</filepath>, type the string <userinput>TEST.COBOL</userinput> in
+the field.</stepxmp></substep>
+<substep><cmd>Click <uicontrol>Next</uicontrol>.</cmd></substep>
+</substeps>
+</step>
+<step><cmd>On the <wintitle>Data Set Allocation</wintitle> page, select
+an option to indicate how to begin specifying allocation values such
+as record format, record length, and block size. </cmd>
+<choices>
+<choice>To use the same data set characteristics as an existing data
+set, select <uicontrol>Copy characteristics from an existing data
+set</uicontrol>, and then click <uicontrol>Browse</uicontrol>. Select
+a data set, and then click <uicontrol>OK</uicontrol>. </choice>
+<choice>To use a defined set of characteristics, select <uicontrol>Specify
+characteristics by usage type</uicontrol>, and then select a value
+from these lists: <ul>
+<li>From the <uicontrol>Category</uicontrol> list, choose how the
+data is to be used: <uicontrol>Source</uicontrol>, <uicontrol>Listing</uicontrol>,
+or <uicontrol>Other</uicontrol>.</li>
+<li>From the <uicontrol>Type</uicontrol> list, choose a language: <uicontrol>ASM</uicontrol>, <uicontrol>C/C++</uicontrol>, <uicontrol>COBOL</uicontrol>, <uicontrol>JCL</uicontrol>, <uicontrol>PLI</uicontrol>,
+or <uicontrol>REXX</uicontrol>.</li>
+</ul></choice>
+<choice>To specify custom data set characteristics, select <uicontrol>Specify
+characteristics (advanced allocation)</uicontrol>.</choice>
+</choices>
+</step>
+<step importance="optional"><cmd>Click <uicontrol>Next</uicontrol>.</cmd>
+<stepresult>The <wintitle>Data Set Characteristics</wintitle> page
+opens. It displays the set of data set characteristics that you selected
+on the <wintitle>Data Set Allocation</wintitle> page:<ul>
+<li>For an existing data set: the data set characteristics of the
+existing data set.</li>
+<li>For usage type: the data set characteristics defined for the selected
+usage type.</li>
+<li>For advanced allocation: the values that were used for the previous
+data set allocation.</li>
+</ul></stepresult></step>
+<step importance="optional"><cmd>Specify data set characteristics.</cmd>
+<info><ul>
+<li>For more information about the fields on this window, see <xref
+format="dita" href="r_dschar.dita" scope="local" type="reference"></xref>.</li>
+<li>For information about the values that are required for different
+uses, contact your <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+administrator. That administrator can also inform you whether you
+must click <uicontrol>System Managed Storage</uicontrol> to assign
+a data set to a particular class.</li>
+<li>The product enforces certain rules for record format (RECFM),
+record length (LRECL), and block size (BLKSIZE). For more information
+about these rules, see <xref href="rzddsa.dita" type="reference"></xref>.</li>
+</ul> </info></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>.</cmd><stepresult>The
+data set is allocated and added to the <uicontrol>Retrieved Data Sets</uicontrol> filter.</stepresult>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn035.dita" type="task"></link>
+<link href="tzdcmn082.dita" type="task"></link>
+<link href="allocateVSAM.dita" type="task"></link>
+<link format="dita" href="t_explore_gens.dita" rev="95" scope="local"
+type="task"></link>
+<link format="dita" href="r_dschar.dita" scope="local" type="reference">
+</link>
+<link format="dita" href="rzddsa.dita" scope="local" type="reference">
+</link>
+</related-links>
+<?tm 1435190812 3?>
+</task>
+<?Pub *0000008425?>

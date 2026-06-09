@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="r_loc_preproc_opt_vars" xml:lang="en-us">
+<title>Variables in local preprocessor options</title>
+<titlealts>
+<navtitle>Variables in local preprocessor options</navtitle>
+<searchtitle>Variables in local preprocessor options</searchtitle>
+</titlealts>
+<shortdesc>To help generalize project builds, you can use variables
+in any of the fields on the <wintitle>Local Preprocessors</wintitle> page
+of the <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local
+PLI Settings</wintitle> page of a property group.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local preprocessor options<indexterm>variables</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>variables<indexterm>local preprocessor options</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><dl>
+<dlentry>
+<dt>${bundle:<varname>packageName</varname>}/<varname>path</varname></dt>
+<dd>The location of an unpacked bundle, or plug-in, where a local preprocessor is defined. You can
+use this variable to point to a local preprocessor plug-in that is installed in the product.
+<varname>packageName</varname> is the plug-in name and <varname>path</varname> is the location of
+the preprocessor in the plug-in.</dd>
+</dlentry><dlentry>
+<dt>${project_loc}</dt>
+<dd>The project location. It can be used to add the location on disk
+of the project. If you must pass the name of a folder in your project
+to your preprocessor, you can specify it as <userinput>${project_loc}\folder1</userinput>.
+Upon invocation of the preprocessor, ${project_loc} is substituted.
+ </dd>
+</dlentry><dlentry>
+<dt>${rdz_cache_home}</dt>
+<dd>When you use a local preprocessor with a remote file, it might be necessary to reach the root
+cache location. This location is the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> cache location
+that is described in the ${rdz_cache_sysn} variable explanation. This variable does not include the
+<filepath>FttRemoteTempFiles\RSE Connection Name</filepath> subfolders. The
+<filepath>BuildOutput</filepath> folder for a local syntax check of a remote file is in the
+${rdz_cache_home} location. This folder is the one from which the local preprocessor is
+started.<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></dd>
+</dlentry><dlentry>
+<dt>${rdz_cache_sysn}</dt>
+<dd>When you use a local preprocessor with a remote file, it might be necessary to be able to point
+to your file in the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> download
+location. This location depends on your workspace location. The local syntax of a remote file
+downloads your compilation dependencies. The download location is the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> cache location.
+When you request a local syntax check of a remote file, the preprocessor must be running on the
+remote system. A combination of a preprocess and a compilation is performed on the remote system,
+and a list of build dependencies is created. This list is the same list of files that is displayed
+when you perform the <uicontrol>Show Dependencies</uicontrol> operation on the file. This list is
+the same list of files that you see when you click <uicontrol>Dependent Files</uicontrol> on the
+<wintitle>Check Dependencies</wintitle> window from the <uicontrol>Syntax Check > Local</uicontrol>
+action. These files are downloaded to the cache location. You might need to point to a file or a
+folder with the ${rdz_cache_sysn} variable. If a data set member
+<filepath>USERID.A001.COPYLIB(MEM1)</filepath> is one of your dependent files, for example, you
+might need to point to the cache location of that file for your local preprocessor to consume. One
+way to do that is to set an environment variable to the folder that contains the downloaded member.
+You can do set this variable in the preprocessor environment variable entry field: <userinput>SET
+SYSLIB=${rdz_cache_sysn}\USERID\USERID.A001.COPYLIB</userinput>. The parent of the folder
+corresponding to the data set is the high-level qualifier of the data set name that contains the
+member. The variable ${rdz_cache_sysn} is substituted with <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> cache location
+<filepath>FttRemoteTempFiles\RSE Connection Name</filepath>.<note
+conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></dd>
+</dlentry><dlentry>
+<dt>${resource_fn}</dt>
+<dd>The unqualified file name of the current resource that is being
+preprocessed. If you built a project, and there were 3 COBOL files
+in your project, <filepath>RED.cbl, WHITE.cbl</filepath>, and <filepath>BLUE.cbl</filepath>,
+for each preprocess during the project build a value would be assigned
+to that variable. The value would be either RED, WHITE, or BLUE. This
+variable is of value when you are specifying preprocessor values on
+the project. For example, specifying <userinput>${resource_fn}_PP1.dek</userinput> in
+the <uicontrol>Preprocessor Output File Name</uicontrol> entry field
+leads to output files <filepath>RED_PP1.dek</filepath>, <filepath>WHITE_PP1.dek</filepath>,
+and <filepath>BLUE_PP1.dek</filepath>, in the <filepath>BuildOutput</filepath> folder.
+ </dd>
+</dlentry><dlentry>
+<dt>${resource_loc}</dt>
+<dd>The location on disk of the resource that is being preprocessed. If the preprocessor requires
+the exact location of the file on disk to preprocess it, you can use this variable, and upon
+invocation, the value of the resource location on disk is substituted. When you request a local
+syntax check of a remote file, the value of ${resource_loc} in the local preprocessor options is the
+location of the file in the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> cache.<note
+conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></dd>
+</dlentry>
+<dlentry otherprops="IDz">
+<dt>${INSTDIR}</dt>
+<dd>The product installation directory. In version 14.1.4 or earlier, you can use the ${INSTDIR}
+variable to point to the product installation directory. This variable is used to find the include
+preprocessor that is shipped with the product.</dd>
+</dlentry></dl></section>
+</refbody>
+<related-links>
+<link format="dita" href="tzdlocprocopts.dita" scope="local" type="task">
+</link>
+</related-links>
+</reference>
+<?Pub *0000005968?>

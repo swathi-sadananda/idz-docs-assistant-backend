@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_submit_mult_jobs" xml:lang="en-us">
+<title>Submitting multiple jobs</title>
+<titlealts>
+<navtitle>Submitting multiple jobs</navtitle>
+<searchtitle>Submitting multiple jobs</searchtitle>
+</titlealts>
+<shortdesc>You can select multiple JCL files to submit.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>submitting multiple jobs</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><xref href="tzdcmn032.dita">Connect to the remote system</xref>.</prereq>
+<steps>
+<stepsection>To submit multiple jobs:</stepsection>
+<step><cmd>From the <wintitle>Remote Systems</wintitle> view or <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> view, expand the
+folders to display the names of the JCL members you want to submit.</cmd>
+</step>
+<step><cmd>Select one or more JCL members.</cmd></step>
+<step><cmd>Right-click and select <uicontrol>Submit</uicontrol> <ph
+rev="80">or press Ctrl+Alt+M.</ph></cmd><stepresult> The <wintitle>Job
+Submission Confirmation</wintitle> window opens.</stepresult></step>
+<step><cmd>To see a list of jobs and their status, click <uicontrol>Details</uicontrol>.</cmd>
+</step>
+<step><cmd>To locate the jobs in the <wintitle>Remote Systems</wintitle> view,
+select one or more jobs in the list and click <uicontrol>Locate Jobs</uicontrol>.</cmd>
+<info>You can select jobs individually or click the <uicontrol>Select
+All</uicontrol> and <uicontrol>Deselect All</uicontrol> to select
+jobs. The <uicontrol>Select All</uicontrol> button selects only the
+last 10 jobs on the list and the <uicontrol>Locate Jobs</uicontrol> action
+locates only the last 10 successfully submitted jobs.</info><stepresult>Located
+jobs are added to the <uicontrol>Retrieved Jobs</uicontrol> filter
+of the JES subsystem.</stepresult></step>
+</steps>
+</taskbody>
+</task>
+<?Pub *0000002011?>

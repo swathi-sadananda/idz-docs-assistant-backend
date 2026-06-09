@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdpgsyssamp" xml:lang="en-us">
+<title>Sample system property group file</title><?Pub Caret -2?>
+<shortdesc>This example illustrates a system property group file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>property groups<indexterm>system property group
+example</indexterm></indexterm><indexterm>system property group example</indexterm>
+<indexterm>configure property groups<indexterm>system property group
+example</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;PROPERTY-GROUPS>
+  &lt;PROPERTY-GROUP>
+    &lt;NAME>COBOL PROPERTY GROUP&lt;/NAME>
+    &lt;APPLICATION-LANGUAGE>COBOL&lt;/APPLICATION-LANGUAGE>
+    &lt;CATEGORY-INSTANCE>
+      &lt;CATEGORY>COBOL_SETTINGS&lt;/CATEGORY>
+      &lt;PROPERTY>
+        &lt;NAME>HOST_COMPILE_OPTIONS&lt;/NAME>
+        &lt;VALUE>TEST&lt;/VALUE>
+      &lt;/PROPERTY>
+      &lt;PROPERTY>
+        &lt;NAME>COMPILE_JCL_PROCEDURE_NAME&lt;/NAME>
+        &lt;VALUE>ELAXFCOC&lt;/VALUE>
+      &lt;/PROPERTY>
+    &lt;/CATEGORY-INSTANCE>
+  &lt;/PROPERTY-GROUP>
+&lt;/PROPERTY-GROUPS>
+</codeblock></section>
+</refbody>
+<?tm 1435190794 0?>
+</reference>
+<?Pub *0000001422?>

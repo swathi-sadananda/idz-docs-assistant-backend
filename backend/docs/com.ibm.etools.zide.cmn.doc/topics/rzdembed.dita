@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdembed" xml:lang="en-us">
+<title>Integrated and separate <tm tmtype="reg" trademark="CICS">CICS</tm> and <tm
+tmtype="reg" trademark="Db2">Db2</tm> steps</title><?Pub Caret -2?>
+<shortdesc>If your COBOL or PL/I programs use <tm tmtype="reg"
+trademark="CICS">CICS</tm> or <tm tmtype="reg" trademark="Db2">Db2</tm>,
+you can indicate whether to use the integrated <tm tmtype="reg"
+trademark="CICS">CICS</tm> translator or <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor
+or a separate step. Settings on the COBOL and PL/I <wintitle>Procedures
+and Steps</wintitle> window control how JCL for these procedures is
+generated.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Db2 integrated coprocessor</indexterm><indexterm>CICS
+integrated translator</indexterm><indexterm>ELAXFCOP</indexterm>
+<indexterm>ELAXFCOC</indexterm><indexterm>ELAXFCOT</indexterm>
+<indexterm>ELAXFPLP</indexterm><indexterm>ELAXFPL1</indexterm>
+<indexterm>ELAXFPLT</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><title>With COBOL programs</title><p>If you select <uicontrol>DB2</uicontrol> on
+the <wintitle>Runtime Environments</wintitle> window and the ELAXFCOP
+procedure is disabled, then ELAXFCOC is generated with PARMs that
+tell the compiler to use the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor.
+However, if you select <uicontrol>Db2</uicontrol> and the ELAXFCOP
+procedure is enabled, then ELAXFCOC is generated with PARMs that tell
+the compiler not to use the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor.
+Instead, it uses the separate step (ELAXFCOP). In either case, the
+compiler is started with ELAXFCOC, but whether it uses the integrated <tm
+tmtype="reg" trademark="Db2">Db2</tm> coprocessor depends on the PARMs
+passed.</p><p>If you select <uicontrol>CICS</uicontrol> on the <wintitle>Runtime
+Environments</wintitle> window and the ELAXFCOT procedure is disabled,
+then ELAXFCOC is generated with PARMs that tell the compiler to use
+the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> coprocessor.
+However, if you select <uicontrol>CICS</uicontrol> and the ELAXFCOT
+procedure is enabled, then ELAXFCOC is generated with PARMs that tell
+the compiler not to use the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> coprocessor.
+Instead, it uses the separate step (ELAXFCOT). In either case, the
+compiler is started with ELAXFCOC, but whether it uses the integrated <tm
+tmtype="reg" trademark="CICS">CICS</tm> coprocessor depends on the
+PARMs passed. </p></section>
+<section><title>With PL/I programs</title><p>If you select <uicontrol>Db2</uicontrol> on
+the <wintitle>Runtime Environments</wintitle> window and the ELAXFPLP
+procedure is disabled, then ELAXFPL1 is generated with PARMs that
+tell the compiler to use the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor.
+However, if you select <uicontrol>Db2</uicontrol> and the ELAXFPLP
+procedure is enabled, then ELAXFPL1 is generated with PARMs that tell
+the compiler not to use the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor.
+Instead, it uses the separate step (ELAXFPLP). In either case, the
+compiler is started with ELAXFPL1, but whether it uses the integrated <tm
+tmtype="reg" trademark="Db2">Db2</tm> coprocessor depends on the PARMs
+passed.</p><p>If you select <uicontrol>CICS</uicontrol> on the <wintitle>Runtime
+Environments</wintitle> window and the ELAXFPLT procedure is disabled,
+then ELAXFPL1 is generated with PARMs that tell the compiler to use
+the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> coprocessor.
+ However, if you select <uicontrol>CICS</uicontrol> and the ELAXFPLT
+procedure is enabled, then ELAXFPL1 is generated with PARMs that tell
+the compiler not to use the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> coprocessor.
+Instead, it uses the separate step (ELAXFPLT). In either case, the
+compiler is started with ELAXFPL1, but whether it uses the integrated <tm
+tmtype="reg" trademark="CICS">CICS</tm> coprocessor depends on the
+PARMs passed.</p></section>
+</refbody>
+<?tm 1435190819 18?>
+</reference>
+<?Pub *0000004345?>

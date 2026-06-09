@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN" "ibm-map.dtd">
+<map xml:lang="en-us"><title>z/OS IDE Documentation</title>
+<topicref href="common_configuring_toc.ditamap" format="ditamap"
+navtitle="Configuring Developer for z/OS"/>
+<topicref href="common_debugging_toc.ditamap" format="ditamap"
+navtitle="Configuring Developer for z/OS"/>
+<topicref href="common_developing_toc.ditamap" format="ditamap"
+navtitle="Configuring Developer for z/OS"/>
+<topicref href="common_hostbased_toc_2.ditamap" format="ditamap"
+navtitle="Configuring Developer for z/OS"/>
+<topicref href="wazi_code_vscode_editor_config_idz.ditamap" format="ditamap"
+navtitle="Configuring Developer for z/OS"/>
+<!--resource only topicrefs-->
+<topicref href="topics/tzdcmn032.dita" processing-role="resource-only"/>
+<topicref href="../com.ibm.wsentdev.doc/topics/czdcmn026.dita" processing-role="resource-only"/>
+<topicref href="topics/czdptc.dita" processing-role="resource-only"/>
+<topicref href="../com.ibm.etools.est.doc/topics/cest_techoverview.dita" processing-role="resource-only"/>
+<topicref href="../com.ibm.idz.db24zos.doc/topics/overview.dita" processing-role="resource-only"/>
+<topicref href="topics/c_planning.dita" processing-role="resource-only"/>
+<topicref href="topics/tzdupdcfg.dita" processing-role="resource-only"/>
+<topicref href="topics/czdbidi.dita" processing-role="resource-only"/>
+</map>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdchgrunenv" xml:lang="en-us">
+<title>Changing the runtime environment of an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Changing the runtime environment of an MVS subproject</navtitle>
+<searchtitle>Changing the runtime environment of an MVS subproject</searchtitle>
+</titlealts>
+<shortdesc>You can change the runtime environment of an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject after it is created.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>runtime environment<indexterm>changing</indexterm></indexterm>
+<indexterm>changing a runtime environment</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>When you create an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject,
+you can choose a runtime environment for the subproject. The runtime
+environment is used to associate runtime-specific actions with projects
+and subprojects. You can see the runtime environment that is associated
+with a subproject by selecting the subproject and opening the <wintitle>Properties</wintitle> view.</context>
+<steps>
+<stepsection>To change the runtime environment that is associated
+with a subproject:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+select the subproject and then click <uicontrol>Properties</uicontrol>.</cmd>
+<stepresult>The <wintitle>Properties</wintitle> window opens.</stepresult>
+</step>
+<step><cmd>Click <uicontrol>Info</uicontrol> to open the <wintitle>Info</wintitle> page.</cmd>
+</step>
+<step><cmd>Select a new runtime environment from the <uicontrol>Runtime
+Environment</uicontrol> list.</cmd><info>You can choose from the following
+runtime environments:<ul>
+<li><uicontrol>Any:</uicontrol> Enables all project and subproject
+actions. This runtime environment is the default.</li>
+<li><uicontrol>Batch:</uicontrol> This option is reserved for future
+use.</li>
+<li><uicontrol>CICS:</uicontrol> Enables <tm tmtype="reg"
+trademark="CICS">CICS</tm> actions and disables other runtime-specific
+actions.</li>
+<li><uicontrol>IMS:</uicontrol> This option is reserved for future
+use.</li>
+</ul></info></step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to save the change.</cmd>
+</step>
+</steps>
+</taskbody>
+<?tm 1435190832 4?>
+</task>
+<?Pub *0000002501?>

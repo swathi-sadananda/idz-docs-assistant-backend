@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdrunstepopts" xml:lang="en-us">
+<title>Runtime step options</title>
+<titlealts>
+<navtitle>Runtime step options</navtitle>
+<searchtitle>Runtime step options</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>Runtime Step Options</uicontrol> to
+specify the runtime settings, including options and JCL-related options
+and properties.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Runtime Step Options</indexterm><indexterm>code
+coverage</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/runp0001_pp"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/runp0001_ro"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/runp0001_so"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/runp0001_aj"></p></section>
+</refbody>
+<?tm 1397076476 0?>
+</reference>
+<?Pub *0000002099?>

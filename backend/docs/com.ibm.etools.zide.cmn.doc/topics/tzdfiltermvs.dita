@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdfiltermvs" xml:lang="en-us">
+<title>Creating a filter for <tm tmtype="tm" trademark="MVS">MVS</tm> Files</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Creating a filter for MVS files</navtitle>
+<searchtitle>Creating a filter for MVS files</searchtitle>
+</titlealts>
+<shortdesc>You can define a filter for an <tm tmtype="tm" trademark="MVS">MVS</tm> system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS Files<indexterm>creating a filter</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>creating a filter<indexterm>MVS Files</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you can create a filter for an <tm tmtype="tm"
+trademark="MVS">MVS</tm> system, you must create a connection to the
+system. For instructions, see <xref href="tzdcmn032.dita#tzdcmn032"></xref>.</prereq>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, under
+the connection name, right-click <uicontrol>MVS Files</uicontrol> and
+click <menucascade><uicontrol>New</uicontrol><uicontrol>Filter</uicontrol>
+</menucascade>.</cmd></step>
+<step><cmd>In the <uicontrol>Filter string</uicontrol> field of the <wintitle>New
+Filter</wintitle> window, type an uppercase filter string and click <uicontrol>Next</uicontrol>.</cmd>
+<info> The filter string is similar to the data set name level. You
+can use a single asterisk to represent zero or more characters. You
+can use double asterisks (**) to represent zero or more qualifiers.
+Given data set names A.C and A.B.C, for example, the filter A.*.C
+matches A.B.C, but not A.C, while the filter A.**.C matches both data
+set names. The only wildcard character that is supported in this field
+is *. The % wildcard character is not supported.</info></step>
+<step><cmd>In the <uicontrol>Filter name</uicontrol> field, type a
+name for your filter and click <uicontrol>Finish.</uicontrol>. The
+new filter is added to <uicontrol>MVS Files</uicontrol>.</cmd></step>
+<step><cmd>Expand the filter and, when the <wintitle>Enter Password</wintitle> window
+opens, type your user ID and password and click <uicontrol>OK.</uicontrol></cmd>
+<stepresult>If the connection attempt is successful, all the data
+sets matching your filter are displayed. You can expand a data set
+name and see the members in it.</stepresult></step>
+</steps>
+<example>
+<image placement="break" href="../animations/filter.gif">
+<alt>Animation illustrating how to filter MVS Files</alt>
+</image>
+</example>
+</taskbody>
+<?tm 1435190810 3?>
+</task>
+<?Pub *0000002573?>

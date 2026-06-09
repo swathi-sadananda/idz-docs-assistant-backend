@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdgdgview" rev="751" xml:lang="en-us">
+<title>Viewing GDGs and GDSs</title><?Pub Caret -2?>
+<shortdesc>If you are connected to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+that contains GDGs, these files are displayed under the <uicontrol>MVS
+Files</uicontrol> node of the <wintitle>Remote Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>generation data group<indexterm>viewing</indexterm></indexterm>
+<indexterm>generation data set<indexterm>viewing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+with GDG resources.</prereq>
+<context>In the <wintitle>Remote Systems</wintitle> view, a GDG is
+shown as a folder that contains GDSs. A GDS can be a sequential or
+a partitioned data set. The name of each GDS in a GDG consists of
+the GDG name followed by the absolute generation and version numbers.
+The generation and version numbers are in the form G<varname>xxxx</varname>V<varname>yy</varname>,
+where <varname>xxxx</varname> is an unsigned 4-digit decimal generation
+number (0001 - 9999) and <varname>yy</varname> is an unsigned 2-digit
+decimal version number (00 - 99). In the following illustration, USER33.GDG0001.G0006V00
+is a GDS of generation 6, version 0 in a GDG named USER33.GDG0001. <image
+href="../images/gdg.gif" placement="break"><alt>GDG in the <wintitle>Remote
+Systems</wintitle> view</alt></image><p>A GDS can also be accessed
+by using the GDG name followed by a relative generation number. The
+current generation is represented by 0, the previous generation by
+-1, and so on. You use +n to allocate a new generation. The allocated
+generation number is the current generation + n. The relative generation
+number does not count skipped generations. If a GDG contains GDSs <filepath>A.B.C.G0001V00</filepath> and <filepath>A.B.C.G0003V00</filepath>, <filepath>A.B.C.G0001V00</filepath> is <filepath>A.B.C(-1)</filepath> and <filepath>A.B.C.G0003V00</filepath> is <filepath>A.B.C(0)</filepath>.</p><p>In
+the <wintitle>Remote Systems</wintitle> view, a GDS in a GDG is represented
+by the absolute generation and version numbers followed by the relative
+generation number. This order can be changed by a preference to the
+relative generation number followed by the absolute generation and
+version numbers. They are shown in the order of the newest generation
+to the oldest. The succeeding relative generation number or the absolute
+generation and version numbers is a label decoration that can be disabled
+by a preference setting.  </p></context>
+</taskbody>
+<related-links>
+<link href="tzdgdg.dita" type="task"></link>
+<link href="tzdgdgdef.dita" type="task"></link>
+<link href="tzdgdsalloc.dita" type="task"></link>
+</related-links>
+<?tm 1435190815 2?>
+</task>
+<?Pub *0000003051?>

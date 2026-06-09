@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><topic id="tzdcmn145" xml:lang="en-us">
+<title>Searching a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> system</title>
+<shortdesc>You can search a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system for file names or for
+files that contain a search string.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>z/OS system<indexterm>searching</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>searches<indexterm>remote z/OS system</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section id="prereq">
+<title>Before you start</title>
+<ol>
+<li>Connect to a remote system.</li>
+<li>Set search preferences. The search function can return search results incrementally so that you
+can begin working with search results before all results are returned. This function is controlled
+by a setting in the <wintitle>Remote z/OS Search</wintitle> preference page. To open this page,
+click <uicontrol>Preferences</uicontrol> at the bottom of the <wintitle>Remote z/OS
+Search</wintitle> window. For more information about controlling how frequently search results are
+updated, see <xref format="dita" href="tzdsearchpref.dita" scope="local" type="task" />.</li>
+</ol>
+</section>
+<section id="search">
+<title>Searching a <tm trademark="z/OS" tmtype="reg">z/OS</tm> system</title>
+<p> The <wintitle>Remote z/OS Search</wintitle> window provides various options for searching <tm tmtype="reg" trademark="z/OS">z/OS</tm> systems. The following procedure provides basic search
+instructions. For more information about the various search options, see <xref format="dita" href="t_set_other_srch_opts.dita" scope="local" type="task" />.</p>
+<p rev="91">To search for strings in a specific data set or data set member, you can also use the
+<wintitle>Remote z/OS File Search</wintitle> window. This window generates a batch ISPF search-for
+request (ISPF option 3.14) and can be a more efficient way to search in large data sets. For more
+information about the Remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> File Search window, see
+<xref format="dita" href="t_search_remote_zos_file.dita" scope="local" type="task" />.</p>
+<note type="tip">The <wintitle>Remote z/OS Search</wintitle> window retains the following search
+options that are used for a previous search, if you do not select a different object for the search:<ul>
+<li>The options in the <uicontrol>Search for</uicontrol> area</li>
+<li>The <uicontrol>With name</uicontrol> field</li>
+<li>The <uicontrol>Content strings</uicontrol> field</li>
+</ul>If you select a new object for a search, the search function prepares a new search and clears
+these options.<p>The following search options are always retained:<ul>
+<li>The <uicontrol>Regular expression</uicontrol> checkboxes in the <uicontrol>Search
+for</uicontrol> area</li>
+<li>Settings in the <uicontrol>Search result options</uicontrol> area</li>
+<li>Settings in the <uicontrol>Content string options</uicontrol> area</li>
+<li>The setting of the <uicontrol>Search Options</uicontrol> push button (expanded or
+collapsed)</li>
+</ul></p></note>
+<ol>
+<li>To search for a file or for file content on a <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+system:</li>
+<li>To open the <wintitle>Remote z/OS Search</wintitle> window: <ul>
+<li>Click <uicontrol>Search</uicontrol>
+<image href="../images/search.gif" placement="inline"><alt>Search icon</alt>
+</image> on the toolbar.</li>
+<li>Press Ctrl+H.</li>
+<li>Select <menucascade><uicontrol>Search</uicontrol><uicontrol>Search</uicontrol>
+</menucascade> from the menu bar.</li>
+<li>In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view,
+right-click the file or container to search, and then select <uicontrol>Search</uicontrol> from the
+menu.</li>
+<li>In the COBOL Editor, PL/I Editor, or <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX
+Editor, highlight a string and press Ctrl+H.</li>
+</ul>
+</li>
+<li>Click the <uicontrol>Remote z/OS Search</uicontrol> tab. <itemgroup><wintitle>Remote z/OS
+Search</wintitle> is the default search view when you initiate a search from these views or editors:<ul>
+<li><wintitle>Remote Systems</wintitle> view</li>
+<li><wintitle>z/OS Projects</wintitle> view</li>
+<li><wintitle>Remote System Details</wintitle> view</li>
+<li>COBOL Editor</li>
+<li>PL/I Editor</li>
+<li>JCL Editor</li>
+<li><tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor</li>
+</ul><note>A system administrator can change the default search view for these views and
+editors.</note></itemgroup></li>
+<li>Choose the type of file you are searching for: <ul>
+<li><uicontrol>Data set member</uicontrol>: Select this option to search for a data set member.</li>
+<li><uicontrol>Sequential data set</uicontrol>: Select this option to search for a sequential data
+set, VSAM data set, or generation data set.</li>
+<li><uicontrol>Partitioned data set</uicontrol>: Select this option to search for a partitioned data
+set or generation data group.</li>
+</ul>
+</li>
+<li importance="optional">In the <uicontrol>With name</uicontrol> field, type the file name to
+search for. <itemgroup>This field is optional when you are searching for file contents rather than a
+file name. If the <uicontrol>Regular expression</uicontrol> checkbox is not selected, you can use
+wildcard characters in the <uicontrol>With name</uicontrol> field. Valid characters include * to
+match any string and ? to match a single character. Wildcard characters are not allowed in a
+high-level qualifier. <note type="important">To use the ? wildcard character, both the client and
+server must be version 9.0.1 or later. For examples of using the ? wildcard character, see <xref href="#tzdcmn145/question_mark" format="dita" /></note></itemgroup>
+</li>
+<li importance="optional">In the <uicontrol>Content strings</uicontrol> field, type the text to
+search for. <itemgroup>To search for a file name, leave this field blank (or type
+<userinput>*</userinput> in the field). To search within a file, you must specify a content string
+in this field. You can use wildcard and escape characters in the <uicontrol>Content
+strings</uicontrol> field. Valid characters include * to match any string, ? to match any character,
+and \ to specify an escape character for these literals: * ? or \. For an example of constructing an
+AND search query, see <xref href="#tzdcmn145/and_query_example" format="dita" />.<note>The
+<uicontrol>Content strings</uicontrol> field is not available for <uicontrol>Partitioned data
+set</uicontrol> searches.</note></itemgroup></li>
+<li importance="optional"> Select the <uicontrol>Regular expression</uicontrol> checkbox to enter a
+regular expression for the <uicontrol>With name</uicontrol> or <uicontrol>Content
+strings</uicontrol> field.<itemgroup><ph rev="v85">You can use the
+<userinput>\x<varname>hh</varname></userinput> escape sequence in the <uicontrol>Content
+strings</uicontrol> field to search for hexadecimal content in a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> file. For more information about searching for hexadecimal content, see
+the related topics.</ph> For the meaning of * and ? in regular expressions, see <xref format="html" href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html" scope="external">Class
+Pattern</xref>. For examples of constructing a regular expression search, see <xref href="#tzdcmn145/regex" format="dita" />.</itemgroup>
+</li>
+<li>Click <uicontrol>Search</uicontrol>.</li>
+</ol>
+</section>
+<section id="results"><title>Results</title>The search window closes and the <wintitle>Remote z/OS
+Search</wintitle> view opens, listing the search results. A search can return two types of results:<ul>
+<li>If you type a string in the <uicontrol>With name</uicontrol> field and leave the
+<uicontrol>Content strings</uicontrol> field empty, then the search returns a list of data set or
+member names as the search result.</li>
+<li>If you type a string in the <uicontrol>Content strings</uicontrol> field, then the search
+returns a list of content strings as the search result.</li>
+</ul>You can double-click files that are listed in this view to open them in the editor. If you
+request a search for content strings within files, you can expand the files that are listed in this
+view by clicking <uicontrol>+</uicontrol> next to their names. The lines that match the specified
+search string are listed beneath these files. You can double-click a line number to open the
+corresponding file and position the cursor at that line. For more information about working with
+search results, see <xref format="dita" href="tzdcmn103.dita" scope="local" type="topic" />.</section>
+<section id="and_query_example">
+<title>Constructing an AND search query</title>
+<p conref="zide_conrefs.dita#zide_conrefs/and_search_queries" />
+</section>
+<section id="question_mark">
+<title>Including the ? character in a content string search</title>
+<p>You can include the ? wildcard character in the <uicontrol>Content string</uicontrol> field of
+the search window. This character returns different results with the <uicontrol>Regular
+expression</uicontrol> option on (selected) or off (cleared).</p>
+<table id="table_mcx_tjj_btb"><title>Results of ? wildcard characters in content string
+searches</title><desc>
+<p outputclass="summary">This table describes how to construct ? wildcard character searches in the
+<uicontrol>Content string</uicontrol> field with the <filepath>Regular expression</filepath> option
+turned on and off.</p>
+</desc><tgroup cols="5">
+<colspec colname="col1" />
+<colspec colname="col2" />
+<colspec colname="col3" />
+<colspec colname="col4" />
+<colspec colname="col5" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Field name</entry>
+<entry colname="col2">Regular expression option</entry>
+<entry colname="col3">Use to search for</entry>
+<entry colname="col4">Sample search string</entry>
+<entry colname="col5">Matching results</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><uicontrol>Content string</uicontrol></entry>
+<entry colname="col2">On</entry>
+<entry colname="col3">Search for a character that occurs once or not at all in the position
+preceding the ? wildcard character.</entry>
+<entry colname="col4">VARA?B</entry>
+<entry colname="col5">The search in a COBOL program that contains the following variable declarations:<sl>
+<sli>VARAA</sli>
+<sli>VARAAB</sli>
+<sli>VARAB</sli>
+<sli>VARBA</sli>
+<sli>VARAC</sli>
+<sli>ABCVARABA</sli>
+</sl>Returns matches for the variables VARAB, VARBA, ABCVARABA, because each of these strings
+contains VAR + A[0 or 1 time] + B.</entry>
+</row>
+<row>
+<entry colname="col1"><uicontrol>Content string</uicontrol></entry>
+<entry colname="col2">Off</entry>
+<entry colname="col3">Search for any single character in the position of the ? wildcard
+character.</entry>
+<entry colname="col4">VARA?B</entry>
+<entry colname="col5">The search in a COBOL program that contains the following variable declarations:<sl>
+<sli>VARAA</sli>
+<sli>VARAAB</sli>
+<sli>VARAB</sli>
+<sli>VARBA</sli>
+<sli>VARAC</sli>
+<sli>ABCVARABA</sli>
+</sl>Returns a match only for the variable VARAAB, because the search string matches only VAR + A +
+[any single character] + B.</entry>
+</row>
+</tbody>
+</tgroup></table>
+</section>
+<section id="regex">
+<title>Constructing a regular expression search</title>
+<p>You can perform a regular expression search using either the <uicontrol>With name</uicontrol>
+field or the <uicontrol>Content string</uicontrol> field. Regular expression searches in these
+fields function differently.</p>
+<dl>
+<dlentry>
+<dt><uicontrol>With name</uicontrol></dt>
+<dd>A regular expression search in the <uicontrol>With name</uicontrol> field calls the regular
+expression engine searching for exact matches. The search scope for this type of search is member
+names (that is, you cannot use it to search data set names). The following two examples illustrate
+how a regular expression search functions with this list of member names:<sl>
+<sli><filepath>COBOLTST</filepath></sli>
+<sli><filepath>CBLTST</filepath></sli>
+<sli><filepath>ACOBTST</filepath></sli>
+</sl><ol>
+<li>The search pattern <userinput>COB</userinput> returns no results because no member name is
+exactly <filepath>COB</filepath>.</li>
+<li>The search pattern <userinput>*COB*</userinput> returns all member names except
+<filepath>CBLTST</filepath>.</li>
+</ol>
+</dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Content string</uicontrol></dt>
+<dd>A regular expression search in the <uicontrol>Content string</uicontrol> field calls the regular
+expression engine searching for any match of the search string in the content of members. Given the
+same list of member names, the following regular expression searches in the <uicontrol>Content
+string</uicontrol> field return these results:<ol>
+<li>The search pattern <userinput>COB</userinput> returns all member names except
+<filepath>CBLTST</filepath> because the search engine is looking for any instance of
+<userinput>COB</userinput>.</li>
+<li>The search pattern <userinput>*COB*</userinput> also returns all member names except
+<filepath>CBLTST</filepath>.</li>
+</ol>
+</dd>
+</dlentry>
+</dl>
+</section>
+</body>
+<related-links>
+<link format="dita" href="t_set_other_srch_opts.dita" scope="peer" type="task"><linktext>Setting
+other search options</linktext></link>
+<link format="dita" href="tzhexsearch.dita" scope="peer" type="task"><linktext>Searching for
+hexadecimal values in remote z/OS files</linktext></link>
+<link href="tzdcmn103.dita" type="topic" scope="peer"><linktext>Working with search
+results</linktext></link>
+<link format="dita" href="t_export_search_results.dita" scope="peer" type="task"><linktext>Exporting
+search results</linktext></link>
+<link href="t_editRerunSearch.dita" type="task" scope="peer"><linktext>Edit and rerun a
+search</linktext></link>
+<link href="tzdsavesearch.dita" type="task"><linktext>Saving search queries</linktext></link>
+<link format="dita" href="tzdsearchpref.dita" scope="peer" type="task"><linktext>Setting preferences
+for Remote z/OS Search</linktext></link>
+<?Pub Caret 0?>
+</related-links>
+
+</topic><?Pub *0000014643?><?tm 1665694012145 9 z/OS||z Systems ?>

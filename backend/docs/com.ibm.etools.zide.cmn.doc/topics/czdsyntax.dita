@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdsyntax" xml:lang="en-us">
+<title>Checking syntax</title><?Pub Caret -2?>
+<shortdesc><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> provides
+two options for checking the syntax of your resources: local syntax
+check and remote syntax check.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS subproject<indexterm>syntax checking</indexterm></indexterm>
+<indexterm>local syntax check</indexterm><indexterm>remote syntax
+check</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p rev="803"><note type="attention">Local syntax check is deprecated.</note>You
+can do a local syntax check on COBOL or PL/I files or a remote syntax
+check on COBOL, PL/I, or Assembler files:</p>
+<ul>
+<li>A <term>local syntax check</term> uses the <tm tmtype="tm" trademark="Windows">Windows</tm> COBOL or PL/I compiler to check the
+syntax of resources. You can use local syntax check on resources that
+are stored locally or on remote resources. Local syntax checking saves
+processing time and avoids the expense (if any) that is associated
+with added <tm tmtype="reg" trademark="z/OS">z/OS</tm> CPU cycles.
+To perform a local syntax check, the source file you want to check
+must be in an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.
+The subproject might be in either offline or online state.</li>
+<li rev="803">A <term>remote syntax check</term> uses the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> JCL procedure support to submit resources to a <tm trademark="z/OS" tmtype="reg">z/OS</tm>-based compiler or assembler for syntax checking. For remote syntax checking from an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject, the subproject must
+be in online state. A remote syntax check allows for a final syntax
+check on the target machine. You can perform a remote check syntax
+operation on the following resource types:<ul>
+<li>COBOL, PL/I, and Assembler source files in a local <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</li>
+<li>COBOL, PL/I, and Assembler source files in a partitioned data
+set in an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject or on
+a remote system</li>
+<li>A local file or remote partitioned data set member that is open
+in the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor,
+COBOL Editor, or PL/I Editor</li>
+</ul>    </li>
+</ul>
+<note type="restriction">
+<ul>
+<li>The syntax check action is not supported for sequential data sets or <tm tmtype="tm"
+trademark="MVS">MVS</tm> subprojects.</li>
+<li><ph id="sosi-local-syntax-check">Local syntax checking does not support shift-out-shift-in
+(SOSI) sources. The importer that is used to do the local syntax check supports only UTF-8 encoding.
+Translating CP-930 and other SOSI sources into UTF-8 alters the column locations for some
+characters, and this alteration results in unexpected errors.</ph></li>
+<li>Remote syntax check cannot be performed when either the Db2 Precompiler Step or the CICS
+Translator Step is enabled in the property group because error feedback is not supported for these
+steps.  To temporarily override these options:<ol>
+<li>Select the file for which you want to perform a remote syntax check.</li>
+<li>Right-click and select <menucascade>
+<uicontrol>Property Group</uicontrol>
+<uicontrol>Override Properties</uicontrol>
+</menucascade>. The property group editor opens a copy of the property group specific to the
+file.</li>
+<li>On the <wintitle>Procedures and Steps</wintitle> page, disable the procedure containing the <tm trademark="Db2" tmtype="reg">Db2</tm> Precompiler Step or the <tm trademark="CICS" tmtype="reg">CICS</tm> Translator Step and save the property group.</li>
+<li>Perform the syntax check.</li>
+<li>To re-enable the procedure, right-click the file and select <menucascade>
+<uicontrol>Property Group</uicontrol>
+<uicontrol>Delete Overrides</uicontrol>
+</menucascade>.</li>
+</ol></li>
+</ul>
+</note>
+<p>In relation to local or remote syntax checks, any copybooks, include
+files, or macros are checked if they are referenced in the source
+and are accessible. Errors are displayed in the <wintitle>Remote Error
+List</wintitle> view, and you can double-click an error entry to open
+the file (potentially an included file) where the error was found.</p>
+<p>In the absence of language elements that require special processing, it is recommended that you first check your code locally. After you remove most of the errors, you can check your code against a <tm trademark="z/OS" tmtype="reg">z/OS</tm>-based compiler.</p>
+</conbody>
+<related-links>
+<link href="tzdcmn055.dita" type="task" />
+<link href="tzdcmn056.dita" type="task" />
+<link href="czdcmn018.dita" type="concept" otherprops="IDz" />
+<link href="tzdcicslevel.dita" type="task" />
+<link href="tzdshowdep.dita" type="task" />
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+
+</concept><?Pub *0000003762?><?tm 1665694000174 14 z/OS||z Systems||Windows||MVS||Db2||CICS ?>

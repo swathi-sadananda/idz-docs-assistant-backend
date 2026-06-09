@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN" "ibm-topic.dtd">
+<topic id="tzdcmn042" xml:lang="en-us">
+<title>Creating a local <tm trademark="z/OS" tmtype="reg">z/OS</tm> project</title>
+<titlealts>
+<navtitle>Creating a local z/OS project</navtitle>
+<searchtitle>Creating a local z/OS project</searchtitle>
+</titlealts>
+<shortdesc>You can create a local <tm trademark="z/OS" tmtype="reg">z/OS</tm> project from the <wintitle>z/OS Projects</wintitle> view or
+from a local Git repository.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>z/OS project<indexterm>local<indexterm>creating</indexterm></indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>local z/OS project<indexterm>creating</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>
+<title>From the <tm trademark="z/OS" tmtype="reg">z/OS</tm> Projects view</title>
+<ol id="new_local_zos_project">
+<li>Right-click the <wintitle>z/OS Projects</wintitle> view and select <menucascade>
+<uicontrol>New</uicontrol><uicontrol>Local z/OS Project</uicontrol></menucascade>. The <wintitle>New
+Local Project</wintitle> window opens. </li>
+<li>Type a name for the project. </li>
+<li rev="760">From the <uicontrol>Property Group</uicontrol> area, select one of these options: <ul>
+<li rev="803"><uicontrol>Select a property group to associate with the project</uicontrol> Select
+this option and then select a property group for the new project. You can sort the list by clicking
+the table headings. To reverse the sort order, click the table headings again.</li>
+<li><uicontrol>Create a property group and associate it with the project. Click Finish to edit the
+property group.</uicontrol> Select this option to create a property group for the project. Type a
+name for the group in the <uicontrol>Name</uicontrol> field.</li>
+<li><uicontrol>Do not associate the project with a property group.</uicontrol> Select this option to
+create the project without associating it with a property group.</li>
+</ul></li>
+<li>Click <uicontrol>Finish</uicontrol>. If you are creating a new property group, the property
+group editor opens.</li>
+</ol>
+</section>
+<section id="git-repo">
+<title>From a local Git repository</title>
+<ol id="git-repo-steps">
+<li>Add a Git repository to the <wintitle>Git Repositories</wintitle> view. For instructions, see
+<xref href="https://www.ibm.com/docs/en/adfz/developer-for-zos/15.0.0?topic=eug-tasks#Adding_a_Repository" format="html" scope="peer">Adding a repository</xref> in the EGit User Guide.</li>
+<li>In the <wintitle>Git Repositories</wintitle> view, right-click a repository or an application
+folder and click <uicontrol>Create a z/OS Project</uicontrol>. The Git repository or folder is added
+to the <wintitle>z/OS Projects</wintitle> view.</li>
+<li>To see the new project, click the <uicontrol>z/OS Projects</uicontrol> tab. The following
+demonstration includes the steps for adding a Git repository to the <wintitle>Git
+Repositories</wintitle> view.<image href="../animations/new-project-from-git-repo.gif" placement="break">
+<alt>Creating a z/OS project from a Git repository</alt>
+</image></li>
+</ol>
+</section>
+</body>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" type="task" />
+<link><linktext>Switching to a new perspective</linktext></link>
+<link href="https://www.ibm.com/docs/en/adfz/developer-for-zos/15.0.0?topic=documentation-egit-user-guide" format="html" scope="peer"><linktext>EGit User Guide</linktext></link>
+</related-links>
+</topic><?tm 1665693491665 3 z/OS ?>

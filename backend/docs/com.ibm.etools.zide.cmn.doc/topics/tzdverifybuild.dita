@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdverifybuild" xml:lang="en-us">
+<title>Verifying build settings</title><?Pub Caret -2?>
+<shortdesc>Follow these steps to verify build settings for an <tm
+tmtype="tm" trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>build<indexterm>verify settings</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>verify build settings</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+right-click the subproject of interest and select <menucascade>
+<uicontrol>Property Group</uicontrol><uicontrol>Edit Associated Property
+Group</uicontrol></menucascade> from the menu.</cmd></step>
+<step><cmd>In the Property Group editor, click the tabs to open property
+pages and make changes as appropriate. </cmd><info>The following entries
+are most relevant to building <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects: <ul>
+<li>To identify the data sets used during build, see the entry for
+Assembler Settings, COBOL Settings, or PL/I Settings; also see the
+entry for Link Options.</li>
+<li>To identify the job card that is used in generated JCL, as well
+as the data set that receives the JCL, see the entry for JCL Job Card
+and Data Set.</li>
+<li>To identify certain characteristics of the load module, see the
+entry for Application Entry Point (on the <wintitle>Properties</wintitle> page)
+and the entry for Runtime Options.</li>
+</ul></info></step>
+<step><cmd>After you make changes, close and save the property group.</cmd>
+</step>
+</steps>
+</taskbody>
+<?tm 1435190839 2?>
+</task>
+<?Pub *0000001963?>

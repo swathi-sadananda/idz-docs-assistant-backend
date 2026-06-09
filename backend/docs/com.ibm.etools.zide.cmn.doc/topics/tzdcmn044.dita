@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn044" xml:lang="en-us">
+<title>Working offline in a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</title><?Pub Caret -2?>
+<shortdesc>You can work offline in a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+if your circumstances do not permit you to remain connected to the
+remote system. When you move a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+to the offline state, you can select specific subprojects, data sets,
+and partitioned data set members to be taken offline. When you are
+ready to work online again, you can reconnect to the remote system
+and upload the resources you changed.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS project<indexterm>working offline</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>offline state</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you can move a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+to offline state, you must complete the following tasks:<ul>
+<li><xref href="tzdcmn032.dita" type="topic">Define a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system</xref> and <xref href="tzdcmn032.dita" type="topic">connect to the system</xref> in the <wintitle>Remote Systems</wintitle> view.</li>
+<li><xref href="tzdcmn043.dita" type="task">Create a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</xref> and one or more <xref href="tzdnewsubproject.dita" type="task"><tm tmtype="tm" trademark="MVS">MVS</tm> subprojects</xref> in
+the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view.</li>
+<li><xref href="tzdcmn049.dita" type="topic">Populate the <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects</xref> with your personal data
+sets or partitioned data set members as well as some shared copybook
+data sets.</li>
+<li>Correctly define the SYSLIBs for the remote system.</li>
+</ul></prereq>
+<context><note type="attention">The work offline and work online operations
+for a remote resource are deprecated.</note>The default configuration
+of <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> grants
+permission to move a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+to offline state. If you notice that the <uicontrol>Work Offline</uicontrol> action
+is disabled for a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project,
+then the remote system might be configured to deny permission to work
+offline. Consult your systems administrator if you have questions
+about offline permissions on a remote system.</context>
+<steps>
+<stepsection>To work offline in a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project,
+follow these steps:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view,
+right-click the project to be moved offline.</cmd></step>
+<step><cmd>Click <uicontrol>Work Offline</uicontrol>.</cmd><stepresult> The <wintitle>Work
+Offline</wintitle> wizard opens. This wizard steps you through the
+process of selecting resources to be moved offline and checking dependencies
+to ensure that you have all the resources you must work while disconnected
+from the remote system. </stepresult></step>
+<step><cmd>On the <wintitle>Move Project Offline</wintitle> page,
+select the subprojects, data sets, or members to move offline.</cmd>
+</step>
+<step><cmd importance="optional">To add the dependencies of any selected
+COBOL or PL/I programs to the subproject, follow these steps:</cmd>
+<substeps>
+<substep><cmd>Click <uicontrol>Next</uicontrol>.</cmd><stepresult>The <wintitle>Show
+Dependencies for Selected Resources</wintitle> page opens.</stepresult>
+</substep>
+<substep><cmd>Click <uicontrol>Show Dependencies</uicontrol>. </cmd>
+<info> <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> uses
+the COBOL and PL/I compiler options to determine program dependencies.
+For information about setting compiler options for COBOL and PL/I
+programs, see <xref href="tzdshowdep.dita" type="task" />.</info>
+<stepresult>The dependencies are displayed in the <uicontrol>Dependency
+Files</uicontrol> list.</stepresult></substep>
+<substep><cmd>Select the check box next to the copy members and include files in the
+<uicontrol>Dependency Files</uicontrol> list to add these files to the subproject before the project
+goes offline.</cmd>
+<stepresult> The files that are selected in the dependencies list are also taken offline. If any of
+your programs depend on a file that cannot be found, an error message is issued and the file is
+skipped. To ensure that files are not skipped, run a local syntax check on your program; if the
+syntax check does not produce any errors, then all the dependencies can be located and no files are
+skipped.<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></stepresult>
+</substep>
+</substeps>
+</step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>. </cmd><stepresult>The
+selected resources are taken offline, and the project is labeled <uicontrol>[Offline]</uicontrol> in
+the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view. Other
+project resources that were not taken offline are disabled in the <wintitle>z/OS
+Projects</wintitle> view. The following example shows an offline project
+in which <filepath>USER33.RDZDB2.COBOL(RDZDB2)</filepath> is offline.
+The remaining data sets in <filepath>Subproj1</filepath> are disabled
+and are not accessible while the project is offline.<image href="../images/offlineproj.gif" placement="break"><alt>An offline
+project</alt></image></stepresult></step>
+<step><cmd>Disconnect from the remote system and work offline on downloaded
+resources.</cmd></step>
+</steps>
+<result>When the project is taken offline, the library properties
+that are used to build a file are transferred to the offline subproject.
+In addition to the SYSLIB being transferred to reflect a local version,
+the Additional JCL is processed into SET statements of the <uicontrol>Environment
+variables</uicontrol> field. Translating these properties locally
+helps you continue development activities like syntax check, open
+copy member, and content assist.<p>The work offline feature is a convenience
+that you can use to edit source code, check the syntax of the code,
+and save local changes when a remote system connection is not available.
+You can perform the following actions on an offline project:<ul>
+<li>Rename data sets and partitioned data set members</li>
+<li>Copy data sets and partitioned data set members</li>
+<li>Delete a partitioned data set member</li>
+<li>Edit data sets and partitioned data set members</li>
+<li>Local syntax check<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></li>
+<li>Nominate as entry point</li>
+<li>Associate property groups with resources</li>
+<li>Edit properties of subprojects, partitioned data sets, and partitioned
+data set members</li>
+</ul></p><p>Be aware, however, that the following special considerations
+and limitations are in effect when you work offline in a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project:<ul>
+<li>Resources on the remote system are still accessible to others.
+You must merge your changes with any changes other users make to resources.
+ <note>If you choose to overwrite a remote resource when you take
+a project back online, any changes that others make to the resource
+on the remote system are lost.</note></li>
+<li>For <tm tmtype="tm" trademark="MVS">MVS</tm>, remote operations,
+including remote syntax check, project builds, allocation or deletion
+of data sets, creation or deletion of a member, move, copy and paste,
+rename, save as, generate JCL, debug, compress, and migration of data
+sets are not supported when you work offline, even if the system associated
+with the project is connected. For <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> System Services, project builds,
+file level compilation, and assemble and debug are not supported in
+offline state. </li>
+<li>New data sets cannot be created in an offline subproject.</li>
+</ul></p></result>
+</taskbody>
+<related-links>
+<link href="czdsubprojects.dita" type="concept" />
+<link href="../../com.ibm.uss.projects.doc/topics/navinstalling.dita" type="topic" otherprops="IDz" />
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" type="task" />
+<link href="tzdonline.dita" type="task" />
+<link href="tzdcmn037.dita" type="task" />
+<link href="tzdshowdep.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000008720?><?tm 1665694009055 15 z/OS||UNIX||MVS ?>

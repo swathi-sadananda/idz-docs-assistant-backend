@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdkeymap" xml:lang="en-us">
+<title>Key mapping file</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Key mapping file</navtitle>
+<searchtitle>Key mapping file for push-to-client configuration</searchtitle>
+</titlealts>
+<shortdesc>The key mapping file is generated when you export configuration
+files. It stores the names, locations, and character encodings of
+configuration files that are used in a push-to-client configuration
+environment.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>push-to-client configuration<indexterm>key mapping
+file</indexterm></indexterm><indexterm>key mapping file</indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The key mapping file is a UTF-8 encoded XML file that is named
+<filepath>keymapping.xml</filepath>. Its default location on the <tm tmtype="reg" trademark="z/OS"
+>z/OS</tm> system is <filepath>/var/zexpl/pushtoclient/keymapping.xml</filepath>. This location is
+defined in the <codeph>pushtoclient.folder</codeph> property of the
+<filepath>/etc/zexpl/pushtoclient.properties</filepath> file. For more information about the
+<filepath>pushtoclient.properties</filepath> file, see the <cite><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full"/> Host
+Configuration Guide</cite> (SC23-7658).<p>The key mapping file contains the following tags for each
+configuration file:<dl>
+<dlentry>
+<dt>&lt;fileId></dt>
+<dd>Identifies the configuration file. This tag can contain the following values, described here by
+using the label that is displayed on the <wintitle>Export</wintitle> window for each file:<ul>
+<li><codeph>com.ibm.ftt.resources.zos.install.configuration</codeph> Install Configuration Files -
+Version Configuration</li>
+<li><codeph>com.ibm.ftt.resources.zos.install.response</codeph> Install Configuration Files -
+Response Files</li>
+<li><codeph>com.ibm.ftt.configurations.RSEConnections</codeph> Remote System Connections</li>
+<li><codeph>com.ibm.ftt.configurations.EclipsePreferences</codeph> Eclipse Preferences</li>
+<li otherprops="IDz"><codeph>com.ibm.ftt.projects.configurations.HostBasedConfigurationFile</codeph>
+Host-based Project Configuration Files</li>
+<li><codeph>com.ibm.ftt.resources.zos.mapping.specificmapping</codeph>
+<tm tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping Configuration Files - <tm
+tmtype="tm" trademark="MVS">MVS</tm> Files - Resource Mapping</li>
+<li otherprops="IDz"><codeph>com.ibm.ftt.resources.zos.mapping.bct</codeph>
+<tm tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping Configuration Files - <tm
+tmtype="tm" trademark="MVS">MVS</tm> Files - Bidi Conversion Table</li>
+<li><codeph>com.ibm.ftt.resources.zos.mapping.genericmapping</codeph>
+<tm tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping Configuration Files - <tm
+tmtype="tm" trademark="MVS">MVS</tm> Files - System Mapping</li>
+<li><codeph>com.ibm.ftt.properties.zos.propertygroups</codeph> Property Group Configuration Files -
+Property Groups</li>
+<li><codeph>com.ibm.ftt.properties.zos.defaultvalues</codeph> Property Group Configuration Files -
+Default Values</li>
+</ul><note>Installation, Remote System Connections, and Eclipse Preferences configuration files are
+stored only on the primary system.</note></dd>
+</dlentry>
+<dlentry>
+<dt>&lt;containerPath></dt>
+<dd>Specifies the location of the configuration file on the <tm tmtype="reg" trademark="z/OS"
+>z/OS</tm> system. The default container path for each configuration file is either the folder that
+contains the key mapping file or a subfolder. Subfolders are used to reduce the number of files in
+the parent folder and to group similar sets of files, such as Eclipse preference files.</dd>
+</dlentry>
+<dlentry>
+<dt>&lt;fileMask></dt>
+<dd>Specifies the name of the configuration file. Some export operations, such as Eclipse
+Preferences and RSE Connections, generate multiple files. For these operations, the value for the
+file mask uses wildcard characters such as <filepath>*.xml</filepath> and
+<filepath>*.zip.</filepath></dd>
+</dlentry>
+<dlentry>
+<dt>&lt;encoding></dt>
+<dd>Specifies the character encoding of the configuration file.</dd>
+</dlentry>
+</dl></p></section>
+<example><title>Sample key mapping file</title>The following sample key mapping file points to
+configuration files stored in the <filepath>/var/zexpl/pushtoclient</filepath> path of the <tm
+tmtype="reg" trademark="z/OS">z/OS</tm>
+system.<codeblock>
+&lt;?xml version="1.0" encoding="UTF-8"?>
+ &lt;configuration-system>
+   &lt;location-list>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.resources.zos.install.configuration&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/install&lt;/containerPath>
+       &lt;fileMask>installconfig.xml&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.resources.zos.install.response&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/install/responsefiles&lt;/containerPath>
+       &lt;fileMask>*.xml&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.configurations.EclipsePreferences&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/preferences&lt;/containerPath>
+       &lt;fileMask>*.pref&lt;/fileMask>
+       &lt;encoding>IBM-1047&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.configurations.RSEConnections&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/connections&lt;/containerPath>
+       &lt;fileMask>*.zip&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.projects.configurations.HostBasedConfigurationFile&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/projects&lt;/containerPath>
+       &lt;fileMask>&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.resources.zos.mapping.genericmapping&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/mappings&lt;/containerPath>
+       &lt;fileMask>zossys.xml&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.resources.zos.mapping.specificmapping&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/mappings&lt;/containerPath>
+       &lt;fileMask>zoshlq_*.xml&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.resources.zos.mapping.bct&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/mappings&lt;/containerPath>
+       &lt;fileMask>*.bct&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.properties.propertygroups&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/properties&lt;/containerPath>
+       &lt;fileMask>propertygroups.xml&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+     &lt;location>
+       &lt;fileId>com.ibm.ftt.properties.defaultvalues&lt;/fileId>
+       &lt;containerPath>/var/zexpl/pushtoclient/properties&lt;/containerPath>
+       &lt;fileMask>defaultvalues.xml&lt;/fileMask>
+       &lt;encoding>UTF-8&lt;/encoding>
+     &lt;/location>
+   &lt;/location-list>
+ &lt;/configuration-system>
+</codeblock></example>
+</refbody>
+<related-links otherprops="Wazi">
+<link href="../../com.ibm.guide.hostconfig.doc/topics/newchap2.dita" scope="local"
+><linktext><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full"/> Host
+Configuration Guide (SC23-7658)</linktext></link>
+</related-links>
+<?tm 1435190796 9?>
+</reference>
+<?Pub *0000007896?>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="mfs_step_opts_r" xml:lang="en-us">
+<title>MFS step options</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>MFS step options</navtitle>
+<searchtitle>MFS step options</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>MFS Compiler Options</uicontrol> to edit an MFS compilation step that
+is included with the product. </shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>MFS step options</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used to generate JCL
+for the selected procedure.<note>For fields that take partitioned data sets as their value, you can
+drag a partitioned data set name from the <wintitle>Remote Systems</wintitle> view, <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view, or <wintitle>Remote z/OS Search</wintitle>
+results view and drop it in the field. To change the order of partitioned data set names in a field,
+place the cursor in the field and click <uicontrol>Change Order</uicontrol> from the menu.
+</note></section>
+<section>
+<title>Fields</title>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfs_step_opts_co"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfs_step2_name"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfs_step_opts_fl"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_lods"/>
+<p><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_syslib"
+/></p>
+<p><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_ajcl"
+/></p>
+</section>
+</refbody>
+<related-links>
+<link href="../../com.ibm.etools.mfseditor.doc/concepts/tmf000.dita" scope="peer" type="topic"
+><linktext>Designing MFS messages for IMS with the MFS Editor</linktext></link>
+<link href="../../com.ibm.etools.mfseditor.doc/ref/tmf050.dita" scope="peer" type="topic"
+><linktext>JCL generation</linktext></link>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1435190820 0?>
+</reference>
+<?Pub *0000003221?>

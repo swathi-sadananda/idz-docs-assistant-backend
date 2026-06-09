@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdonline" xml:lang="en-us">
+<title>Returning a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+to online state</title><?Pub Caret -2?>
+<shortdesc>If you take a project offline and are ready to connect
+it to a remote system again, you can return it to online state.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS project<indexterm>Returning to online state</indexterm><indexterm>online
+state</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><note type="attention">The work offline and work online operations
+for a remote resource are deprecated.</note>When a project is offline,
+the resources on the remote system are still accessible to others.
+You must merge your changes with any changes other users made to resources. </context>
+<steps>
+<stepsection>To connect a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+back to the remote system and work online, follow these steps:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+right-click the project to be moved online and click <uicontrol>Work
+Online</uicontrol>.</cmd><stepresult>If any of the associated systems
+are not connected, you are prompted to connect before the project
+is moved to online state. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> attempts
+to resynchronize your local resources with the remote system. A progress
+indicator is displayed while the product collects out-of-synch resources.
+If the offline project is large, resynchronization can take a few
+minutes. After resynchronization, the <wintitle>Work Online</wintitle> window
+opens showing the resources that changed since the project was taken
+offline. If you renamed an offline resource, this change shows up
+as two separate update operations: a deletion of the old resource
+and an addition of the newly renamed resource.</stepresult></step>
+<step><cmd>You can make updates as follows:</cmd>
+<substeps>
+<substep><cmd>To view differences between a local and remote resource,
+select the resource of interest in the Changes pane.</cmd><stepresult>A
+Text Compare pane opens showing the differences between the local
+and remote resources. You can handle conflicts as follows:<ul>
+<li>If a file is modified both locally and on the remote system, it
+is marked with a red diamond. You can copy changes from the remote
+system to your local workspace by clicking the right arrow between
+the two panes.</li>
+<li>After you fix the conflicts, you can save the local file by right-clicking
+and selecting <uicontrol>Save</uicontrol> on the menu.</li>
+<li>To indicate that all conflicts are resolved, select the resource
+in the <wintitle>Changes</wintitle> pane and click <uicontrol>Mark
+as Merged</uicontrol>. </li>
+</ul></stepresult></substep>
+<substep><cmd>To download a resource that changed on the remote system,
+select it and click <uicontrol>Download</uicontrol>.</cmd></substep>
+<substep><cmd>To upload a resource that changed locally, select it
+and click <uicontrol>Upload</uicontrol>. If you choose to overwrite
+a remote resource when you take a project online, any changes that
+others made to the resource on the remote system are lost.</cmd>
+</substep>
+<substep><cmd>To upload the entire subproject, select the subproject
+name in the Changes pane and click <uicontrol>Upload</uicontrol>.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>After you upload or download all the resources that you
+want, click <uicontrol>Work Online</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="czdsubprojects.dita" type="concept"></link>
+<link href="../../com.ibm.uss.projects.doc/topics/navinstalling.dita" type="topic" otherprops="IDz"/>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" type="task"></link>
+<link href="tzdcmn044.dita" type="task" otherprops="IDz"/>
+<link href="tzdcompare.dita" type="task"></link>
+</related-links>
+<?tm 1435190830 2?>
+</task>
+<?Pub *0000004186?>

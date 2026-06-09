@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdalias" xml:lang="en-us">
+<title>Defining and using data set aliases</title><?Pub Caret -2?>
+<shortdesc>You can define aliases for remote data sets and use them
+in the same way that you use ISPF data set aliases.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>alias<indexterm>data set<indexterm>defining</indexterm><indexterm>identifying</indexterm><indexterm>actions</indexterm></indexterm></indexterm>
+</keywords>
+<keywords><indexterm>alias<indexterm>data set<indexterm>modifying
+properties</indexterm></indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context> A data set alias contains a reference to the data set for
+which it is created. Data set aliases are displayed in the <wintitle>Remote
+Systems</wintitle> and <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> views
+with a distinct icon so that you can easily identify them as aliases
+and with the original data set name in brackets beside the alias name: <image
+alt="File list showing example of alias icon" href="../images/alias.gif"
+placement="break"></image>Data set aliases have properties that are
+separate from and can be different from the properties of the referenced
+data set. When an alias named <filepath>HLQ.TEST.JCL</filepath> references <filepath>HLQ.TEST.COBOL</filepath>,
+for example, the default extension of all members in <filepath>HLQ.TEST.JCL</filepath> is <filepath>jcl</filepath>,
+while the default extension of the members in <filepath>HLQ.TEST.COBOL</filepath> is <filepath>cbl</filepath>.</context>
+<steps>
+<stepsection>To define an alias for a remote data set:</stepsection>
+<step rev="803"><cmd>From the <wintitle>Remote Systems</wintitle> view
+or the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+select the data set for which you want to define an alias.</cmd></step>
+<step><cmd>Click <menucascade><uicontrol>New</uicontrol><uicontrol>Define
+Alias</uicontrol></menucascade>.</cmd></step>
+<step><cmd>In the <wintitle>Define Alias</wintitle> window, select
+or type a high-level qualifier in the list.</cmd></step>
+<step><cmd>In the <uicontrol>Alias Name</uicontrol> field, type an
+alias name for the data set and click <uicontrol>OK</uicontrol>.</cmd>
+</step>
+</steps>
+<postreq>There are a few differences between the actions you can perform
+on data set aliases and the actions you can perform on data sets:<ul>
+<li>The rename action is disabled for aliases.</li>
+<li>When you delete an alias, the referenced data set is not deleted.
+Only the alias is deleted.</li>
+</ul>For more information about actions you can perform on aliases,
+see the related links.</postreq>
+</taskbody>
+<related-links>
+<link href="tzddelalias.dita" type="task"></link>
+<link href="tzdeditalias.dita" type="topic"></link>
+</related-links>
+<?tm 1435190814 0?>
+</task>
+<?Pub *0000003008?>

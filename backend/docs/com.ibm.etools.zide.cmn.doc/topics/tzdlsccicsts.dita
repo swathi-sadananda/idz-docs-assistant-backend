@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdlsccicsts" xml:lang="en-us">
+<title>Local syntax check of a remote file with the <tm tmtype="reg" trademark="OS/390">OS/390</tm> <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server syntax</title><?Pub Caret -2?>
+<shortdesc>You can request a local syntax check of a remote file with
+the <tm tmtype="reg" trademark="OS/390">OS/390</tm> <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction Server syntax.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local syntax check<indexterm>remote file with
+OS/390 CICS Transaction Server syntax</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>To check the syntax of a remote <tm
+tmtype="reg" trademark="CICS">CICS</tm> COBOL or PL/I program with the <tm tmtype="reg"
+trademark="OS/390">OS/390</tm>
+<tm tmtype="reg" trademark="CICS">CICS</tm> Transaction Server syntax, <tm tmtype="reg"
+trademark="CICS">CICS</tm> TX Series version 6.1 or above must be installed on your
+workstation.</prereq>
+<context><p>The
+COBOL or PL/I compiler calls the <tm tmtype="reg" trademark="CICS">CICS</tm> Translator
+on your behalf if the CICS('CTS<varname>xx</varname>') <ph rev="80">(for
+COBOL) or pp(CICS('CTS<varname>xx</varname>') (for PL/I)</ph> compiler
+option is specified as part of your local compiler options. This compiler
+option is automatically generated on a local syntax check of a remote <tm tmtype="reg" trademark="CICS">CICS</tm> COBOL file if the <uicontrol>CICS
+(contains EXEC CICS statements)</uicontrol> checkbox is selected
+on the <uicontrol>Runtime Environments</uicontrol> tab of the <wintitle>COBOL</wintitle> or <wintitle>PL/I
+Settings</wintitle> properties page for the remote file. On this page,
+you can select the version of <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server that is installed on the remote system.</p><p>Because the <tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') <ph rev="80">(for COBOL) or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') (for PL/I)</ph> compiler
+options are only intended for syntax checking purposes, you cannot
+use them when you build a DLL that runs in a <tm tmtype="reg" trademark="CICS">CICS</tm> region. If this option is specified in
+the IDE for any action other than a syntax check, an error window
+opens and the build ends.</p><note conref="tzdlscremotefilelpex.dita#tzdlscremotefilelpex/restriction_local_syntax_check"/></context>
+</taskbody>
+
+</task><?Pub *0000002764?><?tm 1665694015551 17 OS/390||CICS ?>

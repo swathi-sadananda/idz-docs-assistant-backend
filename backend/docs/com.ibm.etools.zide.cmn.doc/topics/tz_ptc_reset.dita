@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tz_ptc_reset" xml:lang="en-us">
+<title>Resetting workspace configuration files</title>
+<titlealts>
+<navtitle>Resetting workspace configuration files</navtitle>
+<searchtitle>Resetting workspace configuration files</searchtitle>
+</titlealts>
+<shortdesc>You can reset the workspace configuration files that you
+downloaded from the remote system by clearing the cached files.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>clear cached files</indexterm></keywords>
+<keywords><indexterm>configuration files<indexterm>resetting</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>resetting configuration files</indexterm>
+</keywords>
+<keywords><indexterm>push-to-client<indexterm>resetting workspace
+configuration files</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><p>Remote configuration files are stored in your workspace
+in a folder named <filepath><varname>workspacePath</varname>\RemoteConfigurationFiles</filepath>.
+This folder contains the following subfolders:<ul>
+<li>A folder that is named <filepath>global</filepath>, which contains
+global configurations. Global configurations are defined on the primary
+push-to-client server.</li>
+<li>One folder for each remote system to which you connect and that
+is enabled for push-to-client.</li>
+</ul><uicontrol>Clear Cached Files</uicontrol> on the <wintitle>Configuration
+Files</wintitle> preference page deletes some of the contents of the <filepath>RemoteConfigurationFiles</filepath> folder. </p><p>You
+might consider clearing the cached files in the following circumstances:<ul>
+<li>If you are the push-to-client administrator, and you discover
+that you set preferences or configured features in a way that you
+did not intend to export to the remote system or group with which
+the workspace is associated. <p>If you discover that you exported
+configurations that you did not intend to export, then you can clear
+the cached files, reconfigure the workspace, and then export the configurations
+again. <uicontrol>Clear Cached Files</uicontrol> provides a way to
+start over with workspace configurations.</p></li>
+<li>If you downloaded configurations that you did not intend to download
+when you connected to a remote system.<p>When you connect to a remote
+system, the push-to-client feature prompts you with a list of recent
+configuration updates. From this list, you can select the specific
+configurations that you want to download. If you select a configuration
+by mistake, you can clear the cached files, disconnect from the remote
+system, and then connect again to choose the configurations you want
+to download. </p></li><?Pub Caret 7?>
+</ul></p><note type="important">If you changed configurations that
+are downloaded from a remote system and you clear the cached files,
+then any local changes you made to the downloaded configurations are
+overwritten the next time you connect to the remote system.<p>Configurations
+that you create locally, such property groups, are saved in a folder
+that is called <filepath>client</filepath> and are not deleted when
+you clear the cached files.</p></note></context>
+<steps>
+<stepsection>To reset downloaded configuration files:</stepsection>
+<step>
+<cmd>On the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>Remote Systems</uicontrol>
+<uicontrol>Configuration Files</uicontrol>
+</menucascade>.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Clear Cached Files</uicontrol>.</cmd>
+<stepresult>The next time that you connect to any of the remote systems
+that are enabled for push-to-client, you are prompted to accept configuration
+changes.</stepresult></step>
+</steps>
+<result>Clearing the cached files affects your workspace in the following
+ways:<ul>
+<li>Eclipse preferences: No change. The preferences that you set are
+left as they were even after the cache is cleared. The Eclipse preferences
+are managed by the Open RSE base program, which has its own repository
+for the preferences. Clearing the cached files deletes only the local
+files in the <filepath>RemoteConfigurationFiles</filepath> folder.</li>
+<li>Remote connections: No change. The remote connections are managed
+by the Open RSE base program, which has its own repository for the
+remote connections.</li>
+<li>Property Groups: The imported property groups are deleted. Property
+groups use the <filepath>RemoteConfigurationFiles</filepath> folder
+as its repository and do not have another repository.</li>
+<li> Mappings: The imported mappings are deleted.</li>
+<li> Software Analyzer Configurations:  No change. The software analyzer
+has a different repository from the <filepath>RemoteConfigurationFiles</filepath> folder.</li>
+</ul></result>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdptcprefs.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdupdcfg.dita" scope="local" type="task">
+</link>
+<link format="dita" href="czdptc.dita" scope="local" type="concept">
+</link>
+<link format="dita" href="tzdcmn032.dita" scope="local" type="topic">
+</link>
+</related-links>
+<?tm 1337269546 0?>
+</task>
+<?Pub *0000005325?>

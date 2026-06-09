@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdcobstepopt" xml:lang="en-us">
+<title>COBOL and PL/I step options</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>COBOL and PL/I step options</navtitle>
+<searchtitle>COBOL and PL/I step options</searchtitle>
+</titlealts>
+<abstract><shortdesc>Use the <uicontrol>COBOL and PL/I Compile Step Options</uicontrol> to edit the
+COBOL compile step of the ELAXFCOB JCL procedure or the PLI compile step of the ELAXFPL1 JCL
+procedure that is included with the product. </shortdesc>Before you start, verify that the ELAXFCOB
+and ELAXFPL1 procedures are customized for your site. For more information about customizing the
+ELAXF* JCL procedures, see <xref href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita"
+scope="peer">ELAXF* remote build procedures</xref>.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>COBOL compile step options</indexterm>
+<indexterm>PL/I compile step options</indexterm>
+<indexterm>ELAXFCOC</indexterm>
+<indexterm>ELAXFPL1</indexterm>
+</keywords>
+<keywords/>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used to generate JCL
+for the selected procedure. The information that you provide on this window pertains to remote COBOL
+or PL/I compiler options. Use the <wintitle>Local Compiler Options</wintitle> page to set options
+for local compilations.<note>For fields that take partitioned data sets as their value, you can drag
+a partitioned data set name from the <wintitle>Remote Systems</wintitle> view, <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view, or <wintitle>Remote z/OS Search</wintitle>
+results view and drop it in the field. To change the order of partitioned data set names in a field,
+place the cursor in the field and click <uicontrol>Change Order</uicontrol> from the menu.
+</note></section>
+<section>
+<title>Fields</title>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_app"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_co"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_lods"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_dds"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_odds"/>
+<p><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_syslib"
+/></p>
+<p><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_copyloc"
+/></p>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_sef"/>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_dsq"/>
+<p><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_ajcl"
+/></p>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_imsl"
+/>
+</section>
+</refbody>
+<related-links>
+<link format="dita" href="tzdrunopts.dita" scope="local" type="task"/>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1435190820 0?>
+</reference>
+<?Pub *0000003221?>

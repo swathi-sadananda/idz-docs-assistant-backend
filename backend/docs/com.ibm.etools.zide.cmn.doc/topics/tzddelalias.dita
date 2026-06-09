@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzddelalias" xml:lang="en-us">
+<title>Deleting an alias</title>
+<shortdesc>Deleting an alias deletes only the alias name from the
+catalog. It does not delete the referenced data set.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>alias<indexterm>data set<indexterm>deleting</indexterm></indexterm></indexterm>
+</keywords>
+<keywords><indexterm>alias<indexterm>data set<indexterm>removing from
+catalog</indexterm></indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To delete a data set alias, do these steps:</stepsection>
+<step><cmd>Select the data set alias that you want to delete and click <uicontrol>Delete</uicontrol>.</cmd>
+<stepresult>A <wintitle>Delete Confirmation</wintitle> window opens.</stepresult>
+</step>
+<step><cmd>To confirm the delete action, click <uicontrol>Delete</uicontrol>.</cmd>
+<stepresult>A message window opens indicating that the referenced
+data set is not deleted.</stepresult></step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to close the message window.</cmd>
+<info>You can suppress the message window by clicking <uicontrol>Don't
+show this again</uicontrol>.</info></step>
+</steps>
+<result>When you delete a referenced data set, its alias entries are
+also removed from the catalog.</result>
+</taskbody>
+</task>
+<?Pub *0000001517?>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn035" xml:lang="en-us">
+<title>Mapping data sets and partitioned data set members</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Mapping data sets and partitioned data set members</navtitle>
+<searchtitle>Mapping data sets and partitioned data set members</searchtitle>
+</titlealts>
+<shortdesc>A data set mapping associates the lowest level qualifier
+in each <tm tmtype="tm" trademark="MVS">MVS</tm> data set to a file name extension that is used for the related workstation-based file in your subprojects. One mapping, for example, associates the <tm trademark="z/OS" tmtype="reg">z/OS</tm>-based qualifier <filepath>COBOL</filepath> with the workstation-based file
+extension <filepath>.cbl</filepath>.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>data sets<indexterm>mapping</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+provides a set of default mappings, but you can create more mappings. </context>
+<steps>
+<stepsection>To add a data set mapping:</stepsection>
+<step><cmd>Open the <wintitle>z/OS File System Mapping</wintitle> view.</cmd>
+<info>This view displays all remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> systems
+and the data set mappings that are defined on them. When there are
+multiple definitions for a data set or member name pattern, the order
+in which a mapping is displayed in the table determines its priority:
+the higher it is on the list, the higher the priority.</info></step>
+<step><cmd>From the <uicontrol>System</uicontrol> list, select the
+remote system that you want to modify mappings for.</cmd></step>
+<step><cmd>To add a data set mapping, right-click the table and select <uicontrol>Add
+Data Set Mapping</uicontrol>.</cmd><stepresult>The <wintitle>Add Data
+Set Mapping</wintitle> window opens.</stepresult></step>
+<step><cmd>To add a member mapping, right-click a data set mapping
+in the <wintitle>z/OS File System Mapping</wintitle> view and select <uicontrol>Add
+Member Mapping</uicontrol>.</cmd><stepresult>The <wintitle>Add Member
+Mapping</wintitle> window opens.</stepresult></step>
+<step><cmd>Specify a string in the <uicontrol>Mapping criterion</uicontrol> field.</cmd>
+<info>Data sets and members with names that match this string are
+included in the mapping.<ul>
+<li>Use ** as a wildcard for matching one or more data set name segments
+or qualifiers:<ul>
+<li>**COBOL matches <varname>&lt;any high-level qualifier&gt;.&lt;any
+middle qualifier&gt;</varname>.COBOL. These sample data set names match
+this mapping:<ul>
+<li>USER.COBOL</li>
+<li>USER.A.COBOL</li>
+<li>USER.A.B.C.COBOL</li>
+<li>USER.A.B.C.MYCOBOL</li>
+</ul></li>
+<li>**ERROR** matches <varname>&lt;any high-level qualifier&gt;</varname>.ERROR.<varname>&lt;any
+low-level qualifier&gt;</varname>. These sample data set names match
+this mapping:<ul>
+<li>USER.ERROR.TEST</li>
+<li>USER.A.B.MYERROR.ABC</li>
+<li>USER.A.B.MYERROR2.ABC</li>
+</ul></li>
+</ul></li>
+<li> Use * as a wildcard for matching within a data set name segment
+or qualifier. For example, USER**COB* matches the following names:<ul>
+<li>USER.A.COB</li>
+<li>USER.A.B.COBOL</li>
+<li>USER.A.B.ACOBCOPY</li>
+</ul></li>
+<li>You can also use a period as a delimiter in a mapping:<ul>
+<li>USER.*.TEST matches USER.A.TEST, but not USER.A.B.TEST</li>
+<li>USER.**TEST matches USER.A.TEST, USER.A.B.TEST, and USER.A.B.CTEST.</li>
+</ul></li>
+<li>Use <codeph>?</codeph> as a wildcard for any single character within a member name. Take members
+A0, A00, and A00 as example. The wildcard pattern <codeph>A??</codeph> matches member A00, but other
+two members A0 and A000 are not matched. In this case, this wildcard is only effective for Member
+Mapping criterion.</li>
+</ul>For more examples of wildcard patterns and matching data set
+names, see <xref href="#tzdcmn035/wildcards" />.</info></step>
+<step><cmd>In the <uicontrol>Workstation file extension</uicontrol> group,
+click <uicontrol>Default</uicontrol> or click <uicontrol>Other</uicontrol> and
+type the file name extension that you want to associate with the data
+set matching string.</cmd></step>
+<step><cmd>Use the remaining fields to choose a file transfer type
+and local and remote code pages.</cmd><info>For more information about
+other file mapping options, see the related topics.</info></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult> The
+new mapping is displayed in the table. Member mappings are added as
+children of the data set mapping that you selected before you click <uicontrol>Add
+Member Mapping</uicontrol>. You can sort this table by any of the
+headings that are shown in the view (such as Mapping Criterion, Workstation
+File Extension, and Transfer Mode). To sort the table, click a table
+heading.</stepresult></step>
+<step importance="optional"><cmd>You can override these system-wide
+mappings by defining mappings for specific data sets or members:</cmd>
+<substeps>
+<substep><cmd>Right-click the data set or member in the <wintitle>Remote
+Systems</wintitle> view and click <uicontrol>Properties</uicontrol>.</cmd>
+</substep>
+<substep><cmd>Click <uicontrol>Mapping</uicontrol> in the list on
+the left.</cmd><stepresult>The <wintitle>Mapping</wintitle> pane opens
+on the right. This pane is similar to the <wintitle>Add Data Set Mapping</wintitle> window.</stepresult>
+</substep>
+<substep><cmd>Leave the option to inherit values selected for each
+of the values you want to cascade from a higher level.</cmd></substep>
+</substeps>
+</step>
+</steps>
+<example>The following table provides further examples of wildcard
+patterns and the strings that match and do not match them.<table id="wildcards"><title>Examples of wildcard patterns in data set mappings</title>
+<desc> Wildcard patterns are listed across the top of the table, and
+sample data set names are listed down the first column of the table.
+The remaining cells indicate whether the sample data set name and
+the wildcard pattern match.</desc>
+<tgroup cols="8"><colspec colname="COLSPEC5" /><colspec colname="col2" />
+<colspec colname="col3" /><colspec colname="COLSPEC0" /><colspec colname="COLSPEC3" /><colspec colname="COLSPEC2" /><colspec colname="COLSPEC1" /><colspec colname="COLSPEC4" />
+<thead>
+<row>
+<entry colname="COLSPEC5" />
+<entry nameend="COLSPEC4" namest="col2">Wildcard Patterns</entry>
+</row>
+<row valign="bottom">
+<entry colname="COLSPEC5">Data set names</entry>
+<entry colname="col2">KENYA**COBOL</entry>
+<entry colname="col3" valign="top">KENYA**COBOL*	</entry>
+<entry colname="COLSPEC0" valign="top">KENYA.**COBOL</entry>
+<entry colname="COLSPEC3" valign="top">KENYA.**.COBOL</entry>
+<entry colname="COLSPEC2" valign="top">KENYA.*COBOL	</entry>
+<entry colname="COLSPEC1" valign="top">KENYA.*.COBOL</entry>
+<entry colname="COLSPEC4">KENYA.*.*.COBOL</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="COLSPEC5">KENYA.COBOL </entry>
+<entry colname="col2">Match</entry>
+<entry colname="col3">Match</entry>
+<entry colname="COLSPEC0">Match</entry>
+<entry colname="COLSPEC3">Do not match</entry>
+<entry colname="COLSPEC2">Match</entry>
+<entry colname="COLSPEC1">Do not match</entry>
+<entry colname="COLSPEC4">Do not match</entry>
+</row>
+<row>
+<entry colname="COLSPEC5">KENYA.A.COBOL </entry>
+<entry colname="col2">Match</entry>
+<entry colname="col3">Match</entry>
+<entry colname="COLSPEC0">Match</entry>
+<entry colname="COLSPEC3">Match</entry>
+<entry colname="COLSPEC2">Do not match</entry>
+<entry colname="COLSPEC1">Match</entry>
+<entry colname="COLSPEC4">Do not match</entry>
+</row>
+<row>
+<entry colname="COLSPEC5">KENYA.A.B.COBOL </entry>
+<entry colname="col2">Match</entry>
+<entry colname="col3">Match</entry>
+<entry colname="COLSPEC0">Match</entry>
+<entry colname="COLSPEC3">Match</entry>
+<entry colname="COLSPEC2">Do not match</entry>
+<entry colname="COLSPEC1">Do not match</entry>
+<entry colname="COLSPEC4">Match</entry>
+</row>
+<row>
+<entry colname="COLSPEC5">KENYA.XYCOBOL </entry>
+<entry colname="col2">Match</entry>
+<entry colname="col3">Match</entry>
+<entry colname="COLSPEC0">Match</entry>
+<entry colname="COLSPEC3">Do not match</entry>
+<entry colname="COLSPEC2">Match</entry>
+<entry colname="COLSPEC1">Do not match</entry>
+<entry colname="COLSPEC4">Do not match	</entry>
+</row>
+<row>
+<entry colname="COLSPEC5">KENYA.A.XYCOBOL </entry>
+<entry colname="col2">Match</entry>
+<entry colname="col3">Match</entry>
+<entry colname="COLSPEC0">Match</entry>
+<entry colname="COLSPEC3">Do not match</entry>
+<entry colname="COLSPEC2">Do not match</entry>
+<entry colname="COLSPEC1">Do not match</entry>
+<entry colname="COLSPEC4">Do not match</entry>
+</row>
+<row>
+<entry colname="COLSPEC5">KENYA.XCOBOLY</entry>
+<entry colname="col2">Do not match</entry>
+<entry colname="col3">Match</entry>
+<entry colname="COLSPEC0">Do not match</entry>
+<entry colname="COLSPEC3">Do not match</entry>
+<entry colname="COLSPEC2">Do not match</entry>
+<entry colname="COLSPEC1">Do not match</entry>
+<entry colname="COLSPEC4">Do not match	</entry>
+</row>
+</tbody>
+</tgroup>
+</table></example>
+</taskbody>
+<related-links>
+<link href="czdcmn044.dita" scope="local" type="concept" />
+<link format="dita" href="c_file_trans_code_page.dita" scope="local" type="concept" />
+<link format="dita" href="rzdcodepages.dita" scope="local" type="reference" />
+<link href="tzdcmn032.dita" scope="local" type="topic" />
+<link href="rzdlogicalnot.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000009405?><?tm 1670257713679 4 z/OS||MVS ?>

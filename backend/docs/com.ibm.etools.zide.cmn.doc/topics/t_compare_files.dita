@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_compare_files" xml:lang="en-us">
+<title>Comparing a file with a previous version</title>
+<titlealts>
+<navtitle>Comparing a file with a previous version</navtitle>
+<searchtitle>Comparing a file with a previous version</searchtitle>
+</titlealts>
+<shortdesc>The compare feature can be used to determine the content
+difference between two versions of the same file. Some features available in the source editor are
+also available when you compare files, such as quick fix.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>compare<indexterm>files</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step>
+<cmd>Right-click the file to be compared and click <uicontrol>Compare with</uicontrol>.</cmd>
+</step>
+<step><cmd>Select <uicontrol>Local History</uicontrol>. </cmd>
+<stepresult>You can select a previous version of the file on your
+local system to compare with the current version. If there is no local
+history available to compare, a message is displayed.</stepresult>
+</step>
+<step><cmd>Double-click the version that you want to compare. Versions
+are listed by revision time.</cmd></step>
+<step><cmd>The compare editor opens on both files. Differences are
+highlighted based on preference settings.</cmd><info>You can copy
+differences from one file to another and use the various controls
+in the editor to move from one difference to another. See <xref
+format="html"
+href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-25.htm"
+scope="peer">Compare editor</xref> for details on using the editor.</info>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="html"
+href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-25.htm"
+scope="peer" type="reference"><linktext>Compare editor</linktext></link>
+</related-links>
+<?tm 1333652806 0?>
+</task>
+<?Pub *0000002018?>

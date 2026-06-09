@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsetlog" rev="760" xml:lang="en-us">
+<title>Tracing</title><?Pub Caret -2?>
+<shortdesc>You can set varying tracing levels for specific <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> components.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>setting tracing levels</indexterm><indexterm>tracing
+levels<indexterm>setting</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><ph id="trace-location">During tracing, trace entries are produced and placed in the
+<filepath>workspace\.metadata\.trace</filepath> file. </ph>The number of entries and the amount of
+detail that is generated is determined by the setting of the <term>tracing level</term> for various
+<term>tracers</term>. The tracers are listed on the <wintitle>Tracing preference</wintitle> page. A
+tracing level is specified for each tracer, and, if tracing is enabled, the
+<filepath>.trace</filepath> file is populated with entries that contain a level equal to or less
+than the specified level. A trace shows the flow of the execution of a program and can help with
+troubleshooting and debugging problems.</context>
+<steps>
+<stepsection>To set tracing levels for <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> components,
+do these steps:</stepsection>
+<step>
+<cmd>In the <wintitle>Preferences</wintitle> window, click <uicontrol>Tracing</uicontrol>.</cmd>
+<stepresult> The <uicontrol>Tracer Name</uicontrol> list displays components for which tracing is
+available. The default tracing level for
+<systemoutput>com.ibm.ftt.core.migration.impl</systemoutput> is <systemoutput>FINEST</systemoutput>.
+The default for the remaining components is <systemoutput>NONE</systemoutput>, which means that no
+tracing is done for the component. Other available tracing levels include the following values:<ul>
+<li><systemoutput>FINE</systemoutput> - records trace data for basic debugging information such as
+input and output date.</li>
+<li><systemoutput>FINER</systemoutput> - records trace data such as conversion data and traps that
+are to be ignored.</li>
+<li><systemoutput>FINEST</systemoutput> - records trace data such as entry and exit data for
+methods.</li>
+</ul></stepresult>
+</step>
+<step><cmd>To include trace entries regardless of their levels, change
+the tracing level to <systemoutput>FINEST</systemoutput>. </cmd>
+<stepresult>The volume of data generated is greater, but might provide
+the information that is required to solve some problems.</stepresult>
+</step>
+<step><cmd>Click <uicontrol>Restore Defaults</uicontrol> after the
+trace is captured.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="html"
+href="../../com.ibm.wsentdev.doc/topics/tzdcmn200.html"
+scope="peer" type="concept"><linktext>Troubleshooting and support
+for <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword></linktext>
+</link>
+<link format="html"
+href="../../com.ibm.etools.getstart.wsentdev.doc/topics/trace.html"
+scope="peer" type="topic"><linktext>Quick task: Setting up tracing</linktext>
+</link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1435190798 0?>
+</task>
+<?Pub *0000003532?>

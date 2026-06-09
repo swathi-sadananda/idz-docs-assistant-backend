@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdefcobolpli" xml:lang="en-us">
+<title>Supporting error feedback for COBOL and PL/I programs</title>
+<shortdesc>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+supports error feedback for COBOL and PL/I programs with default property
+settings for COBOL and PL/I source files. These properties work together
+to support error feedback.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>client setup</indexterm><indexterm>COBOL
+and PL/I properties</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>The <wintitle>COBOL</wintitle> and <wintitle>PL/I Compile
+Step Option</wintitle> windows include a checkbox and field to allow
+users to indicate whether the step supports error feedback. If you
+select this checkbox, then the field below it is enabled to specify
+the error feedback qualifier. For COBOL and PL/I, because error feedback
+is supported by default, the checkbox is selected by default and
+the text box contains the default values of &lt;HLQ>.ERRCOB and &lt;HLQ>.ERRPLI
+for COBOL and PL/I.</context>
+</taskbody>
+<related-links>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link format="dita" href="tzdcustbld.dita" scope="local" type="task">
+</link>
+<link href="tzdefpreprocessor.dita" type="task"></link>
+<link href="tzdefotherlang.dita" type="task"></link>
+</related-links>
+<?tm 1337269569 0?>
+</task>
+<?Pub *0000001683?>

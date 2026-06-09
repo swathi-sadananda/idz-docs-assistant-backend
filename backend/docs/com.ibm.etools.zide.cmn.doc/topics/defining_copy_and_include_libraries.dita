@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN" "ibm-topic.dtd">
+<topic id="defining_copy_and_include_libraries" xml:lang="en-us">
+<title>Defining copy, include, and macro libraries</title>
+<titlealts>
+<navtitle>Defining copy, include, and macro libraries</navtitle>
+<searchtitle>Defining copy, include, and macro libraries</searchtitle>
+</titlealts>
+<abstract><shortdesc>Property groups provide multiple places where you can define copy, include,
+macro, and procedure libraries for local and remote source files. These multiple locations provide
+flexibility for writing code, checking dependencies, and compiling code across a hybrid system that
+includes files on your workstation client or a Git repository (local files), and files on an <tm
+trademark="MVS" tmtype="tm">MVS</tm> or z/OS <tm trademark="UNIX" tmtype="reg">UNIX</tm> System
+Services system (remote files). Use this table to understand where to define copy, include, macro,
+and procedure libraries so that the product editors can find dependent files.</shortdesc><ph
+conref="editor_options.dita#editor_options/hlasm-lpex-libs"/></abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>define copy, include, and macro libraries</indexterm>
+<indexterm>copy libraries</indexterm>
+<indexterm>include libraries</indexterm>
+<indexterm>macro libraries</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<note
+conref="../../com.ibm.etools.rdz.language.editors.doc/topics/property_group_settings_for_editing.dita#property_group_settings_for_editing/library-search-order"/>
+<table frame="all" rowsep="1" colsep="1" id="table_e5z_hd3_kqb"><title>Where to define copy,
+include, and macro libraries</title><desc>
+<p outputclass="summary">This table contains 6 columns and 8 rows. Column 1 tests the location of
+source files. It is labeled "If the source file is on a." Column 2 tests the location of a copy,
+include, or macro file. It is labeled "And the copy, include, or macro file is on a." Columns 3
+through 6 point to the location (local or remote), tab, page, and field of a property group where
+the copy, include, and macro library must be defined for the editor to find them. Columns 3 through
+6 have two header rows. The top header spans all four columns and is labeled "Define copy, include,
+or macro libraries here." The second headers are labeled "Property Group Location," "Tab," "Page,"
+and "Field." The remaining rows define the locations of source files; copy, include, and macro
+files; and the property group tabs, pages, and fields where they are to be defined.</p>
+</desc><tgroup cols="6" align="center">
+<colspec colname="c1" colnum="1" colwidth="1*" align="left"/>
+<colspec colname="c2" colnum="2" colwidth="1*" align="left"/>
+<colspec colname="c3" colnum="3" colwidth="1*" align="left"/>
+<colspec colname="c4" colnum="4" colwidth="1*" align="left"/>
+<colspec colname="newCol5" colnum="5" colwidth="1*" align="left"/>
+<colspec colname="c5" colnum="6" colwidth="1*" align="left"/>
+<thead>
+<row>
+<entry morerows="1" align="left" valign="middle">If the source file is on a</entry>
+<entry morerows="1" align="left" valign="middle">And the copy, include, or macro file is on
+a</entry>
+<entry namest="c3" nameend="c5" align="left" valign="middle">Define copy, include, or macro
+libraries here:</entry>
+</row>
+<row>
+<entry align="left" valign="middle">Property Group Location</entry>
+<entry align="left" valign="middle">Tab</entry>
+<entry align="left" valign="middle">Page</entry>
+<entry align="left" valign="middle">Field</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry morerows="13" valign="middle" align="left">Local system</entry>
+<entry morerows="5" valign="middle" align="left">Local system</entry>
+<entry morerows="5" valign="middle" align="left">Local system</entry>
+<entry morerows="1" align="left" valign="middle">Assembler</entry>
+<entry morerows="1" align="left" valign="middle">Local Options</entry>
+<entry align="left" valign="middle" rev="17.0.0">Macro Libraries</entry>
+</row>
+<row>
+<entry align="left" valign="middle">Copy Libraries<sup>1</sup></entry>
+</row>
+<row valign="top">
+<entry align="left" valign="middle">COBOL or PL/I</entry>
+<entry align="left" valign="middle">Local Compiler Options</entry>
+<entry align="left" valign="middle">SYSLIB</entry>
+</row>
+<row>
+<entry align="left" valign="middle">REXX</entry>
+<entry align="left" valign="middle">Local REXX Options</entry>
+<entry align="left" valign="middle">SYSLIB</entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Local JCL Options</entry>
+<entry align="left" valign="middle">SYSLIB <sup>4</sup> (INCLUDE)</entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Local JCL Options</entry>
+<entry align="left" valign="middle">PROCLIB (PROC)</entry>
+</row>
+<row>
+<entry morerows="7" align="left" valign="middle">Remote system</entry>
+<entry morerows="7" align="left" valign="middle">Local system</entry>
+<entry morerows="3" align="left" valign="middle">Assembler</entry>
+<entry morerows="3" align="left" valign="middle">Remote Libraries</entry>
+<entry align="left" valign="middle">Remote Macro Libraries > Connection name<sup>2</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">Remote Macro Libraries > Library table<sup>3</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">Remote Copy Libraries > Connection name<sup>2</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">Remote Copy Libraries > Library table<sup>1</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">COBOL or PL/I</entry>
+<entry align="left" valign="middle">Copy Libraries</entry>
+<entry align="left" valign="middle">Library table</entry>
+</row>
+<row>
+<entry align="left" valign="middle">REXX</entry>
+<entry align="left" valign="middle">Include Libraries</entry>
+<entry align="left" valign="middle">All fields</entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Remote JCL Options</entry>
+<entry align="left" valign="middle">Library Table <sup>4</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Remote JCL Options</entry>
+<entry align="left" valign="middle">PROCLIB (Library table)</entry>
+</row>
+<row>
+<entry morerows="10" align="left" valign="middle">Remote system</entry>
+<entry morerows="5" align="left" valign="middle">Remote system</entry>
+<entry morerows="5" align="left" valign="middle">
+<lines>Remote system</lines>
+</entry>
+<entry morerows="1" align="left" valign="middle">Assembler</entry>
+<entry morerows="1" align="left" valign="middle">Procedures and steps &gt; Step options</entry>
+<entry align="left" valign="middle">Macro libraries<sup>3</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">Copy libraries<sup>1</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">COBOL or PL/I</entry>
+<entry align="left" valign="middle">Procedures and steps &gt; Step options</entry>
+<entry align="left" valign="middle">SYSLIB</entry>
+</row>
+<row>
+<entry align="left" valign="middle">REXX</entry>
+<entry align="left" valign="middle">Remote REXX Options</entry>
+<entry align="left" valign="middle">SYSLIB</entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Remote JCL Options</entry>
+<entry align="left" valign="middle">Include and Procedure Search Libraries</entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Remote JCL Options</entry>
+<entry align="left" valign="middle">Library table</entry>
+</row>
+<row>
+<entry morerows="4" align="left" valign="middle">Local system</entry>
+<entry morerows="4" align="left" valign="middle">Remote system</entry>
+<entry align="left" valign="middle">Assembler</entry>
+<entry align="left" valign="middle">Local Options</entry>
+<entry align="left" valign="middle">Copy libraries<sup>1</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">COBOL or PL/I</entry>
+<entry align="left" valign="middle">Local Compiler Options</entry>
+<entry align="left" valign="middle">SYSLIB</entry>
+</row>
+<row>
+<entry align="left" valign="middle">REXX</entry>
+<entry align="left" valign="middle">Local REXX Options</entry>
+<entry align="left" valign="middle">SYSLIB</entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Local JCL Options</entry>
+<entry align="left" valign="middle">SYSLIB <sup>4</sup></entry>
+</row>
+<row>
+<entry align="left" valign="middle">JCL</entry>
+<entry align="left" valign="middle">Local JCL Options</entry>
+<entry align="left" valign="middle">PROCLIB (PROC)</entry>
+</row>
+<row>
+<entry namest="c1" nameend="c5" align="left" valign="middle">
+<ol rev="17.0.0">
+<li>These fields are used only by the HLASM Editor. They are not used by the z Systems LPEX
+Editor.</li>
+<li>For remote macro and copy libraries to be found, you must specify a connection name and be
+connected to the z/OS system.</li>
+<li>This field is used by the HLASM Editor and z Systems LPEX Editor. For remote files, the <b>HLASM
+Editor</b> searches the SYS1.MACLIB library by default, and no property group definitions are
+necessary. All other locations to macros must be defined. For z System LPEX Editor, all locations
+for macros and copybooks must be defined in this field.</li>
+<li>This field is used only by the JCL Editor. It is not used by the z Systems LPEX Editor.</li>
+</ol>
+</entry>
+</row>
+</tbody>
+</tgroup></table>
+</body>
+</topic><?tm 1665694000600 2 UNIX||MVS ?>

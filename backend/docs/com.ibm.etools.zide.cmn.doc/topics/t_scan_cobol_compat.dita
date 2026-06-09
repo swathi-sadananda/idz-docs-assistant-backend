@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Inc?>
+<task id="t_scan_cobol_compat" xml:lang="en-us">
+<title>Scanning COBOL programs for compatibility</title>
+<titlealts>
+<navtitle>Scanning COBOL programs for compatibility</navtitle>
+<searchtitle>Scanning COBOL programs for compatibility</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>Scan for Compatibility</uicontrol> action
+to scan a set of COBOL programs to determine whether the parameters
+passed between calling and called programs are compatible.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Scan for Compatibility</indexterm></keywords>
+<keywords><indexterm>compatibility<indexterm>COBOL programs</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>COBOL programs<indexterm>compatibility</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><p>The <uicontrol>Scan for Compatibility</uicontrol> action
+can detect when a calling program is passing incompatible arguments
+to a called program. For example, one COBOL program might call another
+program using a 100-byte argument while the program expects a 200-byte
+argument.</p>
+<note type="other" othertype="Limitation">Call statements that reference Dynamic Length Data Items
+are not supported by the compatibility scanner.</note></context>
+<steps>
+<step><cmd>In the <uicontrol>z/OS Projects</uicontrol> or <uicontrol>Remote
+Systems</uicontrol> view, select a set of COBOL source programs, and
+then right-click and select <uicontrol>Scan for Compatibility</uicontrol>.</cmd>
+<stepxmp><image href="../images/ScanForCompatibility.gif"
+placement="break"><alt>Scan for Compatibility menu item</alt></image></stepxmp>
+<stepresult>The compatibility scanner analyzes all program calls to
+determine whether there are duplicate programs of the same name, whether
+the number of arguments used in a call is incorrect for any program,
+or whether the sizes of arguments are mismatched.  For each incompatible
+call, a new problem marker is created in the <wintitle>Remote Error
+List</wintitle>.<note>The compatibility scanner supports CALL statements
+using literals. When a data item is used in place of a literal in
+the CALL statement, the scanner uses static analysis to attempt to
+determine a value for the data item. If the data item has a VALUE
+clause defining a literal value for the data item or if the data item
+is assigned a literal value as part of an unconditional MOVE statement,
+the scanner will use that value when performing the compatibility
+check. When the scanner detects alternate names assigned via MOVEs
+in different branches of a conditional statement, it checks for parameter
+mismatches against each of the possible targets.</note><?Pub Caret 633?></stepresult>
+</step>
+</steps>
+<result>This example shows <uicontrol>Scan for Compatibility</uicontrol> messages
+in the <wintitle>Remote Error List</wintitle>. For each compatibility
+error, the list shows the name of the calling program, the name of
+the called program, the actual and expected size of each incompatible
+parameter, and the location of the source file and the line number
+of the program call. The first message in this list, for example,
+reports a program call in line 190 of the source file <filepath>USER146.SCAN.COBOL(TB75DRVX)</filepath>.
+The parameter passed to the called program <filepath>TB7500BA</filepath> has
+a size of 847, but <filepath>TB7500BA</filepath> expects a parameter
+with a size of 1304.<image
+href="../images/ScanForCompatibility_Messages.gif" placement="break">
+<alt>Sample list of messages returned by the Scan for Compatibility
+action</alt></image></result>
+</taskbody>
+<?tm 1435190864 0?>
+</task>
+<?Pub *0000003626?>

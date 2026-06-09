@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdrenproj" xml:lang="en-us">
+<title>Renaming a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</title><?Pub
+Caret -2?>
+<shortdesc>Follow these steps to rename a <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> project.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>renaming<indexterm>z/OS project</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>z/OS project<indexterm>renaming</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+select the <tm tmtype="reg" trademark="z/OS">z/OS</tm> project that
+you want to rename.</cmd></step>
+<step><cmd>Click <uicontrol>Rename</uicontrol> and type the new project
+name in the <wintitle>Rename Resource</wintitle> window.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>If the
+project contains one or more subprojects that are associated with
+systems that are not connected, a window opens that prompts you to
+connect to the system. If the user ID and password for the system
+are saved, this window does not open. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> uses
+the saved user ID and password to connect.</stepresult></step>
+</steps>
+</taskbody>
+<?tm 1435190829 3?>
+</task>
+<?Pub *0000001551?>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdprojdeffile" xml:lang="en-us">
+<title>Creating a project definition file</title><?Pub Caret -2?>
+<shortdesc>Project definition files list the subprojects that are
+contained by the project and are in the root project definition folder
+or one of its subfolders.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>project definition
+file</indexterm></indexterm><indexterm>project definition file</indexterm>
+<indexterm>configuring host-based projects<indexterm>project definition
+file</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><note othertype="Prerequisite" type="other"><xref
+href="tzdprojinstfile.dita" type="task"></xref></note></prereq>
+<context>Unlike workstation-based projects, all subprojects that are
+contained by a host-based project must be associated with the same
+system.<p>Project definition files can be reused by referring to them
+from multiple project instance files. Using the name override capability
+of the instance file, the same project structure can be given a different
+name for each instance file.</p><p>Project definition files must be
+encoded in UTF-8 and have an extension of <filepath>*.hbppd</filepath>.
+They are XML files that contain the following tags:</p><codeblock>&lt;PROJECT-STRUCTURE>
+  &lt;WSED-VERSION>7.1.0.0&lt;/WSED-VERSION>
+  &lt;PROJECT>
+    &lt;PROJECT-NAME><varname>overrideName</varname>&lt;/PROJECT-NAME>
+    &lt;PROJECT-TYPE>zos-project&lt;/PROJECT-TYPE>
+    &lt;SUBPROJECT-LIST>
+      &lt;SUBPROJECT>
+        &lt;SUBPROJECT-FULL-PATH><varname>pathName</varname>&lt;/SUBPROJECT-FULL-PATH>
+      &lt;/SUBPROJECT>
+    &lt;/SUBPROJECT-LIST>
+  &lt;/PROJECT>
+&lt;/PROJECT-STRUCTURE>
+</codeblock><dl><dlentry>
+<dt>&lt;PROJECT-NAME></dt>
+<dd>Is optional and specifies an override to the project name. If
+this tag is omitted, the project name is the same as the project definition
+file name.<note>If the &lt;PROJECT-NAME> tag is used in the project
+instance file, that name overrides the name that is specified here.</note></dd>
+</dlentry><dlentry>
+<dt>&lt;PROJECT-TYPE></dt>
+<dd>Is required and must be <keyword>zos-project</keyword>, as shown.</dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT-LIST></dt>
+<dd>Is required and contains one or more &lt;SUBPROJECT> tags. </dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT></dt>
+<dd>Is required and contains one or more &lt;SUBPROJECT-FULL-PATH>
+tags. </dd>
+</dlentry><dlentry>
+<dt>&lt;SUBPROJECT-FULL-PATH></dt>
+<dd>Is required and specifies the path to a subproject definition
+file, relative to the PROJECT-HOME directory.</dd>
+</dlentry></dl></context>
+<postreq><xref href="tzdsubpdeffile.dita" type="task"></xref></postreq>
+</taskbody>
+<related-links>
+<link href="rzdprojdefschema.dita" type="reference"></link>
+</related-links>
+<?tm 1435190795 0?>
+</task>
+<?Pub *0000003034?>

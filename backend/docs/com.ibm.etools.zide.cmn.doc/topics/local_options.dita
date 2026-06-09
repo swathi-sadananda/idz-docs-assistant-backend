@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN"  "ibm-topic.dtd">
+<topic id="local_options" xml:lang="en-us">
+<title>Local Options</title>
+<abstract><shortdesc
+conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#local_options/local_options_shortdesc"
+>for information about</shortdesc> For information about configuring macro files for local Assembler
+resources open in the z Systems LPEX Editor, see <xref
+href="../../com.ibm.cdz.remote.doc/topics/settinghlasmparserpreferences_t.dita" scope="peer">Setting
+HLASM Parser preferences</xref>. For a summary of copy and macro library support for the HLASM and z
+Systems LPEX Editor, see <xref
+href="../../com.ibm.etools.rdz.language.editors.doc/topics/locating_copy_macro_assembler.dita"
+/>.</abstract>
+<body>
+<note
+conref="../../com.ibm.etools.rdz.language.editors.doc/topics/property_group_settings_for_editing.dita#property_group_settings_for_editing/library-search-order"/>
+<p>
+<div
+conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#local_options/local_options_lib"
+/>
+</p>
+</body>
+<related-links>
+<link format="html" href="https://mywiki.wooledge.org/glob" scope="external"><linktext>Bash glob
+features</linktext></link>
+</related-links>
+</topic>

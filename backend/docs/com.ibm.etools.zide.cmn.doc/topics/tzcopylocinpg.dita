@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="t_compare_files" xml:lang="en-us">
+<title>Using COPYLOC in property group</title>
+<titlealts>
+<navtitle>Using COPYLOC in property group</navtitle>
+<searchtitle>Using COPYLOC in property group</searchtitle>
+</titlealts>
+<shortdesc>Use the COPYLOC command in the property group for mixed locations for copybooks and set
+the copybook locations in the compiler options.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>use<indexterm>COPYLOC</indexterm></indexterm>
+<indexterm>property group</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>
+<p>COBOL V6.2 adds support for mixed locations for copybooks and allowing copybook locations to be
+set in the compiler options. This support is provided by the <xref href="https://www.ibm.com/support/knowledgecenter/SS6SG3_6.2.0/com.ibm.cobol62.ent.doc/PGandLR/ui/up1010.html?view=kc" format="html" scope="external">COPYLOC</xref> command. For more information, see <xref href="https://mediacenter.ibm.com/media/1_9ruggy79" format="html" scope="external">Quick Look: COBOL 6.2 COPYLOC Option</xref>.</p>
+<p>The compiler checks the <codeph>SYSLIB</codeph> locations first. Then it checks locations
+specified in the <codeph>COPYLOC</codeph> compiler option. The search for a <codeph>COPYLOC</codeph>
+member is performed according to the following rules:<ul>
+<li>If an explicit library name is specified in the <codeph>COPYLOC</codeph> statement, the name is
+assumed to correspond to a ddname that has been allocated to a concatenation of data sets in which
+the compiler will search for the copy member. If no library name is specified in the
+<codeph>COPYLOC</codeph> statement, the concatenation of data sets allocated to the
+<codeph>SYSLIB</codeph> ddname is searched.</li>
+<li>If the copy member was not found during the above search, all locations specified via the
+<codeph>COPYLOC</codeph> option will be searched in the order that they were specified. These locations can include a mix of <tm trademark="z/OS" tmtype="reg">z/OS</tm> <tm trademark="UNIX" tmtype="reg">UNIX</tm> directories and PDS or PDSE data sets.</li>
+</ul></p>
+<p>To use the <codeph>COPYLOC</codeph> command, you need to add <codeph>COPYLOC</codeph> statements
+to the remote compiler options field in the property group.</p>
+</context>
+<steps>
+<step>
+<cmd>Create a COBOL property group and associate it with the COBOL file.</cmd>
+</step>
+<step>
+<cmd>On the COBOL Settings page, click <uicontrol>Procedures and Steps</uicontrol>.</cmd>
+</step>
+<step>
+<cmd>Expand the <codeph>ELAXFCOC</codeph> procedure and click the COBOL step.</cmd>
+</step>
+<step>
+<cmd>Scroll to the <uicontrol>Compiler options</uicontrol> field.</cmd>
+</step>
+<step>
+<cmd>Add <codeph>COPYLOC</codeph> statements to the <uicontrol>Compiler options</uicontrol>
+field.</cmd>
+</step>
+<step>
+<cmd>Edit the file. Copybooks are resolved using the <codeph>COPYLOC</codeph> statements.</cmd>
+<info>
+<note>
+<p>Do not use spaces in the <codeph>COPYLOC</codeph> statement. You can use spaces to separate
+multiple <codeph>COPYLOC</codeph> statements.</p>
+</note>
+</info>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-25.htm" scope="peer" type="reference"><linktext>Compare editor</linktext></link>
+</related-links>
+
+</task><?Pub *0000002018?><?tm 1665694007487 2 z/OS||UNIX ?>

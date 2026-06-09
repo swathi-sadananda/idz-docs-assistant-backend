@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<reference id="rzddb2stepopts" xml:lang="en-us">
+<title><tm tmtype="reg" trademark="Db2">Db2</tm> precompiler step options</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Db2 precompiler step options</navtitle>
+<searchtitle>Db2 precompiler step options</searchtitle>
+</titlealts>
+<abstract><shortdesc>Use the <uicontrol>Db2 Precompiler Step Options</uicontrol> to specify
+properties and options to be passed to the <tm tmtype="reg" trademark="Db2">Db2</tm>
+precompiler.</shortdesc>Before you start, verify that the ELAXFCOP procedure for COBOL or ELAXFPLP
+procedure for PL/I is customized for your site. For more information about customizing the ELAXF*
+JCL procedures, see <xref href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita" scope="peer"
+>ELAXF* remote build procedures</xref>.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>Db2 precompiler step options</indexterm>
+<indexterm>ELAXFCOP</indexterm>
+<indexterm>ELAXFPLP</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used to generate JCL
+for the selected procedure. The information that you provide on this window pertains to remote COBOL
+or PL/I compiler options. </section>
+<section>
+<title>Fields</title>
+<p><uicontrol>Options:</uicontrol> Specify <tm tmtype="reg" trademark="Db2">Db2</tm> preprocessing
+options; separate multiple options with spaces. This field is limited to 100 characters.</p>
+<p><uicontrol>SYSLIB</uicontrol>: Specify SYSLIB for <tm trademark="Db2" tmtype="reg">Db2</tm>
+preprocessing; separate multiple entries with spaces.</p>
+<p><uicontrol>Database Request Module Location (DBRM):</uicontrol> The main output from the
+precompiler is a database request module (DBRM). A DBRM is a data set that contains SQL statements
+and remote system variable information that is extracted from the source program during program
+preparation. The purpose of a DBRM is to communicate your SQL requests to <tm tmtype="reg"
+trademark="Db2">Db2</tm> during the bind process. Specify only one entry.</p>
+<p><uicontrol>SYSTSIN Instructions:</uicontrol> Type <tm tmtype="reg" trademark="Db2">Db2</tm> Plan
+instructions in this field. The field is echoed into the generated JCL. Currently, a sample is
+specified but commented out. You can uncomment the sample and make any necessary changes. The entry
+field must start with <userinput>//SYSTSIN DD DD *</userinput> followed by instructions or with a
+pointer to a data set containing the instructions.</p>
+<note>For fields that take partitioned data sets as their values, you can drag a partitioned data
+set name from the <wintitle>Remote Systems</wintitle> view, <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view, or <wintitle>Remote z/OS Search</wintitle>
+results view and drop it in the field. To change the order of partitioned data set names in a field,
+place the cursor in the field and click Change Order from the menu. </note>
+</section>
+</refbody>
+<related-links>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+</reference><?Pub *0000003090?><?tm 1665694002943 6 Db2 ?>

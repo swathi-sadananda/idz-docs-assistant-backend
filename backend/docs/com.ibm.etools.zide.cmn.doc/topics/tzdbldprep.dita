@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbldprep" xml:lang="en-us">
+<title>Building the sample preprocessor TMPLT00</title><?Pub Caret -2?>
+<shortdesc>Learn how to build the sample PL/I preprocessor TMPLT00.</shortdesc>
+<prolog><metadata>
+<keywords>
+<!--Insert <indexterm> tags here-->
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>TMPLT00 is an ILC (Inter-Language Communication) program.
+ It is a PL/I program that calls a C module to get the data set name
+associated with a DD card.    The C module that is called is ZFLDATA. <p>To
+see the code for TMPLT00, refer to <xref format="dita"
+href="rzdefpli.dita" scope="local" type="reference"></xref>.</p><p>To
+see the code for ZFLDATA, refer to <xref format="dita" href="rzdefc.dita"
+scope="local" type="reference"></xref></p></context>
+<steps>
+<stepsection>To build the sample preprocessor TMPLT00, do these steps.
+Click the links in the following procedure for further instructions
+for each step:</stepsection>
+<step><cmd><xref format="dita" href="tzdcmn043.dita" scope="local"
+type="task">Create a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project.</xref></cmd>
+</step>
+<step><cmd><xref format="dita" href="tzdnewsubproject.dita" scope="local"
+type="task">Create two <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects:</xref> one
+for TMPLT00 and one for ZFLDATA.</cmd></step>
+<step><cmd><xref format="dita" href="tzdpscreate.dita" scope="local"
+type="topic">Create a property group</xref> named "Property Group for
+C Parts" for the ZFLDATA subproject with the following property settings:</cmd>
+<info><table><title>Property Group for C Parts</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="53*"/><colspec
+colname="col2" colwidth="144*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Property Group Page</entry>
+<entry colname="col2">Property Group Settings</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Property Group Categories</entry>
+<entry colname="col2">Select the following categories:<ul>
+<li>C/C++ Settings</li>
+<li>JCL Job Card and Data Set</li>
+<li>Link Options</li>
+<li>Runtime Options</li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">C/C++ Settings</entry>
+<entry colname="col2">On the <uicontrol>Procedures and Steps</uicontrol> page:<ul>
+<li>Enable the ELAXFCPC procedure.</li>
+<li>Specify the following options for the C step:<sl>
+<sli><uicontrol>Compiler options:</uicontrol> TEST SOURCE NOMAR NOSEQ
+NOLIST</sli>
+<sli><uicontrol>Object Deck Data Set:</uicontrol> &lt;HLQ>.CPPOBJS.OBJ</sli>
+<sli><uicontrol>System Libraries:</uicontrol> EDCV120.SeDCDHDR</sli>
+<sli><uicontrol>Event File Data Set:</uicontrol> &lt;HLQ>.SYSEVENT</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site.</sli>
+</sl></li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">Link Options</entry>
+<entry colname="col2">On the <uicontrol>Procedures and Steps</uicontrol> page:<ul>
+<li>Enable the ELAXFLNK procedure.</li>
+<li>Specify the following options for the LINK step:<sl>
+<sli><uicontrol>Link libraries:</uicontrol> SYS1.SCEELKED SYS1.SCEEMAC</sli>
+<sli><uicontrol>Use specified link instructions:</uicontrol> ORDER
+CEESTART</sli>
+<sli><uicontrol>Load module location:</uicontrol> &lt;HLQ>.LOAD</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site.</sli>
+</sl></li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">Runtime Options</entry>
+<entry colname="col2">On the <uicontrol>Procedures and Steps</uicontrol> page:<ul>
+<li>Enable the ELAXFGO procedure.</li>
+<li>Specify the following options for the RUN step:<sl>
+<sli><uicontrol>Run in batch with debugger:</uicontrol> Select this
+radio button.</sli>
+<sli><uicontrol>Runtime options/Program parameters:</uicontrol> Select
+this radio button.</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> </sli>
+</sl><codeblock>//SYSXMLSD DD DSN=&amp;amp;SYSUID..TEMP.WSEDSF1,DISP=(NEW,CATLG),
+            DCB=(RECFM=VB,LRECL=16383,BLKSIZE=27998),
+            SPACE=(TRK,(200,40))</codeblock></li>
+</ul></entry>
+</row>
+</tbody>
+</tgroup>
+</table></info></step>
+<step><cmd>Create a property group named “Property Group for PL/I
+Parts” for the TMPLT00 subproject with the following property settings:</cmd>
+<info><table><title>Property Group for PL/I Parts</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="53*"/><colspec
+colname="col2" colwidth="144*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Property Group Page</entry>
+<entry colname="col2">Property Group Settings</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Property Group Categories</entry>
+<entry colname="col2">Select the following categories:<ul>
+<li>PL/I Settings</li>
+<li>JCL Job Card and Data Set</li>
+<li>Link Options</li>
+<li>Runtime Options</li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">PL/I Settings</entry>
+<entry colname="col2">On the <uicontrol>Procedures and Steps</uicontrol> page:<ul>
+<li>Enable the ELAXFPLP procedure.</li>
+<li>Specify the following options for the PLI step:<sl>
+<sli><uicontrol>Object deck data set:</uicontrol> &lt;HLQ>.PLIOBJS.OBJ</sli>
+<sli><uicontrol>SYSLIB:</uicontrol> &lt;HLQ>.PLI.INCLUDE.CEE.SCEESAMP</sli>
+<sli><uicontrol>Support Error Feedback:</uicontrol> Select this check
+box.</sli>
+<sli><uicontrol>Data Set qualifier for compiler errors:</uicontrol> &lt;HLQ>.ERRPLI</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site.</sli>
+</sl></li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">Link Options</entry>
+<entry colname="col2">On the <uicontrol>Procedures and Steps</uicontrol> page:<ul>
+<li>Enable the ELAXFLNK procedure.</li>
+<li>Specify the following options for the LINK step:<sl>
+<sli><uicontrol>Link libraries:</uicontrol> &lt;HLQ>.CPPOBJS.OBJ SYS1.SCEEMAC
+SYS1.SCEELKED </sli>
+<sli><uicontrol>Use specified link instructions:</uicontrol> ORDER
+CEESTART</sli>
+<sli><uicontrol>Load module location:</uicontrol> &lt;HLQ>.LOAD</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site.</sli>
+</sl></li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">Runtime Options</entry>
+<entry colname="col2">On the <uicontrol>Procedures and Steps</uicontrol> page:<ul>
+<li>Enable the ELAXFGO procedure.</li>
+<li>Specify the following options for the RUN step:<sl>
+<sli><uicontrol>Run in batch:</uicontrol> Select this radio button.</sli>
+<sli><uicontrol>Runtime options/Program parameters:</uicontrol> Select
+this radio button.</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site.</sli>
+</sl></li>
+</ul></entry>
+</row>
+</tbody>
+</tgroup>
+</table></info></step>
+</steps>
+</taskbody>
+<?tm 1435190825 2?>
+</task>
+<?Pub *0000006903?>

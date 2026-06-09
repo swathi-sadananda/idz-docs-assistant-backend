@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdnewsubproject" xml:lang="en-us">
+<title>Creating an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject</title><?Pub Caret -2?>
+<shortdesc><tm tmtype="tm" trademark="MVS">MVS</tm> subprojects contain
+the development resources on an <tm tmtype="tm" trademark="MVS">MVS</tm> system.
+You can create multiple subprojects in a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS subproject<indexterm>create</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you create an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject,
+you must <xref href="tzdcmn043.dita">create a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</xref>.</prereq>
+<steps>
+<stepsection>To create an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject:</stepsection>
+<step rev="803"><cmd>From the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view menu, click <menucascade>
+<uicontrol>New</uicontrol><uicontrol>MVS Subproject</uicontrol>
+</menucascade>.</cmd><stepresult>The <wintitle>New MVS Subproject</wintitle> wizard
+opens. The <uicontrol>Connection name</uicontrol> field shows the
+name of the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system to
+which you are connected. </stepresult></step>
+<step><cmd>Do one of the following steps:</cmd>
+<choices>
+<choice>If you are connected to more than one system, change the system
+under which the subproject is created by selecting the system from
+the <uicontrol>Connection name</uicontrol> list.</choice>
+<choice rev="803">If you are not connected to a remote system, you
+can create a connection by selecting <uicontrol>Create Connection</uicontrol> from
+the <uicontrol>Connection name</uicontrol> list. The <wintitle>Remote
+z/OS System Connection</wintitle> wizard opens. For instructions about
+using this wizard, see the related links. After the wizard completes,
+it returns you to the <wintitle>New MVS Subproject</wintitle> wizard.</choice>
+</choices>
+</step>
+<step><cmd>From the <uicontrol>Project name</uicontrol> list, select
+the <tm tmtype="reg" trademark="z/OS">z/OS</tm> project to contain
+this subproject.</cmd><info>This field defaults to the project name
+selected when you clicked the <menucascade><uicontrol>New</uicontrol>
+<uicontrol>MVS Subproject</uicontrol></menucascade> action. </info>
+</step>
+<step><cmd>In the <uicontrol>Subproject name</uicontrol> field, type
+a name for the subproject.</cmd><info>The <uicontrol>High-level qualifier</uicontrol> defaults
+to the user ID with which you logged on to the remote system. </info>
+</step>
+<step importance="optional"><cmd>You can choose a different high-level
+qualifier from the <uicontrol>High-level qualifier</uicontrol> list.</cmd>
+<info><note>You can also change the high-level qualifier after the
+subproject is created. For more information about how to change a
+high-level qualifier, see the related topics.</note></info></step>
+<step importance="optional"><cmd>In the <uicontrol>Runtime environment</uicontrol> field,
+select a runtime environment to associate with the subproject. </cmd>
+<info>The runtime environment is used to associate runtime-specific
+actions with projects and subprojects. You can choose from the following
+runtime environments:<ul>
+<li><uicontrol>Any:</uicontrol> Enables all project and subproject
+actions. This runtime environment is the default.</li>
+<li><uicontrol>Batch:</uicontrol> This option is reserved for future
+use.</li>
+<li><uicontrol>CICS:</uicontrol> Enables <tm tmtype="reg" trademark="CICS">CICS</tm> actions and disables other runtime-specific
+actions.</li>
+<li><uicontrol>IMS:</uicontrol> This option is reserved for future
+use.</li>
+</ul></info></step>
+<step importance="optional">
+<cmd>To add resources to the subproject after it is created, select the <uicontrol>Select and add
+resources to the subproject</uicontrol> checkbox. </cmd>
+<stepresult>Selecting this option causes the <wintitle>Add Resources to Subproject</wintitle> window
+to open after the subproject is created. To prevent this window from opening, clear this checkbox.
+You can add resources to the subproject later.</stepresult>
+</step>
+<step><cmd>From the <uicontrol>Property group</uicontrol> area, choose
+one of the following options:</cmd>
+<choices>
+<choice rev="803"><uicontrol>Select a property group to associate
+with the subproject</uicontrol>: Select this option and then select
+a property group for the subproject. You can sort the list by clicking
+the table headings. To reverse the sort order, click the table headings
+again.</choice>
+<choice rev="851"><uicontrol>Create a property group and associate it with the
+subproject</uicontrol>: Select this option to create a property group for the subproject. Type a
+name for the group in the <uicontrol>Name</uicontrol> field, choose a language from the
+<uicontrol>Application language</uicontrol> list, and click <uicontrol>Finish</uicontrol> to set
+values in the property group editor. The default application language is COBOL.<note conref="tzdcmn065.dita#tzdcmn065/tabsRemoved" /></choice>
+<choice><uicontrol>Do not associate a property group with the subproject</uicontrol>:
+Select this option to create the subproject without associating a
+property group with it.</choice>
+</choices>
+<info rev="14.2.1">
+<note>A resource in the <wintitle>Remote Systems</wintitle> view can have a different property group
+than the same physical resource in the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view. <tm trademark="z/OS" tmtype="reg">z/OS</tm> Project resources are logical representations of the actual physical resource and therefore each can have its own property group setting. Setting a property group in one location does not associate the same property group to the resource in all locations.</note>
+</info>
+</step>
+<step><cmd>Click <uicontrol>Finish</uicontrol> to create the subproject
+and associate the property group.</cmd><stepresult>If you created
+a remote system connection, the wizard prompts you to log on to the
+system.</stepresult></step>
+</steps>
+<example>
+<image placement="break" href="../animations/zosproject.gif">
+<alt>Animation illustrating how to create a subproject</alt>
+</image>
+</example>
+<postreq rev="751">If you choose not to associate a property group
+with the subproject, you can make an association later. To associate
+a property group with the subproject, select the subproject and click <menucascade>
+<uicontrol>Property Group</uicontrol><uicontrol>Associate Property
+Group</uicontrol></menucascade>.</postreq>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdcmn032.dita" scope="local" type="topic">
+</link>
+<link href="tzdcmn049.dita" type="topic" />
+<link href="tzdpropgrp.dita" type="topic" />
+<link href="tzdpscreate.dita" type="topic" />
+<link href="tzdpsexport.dita" type="topic" />
+<link href="tzdchghlq.dita" scope="local" type="task" />
+<link href="tzdchgrunenv.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000006515?><?tm 1665694016902 11 z/OS||MVS||CICS ?>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdlscremotefilelpex" xml:lang="en-us">
+<title>Local syntax check of a remote file from an editor</title><?Pub
+Caret -2?>
+<shortdesc>When you request a local syntax check for a remote COBOL
+or PL/I file, the syntax check operation searches the remote system
+for all dependencies (such as copybooks and include files) and caches
+these files in a temporary location in your workspace. The list of
+files is also stored as a property of the remote file. This search
+and temporary caching enables a syntax check operation to complete
+without requiring you to add the dependent files to your <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local syntax check<indexterm>remote file from
+LPEX</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>
+<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>
+<p>Before you check syntax locally,
+you might need to set local build options. You must do this action only once and only if you want to
+override the default values.</p>
+<p>This procedure outlines the default behavior for local syntax check.
+You can override this default behavior and request that the syntax check operation look only in your
+subproject for dependent files. To override this default behavior, select the <uicontrol>Syntax
+Check</uicontrol> option in the <wintitle>Preferences</wintitle> window. For more information, see
+the related links.</p>
+<note id="restriction_local_syntax_check" type="restriction">A local syntax check of a remote file that
+contains copy members might use stale copy members from the cache if the copy member was moved to a
+different location in the SYSLIB concatenation that is specified in the
+<uicontrol>SYSLIB</uicontrol> field of the property group. This situation can occur if you have two
+identically named copy members in different locations of the SYSLIB concatenation, perform a syntax
+check, and then delete the identically named copy member that is highest in the concatenation. To
+work around this problem, do these steps:
+<ol>
+<li>In the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>Remote Systems</uicontrol>
+<uicontrol>File Cache</uicontrol>
+</menucascade>, and then press <uicontrol>Clear Cached Files</uicontrol>.</li>
+<li>Right click in the <wintitle>Remote Error List</wintitle>, and remove all error messages. This
+step prevents any error messages from existing copy files from being displayed.</li>
+<li>Perform the local syntax check and refresh dependencies to make sure that the copy files are
+refreshed in the cache location.</li>
+</ol>
+</note>
+</prereq>
+<steps>
+<stepsection>To do a local syntax check of a remote file from an editor,
+follow these steps:</stepsection>
+<step><cmd>Open the member in the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor, COBOL Editor, or PL/I Editor.</cmd></step>
+<step><cmd>In the content area of the editor, right-click and select <uicontrol>Syntax
+Check > Local</uicontrol> <ph rev="80">(or press Ctrl+Alt+L</ph>)
+or <uicontrol>Save and Syntax Check > Local</uicontrol> if the file
+was changed.</cmd><stepresult>The <wintitle>Check Dependencies</wintitle> window
+opens, prompting you to refresh dependencies for the remote file.</stepresult>
+</step>
+<step importance="optional"><cmd>If you have reason to believe that
+the dependencies changed since the last syntax check, click <uicontrol>Refresh
+dependencies and then perform a syntax check</uicontrol>. Otherwise,
+click <uicontrol>Syntax check only</uicontrol>.</cmd><info>To review
+the list of dependencies before proceeding, click <uicontrol>Dependent
+files</uicontrol>. The window expands to show the list of dependent
+files and the date and time of the last refresh.<note>The <uicontrol>Dependent
+files</uicontrol> button is present only if you previously requested
+a refresh dependencies for the file.</note></info></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>The local compiler is started to perform the syntax check. <note>Unless you select <menucascade>
+<uicontrol>Save and Syntax Check</uicontrol>
+<uicontrol>Local</uicontrol>
+</menucascade>, your file is not automatically saved before initiating the syntax check.</note>When
+the syntax check is completed, any errors are displayed in the <wintitle>Remote Errors
+List</wintitle>. If there are no errors, control is returned to you and you can continue
+working.</stepresult></step>
+</steps>
+<result>The following error messages represent some common problems with local syntax check of
+remote files. These messages might appear in the <wintitle>Refresh Dependencies Problems</wintitle>
+window. Click <uicontrol>Details</uicontrol> to display the specific error message.<ul>
+<li><msgph>JES subsystem is not connected. Connect to the subsystem and retry the operation.</msgph>
+This message might appear if the JES subsystem is not connected.</li>
+<li><msgph>The submitted job has ended with a JCL error. Check the build properties and retry the
+operation.</msgph> This message might appear if, for example, you specified a partitioned data set
+in the SYSLIB that does not exist.</li>
+</ul></result>
+</taskbody>
+<related-links>
+<link href="tzdshowdep.dita" type="task"></link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1435190836 2?>
+</task>
+<?Pub *0000005680?>

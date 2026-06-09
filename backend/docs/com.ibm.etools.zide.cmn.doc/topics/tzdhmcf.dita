@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdhmcf" xml:lang="en-us">
+<title>Creating and distributing configuration files</title>
+<titlealts>
+<navtitle>Creating and distributing configuration files</navtitle>
+<searchtitle>Push-to-client configuration files</searchtitle>
+</titlealts>
+<shortdesc>The push-to-client feature provides tools for system administrators to define remote
+system connections, define configuration files, and set client workstation preferences from a
+central location. These connection definitions, configuration files, and preferences can be
+distributed to individual client workstations automatically when they connect to a remote
+system.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>push-to-client configuration</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq id="prereq">To create and distribute remote connection definitions, configuration files, and
+preferences from a central location, the server must be configured to enable push-to-client
+updates.</prereq>
+<?Pub Caret 180?>
+<context>When a user connects to the primary remote system or to another remote system for which
+system configuration files are defined, the configuration files that are stored on that system are
+compared to the configuration files on the workstation. If updates are available, users are prompted
+to install them.<p conref="zide_conrefs.dita#zide_conrefs/ptc_config_list"/></context>
+<steps>
+<stepsection>To create and distribute configuration files, do these steps. Each of these steps links
+to more information about completing the step.</stepsection>
+<step><cmd><xref format="dita" href="tzdptcmaster.dita" scope="local" type="task">Create a workspace
+that serves as the model workspace</xref> for the configurations and preferences to be
+distributed.</cmd></step>
+<step><cmd>From the model workspace, <xref format="dita" href="tzdcmn032.dita" scope="local"
+type="topic">create connections</xref> to the primary remote system from which you intend to
+distribute global and system configurations and to each remote system from which you intend to
+distribute system configurations.</cmd></step>
+<step><cmd><xref format="dita" href="tzdplanptc.dita" scope="local" type="concept">Configure remote
+system connections, configuration files, and preferences</xref> in the model workspace.</cmd></step>
+<step><cmd><xref format="dita" href="tzdexpconfig.dita" scope="local" type="task">Export the
+configuration files</xref> that are to be distributed to other client workspaces.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="czdptc.dita" scope="local" type="concept"> </link>
+</related-links>
+<?tm 1379086769 0?>
+</task>
+<?Pub *0000002960?>

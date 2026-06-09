@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcicslevel" xml:lang="en-us">
+<title>Setting the <tm tmtype="reg" trademark="CICS">CICS</tm> level
+for COBOL and PL/I programs</title><?Pub Caret -2?>
+<shortdesc>You can set the level of <tm tmtype="reg" trademark="CICS">CICS</tm> in
+use at your installation to aid more accurate content assistance and
+syntax checking. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>CICS<indexterm>setting the level</indexterm><indexterm>level
+and content assistance</indexterm><indexterm>level and syntax checking</indexterm></indexterm>
+<indexterm>content assistance<indexterm>CICS level</indexterm></indexterm>
+<indexterm>syntax checking<indexterm>CICS level</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>When you set the level of <tm tmtype="reg" trademark="CICS">CICS</tm> in
+use at your installation, you can take advantage of release-specific
+content assistance and syntax checking for your COBOL and PL/I programs.
+The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+uses the <tm tmtype="reg" trademark="CICS">CICS</tm> level that you
+specify to do the following operations:<ul>
+<li>Set compiler options specific to the release of <tm tmtype="reg" trademark="CICS">CICS</tm> in
+use at your installation. These options are used for local syntax checking. This action is available
+only on Windows.<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></li>
+<li>Provide release-specific content assistance in the <tm tmtype="tm"
+trademark="z Systems">z Systems</tm> LPEX Editor.</li>
+</ul></context>
+<steps>
+<stepsection>To set the level of <tm tmtype="reg" trademark="CICS">CICS</tm> in
+use at your installation:</stepsection>
+<step><cmd>Open <wintitle>COBOL Settings properties</wintitle> or <wintitle>PL/I
+Settings properties</wintitle> page.</cmd></step>
+<step><cmd>Click <uicontrol>Use CICS</uicontrol>.</cmd></step>
+<step><cmd>From the list, select the level of <tm tmtype="reg" trademark="CICS">CICS</tm>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="rzddefcicsopts.dita" type="reference" />
+<link href="rzdcicsoptions.dita" type="reference" />
+</related-links>
+
+</task><?Pub *0000002418?><?tm 1665694655019 8 z Systems||CICS ?>

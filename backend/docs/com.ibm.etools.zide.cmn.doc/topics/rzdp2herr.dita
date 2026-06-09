@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><reference id="rzdp2herr" xml:lang="en-us">
+<title>Pushable Manifest Editor errors</title>
+<shortdesc>These errors can occur when you create a mapping for remote
+synchronization.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Pushable Manifest Editor<indexterm>errors</indexterm></indexterm>
+<indexterm>errors<indexterm>Pushable Manifest Editor</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><table><title>Pushable Manifest Editor errors</title>
+<tgroup cols="3"><colspec colname="col1" /><colspec colname="col2" />
+<colspec colname="col3" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Severity</entry>
+<entry colname="col2">Text</entry>
+<entry colname="col3">Resolution</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>Invalid Format, expected path found ?</msgph></entry>
+<entry colname="col3">The file is in an unsupported format. A non-path
+item was found when a path was expected. Open the <filepath>.RemoteMapping</filepath> file
+in a text editor and correct the line in error.</entry>
+</row>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>Unrecognized remote resource type ?</msgph></entry>
+<entry colname="col3">Open the Pushable Manifest Editor and set a
+valid remote resource type, or clear the mapping for that item.</entry>
+</row>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>Unrecognized remote resource location</msgph></entry>
+<entry colname="col3">Open the Pushable Manifest Editor and set a
+valid remote resource location.</entry>
+</row>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>Unspecified remote resource type</msgph></entry>
+<entry colname="col3">Open the Pushable Manifest Editor and specify
+a remote resource type, or clear the remote location.</entry>
+</row>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>The Specified host ??? is unknown.</msgph></entry>
+<entry colname="col3">Open the Pushable Manifest Editor and specify
+a valid host location.</entry>
+</row>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>A Host must be specified.</msgph></entry>
+<entry colname="col3">Open the Pushable Manifest Editor and specify
+a valid host location.</entry>
+</row>
+<row>
+<entry colname="col1">Error</entry>
+<entry colname="col2"><msgph>The same remote resource is specified
+multiple times.</msgph></entry>
+<entry colname="col3">Each remote resource can be specified only once
+per project.  Open the Pushable Manifest Editor and set one of the
+local items in error to map to a different remote location.</entry>
+</row>
+<row>
+<entry colname="col1">Warning</entry>
+<entry colname="col2"><msgph>Local Resource does not exist.</msgph></entry>
+<entry colname="col3">Either create the local resource or clear the
+mapping from the editor.</entry>
+</row>
+</tbody>
+</tgroup>
+</table><p>Save the <uicontrol>RemoteMapping</uicontrol> file after you finish making any changes. If you
+have automatic build enabled, any errors display in the file appear in the
+<wintitle>Problems</wintitle> view. If automatic build is not enabled, start the build by choosing <menucascade>
+<uicontrol>Project</uicontrol>
+<uicontrol>Build Project</uicontrol>
+</menucascade> from the menu bar. If the <wintitle>Problems</wintitle> view is not visible, open it
+by selecting <uicontrol>Window</uicontrol><ph otherprops="IDz"> (on <tm trademark="Windows" tmtype="tm">Windows</tm>) or <uicontrol><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full_ui" /></uicontrol>
+(on macOS)</ph> &gt; <menucascade>
+<uicontrol>Show View</uicontrol>
+<uicontrol>Problems</uicontrol>
+</menucascade>. Clicking any error in the <wintitle>Problems</wintitle> view highlights the line
+that must be corrected in the Pushable Manifest Editor.<note>You must build the project for the
+<wintitle>Problems</wintitle> view to update. </note></p></section>
+</refbody>
+</reference><?Pub *0000004007?><?tm 1665694004290 1 Windows ?>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdcmn018.dita" xml:lang="en-us">
+<title>Online and offline projects</title><?Pub Caret -2?>
+<shortdesc>A <tm tmtype="reg" trademark="z/OS">z/OS</tm> project is
+either in online or offline state.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS project<indexterm>states<indexterm>online</indexterm><indexterm>offline</indexterm></indexterm></indexterm>
+<indexterm>offline state</indexterm><indexterm>online state</indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<note type="attention">The work offline and work online operations
+for a remote resource are deprecated.</note>
+<p>A <tm tmtype="reg" trademark="z/OS">z/OS</tm> project is in either
+of two states:  <ul>
+<li>In <term>online state</term>, the project is connected to the
+systems to which its subprojects refer. You can directly change the
+data sets that are stored in those systems.</li>
+<li>In <term>offline state</term>, the project can access only mainframe
+resources that were explicitly taken offline.</li>
+</ul></p>
+<p>When you move a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+to the offline state, you specify the subprojects, data sets, and
+partitioned data set members to be transferred to the workstation.
+When you switch back to online state, you select the files you want
+to upload to the remote system. A window opens that allows for comparison
+of the local and remote versions of the files. You can use this window
+to upload or download the versions of the files you would like to
+keep or to merge changes between local and remote files. Clicking
+the <uicontrol>Work Online</uicontrol> button displays a warning message,
+indicating that any changed files not uploaded to the remote system
+are lost.</p>
+</conbody>
+<?tm 1435190829 3?>
+</concept>
+<?Pub *0000001986?>

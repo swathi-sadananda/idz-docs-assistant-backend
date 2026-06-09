@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn158" xml:lang="en-us">
+<title>Syntax check of COBOL and PL/I source that contains <codeph>EXEC
+CICS</codeph> statements by using <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server for <tm tmtype="reg" trademark="OS/390">OS/390</tm></title><?Pub
+Caret -2?>
+<shortdesc>To perform a quick verification of your code, you can execute
+a syntax check on your program as an initial form of validation. Performing
+a syntax check is faster than performing a full build, so you must
+use it when you want quick feedback on the correctness of your program.
+Any <codeph>EXEC CICS</codeph> statements that are embedded in COBOL
+and PL/I source can be automatically translated by your <tm tmtype="reg"
+trademark="CICS">CICS</tm> translator before you run a syntax check. </shortdesc>
+<taskbody>
+<prereq><p><indexterm>syntax checking<indexterm>COBOL</indexterm><indexterm>PL/I
+source containing EXEC CICS statements</indexterm><indexterm>using
+CICS Transaction Server for OS/390</indexterm></indexterm><indexterm>PL/I
+source containing EXEC CICS statements<indexterm>syntax checking</indexterm><indexterm>using
+CICS Transaction Server for OS/390</indexterm></indexterm><indexterm>COBOL<indexterm>syntax
+checking</indexterm><indexterm>using CICS Transaction Server for OS/390</indexterm></indexterm></p>Before
+you run a syntax check by using <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server for <tm tmtype="reg" trademark="OS/390">OS/390</tm>, you must
+first <xref href="tzdcmn155.dita">configure</xref> your workbench
+to use <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction Server
+as your <tm tmtype="reg" trademark="CICS">CICS</tm> translator.</prereq>
+<steps>
+<stepsection>To execute a remote syntax check, follow these steps:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, right-click the resource
+that you want to check the syntax of and click <menucascade><uicontrol>Remote Syntax
+Check</uicontrol>
+</menucascade>
+<ph rev="80">or press Ctrl+Alt+R.</ph></cmd><info rev="802">If a JCL error occurs or the job ends
+abnormally, an error message displays to help you solve the problem. From this message window, you
+can do one of the following actions:<ul>
+<li>Open the job output to view the error messages and return codes.</li>
+<li>Open the property group that is associated with the file to view the build properties currently
+in use.</li>
+</ul></info></step>
+</steps>
+<result>Errors that the syntax checker finds are listed in the <wintitle>Remote
+Error List</wintitle> view.</result>
+<postreq>Double-click an error that is listed in the <wintitle>Remote
+Error List</wintitle> view to display the corresponding line of code
+in the LPEX Editor.</postreq>
+</taskbody>
+<related-links>
+<link href="tzdshowdep.dita" type="task"></link>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+<?tm 1435190837 7?>
+</task>
+<?Pub *0000003103?>

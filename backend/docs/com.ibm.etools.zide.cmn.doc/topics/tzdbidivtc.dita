@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbidivtc" xml:lang="en-us">
+<title>Comparing bidirectional text</title>
+<shortdesc>Bidirectional text compare is supported for local files,
+team compare and history, and remote file compare. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional support<indexterm>comparing visual
+text</indexterm></indexterm><indexterm>comparing visual text</indexterm>
+<indexterm>bidirectional text compare window</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>Bidirectional text compare becomes available only when the <uicontrol>Compare</uicontrol> check
+box is selected in the <wintitle>Bidirectional Development</wintitle> preference
+page and the files that are being compared are in smart logical format.
+When you enable bidirectional support for comparing files, the <wintitle>Text
+Compare</wintitle> window is replaced with the <wintitle>Bidirectional
+Text Compare</wintitle> window. The <wintitle>Bidirectional Text Compare</wintitle> window
+functions similarly to the standard window, except that bidirectional
+format is indicated by &lt;SL> following the file name. Additionally,
+visual text compare offers the following benefits:<ul>
+<li>Correct processing of bidirectional markers</li>
+<li>Visual typing of bidirectional data</li>
+<li>Saving changes in smart logical format</li>
+</ul>For bidirectional text compare, the <wintitle>Internal Find/Replace</wintitle> window
+is replaced by the <wintitle>Find/Replace Visual Text</wintitle> window,
+which allows visual typing of bidirectional data and correct processing
+of smart logical files. You can allow typing from right to left by
+pressing the Alt+NumLock keys, and you can make autopush typing mode
+active by pressing the Alt+NumPad keys.</context>
+<postreq><xref href="tzdbidicff.dita" type="task"></xref></postreq>
+</taskbody>
+</task>

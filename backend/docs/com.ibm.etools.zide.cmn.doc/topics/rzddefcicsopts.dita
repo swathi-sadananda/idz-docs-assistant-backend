@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzddefcicsopts" xml:lang="en-us">
+<title>Default <tm tmtype="reg" trademark="CICS">CICS</tm> preprocessor
+options</title><?Pub Caret -2?>
+<shortdesc>The default preprocessor options are based on the <tm
+tmtype="reg" trademark="CICS">CICS</tm> product that is installed
+on the workstation.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>CICS<indexterm>default preprocessor options</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>
+<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>
+</section>
+<section>Compiler
+options for a local syntax check of a remote file are determined by
+the options that are specified on the <wintitle>Procedures and Steps</wintitle> window.
+The version of <tm tmtype="reg" trademark="CICS">CICS</tm> that is
+installed on the workstation determines the correct preprocessor options
+for a local syntax check of a remote file. When the <uicontrol>Preprocessor</uicontrol> check
+box on the <wintitle>Local Compile Options</wintitle> page is selected,
+the following  default preprocessor options are set according to the <tm
+tmtype="reg" trademark="CICS">CICS</tm> product that is installed
+on the workstation.<ul>
+<li>COBOL and <tm tmtype="reg" trademark="CICS">CICS</tm> TX Series
+6.1 or higher: CICSNT -lIBMCOB -adesvp</li>
+<li>COBOL and <tm tmtype="reg" trademark="CICS">CICS</tm> TX Series
+5.1: CICSNT -lIBMCOB -adesv</li>
+<li>PL/I and <tm tmtype="reg" trademark="CICS">CICS</tm> TX Series
+6.1 or higher: CICSTNT -lIBMPLI -adesvp</li>
+<li>PL/I and <tm tmtype="reg" trademark="CICS">CICS</tm> TX Series
+5.1: CICSTNT -lIBMPLI -adesvp</li>
+<li>PL/I and <tm tmtype="reg" trademark="CICS">CICS</tm> TX Series
+5.1: CICSTNT -lIBMPLI edf debug source print</li>
+</ul>If no <tm tmtype="reg" trademark="CICS">CICS</tm> product is
+installed and the <uicontrol>Preprocessor</uicontrol> checkbox is
+selected, an option for <tm tmtype="reg" trademark="CICS">CICS</tm> <tm
+tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1 is generated.
+Upon compilation, if the correct translator for the product cannot
+be found, a window indicating that the translator cannot be found
+opens a message is written to the log. For <tm tmtype="reg"
+trademark="TXSeries">TXSeries</tm> 6.1 or higher, the message indicates
+which version of the <tm tmtype="reg" trademark="CICS">CICS</tm> translator
+cannot be found.<p>If you request a local syntax check of a remote
+file and the <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1
+or higher product is not installed, the compiler options to start
+the <tm tmtype="reg" trademark="CICS">CICS</tm> Translator are not
+added to the syntax check. The syntax check returns an error message
+that EXEC <tm tmtype="reg" trademark="CICS">CICS</tm> statements were
+found and you must install <tm tmtype="reg" trademark="CICS">CICS</tm> <tm
+tmtype="reg" trademark="TXSeries">TXSeries</tm>. If you request a
+local syntax check of a remote file and you have <tm tmtype="reg"
+trademark="TXSeries">TXSeries</tm> 6.1 installed, but the level of <tm
+tmtype="reg" trademark="TXSeries">TXSeries</tm> required for that
+syntax check is not available, the compiler reports the error. If,
+for example, you select a host syntax of <tm tmtype="reg"
+trademark="CICS">CICS</tm> Transaction Server 3.2 on the <wintitle>Procedures
+and Steps</wintitle> page, but your compiler and integrated translator
+do not support that level of <tm tmtype="reg" trademark="CICS">CICS</tm>,
+you see a message similar to this message:<msgblock>IGYOS0226-E ERZ004081E: Invalid CICS option 'CTS32' specified.
+IGYDS0139-W Diagnostic messages were issued during processing of compiler options. These messages are located at the beginning of the listing.</msgblock></p></section>
+</refbody>
+<related-links>
+<link href="tzdcicslevel.dita" type="task"></link>
+<link href="rzddefcicsopts.dita" type="reference"></link>
+</related-links>
+<?tm 1435190860 23?>
+</reference>
+<?Pub *0000004217?>

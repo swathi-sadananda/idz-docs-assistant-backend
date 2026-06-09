@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<map linking="normal" operatingsystem="windows" product="SSQ2R2"
+title="Developing COBOL, PL/I, Assembler, and C++ programs" xml:lang="en-us">
+<topicmeta>
+<copyright>
+<copyryear year="2005, 2024"/>
+<copyrholder/>
+</copyright>
+<?Pub Caret 1?>
+</topicmeta>
+<topicref format="dita" href="topics/czdhostintro.dita"
+navtitle="Developing z/OS applications with Eclipse" scope="local"
+type="concept"><!--JCL procedure support--></topicref>
+<!--resource only topicrefs-->
+<topicref href="../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"
+processing-role="resource-only"/>
+<topicref href="../com.ibm.etools.rdz.language.editors.doc/topics/czdcmn024.dita"
+processing-role="resource-only"/>
+<topicref href="../com.ibm.idz.dbbz.doc/topics/DBBz_intro.dita" processing-role="resource-only"/>
+</map>
+<?Pub *0000015322?>

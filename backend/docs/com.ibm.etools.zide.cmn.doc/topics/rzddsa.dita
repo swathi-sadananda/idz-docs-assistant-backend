@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzddsa" xml:lang="en-us">
+<title>Data set allocation rules</title>
+<shortdesc>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+enforces certain rules for record format (RECFM), record length (LRECL),
+and block size (BLKSIZE).</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>data set allocation rules</indexterm><indexterm>rules<indexterm>data
+set allocation</indexterm><indexterm>RECFM</indexterm><indexterm>LRECL</indexterm><indexterm>BLKSIZE</indexterm></indexterm>
+<indexterm>record format rules</indexterm><indexterm>record length
+rules</indexterm><indexterm>block size rules</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>When you allocate a partitioned or sequential data set and
+use the <wintitle>Data Set Characteristics</wintitle> page of the <wintitle>New
+Data Set</wintitle> wizard to specify record format, record length,
+and block size, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+enforces the following rules:<ul>
+<li>With any value of record format except U, either record length
+or block size is required, and both can be specified. A zero value
+is the same as being unspecified. If you omit both record length and
+block size, the wizard prompts you with the message <msgph>Record
+Length: must not be empty</msgph> or <msgph>Block Size: must not be
+empty.</msgph></li>
+<li>If record format is F, FA or FM and both record length and block
+size are specified, they must be equal. Either value defaults to the
+other value. If you attempt to enter differing values for record length
+and block size, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> interface
+prompts you with the message <msgph>For the selected record format,
+the values of record length and block size must be equal when both
+are specified.</msgph></li>
+<li>If record format is FB, FBA, or FBM, and both record length and
+block size are specified, block size must be a multiple of record
+length. If you specify record length without block size, OPEN calculates
+an optimal value for block size that depends on the device type. If
+you attempt to enter a value for block size that is not a multiple
+of record length, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> interface
+prompts you with the message <msgph>For the selected record format,
+the value of block size must be a multiple of record length when both
+are specified.</msgph></li>
+<li>If record format is V, VB, VA, VBA, VM, or VBM and both block
+size and record length are specified, block size must be at least
+four more than the record length value.  If you specify record length
+without block size, OPEN calculates an optimal value for block size
+that depends on the device type.  It is at least four more than the
+record length value. If you attempt to specify a value for block size
+that is less than four more than record length, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> interface
+prompts you with the message <msgph>For the selected record format,
+the value of block size must at least four more than the value of
+record length when both are specified.</msgph></li>
+<li>If record format is VA, VBA, VM, or VBM, record length must be
+at least 5. If you attempt to specify a value for record length that
+is less than 5, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> interface
+prompts you with the message <msgph>For the selected record format,
+the value of record length must at least 5.</msgph></li>
+<li>If record format is U, block size is required, and record length
+is disabled. If you omit block size, the wizard prompts you with the
+message <msgph>Block Size: must not be empty.</msgph></li>
+</ul></section>
+</refbody>
+<related-links>
+<link href="tzdcmn039.dita" type="task"></link>
+</related-links>
+<?tm 1337269559 0?>
+</reference>
+<?Pub *0000004363?>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdptcmaster" xml:lang="en-us">
+<title>Creating a model workspace for push-to-client configuration</title>
+<titlealts>
+<navtitle>Creating a model workspace for push-to-client configuration</navtitle>
+<searchtitle>Creating a model workspace for push-to-client configuration</searchtitle>
+</titlealts>
+<shortdesc>A model workspace is a <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> workspace
+from which you create the remote system connections, configuration
+files, and preference settings to be distributed to other client workstations.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>push-to-client configuration<indexterm>model
+workspace</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>Creating a model workspace for push-to-client configurations
+is no different from creating any other <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> workspace.
+It is good practice to dedicate a workspace to configuration so that
+other development activities do not alter the remote system connections,
+configuration files, and preference settings that are intended for
+general distribution. The purpose of using a model workspace is for
+the workspace owner (or push-to-client administrator) to set up preferences,
+system connections, and configurations the way ordinary users must
+have them in their workspaces. Set up the workspace by using the product
+user interface and then export those settings by using the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> configuration
+export wizard.<p conref="zide_conrefs.dita#zide_conrefs/ptcmaster"></p></context>
+<steps-unordered>
+<step><cmd>For information about creating a workspace, see <xref
+format="html"
+href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-workspaceswitch.htm"
+scope="peer">Switching workspaces</xref>.</cmd></step>
+<step><cmd>For information about group-level control of configurations, see <ph otherprops="Wazi"
+><xref href="../../com.ibm.guide.hostconfig.reference.doc/topics/pushtoclient_consider.dita"/>
+in</ph> the Host Configuration Reference.</cmd>
+</step><?Pub Caret 69?>
+</steps-unordered>
+</taskbody>
+<?tm 1379086769 0?>
+</task>
+<?Pub *0000002503?>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_compress_pds" xml:lang="en-us">
+<title>Compressing partitioned data sets</title>
+<titlealts>
+<navtitle>Compressing partitioned data sets</navtitle>
+<searchtitle>Compressing partitioned data sets</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>Compress</uicontrol> or <uicontrol>Compress
+with Backup</uicontrol> menu items to compress partitioned data sets.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>compress</indexterm></keywords>
+<keywords><indexterm>compress with backup</indexterm></keywords>
+<keywords><indexterm>partitioned data set<indexterm>compressing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>If a partitioned data set runs out of space or if you make
+multiple changes to a partitioned data set or its members, you can
+compress it to reduce the amount of space it uses. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> supports
+two compression actions:<ul>
+<li><uicontrol>Compress</uicontrol> compresses the data set.</li>
+<li><uicontrol>Compress with Backup</uicontrol> creates a backup copy
+of the data set before you compress it. If the compression action
+is successful, the backup copy is deleted. If the compression action
+fails, you can use the backup copy to restore the data set.</li>
+</ul>The <uicontrol>Compress</uicontrol> and <uicontrol>Compress with
+Backup</uicontrol> actions are valid for partitioned data sets only.
+They are not available for PDSE (Library) or sequential data sets.</context>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, select
+a partitioned data set and then select <uicontrol>Compress</uicontrol> or <uicontrol>Compress
+with Backup</uicontrol>.</cmd><stepresult><ul>
+<li>If you select <uicontrol>Compress</uicontrol>, the data set is
+compressed.</li>
+<li>If you select <uicontrol>Compress with Backup</uicontrol>, the <wintitle>Compress
+with Backup</wintitle> window opens to prompt you for a backup data
+set name.</li>
+</ul></stepresult></step>
+<step><cmd>Do one of the following steps:</cmd>
+<substeps>
+<substep><cmd>To accept the default backup data set name, click <uicontrol>OK</uicontrol>. </cmd>
+</substep>
+<substep><cmd>To specify a different backup data set name, type a
+new name and click <uicontrol>OK</uicontrol>.</cmd><stepresult>If
+the compression action is successful, the backup data set is deleted.
+The backup data set is saved only if the compression action fails.</stepresult>
+</substep>
+</substeps>
+</step>
+</steps>
+</taskbody>
+<?tm 1337269562 0?>
+</task>
+<?Pub *0000002789?>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdpsassign" xml:lang="en-us">
+<title>Associating and overriding property groups</title>
+<?Pub Caret -2?>
+<abstract>
+<shortdesc>Associating a property group with a resource allows for consistent property settings
+across projects, subprojects, or data sets. If you decide a different set of properties is more
+suitable for your purposes, you can change the property group associated with a resource or override
+one or more properties in an associated property group.</shortdesc>
+</abstract>
+<prolog>
+<metadata>
+<keywords/>
+</metadata>
+</prolog>
+<body>
+<section><title>Associating a property group with a resource</title><indexterm>property
+groups<indexterm>associating</indexterm></indexterm><ol>
+<li rev="150"> In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view or the
+<wintitle>Remote Systems</wintitle> view, select the <uicontrol>MVS Files</uicontrol> node, an <tm
+tmtype="tm" trademark="MVS">MVS</tm> subproject, a data set or data set member, or a local COBOL,
+PL/I, or Assembler project, directory, or file.<note> When you associate a property group with an
+MVS subproject, this association does not apply to the files or data sets in other views, even if
+the files or data sets are part of the subproject. For example, a COBOL program might inherit one
+property group from a subproject, but a different property group from the partitioned data set that
+it is a member of in the <wintitle>Remote Systems</wintitle> view.</note></li>
+<li>Right-click and select <menucascade><uicontrol>Property Group</uicontrol><uicontrol>Associate
+Property Group</uicontrol>
+</menucascade>. The <wintitle>Associate Property Group</wintitle> window opens. The table view
+displays property groups that are defined for the system. You can sort the list by clicking the
+table headings. To reverse the sort order, click the table headings again.</li>
+<li>Select the checkbox beside a property group to associate with the resource and click
+<uicontrol>OK</uicontrol>.</li>
+</ol></section>
+<section><title>Finding the current properties of a
+resource</title><indexterm>properties<indexterm>viewing</indexterm></indexterm><p>You can use the
+<wintitle>Properties</wintitle> view or <wintitle>Properties</wintitle> window to see the current
+property group for a resource.</p><ul>
+<li>Use the <wintitle>Properties</wintitle> view to determine the property group that is associated
+with a resource. <ol>
+<li>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view or <wintitle>Remote
+Systems</wintitle> view, select the resource for which you want to see properties. The
+<wintitle>Properties</wintitle> view shows the <term>current property group</term> for the resource.
+The <uicontrol>Overrides</uicontrol> field in this view indicates whether any property overrides are
+in effect for the resource.<image href="../images/PropViewWithPropGroup.gif" placement="break">
+<alt> Properties view for a resource</alt>
+</image></li>
+<li>Open the <wintitle>Property Group Manager</wintitle> expand the system name for the resource of
+interest, and double-click the current property group of the resource. The <wintitle>Property Group
+Editor</wintitle> opens. </li>
+<li>To see property values for each category, select the corresponding tab.</li>
+</ol>
+</li>
+<li>Use the <wintitle>Property Group</wintitle> page of the <wintitle>Properties</wintitle> window. <ol>
+<li>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view or <wintitle>Remote
+Systems</wintitle> view, select the resource for which you want to see properties and then click
+<uicontrol>Properties</uicontrol>. </li>
+<li>In the <wintitle>Properties</wintitle> window, click <uicontrol>Property
+Group</uicontrol>.<itemgroup> The <term>current property group</term> is marked by a selected
+checkbox in the table.</itemgroup></li>
+</ol>
+</li>
+</ul></section>
+<section><title>Overriding properties in a property group</title><indexterm>property
+groups<indexterm> overriding</indexterm></indexterm><p>When you associate a property group with a
+resource, it is referred to as the <term>current property group</term>. Actions such as build and
+syntax check use the information in the current property group to provide values for that resource.
+The current property group in parent resources is also the current property group for child
+resources, unless you explicitly set the current property group for child resources. For example,
+the current property group for an <tm tmtype="tm" trademark="MVS">MVS</tm> subsystem is also the
+current property group for all data sets and members in the subsystem. You can explicitly set the
+current property group for a data set or member.</p><p>For a specific resource, you can override
+values for the properties in the resource's current property group. The overridden values do not
+affect any other resource, nor do they affect the property group itself; rather, they are local to
+the resource. In this way, you can work with variations in property groups. Using property overrides
+is a good way to change a property value for a specific purpose, such as testing the effect of a
+change before you propagate it to other resources. If the current property group for a resource is
+changed, the overridden values are deleted. <ph rev="751">You can specify property group overrides
+for partitioned data set members and for files in local <tm trademark="z/OS" tmtype="reg">z/OS</tm>
+projects. Property group overrides are not available for <tm tmtype="tm" trademark="MVS">MVS</tm>
+subprojects, partitioned data sets, the <tm tmtype="tm" trademark="MVS">MVS</tm> Files node in the
+<wintitle>Remote Systems</wintitle> view, local projects, and directories in local
+projects.</ph></p><p>A resource with property overrides displays <systemoutput>Overrides
+Yes</systemoutput> in the Property group section of the <wintitle>Properties</wintitle> view.</p><dl>
+<dlentry>
+<dt>Overriding property group values</dt>
+<dd>
+<ol>
+<li>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> or <wintitle>Remote Systems</wintitle>
+view, select a partitioned data set member or file in local <tm trademark="z/OS" tmtype="reg"
+>z/OS</tm> project. </li>
+<li>Right-click and select <menucascade><uicontrol>Property Group</uicontrol>
+<uicontrol>Override Properties</uicontrol></menucascade>. The <wintitle>Property Group
+Editor</wintitle> opens. </li>
+<li>Specify property values to be overridden in the property group.</li>
+<li> Save your changes.</li>
+</ol>
+<note>Changing the property group association for a resource deletes any property overrides for that
+resource.</note>
+</dd>
+</dlentry>
+<dlentry>
+<dt>Deleting overrides</dt>
+<dd><indexterm>property groups<indexterm>deleting overrides</indexterm></indexterm>If you delete the
+overrides all property values revert to the current property group.<ol>
+<li>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> or <wintitle>Remote Systems</wintitle>
+view, select a partitioned data set member or a file in a local <tm trademark="z/OS" tmtype="reg"
+>z/OS</tm> project with property group overrides. </li>
+<li>Right-click and select <menucascade><uicontrol>Property Group</uicontrol>
+<uicontrol>Delete Overrides</uicontrol></menucascade>.  The property values for the resource revert
+to the current property group.</li>
+</ol></dd>
+</dlentry>
+</dl></section>
+</body>
+<related-links>
+<link href="tzdpropgrp.dita" type="topic"/>
+<link href="tzdpscreate.dita" type="topic"/>
+<link href="tzdpsexport.dita" type="topic"/>
+<link href="tzdnewsubproject.dita" type="task"/>
+<link href="../../com.ibm.etools.rdz.installing.doc/topics/tzdmigprop.dita" type="topic"/>
+</related-links>
+<?tm 1435190818 1?>
+</topic>
+<?Pub *0000002755?>

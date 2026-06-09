@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdrunopts" xml:lang="en-us">
+<title>Choosing the <tm tmtype="reg" trademark="Db2">Db2</tm>, <tm tmtype="reg" trademark="CICS">CICS</tm>, or <tm tmtype="tm" trademark="IMS" tmclass="IGNORE">IMS</tm> runtime environment</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Choosing the Db2, CICS, or IMS runtime environment</navtitle>
+<searchtitle>Choosing the Db2, CICS, or IMS runtime environment</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>Runtime Environments</wintitle> page of the property group editor to
+choose <tm tmtype="reg" trademark="Db2">Db2</tm>, <tm tmtype="reg" trademark="CICS">CICS</tm>, or
+<tm tmtype="tm" trademark="IMS" tmclass="IGNORE">IMS</tm> as a runtime environment for COBOL and PL/I
+applications.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>runtime
+environments<indexterm>Db2</indexterm><indexterm>CICS</indexterm><indexterm>IMS</indexterm></indexterm>
+<indexterm>Db2<indexterm>runtime environment</indexterm></indexterm>
+<indexterm>CICS<indexterm>runtime environment</indexterm></indexterm>
+<indexterm>IMS<indexterm>runtime environment</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context>The <wintitle>Runtime Environments</wintitle> page is available on the
+<uicontrol>COBOL</uicontrol> and <uicontrol>PL/I</uicontrol> property group tabs.</context>
+<steps-unordered>
+<stepsection>You can set the following runtime options:</stepsection>
+<step><cmd><uicontrol>Db2:</uicontrol> Indicates use of <tm tmtype="reg" trademark="Db2">Db2</tm>,
+by using either the integrated <tm tmtype="reg" trademark="Db2">Db2</tm> coprocessor or a separate
+step. </cmd></step>
+<step>
+<cmd><uicontrol>CICS:</uicontrol> Indicates use of <tm tmtype="reg" trademark="CICS">CICS</tm>, by
+using either the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator or a separate
+step. When you select this option, the list is activated. Select the level of <tm tmtype="reg" trademark="CICS">CICS</tm> that you are using on <tm tmtype="tm" trademark="MVS">MVS</tm>. This
+option determines the syntax that is used for content assistance in an edit session. The <tm tmtype="reg" trademark="CICS">CICS</tm> level can be changed or displayed in an edit session by
+using the CICSLevel editor command.</cmd>
+<info>
+<note type="tip">For more information about how to use the <uicontrol>Db2</uicontrol> and
+<uicontrol>CICS</uicontrol> options, see the related links.</note>
+</info>
+</step>
+<step><cmd><uicontrol>IMS:</uicontrol> Select this checkbox to enable <tm tmtype="tm" trademark="IMS" tmclass="IGNORE">IMS</tm> support. Choosing this option causes the <uicontrol>IMS library</uicontrol>
+field to be displayed on the <wintitle>Procedures and Steps</wintitle> page.</cmd></step>
+</steps-unordered>
+<result rev="803">Choosing the <tm tmtype="reg" trademark="Db2">Db2</tm> or <tm tmtype="reg" trademark="CICS">CICS</tm> runtime environment adds the following options to the
+<codeph>PARM</codeph> card:<ul>
+<li>The <codeph>Db2</codeph> option:<ul>
+<li>For COBOL: <codeph>SQL</codeph></li>
+<li>For PL/I: <codeph>PP(SQL),LIB</codeph></li>
+</ul></li>
+<li>The <codeph>CICS</codeph> option:<ul>
+<li>For COBOL: <codeph>CICS</codeph></li>
+<li>For PL/I: <codeph>SYSTEM(CICS),PP(MACRO,CICS)</codeph></li>
+</ul></li>
+</ul>These additions count toward the 100-character limit in the <uicontrol>Compiler
+Options</uicontrol> field of the <wintitle>Procedures and Steps</wintitle> page.</result>
+</taskbody>
+<related-links>
+<link format="dita" href="czdcmn121.dita" scope="local" type="concept"> </link>
+<link format="dita" href="rzdembed.dita" scope="local" type="reference"> </link>
+<link format="dita" href="../../com.ibm.idz.db24zos.doc/topics/dintegratingdb.dita"/>
+<link href="rzdcobstepopt.dita" type="reference" />
+<link format="html" href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" scope="external"><linktext>Software Product Compatibility Reports</linktext></link>
+</related-links>
+
+</task><?Pub *0000004436?><?tm 1665694020470 16 MVS||IMS||Db2||CICS ?>

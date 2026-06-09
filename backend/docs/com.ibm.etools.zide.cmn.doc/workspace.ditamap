@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN" "ibm-map.dtd">
+<map xml:lang="en-us"><title>Setting up an Eclipse development environment</title>
+<topicref href="topics/setup-eclipse.dita" type="topic">
+<topicref href="topics/setup_workspace_guide_builder.dita"
+navtitle="Setting up a workspace for editing source code"/>
+<!--Setting up property groups for editing and building-->
+<topicref href="topics/tzdpropgrp.dita" type="topic">
+<topicref href="topics/tzdpscreate.dita" type="topic"/>
+<topicref href="topics/tzdpsassign.dita" type="topic"/>
+<topicref href="topics/tzdpsexport.dita" type="topic"/>
+<topicref href="topics/zapp_file.dita" type="topic"/>
+</topicref>
+<!--Configuring default values-->
+<topicref href="topics/tzdcfgpg.dita" navtitle="Configuring default property values" type="task">
+<topicref href="topics/rzdpgdefschema.dita" navtitle="Default values schema" type="reference"/>
+<topicref href="topics/rzdpgdefsamp.dita" navtitle="Sample default values file" type="reference"/>
+<topicref href="topics/rzdpgcats.dita" navtitle="Category and property names" type="reference"/>
+</topicref>
+<!--Setting build, compiler, and preprocessor options-->
+<topicref format="dita" href="topics/tzdbldopts.dita" scope="local" type="task">
+<topicref href="topics/r_pg_subvars.dita"
+navtitle="Using substitution variables in property group pages" type="reference"/>
+<!--Setting options for runtime environments-->
+<topicref format="dita" href="topics/tzdrunopts.dita"
+navtitle="Choosing the Db2, CICS, or IMS runtime environment" scope="local" type="task">
+<topicref format="dita" href="topics/czdcmn121.dita"
+navtitle="Adding CICS translation support to COBOL and PL/I applications" scope="local"
+type="concept"/>
+<topicref href="topics/rzdembed.dita" type="reference"/>
+</topicref>
+<!--JCL procedures and steps-->
+<topicref format="dita" href="topics/tzdjclproc.dita"
+navtitle="Setting options for procedures and steps" scope="local" type="task">
+<topicref href="topics/rzdasmstepopt.dita" navtitle="Assembler step options" type="reference"/>
+<topicref href="topics/rzdbmsstepopts.dita" navtitle="BMS step options" type="reference"/>
+<topicref format="dita" href="topics/rzdcicsstepopts.dita" navtitle="CICS translator step options"
+scope="local" type="reference"/>
+<topicref href="topics/rzdcobstepopt.dita" navtitle="COBOL and PL/I step options" type="reference">
+<topicref href="topics/tzcopylocinpg.dita" navtitle="Using COPYLOC in property group" type="task"/>
+</topicref>
+<topicref href="topics/rzddb2stepopts.dita" navtitle="Db2 precompiler step options" type="reference"/>
+<topicref href="topics/mfs_step_opts_r.dita" type="reference"/>
+<topicref href="topics/rzdlinkstepopt.dita" navtitle="Link step options" type="reference"/>
+<topicref href="topics/rzdrunstepopts.dita" navtitle="Runtime step options" type="reference"/>
+<!--ZUnit Content Removed for Version 17.0.0
+https://jsw.ibm.com/browse/ZDPT-12578
+<topicref href="topics/r_zunit_runner_step_options.dita" navtitle="Runner step options" type="reference" otherprops="ZOT IDz"/>-->
+<topicref href="topics/tzdcmn151.dita" type="task"/>
+<topicref format="dita" href="topics/tzdshowdep.dita"
+navtitle="Setting compiler options for show dependencies and remote syntax check" scope="local"
+type="task"/>
+</topicref>
+<topicref href="topics/local_compiler_options.dita" type="topic"/>
+<topicref href="topics/defining_copy_and_include_libraries.dita"
+navtitle="Defining copy, include, and macro libraries" type="topic">
+<topicref href="topics/tzincllib.dita" type="topic"/>
+<topicref href="topics/editor_options.dita" type="task"/>
+<topicref
+href="../com.ibm.etools.rdz.language.editors.doc/topics/locating_copy_macro_assembler.dita"
+navtitle="Copy and macro library support in HLASM files" type="topic"/>
+<topicref href="topics/local_options.dita" type="topic"/>
+</topicref>
+<topicref href="topics/editor_configurations.dita" type="topic"/>
+<topicref href="topics/editor_configurations_local.dita"
+navtitle="Editor Configurations (local property group)" type="topic"/>
+<!--Working with local preprocessors-->
+<topicref format="dita" href="topics/czdprocessors.dita" navtitle="Local preprocessor options"
+scope="local" type="concept">
+<topicref format="dita" href="topics/tzdlocprocopts.dita"
+navtitle="Setting local preprocessor options" scope="local" type="task"/>
+<topicref href="topics/r_loc_preproc_opt_vars.dita"
+navtitle="Variables in local preprocessor options" type="reference"/>
+<topicref format="dita" href="topics/tzdincpreproc.dita"
+navtitle="Using the local include preprocessor" scope="local" type="task"/>
+<topicref href="topics/tzdmultlocproc.dita" type="task">
+<topicref href="topics/tzdaddpreproc.dita" type="task"/>
+<topicref href="topics/tzdeditpreproc.dita" type="task"/>
+<topicref href="topics/tzdrempreproc.dita" type="task"/>
+<topicref href="topics/tzdsamepreproc.dita" type="task"/>
+<topicref href="topics/tzdselpreproc.dita" type="task"/>
+</topicref>
+<topicref href="topics/tzdcustbld.dita" type="task">
+<topicref href="topics/czderrorfeedback.dita" type="concept">
+<topicref href="topics/rzdefschema.dita" type="reference"/>
+<topicref format="dita" href="topics/rzdefpli.dita"
+navtitle="PL/I program for generating error feedback XML file" scope="local" type="reference"/>
+<topicref format="dita" href="topics/rzdefc.dita" navtitle="C program for error feedback"
+scope="local" type="reference"/>
+<topicref href="topics/rzdefcobol.dita" type="reference"/>
+<topicref href="topics/rzdefassembler.dita" type="reference"/>
+</topicref>
+<topicref href="topics/tzdefclient.dita" type="task">
+<topicref href="topics/tzdefcobolpli.dita" type="task"/>
+<topicref href="topics/tzdefpreprocessor.dita" type="task">
+<topicref href="topics/rzdefjclpreprocessor.dita" type="reference"/>
+<topicref href="topics/rzdefxmlpreprocessor.dita" type="reference"/>
+</topicref>
+<topicref href="topics/tzdefotherlang.dita" type="task"/>
+</topicref>
+<topicref format="dita" href="topics/tzdbldprep.dita"
+navtitle="Building the sample preprocessor TMPLT00" scope="local" type="task"/>
+<topicref format="dita" href="topics/tzdrunprep.dita"
+navtitle="Running the sample preprocessor TMPLT00" scope="local" type="task"/>
+<topicref format="dita" href="topics/rzdefwalkthrough.dita" navtitle="Sample code walk-through"
+scope="local" type="reference"/>
+</topicref>
+<topicref href="topics/uremotplf.dita" type="topic"
+navtitle="Using a Remote Preprocessor with Local File"/>
+</topicref>
+<!--JCL substitution-->
+<topicref href="topics/c_jcl_substitution.dita" linking="normal" navtitle="JCL substitution"
+type="concept">
+<topicref href="topics/tzdcmn113.dita" type="task"/>
+<topicref href="topics/tzdcmn114.dita" type="task"/>
+<topicref href="topics/tzdcmn115.dita" type="task"/>
+<topicref href="topics/tzdglobalvar.dita" type="task"/>
+</topicref>
+<topicref href="../com.ibm.debug.pdt.zpcl.doc/topics/r_runtime_debug_options.dita" scope="peer"
+format="dita" navtitle="Runtime debug options" type="reference"/>
+<topicref href="../com.ibm.debug.pdt.zpcl.doc/topics/r_runtime_code_coverage_options.dita"
+scope="peer" format="dita" navtitle="Runtime code coverage options" otherprops="IDz"
+type="reference"/>
+<?Pub Caret -1?>
+</topicref>
+<topicref href="topics/t_config_wb.dita" navtitle="Configuring the other Eclipse client options"
+type="task">
+<topicref format="dita" href="topics/tzdupdcfg.dita"
+navtitle="Updating workspace configuration files" scope="local" type="task"/>
+<topicref href="topics/adding_capabilities_to_the_workbench.dita" type="task"/>
+<topicref href="topics/tzdcmn010.dita" type="task">
+<topicref href="topics/clicert.dita" navtitle="Client Certificates" type="task"> </topicref>
+<topicref format="dita" href="topics/tzdptcprefs.dita" navtitle="Configuration Files" scope="local"
+type="task"/>
+<topicref href="topics/tzdmvspref.dita" type="task"/>
+<topicref href="topics/tzdsearchpref.dita" navtitle="Setting preferences for Remote z/OS Search"
+type="task"/>
+<topicref href="topics/tzdsetlog.dita" type="task"/>
+<?Pub Caret -2?>
+<topicref href="topics/tzdzossol.dita" type="reference"/>
+</topicref>
+<topicref href="topics/czdbidi.dita" type="concept">
+<topicref href="topics/czdbiditerms.dita" type="concept"/>
+<topicref href="topics/czdbidiconv.dita" type="concept"/>
+<topicref href="topics/czdsmartlog.dita" type="concept"/>
+<topicref href="topics/czdbiditools.dita" type="concept"/>
+<topicref href="topics/czdbidiwhy.dita" type="concept"/>
+<topicref href="topics/tzdbidicfg.dita" type="task"/>
+<topicref href="topics/tzdbidiedit.dita" type="task"/>
+<topicref href="topics/tzdbidifs.dita" type="task"/>
+<topicref href="topics/tzdbidivtc.dita" type="task"/>
+<topicref href="topics/tzdbidicff.dita" type="task"/>
+<topicref href="topics/czdbidiinh.dita" type="concept">
+<topicref href="topics/tzdbidicodep.dita" type="task"/>
+<topicref href="topics/tzdbidipds.dita" type="task"/>
+<topicref href="topics/tzdbidimap.dita" type="task"/>
+<topicref href="topics/tzdbidiuss.dita" type="task"/>
+</topicref>
+<topicref href="topics/tzdbidisyn.dita" type="task"/>
+<topicref href="topics/bidi_database_connections_t.dita" type="task"/>
+</topicref>
+</topicref>
+<!--Mapping data sets-->
+<topicref href="topics/czdcmn044.dita" navtitle="Remote-to-local file mapping" type="concept">
+<topicref href="topics/tzdcmn035.dita" navtitle="Mapping data sets and partitioned data set members"
+type="task"/>
+<topicref href="topics/c_file_trans_code_page.dita"
+navtitle="File encoding, code page conversion, and inheritance" type="concept"/>
+<topicref href="topics/rzdcodepages.dita" navtitle="Supported host code pages" type="reference"/>
+<topicref href="topics/rzdlogicalnot.dita" navtitle="Specifying an alternative logical NOT symbol"
+type="task"/>
+</topicref>
+</topicref>
+<!--resource-only topicrefs-->
+<topicref href="../com.ibm.etools.getstart.wsentdev.doc/topics/tzdcmn041.dita" processing-role="resource-only"
+navtitle="Switching to a new perspective" type="task"/>
+<topicref href="topics/source_of_generated_jcl_topic.dita" processing-role="resource-only"
+type="topic"/>
+<topicref href="../com.ibm.etools.rdz.installing.doc/topics/tzdmigprop.dita" processing-role="resource-only" type="topic"/>
+<topicref href="../com.ibm.etools.rdz.installing.doc/topics/t_new_workspace.dita" processing-role="resource-only" type="task"/>
+</map>

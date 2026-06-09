@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="c_non_standard_names" xml:lang="en-us">
+<title>Members with nonstandard names</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Members with nonstandard names</navtitle>
+<searchtitle>Members with nonstandard names</searchtitle>
+</titlealts>
+<shortdesc>Some tools and products create <tm tmtype="tm" trademark="MVS">MVS</tm> files
+with nonstandard names. Nonstandard names do not adhere to <tm
+tmtype="tm" trademark="MVS">MVS</tm> file name conventions. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full"></keyword> provides
+settings for displaying these members in the <wintitle>Remote Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>members<indexterm>nonstandard names</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>nonstandard names<indexterm>members</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<section>When you enable the <uicontrol>Show members with non-standard
+name</uicontrol> option on the <wintitle>MVS Files</wintitle> preference
+page, the <wintitle>Remote Systems</wintitle> view displays members
+with lowercase names or names that contain nonstandard character sets.
+The CA Endevor Software Change Manager, for example, supports file
+names that begin with numbers. The <uicontrol>Show members with non-standard
+name</uicontrol> preference provides for showing these file names
+in the <wintitle>Remote Systems</wintitle> view. You can then use
+the menu items in the <wintitle>Remote Systems</wintitle> view to
+edit, browse, rename, and delete them. You can also include nonstandard
+member names in the <uicontrol>With name</uicontrol> field of the <wintitle>Remote
+z/OS Search</wintitle> window.<note type="restriction">For nonstandard
+names that contain lowercase characters, only the <uicontrol>Delete</uicontrol> and <uicontrol>Rename</uicontrol> menu
+items are available in the <wintitle>Remote Systems</wintitle> view.
+In this case, local cache cannot be displayed in the <wintitle>Remote
+Systems</wintitle> view. The <tm tmtype="tm" trademark="Windows">Windows</tm> file
+system is not case-sensitive, and lowercase cache file names might
+conflict with similar uppercase file names.</note></section>
+</conbody>
+<related-links>
+<link format="dita" href="tzdmvspref.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdcmn145.dita" scope="local" type="topic">
+</link>
+</related-links>
+<?tm 1435190816 3?>
+</concept>
+<?Pub *0000002695?>

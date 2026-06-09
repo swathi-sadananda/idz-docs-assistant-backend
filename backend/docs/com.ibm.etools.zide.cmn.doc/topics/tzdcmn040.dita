@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn040" xml:lang="en-us">
+<title>Submitting a job and obtaining the output</title><?Pub Caret -2?>
+<shortdesc>You can submit jobs from the <wintitle>Remote Systems</wintitle> view,
+the <wintitle>z/OS Projects</wintitle> view, or the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor. Completed jobs are
+listed in the JES subsystem of the <wintitle>Remote Systems</wintitle> view
+or the <wintitle>Remote System Details</wintitle> view. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Submitting a job</indexterm><indexterm>obtaining
+the output</indexterm><indexterm>the output, obtaining</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>To open job output from either of these views, double-click
+the job name or select the job name and then select <uicontrol>Open</uicontrol> from
+the menu. The output is opened in the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor. For more information
+about jobs and job output, see these topics:<ul>
+<li><xref href="tzdsubjobview.dita" type="task" /></li>
+<li><xref href="tzdcmn117.dita" type="task" /></li>
+<li><xref href="tzdcmn118.dita" type="task" /></li>
+<li><xref href="tzdcmn119.dita" type="task" /></li>
+</ul> </context>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference" />
+<link href="tzdcustbld.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000001702?><?tm 1665694008521 2 z Systems ?>

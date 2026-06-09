@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="jcl_opts_r" xml:lang="en-us">
+<title>JCL job card and data set</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>JCL job card and data set</navtitle>
+<searchtitle>JCL job card and data set</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>JCL Job Card and Data Set</uicontrol> page of the property group
+editor to define the default job card for generated JCL, identify the partitioned data set to
+contain generated JCL, and specify a search order for JCL include groups and procedures.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>JCL options</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used by JCL
+generation and JCL Editor operations.<note>For fields that take partitioned data sets as their
+value, you can drag a partitioned data set name from the <wintitle>Remote Systems</wintitle> view,
+<ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, or <wintitle>Remote z/OS Search</wintitle>
+results view and drop it in the field. To change the order of partitioned data set names in a field,
+place the cursor in the field and click <uicontrol>Change Order</uicontrol> from the menu.
+</note></section>
+<section>
+<title>Fields</title>
+<div conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#jobp0002/jcl_properties"
+/>
+</section>
+</refbody>
+<?tm 1435190820 0?>
+</reference>
+<?Pub *0000003221?>

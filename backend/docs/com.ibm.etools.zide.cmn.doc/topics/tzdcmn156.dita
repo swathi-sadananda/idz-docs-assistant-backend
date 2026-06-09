@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn156" xml:lang="en-us">
+<title>Local syntax check of COBOL and PL/I source that contains <codeph>EXEC
+CICS</codeph> statements</title><?Pub Caret -2?>
+<shortdesc>To perform a quick verification of your code, you can execute
+a local syntax check on your program as an initial form of validation.
+Performing a syntax check is faster than performing a full build,
+so you must use it when you want quick feedback on the correctness
+of your program. Any <codeph>EXEC CICS</codeph> statements that are
+embedded in COBOL and PL/I source can be automatically translated
+by your <tm tmtype="reg" trademark="CICS">CICS</tm> translator before
+you run a syntax check. </shortdesc>
+<taskbody>
+<prereq><p><indexterm>syntax checking<indexterm>COBOL</indexterm><indexterm>PL/I source containing
+EXEC CICS statements</indexterm></indexterm><indexterm>PL/I source containing EXEC CICS
+statements<indexterm>syntax checking</indexterm></indexterm><indexterm>COBOL<indexterm>syntax
+checking</indexterm></indexterm></p><note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>Before
+you run a local syntax check, you must enable the <tm tmtype="reg" trademark="CICS">CICS</tm>
+translator. For more information on enabling <tm tmtype="reg" trademark="CICS">CICS</tm> translation
+support, see <xref href="czdcmn121.dita" type="concept"/>.</prereq>
+<steps>
+<stepsection>To execute a local syntax check, follow these steps:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+right-click on the resource you want to check the syntax of and click <menucascade>
+<uicontrol>Syntax Check</uicontrol><uicontrol>Local</uicontrol>
+</menucascade> <ph rev="80">or press Ctrl+Alt+L.</ph></cmd></step>
+</steps>
+<result>Errors found by the syntax checker are listed in the <wintitle>Remote
+Error List</wintitle> view.</result>
+<postreq>Double-click an error that is listed in the <wintitle>Remote
+Error List</wintitle> view to display the corresponding line of code
+in the LPEX Editor.</postreq>
+</taskbody>
+<?tm 1435190836 3?>
+</task>
+<?Pub *0000002431?>

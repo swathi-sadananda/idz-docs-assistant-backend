@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="remotpreplocalfile" xml:lang="en-US">
+<title>Using a Remote Preprocessor with Local Files</title>
+<conbody>
+<p>You can now configure and run a remote preprocessor (REXX or CLIST-based) on a z Systems® for
+local COBOL or PL/I files within <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/>. This allows
+local source files to be preprocessed remotely using z Systems® capabilities before being compiled. </p>
+<section>
+<title>Procedure</title>
+<p>You can open the property group editor from the Property Group Manager or from an edit session.
+When you open the property group from an edit session, the property group editor opens to the
+appropriate page for the type of preprocessor being used.</p>
+<ol>
+<li>From the Property Group Manager:<ol>
+<li>Double-click the name of the property group that is associated with the file you want to
+edit.</li>
+<li>Select the tab for the appropriate programming language for the file. Select
+<uicontrol>COBOL</uicontrol> or <uicontrol>PL/I</uicontrol>.</li>
+<li>In the category list, click <uicontrol>Editor Configurations</uicontrol>. The Editor
+Configurations page opens.</li>
+</ol></li>
+<li>From an edit session, right-click and click <uicontrol>Source</uicontrol> >
+<uicontrol>Preprocessor Statements</uicontrol> > <uicontrol>Configure Preprocessor</uicontrol>
+(COBOL and PL/I Editors) or <uicontrol>Preprocessor Statements</uicontrol> > <uicontrol>Configure
+Preprocessor</uicontrol> (z Systems® LPEX Editor).The Editor Configurations page opens. If no
+property group is associated with the file, the Associate Property Group window opens for you to
+select an available property group.</li>
+<li>Click <uicontrol>Use remote preprocessors</uicontrol>.</li>
+<li>Complete the remote preprocessor configuration properties.<table frame="all" rowsep="1"
+colsep="1" id="table_brn_ypl_lfc">
+<tgroup cols="3" align="center">
+<colspec colnum="1" colname="c1" colwidth="1*" align="left"/>
+<colspec colnum="2" colname="c2" colwidth="2.51*" align="left"/>
+<colspec colnum="3" colname="newCol3" colwidth="1.75*" align="left"/>
+<thead>
+<row valign="middle">
+<entry>Item</entry>
+<entry>Description</entry>
+<entry>Example</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry><uicontrol>Connection name</uicontrol></entry>
+<entry>Specify the z/OS connection where the remote preprocessor will be executed. You can select
+the required connection from the drop-down list.</entry>
+<entry><filepath>abc.test.preprocessor.com</filepath></entry>
+</row>
+<row>
+<entry><uicontrol>REXX or CLIST invoking preprocessor</uicontrol></entry>
+<entry>Specify the PDS member name of the preprocessor that contains the REXX or CLIST script on
+z/OS. Use the format <filepath>USER.SAMPLE(PREPROC)</filepath>, where
+<filepath>USER.SAMPLE</filepath> is the name of the PDS and PREPROC is the name of the REXX or CLIST
+script.</entry>
+<entry><filepath>USER.SAMPLE(PREPROC)</filepath></entry>
+</row>
+<row>
+<entry><uicontrol>Preprocessor Input location</uicontrol></entry>
+<entry>Specify the PDS member where the program will be uploaded on z/OS before
+preprocessing.</entry>
+<entry><filepath>USER.SAMPLE.INPUT</filepath></entry>
+</row>
+<row>
+<entry><uicontrol>Preprocessor output location</uicontrol></entry>
+<entry>Specify the fully qualified name of an output file to be generated and downloaded from the
+remote system to the workstation after a remote preprocessor is started. It must be either a
+partitioned data set member or a sequential data set. If you specify a partitioned data set name
+without a member name, such as MY.PDS( ), the member name of the program that you are editing is
+used.</entry>
+<entry><filepath>USER.SAMPLE.OUTPUT()</filepath></entry>
+</row>
+<row>
+<entry><uicontrol>High-level qualifier for preprocessor data</uicontrol></entry>
+<entry>Specify a qualifier to be used to allocate a temporary sequential data set. The product
+writes data to this data set to be read by the REXX script or CLIST on the remote system. The
+sequential data set is deleted after the REXX script or CLIST runs successfully. If the script
+fails, the data set is not deleted.</entry>
+<entry><filepath>USER</filepath></entry>
+</row>
+<row>
+<entry><uicontrol>Preprocessor parameters</uicontrol></entry>
+<entry>Specify any additional parameters required by the REXX or CLIST script. This field is
+optional.</entry>
+<entry>NA</entry>
+</row>
+</tbody>
+</tgroup>
+</table></li>
+</ol>
+</section>
+
+</conbody>
+</concept>

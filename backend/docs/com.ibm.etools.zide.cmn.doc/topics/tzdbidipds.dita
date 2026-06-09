@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbidipds" xml:lang="en-us">
+<title>Setting bidirectional conversion support for a data set or partitioned data set
+member</title>
+<?Pub Caret -2?>
+<shortdesc><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"
+/> provides special bidirectional properties for <tm tmtype="tm" trademark="MVS">MVS</tm> data sets
+and partitioned data set members to allow correct bidirectional layout conversions for files that
+are transferred between the client and server.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>bidirectional support<indexterm>data set</indexterm><indexterm>partitioned data set
+member</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context> There are three methods for specifying these bidirectional conversion options:<ul>
+<li>Inherit the bidirectional settings from the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem</li>
+<li>Use a bidirectional conversion table</li>
+<li>Use manual bidirectional settings</li>
+</ul></context>
+<steps>
+<stepsection>To set bidirectional conversion support for a data set or partitioned data set member,
+do these steps:</stepsection>
+<step><cmd>Right-click a data set or member in the <wintitle>Remote Systems</wintitle> view.
+</cmd></step>
+<step><cmd>Click <uicontrol>Properties</uicontrol>.</cmd><stepresult>The
+<wintitle>Properties</wintitle> window opens.</stepresult></step>
+<step><cmd>Click <uicontrol>Mapping</uicontrol> in the list on the left.</cmd></step>
+<step><cmd>In the Defined Language section, click <uicontrol>Default</uicontrol> to set
+bidirectional conversion options that are based on the <uicontrol>Workstation file
+extension</uicontrol> field or <uicontrol>Other</uicontrol> to select a language for the file
+extension.</cmd><info> Bidirectional conversion in the Remote System Explorer is sensitive to the
+programming language in which source code is written. You can usually assume that the
+<uicontrol>Workstation file extension</uicontrol> field selects the correct language. In some cases,
+however, such as <filepath>.cpy</filepath> for COBOL and PL/I and <filepath>.mac</filepath> for PL/I
+and Assembler, the same file extensions can be used with different languages. Use the
+<uicontrol>Other</uicontrol> option to select a specific language to associate with the file
+extension.</info></step>
+<step><cmd>Do one of the following steps:</cmd>
+<choices>
+<choice>To inherit the bidirectional settings from the <tm tmtype="tm" trademark="MVS">MVS</tm>
+Files subsystem, click <uicontrol>Inherit from properties for MVS Files</uicontrol>. If the <tm
+tmtype="tm" trademark="MVS">MVS</tm> Files subsystem uses a bidirectional conversion table, the name
+of the table is shown in parentheses and the properties that are inherited are shown in the
+<uicontrol>Inherited set of bidi options</uicontrol> table. For more information about property
+inheritance, see the related topics.</choice>
+<choice>To use a bidirectional conversion table, do these steps: <ol>
+<li>Click <uicontrol>Use the following Bidi Conversion Table (BCT)</uicontrol>. This option enables
+the field and the <uicontrol>Browse</uicontrol> button.</li>
+<li>Enter the name of a bidirectional conversion file you created or click
+<uicontrol>Browse</uicontrol> to look for and select a conversion file.</li>
+<li>To edit the current properties in the bidirectional conversion table, click
+<uicontrol>Copy</uicontrol>. The properties are copied to the <uicontrol>Current set of bidi
+options</uicontrol> table, and you can click <uicontrol>Edit</uicontrol> to change the values and
+<uicontrol>Save as</uicontrol> to save your changes to a new bidirectional conversion table.</li>
+</ol></choice>
+<choice>To use manual bidirectional settings, do these steps:<ol>
+<li>Click <uicontrol>Use the following manual bidi settings</uicontrol>. This option enables a set
+of default bidirectional settings.</li>
+<li>Click <uicontrol>Edit</uicontrol> to open a window that you can use to change the default
+settings.</li>
+<li>Click <uicontrol>Save as</uicontrol> to save the current settings to a new bidirectional
+conversion table.</li>
+</ol></choice>
+</choices>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to apply the changes.</cmd>
+</step>
+</steps>
+<postreq>
+<note othertype="Next" type="other"><xref href="tzdbidimap.dita" type="task"/></note>
+</postreq>
+</taskbody>
+<related-links>
+<link href="czdbidiinh.dita" type="concept"/>
+</related-links>
+<?tm 1435190801 4?>
+</task>
+<?Pub *0000004865?>

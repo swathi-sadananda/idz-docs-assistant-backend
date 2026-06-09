@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="synchronizingautomatically" xml:lang="en-us">
+<title>Synchronizing automatically</title>
+<shortdesc>When enabled, automatic synchronization copies all (nonconflicting) remote changes to the
+local project and local changes to the remote system as needed. If conflicts are present, the
+<wintitle>Synchronize</wintitle> perspective opens so that you can resolve the conflicts. You can
+use two methods to enable automatic synchronization.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>synchronizing automatically</indexterm>
+<indexterm>remote synchronization<indexterm>automatic</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>automatic remote synchronization</indexterm>
+<indexterm>remote synchronization<indexterm>automatic</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>automatic remote synchronization</indexterm>
+<indexterm>remote synchronization<indexterm>automatic</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<note type="attention">The remote synchronization function is deprecated.</note>
+<section>
+<title id="pref">Setting the automatic synchronization preference</title>
+<p>You can set up a local project or file for automatic remote synchronization.</p>
+<p>To enable automatic remote synchronization for a local project or file, right-click any
+remote-enabled file or project and then click
+<menucascade><uicontrol>Remote</uicontrol><uicontrol>Automatically
+synchronize</uicontrol></menucascade>. </p>
+<p>The <uicontrol>Automatically synchronize</uicontrol> action has a checkbox next to it when it is
+enabled. If automatic synchronization is not enabled and changes are found in the project, a warning
+is displayed. The warning indicates that project resources must be synchronized. Select the
+<uicontrol>Always automatically synchronize</uicontrol> checkbox to enable this action. </p>
+</section>
+<section>
+<title id="sync">Remote synchronization during a syntax check</title>
+<p>When a local project is enabled for remote synchronization, you can perform a remote syntax
+check.</p>
+<p>A remote syntax check gathers the remote properties that you set when you enable remote
+synchronization, generates syntax check JCL, and submits the JCL to the remote system. Errors are
+reported in the <wintitle>Remote Error List</wintitle>. </p>
+<p>To perform a remote syntax check, right-click the project or file, and click <menucascade>
+<uicontrol>Syntax check</uicontrol><uicontrol>Remote</uicontrol>
+</menucascade>
+<ph rev="80">or press Ctrl+Alt+R.</ph></p>
+<p>If changes occurred to the file or other files in the project, a warning window prompts you to
+synchronize your changes. <ul>
+<li>To stop the syntax check and open the <wintitle>Synchronize</wintitle> perspective, click
+<uicontrol>Yes</uicontrol>. For more information, see <xref href="tzdp2hman.dita" type="task"/>. </li>
+<li>To submit the syntax check JCL but not synchronize any changes, click
+<uicontrol>No</uicontrol>.</li>
+<li>To stop the syntax check from being submitted, click <uicontrol>Cancel</uicontrol>. </li>
+</ul></p>
+<p>You can avoid this warning by using the <xref href="tzdp2hauto.dita" type="topic"/>
+preference.</p>
+</section>
+</body>
+<related-links>
+<link href="tzdshowdep.dita" type="task"/>
+<link href="tzdcmn056.dita" type="task"/>
+</related-links>
+<?tm 1316710766 0?>
+</topic>
+<?Pub *0000003855?>

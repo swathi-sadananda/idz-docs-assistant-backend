@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn038" xml:lang="en-us">
+<title>Deleting a remote system</title>
+<shortdesc>Follow these steps to delete a remote system from the list.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>remote system<indexterm>deleting</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>Open the <wintitle>Remote Systems</wintitle> view.</cmd>
+</step><?Pub Caret -2?>
+<step><cmd>Expand the <uicontrol>Remote Systems</uicontrol> list and
+select a system.</cmd></step>
+<step><cmd>Disconnect from the remote system.</cmd><info><note>You
+must be disconnected from a remote system before you can delete it.</note></info>
+</step>
+<step><cmd>Right-click and select <uicontrol>Delete</uicontrol>.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Yes</uicontrol> to confirm. </cmd>
+<stepresult>The system is deleted from the list.</stepresult></step>
+</steps>
+</taskbody>
+</task>
+<?Pub *0000001310?>

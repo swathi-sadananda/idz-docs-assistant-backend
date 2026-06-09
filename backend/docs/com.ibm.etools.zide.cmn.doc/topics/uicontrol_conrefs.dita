@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN"
+ "ibm-topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="uicontrol_conrefs" translate="yes" xml:lang="en-us">
+<title>RDz UI elements</title><?Pub Caret -2?>
+<body>
+<p><uicontrol id="uicontrol_cryptographyProviderName">Java Cryptography
+Extension (JCE) provider</uicontrol></p>
+<p><uicontrol id="uicontrol_keyStoreType">Keystore type</uicontrol></p>
+<p><uicontrol id="uicontrol_oidValue">hostIdMappings object identifier
+(OID)</uicontrol></p>
+<p><uicontrol id="uicontrol_uniqueAliasesValue">Ensure unique aliases</uicontrol></p>
+<p><uicontrol id="uicontrol_keyusageValue">Certificate key usage</uicontrol></p>
+</body>
+</topic>
+<?Pub *0000002057?>

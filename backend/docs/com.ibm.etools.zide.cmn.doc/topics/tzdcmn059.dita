@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn059" xml:lang="en-us">
+<title>Creating a sample project</title>
+<shortdesc>You can load sample code that is included with <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> into
+your workspace.</shortdesc>
+<prolog></prolog>
+<taskbody>
+<context> <indexterm>sample project<indexterm>Creating</indexterm></indexterm><indexterm>project,
+sample<indexterm>Creating</indexterm></indexterm><p>To accomplish
+this task, a project is created that contains the sample code.</p></context>
+<steps>
+<stepsection>To create a sample project, follow these steps:</stepsection>
+<step><cmd>Switch to the <ph
+conref="zide_conrefs.dita#zide_conrefs/perspective"></ph> perspective.</cmd>
+</step>
+<step><cmd>Select the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</cmd>
+</step>
+<step><cmd>Do one of the following steps: </cmd>
+<choices>
+<choice>To create a sample COBOL project, select <menucascade>
+<uicontrol>File</uicontrol><uicontrol>New</uicontrol><uicontrol>Example</uicontrol>
+<uicontrol>Workstation COBOL</uicontrol></menucascade>. </choice>
+<choice>To create a sample PL/I project, select <menucascade><uicontrol>File</uicontrol>
+<uicontrol>New</uicontrol><uicontrol>Example</uicontrol><uicontrol>Workstation
+PL/I</uicontrol></menucascade>.</choice>
+</choices>
+</step>
+<step><cmd>Expand the entries under <uicontrol>Workstation COBOL</uicontrol> or <uicontrol>Workstation
+PL/I</uicontrol>.</cmd></step>
+<step><cmd>Select an example. </cmd></step>
+<step><cmd>Click <uicontrol>Next</uicontrol>.</cmd></step>
+<step><cmd>Type a project name.</cmd></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>. </cmd><stepresult>The
+example is imported.</stepresult></step>
+</steps>
+</taskbody>
+<?tm 1337269571 0?>
+</task>
+<?Pub *0000002135?>

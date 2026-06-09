@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdimpproj" xml:lang="en-us">
+<title>Importing a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project</title><?Pub Caret -2?>
+<shortdesc>You can import a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+into your workspace.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS projects<indexterm>importing</indexterm></indexterm>
+<indexterm>importing z/OS projects</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must know the location of the archive file that contains
+an exported <tm tmtype="reg" trademark="z/OS">z/OS</tm> project.<note rev="7601"><tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> subprojects use a different mechanism for
+import and are not included in an imported <tm tmtype="reg" trademark="z/OS">z/OS</tm> project. For information about importing <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> subprojects,
+see the related links.</note></prereq>
+<steps>
+<stepsection>To import a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project:</stepsection>
+<step><cmd>From the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view
+menu, select <uicontrol>Import z/OS Project</uicontrol>.</cmd>
+<stepresult>The <wintitle>Import z/OS Project</wintitle> window opens.</stepresult>
+</step>
+<step><cmd>Specify the name of the archive file that contains the
+project you want to import and press Enter or click the <uicontrol>Browse</uicontrol> button
+to navigate to the location of the archive file, select the file,
+and click <uicontrol>Open</uicontrol>.</cmd><info><note>If your workspace
+already contains a project with the same name as the project you are
+trying to import, a window prompts you to rename the project you are
+importing. Type a new name in this window and click <uicontrol>OK</uicontrol>.</note></info>
+</step>
+<step><cmd>To change the high-level qualifier (HLQ) of any of the
+subprojects in the project, select the subproject name and click <uicontrol>Edit.</uicontrol></cmd>
+<info>The HLQ is used to resolve the &lt;HLQ&gt; substitution variable
+that appears in some property values associated with resources contained
+by the subproject.</info><stepresult>The <wintitle>Edit High-level
+Qualifier</wintitle> window opens.</stepresult></step>
+<step><cmd>Select a new HLQ from the <uicontrol>High-level Qualifier</uicontrol> list
+and click <uicontrol>OK</uicontrol>.</cmd></step>
+<step><cmd>On the <wintitle>Import z/OS Project</wintitle> window,
+click <uicontrol>OK</uicontrol>.</cmd><stepresult>The project is added
+to your workspace.</stepresult></step>
+</steps>
+<postreq>You now have a project that is identical in its properties
+and structure to the project defined in the archive file. You can
+use the imported project as if you created it yourself: you can rename
+it, add subprojects and resources to it, and change its properties.</postreq>
+</taskbody>
+<related-links>
+<link href="tzdexpproj.dita" type="task" />
+<link href="../../com.ibm.uss.projects.doc/topics/importingatpfproject_t.dita" type="task" />
+<link href="tzdchghlq.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000003379?><?tm 1665694014397 9 z/OS||UNIX ?>

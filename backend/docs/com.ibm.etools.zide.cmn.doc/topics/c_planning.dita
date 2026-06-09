@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="c_planning" xml:lang="en-us">
+<title>Planning a push-to-client environment</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Planning a push-to-client environment</navtitle>
+<searchtitle>Planning a push-to-client environment</searchtitle>
+</titlealts>
+<shortdesc>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+offers the push-to-client feature for administering and sharing connections,
+preferences, properties, and configurations so that developers have
+a consistent and centralized development environment.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>planning a push-to-client environment</indexterm>
+</keywords>
+<keywords><indexterm>connections</indexterm></keywords>
+<keywords><indexterm>preferences</indexterm></keywords>
+<keywords><indexterm>properties</indexterm></keywords>
+<keywords><indexterm>configurations</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p>You can take either of two approaches to creating a development
+environment with the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product:<ul>
+<li>You can allow a decentralized environment in which developers
+create their own connections to remote systems, <tm tmtype="reg"
+trademark="CICS">CICS</tm>, or <tm tmtype="reg" trademark="Db2">Db2</tm>;
+set preferences for their workspaces; and create and manage their
+own property groups and debug and run configurations.</li>
+<li>You can centralize and automate the creation and distribution
+of connections, preferences, properties, and configurations so that
+developers’ workspaces are consistent across the site and settings
+are downloaded to workspaces automatically when developers connect
+to a remote system. The push-to-client feature provides the tools
+that you need to create a centralized and automated development environment.</li>
+</ul></p>
+<p conref="zide_conrefs.dita#zide_conrefs/ptc_config_list"/>
+<p>In a push-to-client environment, these configuration files are stored on a remote system. When a
+workspace connects to the remote system, the configuration files are downloaded to the workspace. In
+this way, you can define a set of property groups, for example, that is automatically downloaded
+when a connection is made. If you update the configurations between connections, developers are
+prompted to update their workspaces when they connect.</p>
+<p>In a decentralized environment, developers still have the opportunity
+to share configurations by exporting them from one workspace and importing
+them into another workspace.</p>
+<p>For more information about the push-to-client feature and about
+migrating configurations from one workspace to another, see the related
+topics.</p>
+</conbody>
+<related-links>
+<link href="czdptc.dita" otherprops="IDz"/>
+<link format="dita" href="../../com.ibm.etools.rdz.installing.doc/topics/t_new_workspace.dita" scope="local" type="task"></link>
+</related-links>
+<?tm 1435190790 2?>
+</concept>
+<?Pub *0000003220?>

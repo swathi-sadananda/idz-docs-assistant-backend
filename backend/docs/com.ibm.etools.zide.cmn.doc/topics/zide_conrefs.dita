@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN" "ibm-topic.dtd">
+<topic id="zide_conrefs" xml:lang="en-US">
+<title>zide_conrefs</title>
+<body>
+<p><ph id="perspective"><wintitle>z/OS Projects</wintitle></ph></p>
+<p><ph id="view"><wintitle>z/OS Projects</wintitle></ph></p>
+<p><ph id="view_and"><wintitle>z/OS Projects</wintitle> and <wintitle>Enterprise
+Projects</wintitle></ph></p>
+<p><uicontrol id="preview">Preview contents in Remote z/OS Search view</uicontrol></p>
+<p id="ptcmaster" rev="v85">If group-level control of updates is enabled for the push-to-client
+servers, then the model workspace is <term>bound</term> to a particular group when you export
+configurations to the server. Binding a workspace to a group means that the workspace defines
+configuration and preferences settings for that group only. Therefore, you need to define one model
+workspace for each push-to-client group defined on the servers.</p>
+<p><ph id="choose_default_editor_action">You can choose the default editor action for <tm trademark="MVS" tmtype="tm">MVS</tm> files by setting the <uicontrol>Default action for opening MVS files</uicontrol> preference on the
+<wintitle>MVS Files</wintitle> preference page. This preference setting determines whether a file is
+opened for browsing, editing, or viewing when you double-click the file name. If you drag a file
+from the <wintitle>Remote Systems</wintitle> view to the editor, however, the file is opened in edit
+mode in the default editor that is associated with the file extension. Setting the
+<uicontrol>Default action for opening MVS Files</uicontrol> preference does not change this
+behavior.</ph></p>
+<p id="ptc_config_list">By using the push-to-client feature, you can distribute the following
+configuration files:<ul>
+<li>Global configuration files:<ul>
+<li>Eclipse preferences</li>
+<li>Remote system connections</li>
+<li rev="803" otherprops="IDz">Menu Manager files</li>
+<li rev="803">Software Analyzer Configurations</li>
+<li rev="95" otherprops="IDz">Snippets</li>
+<?Pub Caret -1?>
+</ul></li>
+<li>System configuration files<ul>
+<li rev="803">Remote index locations</li>
+<li><tm tmtype="reg" trademark="z/OS">z/OS</tm> file system mappings</li>
+<li>Property groups</li>
+<li>Default values</li>
+<li otherprops="IDz">Host-based projects</li>
+</ul></li>
+</ul></p>
+<p><ph id="hlq">In a property group, the <varname>&lt;HLQ&gt;</varname> variable is resolved by the
+high-level qualifier of the data set for which you request an action if that action is requested
+from the <wintitle>Remote Systems</wintitle> view.</ph></p>
+<!--Tips and tricks-->
+<p id="and_search_queries">You can use the <wintitle>Remote z/OS Search</wintitle> window to run an
+AND search query:<ol>
+<li>Open the <wintitle>Remote z/OS Search</wintitle> window.</li>
+<li>In the <uicontrol>Content strings</uicontrol> field, type a search string with the following
+syntax:<codeblock> .*&lt;literal1&gt;.+&lt;literal2&gt;</codeblock>To find all lines in a program that
+contain the strings <codeph>IF</codeph> and <codeph>WS-PHARM</codeph>, for example, type the
+following search string:<codeblock>.*IF.+WS-PHARM</codeblock>
+</li>
+</ol></p>
+</body>
+</topic><?Pub *0000003281?><?tm 1665693491776 2 z/OS||MVS ?>

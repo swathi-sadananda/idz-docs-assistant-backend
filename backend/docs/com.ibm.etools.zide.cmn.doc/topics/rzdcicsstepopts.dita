@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdcicstepopts" xml:lang="en-us">
+<title><tm tmtype="reg" trademark="CICS">CICS</tm> translator step options</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>CICS translator step options</navtitle>
+<searchtitle>CICS translator step options</searchtitle>
+</titlealts>
+<abstract><shortdesc>Use the <uicontrol>CICS Translator Step Options</uicontrol> to specify
+properties and options to be passed to the <tm tmtype="reg" trademark="CICS">CICS</tm>
+translator.</shortdesc>Before you start, verify that the ELAXFCOT procedure for COBOL or the
+ELAXFPLT procedure for PL/I is customized for your site. For more information about customizing the
+ELAXF* JCL procedures, see <xref href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita"
+scope="peer">ELAXF* remote build procedures</xref>.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>CICS translator step options</indexterm>
+<indexterm>ELAXFCOT</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used to generate JCL
+for the selected procedure. The information that you provide on this window pertains to remote COBOL
+or PL/I compiler options. </section>
+<section>
+<title>Fields</title>
+<p><uicontrol>Options:</uicontrol> Specify any options that must be passed to the <tm tmtype="reg"
+trademark="CICS">CICS</tm> translator. Separate multiple entries with spaces. This field is limited
+to 100 characters.</p>
+<p><uicontrol>SYSLIB</uicontrol>: Specify SYSLIB data set names. Separate multiple entries with
+spaces. You can drag a partitioned data set name from the<wintitle> Remote Systems</wintitle> view,
+<wintitle>z/OS Projects</wintitle> view, or <wintitle>Remote z/OS Search</wintitle> results view and
+drop it in the field. To change the order of partitioned data set names in a field, place the cursor
+in the field and click <uicontrol>Change Order</uicontrol> from the menu.</p>
+</section>
+</refbody>
+<?tm 1435190820 3?>
+<related-links>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+</reference>
+<?Pub *0000002107?>

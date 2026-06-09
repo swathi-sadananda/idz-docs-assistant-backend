@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn054" xml:lang="en-us">
+<title>Building a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+or <tm tmtype="tm" trademark="MVS">MVS</tm> subproject</title><?Pub
+Caret -2?>
+<shortdesc>You can build a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+or <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS project<indexterm>building</indexterm></indexterm>
+<indexterm>MVS subproject<indexterm>building</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you build a <tm tmtype="reg" trademark="z/OS">z/OS</tm> project
+or <tm tmtype="tm" trademark="MVS">MVS</tm> subproject:<ol>
+<li><xref href="tzdcmn032.dita">Connect to a remote system</xref> and
+open the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</li>
+<li><xref href="tzdverifybuild.dita">Verify build settings</xref> for the subprojects that are
+contained in the project you want to build.</li>
+</ol></prereq>
+<context><p>Remote project builds and other functions use JCL procedure
+support to oversee application builds (including compile, link, and <tm
+tmtype="reg" trademark="Db2">Db2</tm> bind). </p><p>To build a <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> project or subproject, you can use either
+of two methods:  <ul>
+<li>Using <uicontrol>Rebuild Project</uicontrol> or <uicontrol>Rebuild
+Subproject</uicontrol>, you can rebuild the <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> project or <tm tmtype="tm" trademark="MVS">MVS</tm> subproject
+as a whole.</li>
+<li>You can direct generate JCL, which might include an execution step, for a partitioned data set
+or for a source file, and then submit the JCL.</li>
+</ul>The following topics explain how to use each method:<ul>
+<li><xref href="tzdrebuild.dita"></xref></li>
+<li><xref href="tzdsubmitjcl.dita"></xref></li>
+</ul></p></context>
+</taskbody>
+<related-links>
+<link href="tzdcmn040.dita" type="task"></link>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+<link format="html"
+href="../../com.ibm.etools.getstart.wsentdev.doc/topics/editremote.html"
+scope="peer" type="topic"><linktext>Quick task: Editing and compiling
+code on a remote system</linktext></link>
+</related-links>
+<?tm 1435190838 10?>
+</task>
+<?Pub *0000002745?>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="c_file_trans_code_page" xml:lang="en-us">
+<title>File encoding, code page conversion, and inheritance</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>File encoding, code page conversion, and inheritance</navtitle>
+<searchtitle>File encoding, code page conversion, and inheritance</searchtitle>
+</titlealts>
+<shortdesc>When you copy a file between a remote system and the workstation,
+the file is converted to a code page appropriate to its destination.
+File code pages are inherited from the system or folder that contains
+them.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>code pages<indexterm>inheritance</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>code pages<indexterm>conversion</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>default encoding</indexterm></keywords>
+<keywords><indexterm>file system encoding</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<section><title>File system default encoding</title>You can determine
+the default file encoding on a local or remote file system by setting
+a property in the <wintitle>Remote Systems</wintitle> view. Two options
+are available:<dl><dlentry>
+<dt>Default from remote system</dt>
+<dd>The default file encoding is inherited from the local or remote
+system.</dd>
+</dlentry><dlentry>
+<dt>Other</dt>
+<dd>You can select the default file encoding from a list of available
+choices. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> uses
+the International Components for Unicode (ICU) for file encoding.
+You can learn more about ICU at <xref format="html"
+href="http://www.ibm.com/software/globalization/icu/" scope="external">International
+Components for Unicode</xref>.</dd>
+</dlentry></dl>To choose a default file encoding for a local or remote
+system:<ol>
+<li>If you are connected to the remote system, disconnect. You can
+change the default file encoding for a remote system only when you
+are disconnected.</li>
+<li>In the <wintitle>Remote Systems</wintitle> view, select a local
+or remote system.</li>
+<li>Right-click and select <uicontrol>Properties</uicontrol>. The <wintitle>Properties</wintitle> window
+opens.</li>
+<li>In the categories list, click <uicontrol>Host</uicontrol>.</li>
+<li>Choose one of the file encoding options, and then click <uicontrol>OK</uicontrol>.</li>
+</ol></section>
+<section><title>Code page conversion</title><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> uses
+remote-to-local file mapping to determine how file encodings are converted
+between local and remote code pages during file transfers. For more
+information about remote-to-local file mapping, see <xref format="dita"
+href="czdcmn044.dita" scope="local" type="concept"></xref>.</section>
+<section><title>Code page inheritance</title>When you transfer a file
+between a local and remote file system, the file inherits the code
+page setting from the destination container. This inheritance sometimes
+results in a file encoding that is different from or incompatible
+with the original file encoding. To ensure correct file encoding during
+a file transfer, make sure that the code page for the destination
+container is set correctly.<p>To set the code page for a file or container:<ol>
+<li>Select the file or container. To set the code page for the <tm
+tmtype="tm" trademark="MVS">MVS</tm> Files subsystem of a <tm
+tmtype="reg" trademark="z/OS">z/OS</tm> connection, for example, select <uicontrol>MVS
+Files</uicontrol>.</li>
+<li>Right-click and select <uicontrol>Properties</uicontrol>.</li>
+<li>From the category list, select <uicontrol>Code Pages</uicontrol>.</li>
+<li>Select host and local code pages from the list.</li>
+</ol></p></section>
+</conbody>
+<related-links>
+<link format="dita" href="czdcmn044.dita" scope="local" type="concept">
+</link>
+<link format="dita" href="tzdcmn035.dita" scope="local" type="task">
+</link>
+</related-links>
+<?tm 1435190793 2?>
+</concept>
+<?Pub *0000004210?>

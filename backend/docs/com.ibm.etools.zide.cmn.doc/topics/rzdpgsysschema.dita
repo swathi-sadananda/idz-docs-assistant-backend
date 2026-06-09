@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdpgsysschema" xml:lang="en-us">
+<title>System property group schema</title><?Pub Caret -2?>
+<shortdesc>The system property group schema defines tags that are
+used to define a system property group file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>property groups<indexterm>system property group
+schema</indexterm></indexterm><indexterm>system property group schema</indexterm>
+<indexterm>configure property groups<indexterm>system property group
+schema</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  &lt;xsd:element name="PROPERTY-GROUPS">
+    &lt;xsd:annotation>
+      &lt;xsd:documentation>
+        These property groups will be available when users connect
+        to this system for the first time.
+      &lt;/xsd:documentation>
+    &lt;/xsd:annotation>
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element maxOccurs="unbounded" minOccurs="0" ref="PROPERTY-GROUP">&lt;/xsd:element>
+        &lt;xsd:element name="SYSTEM-CURRENT-PROPERTY-GROUP" type="xsd:string">
+          &lt;xsd:annotation>
+            &lt;xsd:documentation>
+              The name of the property group that will be the current property group
+              for MVS files when the user connects to the system for the first time.
+            &lt;/xsd:documentation>
+          &lt;/xsd:annotation>
+        &lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>   
+  &lt;/xsd:element>
+  &lt;xsd:element name="PROPERTY-GROUP">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element name="NAME" type="xsd:string">
+          &lt;xsd:annotation>
+            &lt;xsd:documentation>
+              The name must be unique among the property groups for the system.
+           &lt;/xsd:documentation>
+          &lt;/xsd:annotation>
+        &lt;/xsd:element>
+        &lt;xsd:element minOccurs="0" name="DESCRIPTION" type="xsd:string">&lt;/xsd:element>
+        &lt;xsd:element minOccurs="0" name="APPLICATION-LANGUAGE" type="xsd:string">
+        &lt;xsd:element maxOccurs="unbounded" minOccurs="0" ref="CATEGORY-INSTANCE">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="CATEGORY-INSTANCE">
+    &lt;xsd:annotation>
+      &lt;xsd:documentation>
+        A category instance has property values for properties defined in
+        a particular category.
+      &lt;/xsd:documentation>
+    &lt;/xsd:annotation>
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element name="CATEGORY" type="xsd:string">
+          &lt;xsd:annotation>
+            &lt;xsd:documentation>
+              The name of the category for the category instance.
+            &lt;/xsd:documentation>
+          &lt;/xsd:annotation>
+        &lt;/xsd:element>
+        &lt;xsd:element maxOccurs="unbounded" ref="PROPERTY">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="PROPERTY">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element name="NAME" type="xsd:string">&lt;/xsd:element>
+        &lt;xsd:element name="VALUE" type="xsd:string">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+&lt;/xsd:schema>
+</codeblock></section>
+</refbody>
+<?tm 1435190793 0?>
+</reference>
+<?Pub *0000003607?>

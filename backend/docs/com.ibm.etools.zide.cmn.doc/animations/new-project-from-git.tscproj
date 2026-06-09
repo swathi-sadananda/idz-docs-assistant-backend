@@ -1,0 +1,2347 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "width" : 1920.0,
+  "height" : 1080.0,
+  "version" : "0.5",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia Studio",
+    "platform" : "Windows",
+    "version" : "9.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\Users\\SusanMazzara\\Documents\\GitHub\\IDz1421UA_test\\com.ibm.etools.zide.cmn.doc\\animations\\new-project-from-git-repo\\new-project-from-git-repo_media\\new-project-from-git-repo.gif",
+      "rect" : [0, 0, 1280, 720],
+      "lastMod" : "20211105T132230",
+      "sourceTracks" : [
+        {
+          "range" : [0, 919],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1280, 720],
+          "sampleRate" : 30,
+          "bitDepth" : 8,
+          "numChannels" : 0,
+          "metaData" : ""
+        }
+      ]
+    }
+  ],
+  "timeline" : {
+    "id" : 2,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 30.6333333333333,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 3,
+                    "_type" : "Group",
+                    "attributes" : {
+                      "ident" : "Group 5"
+                    },
+                    "parameters" : {
+                      "translation0" : {
+                        "type" : "double",
+                        "defaultValue" : -4.45794512415887e-11,
+                        "interp" : "eioe"
+                      },
+                      "translation1" : {
+                        "type" : "double",
+                        "defaultValue" : -3.9818814911996e-11,
+                        "interp" : "eioe"
+                      },
+                      "scale0" : {
+                        "type" : "double",
+                        "defaultValue" : 1.16646415552859,
+                        "interp" : "eioe"
+                      },
+                      "scale1" : {
+                        "type" : "double",
+                        "defaultValue" : 1.16646415552859,
+                        "interp" : "eioe"
+                      },
+                      "anchor1" : {
+                        "type" : "double",
+                        "defaultValue" : -0.5,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "linr"
+                      },
+                      "opacity" : {
+                        "type" : "double",
+                        "defaultValue" : 1.0,
+                        "interp" : "linr"
+                      },
+                      "volume" : {
+                        "type" : "double",
+                        "interp" : "linr",
+                        "keyframes" : [
+                          {
+                            "time" : 0,
+                            "value" : 1.0,
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "tracks" : [
+                      {
+                        "trackIndex" : 0,
+                        "medias" : [
+                          {
+                            "id" : 4,
+                            "_type" : "Group",
+                            "attributes" : {
+                              "ident" : "Group 4"
+                            },
+                            "parameters" : {
+                              "translation1" : {
+                                "type" : "double",
+                                "defaultValue" : -0.5,
+                                "interp" : "eioe"
+                              },
+                              "anchor1" : {
+                                "type" : "double",
+                                "defaultValue" : -0.5,
+                                "interp" : "eioe"
+                              },
+                              "sourceCrop0" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "sourceCrop1" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "sourceCrop2" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "sourceCrop3" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop0" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop1" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop2" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop3" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "opacity" : {
+                                "type" : "double",
+                                "defaultValue" : 1.0,
+                                "interp" : "linr"
+                              },
+                              "volume" : {
+                                "type" : "double",
+                                "interp" : "linr",
+                                "keyframes" : [
+                                  {
+                                    "time" : 0,
+                                    "value" : 1.0,
+                                    "duration" : 0
+                                  }
+                                ]
+                              }
+                            },
+                            "tracks" : [
+                              {
+                                "trackIndex" : 0,
+                                "medias" : [
+                                  {
+                                    "id" : 5,
+                                    "_type" : "Group",
+                                    "attributes" : {
+                                      "ident" : "Group 2"
+                                    },
+                                    "parameters" : {
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -0.5,
+                                        "interp" : "eioe"
+                                      },
+                                      "anchor1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -0.5,
+                                        "interp" : "eioe"
+                                      },
+                                      "sourceCrop0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "sourceCrop1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "sourceCrop2" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "sourceCrop3" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop2" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop3" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "opacity" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "interp" : "linr"
+                                      },
+                                      "volume" : {
+                                        "type" : "double",
+                                        "interp" : "linr",
+                                        "keyframes" : [
+                                          {
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "tracks" : [
+                                      {
+                                        "trackIndex" : 0,
+                                        "medias" : [
+                                          {
+                                            "id" : 6,
+                                            "_type" : "VMFile",
+                                            "src" : 1,
+                                            "trackNumber" : 0,
+                                            "attributes" : {
+                                              "ident" : "new-project-from-git-repo"
+                                            },
+                                            "parameters" : {
+                                              "translation0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 8.14317502317863e-11,
+                                                "interp" : "eioe"
+                                              },
+                                              "translation1" : {
+                                                "type" : "double",
+                                                "defaultValue" : -9.97317783912877e-11,
+                                                "interp" : "eioe"
+                                              },
+                                              "scale0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.28611111111103,
+                                                "interp" : "eioe"
+                                              },
+                                              "scale1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.28611111111103,
+                                                "interp" : "eioe"
+                                              },
+                                              "sourceCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "opacity" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.0,
+                                                "interp" : "linr"
+                                              }
+                                            },
+                                            "effects" : [
+
+                                            ],
+                                            "start" : 0,
+                                            "duration" : 919,
+                                            "mediaStart" : 0,
+                                            "mediaDuration" : 919,
+                                            "scalar" : 1,
+                                            "metadata" : {
+                                              "WinSubProjectDisplayName" : "",
+                                              "clipSpeedAttribute" : false,
+                                              "default-scale0" : 1.0,
+                                              "default-scale1" : 1.0,
+                                              "default-translation0" : 0.0,
+                                              "default-translation1" : 0.0
+                                            },
+                                            "animationTracks" : {
+
+                                            }
+                                          }
+                                        ],
+                                          "ident" : "",
+                                          "audioMuted" : false,
+                                          "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "0"
+    }
+                                      },
+                                      {
+                                        "trackIndex" : 1,
+                                        "medias" : [
+                                          {
+                                            "id" : 7,
+                                            "_type" : "Group",
+                                            "attributes" : {
+                                              "ident" : "Group 1"
+                                            },
+                                            "parameters" : {
+                                              "translation0" : {
+                                                "type" : "double",
+                                                "defaultValue" : -159.5,
+                                                "interp" : "eioe"
+                                              },
+                                              "translation1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 244.0,
+                                                "interp" : "eioe"
+                                              },
+                                              "anchor0" : {
+                                                "type" : "double",
+                                                "defaultValue" : -159.5,
+                                                "interp" : "eioe"
+                                              },
+                                              "anchor1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 244.0,
+                                                "interp" : "eioe"
+                                              },
+                                              "sourceCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "opacity" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.0,
+                                                "interp" : "linr"
+                                              },
+                                              "volume" : {
+                                                "type" : "double",
+                                                "interp" : "linr",
+                                                "keyframes" : [
+                                                  {
+                                                    "time" : 0,
+                                                    "value" : 1.0,
+                                                    "duration" : 0
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "tracks" : [
+                                              {
+                                                "trackIndex" : 0,
+                                                "medias" : [
+                                                  {
+                                                    "id" : 8,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 62.0000000000611,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 222.999999999949,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.258333333333152,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0740740740741113,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 0,
+                                                    "duration" : 66,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 66,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 9,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 113.000000000302,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 330.999999999935,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.308333333333626,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.125925925925921,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 66,
+                                                    "duration" : 90,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 90,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 10,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : -169.999999999972,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 286.999999999948,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.17083333333349,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0592592592592723,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 360,
+                                                    "duration" : 5,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 5,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 11,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : -157.999999999989,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 286.999999999963,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.22083333333347,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0592592592594154,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 365,
+                                                    "duration" : 78,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 78,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 12,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : -402.999999999936,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 258.499999999914,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.304166666666743,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0851851851853866,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 443,
+                                                    "duration" : 91,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 91,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 13,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : -442.99999999973,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 282.499999999945,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.266666666667034,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0925925925926052,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 534,
+                                                    "duration" : 110,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 110,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 14,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : -261.999999999908,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 230.999999999791,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.704166666666646,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.659259259259762,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 648,
+                                                    "duration" : 21,
+                                                    "mediaStart" : 0,
+                                                    "mediaDuration" : 21,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  },
+                                                  {
+                                                    "id" : 15,
+                                                    "_type" : "Callout",
+                                                    "def" : {
+                                                      "kind" : "TypeWinBlur",
+                                                      "shape" : "",
+                                                      "style" : "",
+                                                      "blur-invert" : {
+                                                        "type" : "double",
+                                                        "interp" : "linr",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : 0.0,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      },
+                                                      "height" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 270.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "intensity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "width" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 480.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                                      "horizontal-alignment" : "center",
+                                                      "name" : "Blur",
+                                                      "vertical-alignment" : "center",
+                                                      "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                                      "textAttributes" : {
+                                                        "type" : "textAttributeList",
+                                                        "interp" : "left",
+                                                        "keyframes" : [
+                                                          {
+                                                            "time" : 0,
+                                                            "value" : null,
+                                                            "duration" : 0
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "attributes" : {
+                                                      "autoRotateText" : true
+                                                    },
+                                                    "parameters" : {
+                                                      "translation0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : -186.999999999718,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "translation1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 170.000000000008,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.374999999999614,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "scale1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.125925925925787,
+                                                        "interp" : "eioe"
+                                                      },
+                                                      "sourceCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "sourceCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop0" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop1" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop2" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "geometryCrop3" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 0.0,
+                                                        "interp" : "linr"
+                                                      },
+                                                      "opacity" : {
+                                                        "type" : "double",
+                                                        "defaultValue" : 1.0,
+                                                        "interp" : "linr"
+                                                      }
+                                                    },
+                                                    "effects" : [
+
+                                                    ],
+                                                    "start" : 671,
+                                                    "duration" : 7,
+                                                    "mediaStart" : 143,
+                                                    "mediaDuration" : 7,
+                                                    "scalar" : 1,
+                                                    "metadata" : {
+                                                      "WinSubProjectDisplayName" : "",
+                                                      "clipSpeedAttribute" : false,
+                                                      "default-scale0" : 1.0,
+                                                      "default-scale1" : 1.0,
+                                                      "default-translation0" : 0.0,
+                                                      "default-translation1" : 0.0
+                                                    },
+                                                    "animationTracks" : {
+
+                                                    }
+                                                  }
+                                                ],
+                                                  "ident" : "",
+                                                  "audioMuted" : false,
+                                                  "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "0"
+    }
+                                              }
+                                            ]
+,
+                                            "effects" : [
+
+                                            ],
+                                            "start" : 72,
+                                            "duration" : 678,
+                                            "mediaStart" : 0.0,
+                                            "mediaDuration" : 678.0,
+                                            "scalar" : 1,
+                                            "metadata" : {
+                                              "IsGroupExpanded" : "False",
+                                              "WinSubProjectDisplayName" : ""
+                                            },
+                                            "animationTracks" : {
+
+                                            }
+                                          }
+                                        ],
+                                          "ident" : "",
+                                          "audioMuted" : false,
+                                          "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "7.93157199100221e-312"
+    }
+                                      }
+                                    ]
+,
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 0,
+                                    "duration" : 919,
+                                    "mediaStart" : 0.0,
+                                    "mediaDuration" : 919.0,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "IsGroupExpanded" : "False",
+                                      "WinSubProjectDisplayName" : ""
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "0"
+    }
+                              },
+                              {
+                                "trackIndex" : 1,
+                                "medias" : [
+                                  {
+                                    "id" : 16,
+                                    "_type" : "Group",
+                                    "attributes" : {
+                                      "ident" : "Group 3"
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -59.5,
+                                        "interp" : "eioe"
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 178.0,
+                                        "interp" : "eioe"
+                                      },
+                                      "anchor0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -59.5,
+                                        "interp" : "eioe"
+                                      },
+                                      "anchor1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 178.0,
+                                        "interp" : "eioe"
+                                      },
+                                      "sourceCrop0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "sourceCrop1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "sourceCrop2" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "sourceCrop3" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop2" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "geometryCrop3" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.0,
+                                        "interp" : "linr"
+                                      },
+                                      "opacity" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "interp" : "linr"
+                                      },
+                                      "volume" : {
+                                        "type" : "double",
+                                        "interp" : "linr",
+                                        "keyframes" : [
+                                          {
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "tracks" : [
+                                      {
+                                        "trackIndex" : 0,
+                                        "medias" : [
+                                          {
+                                            "id" : 17,
+                                            "_type" : "Callout",
+                                            "def" : {
+                                              "kind" : "TypeWinBlur",
+                                              "shape" : "",
+                                              "style" : "",
+                                              "blur-invert" : {
+                                                "type" : "double",
+                                                "interp" : "linr",
+                                                "keyframes" : [
+                                                  {
+                                                    "time" : 0,
+                                                    "value" : 0.0,
+                                                    "duration" : 0
+                                                  }
+                                                ]
+                                              },
+                                              "height" : {
+                                                "type" : "double",
+                                                "defaultValue" : 270.0,
+                                                "interp" : "linr"
+                                              },
+                                              "intensity" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.0,
+                                                "interp" : "linr"
+                                              },
+                                              "width" : {
+                                                "type" : "double",
+                                                "defaultValue" : 480.0,
+                                                "interp" : "linr"
+                                              },
+                                              "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                              "horizontal-alignment" : "center",
+                                              "name" : "Blur",
+                                              "vertical-alignment" : "center",
+                                              "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                              "textAttributes" : {
+                                                "type" : "textAttributeList",
+                                                "interp" : "left",
+                                                "keyframes" : [
+                                                  {
+                                                    "time" : 0,
+                                                    "value" : null,
+                                                    "duration" : 0
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "attributes" : {
+                                              "autoRotateText" : true
+                                            },
+                                            "parameters" : {
+                                              "translation0" : {
+                                                "type" : "double",
+                                                "defaultValue" : -169.999999999916,
+                                                "interp" : "eioe"
+                                              },
+                                              "translation1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 130.999999999858,
+                                                "interp" : "eioe"
+                                              },
+                                              "scale0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.220833333333537,
+                                                "interp" : "eioe"
+                                              },
+                                              "scale1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.133333333333526,
+                                                "interp" : "eioe"
+                                              },
+                                              "sourceCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "opacity" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.0,
+                                                "interp" : "linr"
+                                              }
+                                            },
+                                            "effects" : [
+
+                                            ],
+                                            "start" : 0,
+                                            "duration" : 23,
+                                            "mediaStart" : 0,
+                                            "mediaDuration" : 23,
+                                            "scalar" : 1,
+                                            "metadata" : {
+                                              "WinSubProjectDisplayName" : "",
+                                              "clipSpeedAttribute" : false,
+                                              "default-scale0" : 1.0,
+                                              "default-scale1" : 1.0,
+                                              "default-translation0" : 0.0,
+                                              "default-translation1" : 0.0
+                                            },
+                                            "animationTracks" : {
+
+                                            }
+                                          },
+                                          {
+                                            "id" : 18,
+                                            "_type" : "Callout",
+                                            "def" : {
+                                              "kind" : "TypeWinBlur",
+                                              "shape" : "",
+                                              "style" : "",
+                                              "blur-invert" : {
+                                                "type" : "double",
+                                                "interp" : "linr",
+                                                "keyframes" : [
+                                                  {
+                                                    "time" : 0,
+                                                    "value" : 0.0,
+                                                    "duration" : 0
+                                                  }
+                                                ]
+                                              },
+                                              "height" : {
+                                                "type" : "double",
+                                                "defaultValue" : 270.0,
+                                                "interp" : "linr"
+                                              },
+                                              "intensity" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.0,
+                                                "interp" : "linr"
+                                              },
+                                              "width" : {
+                                                "type" : "double",
+                                                "defaultValue" : 480.0,
+                                                "interp" : "linr"
+                                              },
+                                              "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                                              "horizontal-alignment" : "center",
+                                              "name" : "Blur",
+                                              "vertical-alignment" : "center",
+                                              "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                                              "textAttributes" : {
+                                                "type" : "textAttributeList",
+                                                "interp" : "left",
+                                                "keyframes" : [
+                                                  {
+                                                    "time" : 0,
+                                                    "value" : null,
+                                                    "duration" : 0
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "attributes" : {
+                                              "autoRotateText" : true
+                                            },
+                                            "parameters" : {
+                                              "translation0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 38.0000000001993,
+                                                "interp" : "eioe"
+                                              },
+                                              "translation1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 228.999999999936,
+                                                "interp" : "eioe"
+                                              },
+                                              "scale0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.270833333333818,
+                                                "interp" : "eioe"
+                                              },
+                                              "scale1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.118518518518678,
+                                                "interp" : "eioe"
+                                              },
+                                              "sourceCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "sourceCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop0" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop1" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop2" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "geometryCrop3" : {
+                                                "type" : "double",
+                                                "defaultValue" : 0.0,
+                                                "interp" : "linr"
+                                              },
+                                              "opacity" : {
+                                                "type" : "double",
+                                                "defaultValue" : 1.0,
+                                                "interp" : "linr"
+                                              }
+                                            },
+                                            "effects" : [
+
+                                            ],
+                                            "start" : 28,
+                                            "duration" : 50,
+                                            "mediaStart" : 0,
+                                            "mediaDuration" : 50,
+                                            "scalar" : 1,
+                                            "metadata" : {
+                                              "WinSubProjectDisplayName" : "",
+                                              "clipSpeedAttribute" : false,
+                                              "default-scale0" : 1.0,
+                                              "default-scale1" : 1.0,
+                                              "default-translation0" : 0.0,
+                                              "default-translation1" : 0.0
+                                            },
+                                            "animationTracks" : {
+
+                                            }
+                                          }
+                                        ],
+                                          "ident" : "",
+                                          "audioMuted" : false,
+                                          "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "0"
+    }
+                                      }
+                                    ]
+,
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 437,
+                                    "duration" : 78,
+                                    "mediaStart" : 0.0,
+                                    "mediaDuration" : 78.0,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "IsGroupExpanded" : "False",
+                                      "WinSubProjectDisplayName" : ""
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "7.93158158061877e-312"
+    }
+                              }
+                            ]
+,
+                            "effects" : [
+
+                            ],
+                            "start" : 0,
+                            "duration" : 919,
+                            "mediaStart" : 0.0,
+                            "mediaDuration" : 919.0,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "IsGroupExpanded" : "False",
+                              "WinSubProjectDisplayName" : ""
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "0"
+    }
+                      },
+                      {
+                        "trackIndex" : 1,
+                        "medias" : [
+                          {
+                            "id" : 19,
+                            "_type" : "Callout",
+                            "def" : {
+                              "kind" : "TypeWinBlur",
+                              "shape" : "",
+                              "style" : "",
+                              "blur-invert" : {
+                                "type" : "double",
+                                "interp" : "linr",
+                                "keyframes" : [
+                                  {
+                                    "time" : 0,
+                                    "value" : 0.0,
+                                    "duration" : 0
+                                  }
+                                ]
+                              },
+                              "height" : {
+                                "type" : "double",
+                                "defaultValue" : 270.0,
+                                "interp" : "linr"
+                              },
+                              "intensity" : {
+                                "type" : "double",
+                                "defaultValue" : 1.0,
+                                "interp" : "linr"
+                              },
+                              "width" : {
+                                "type" : "double",
+                                "defaultValue" : 480.0,
+                                "interp" : "linr"
+                              },
+                              "filename" : "C:\\Program Files\\TechSmith\\Camtasia 9\\Media\\Studio\\Callouts\\blur_100x100.xml",
+                              "horizontal-alignment" : "center",
+                              "name" : "Blur",
+                              "vertical-alignment" : "center",
+                              "xmlContent" : "﻿<?xml version=\"1.0\"?>\n\n<Overlay version=\"1.0.1\">\n\n<Overlay_Filename>blur_100x100.png</Overlay_Filename>\n<Overlay_Name>Blur</Overlay_Name>\n<Text_Top>0</Text_Top>\n<Text_Left>0</Text_Left>\n<Text_Bottom>0</Text_Bottom>\n<Text_Right>0</Text_Right>\n<Fill_Color>0</Fill_Color>\n<Border_Color>0</Border_Color>\n</Overlay>",
+                              "textAttributes" : {
+                                "type" : "textAttributeList",
+                                "interp" : "left",
+                                "keyframes" : [
+                                  {
+                                    "time" : 0,
+                                    "value" : null,
+                                    "duration" : 0
+                                  }
+                                ]
+                              }
+                            },
+                            "attributes" : {
+                              "autoRotateText" : true
+                            },
+                            "parameters" : {
+                              "translation0" : {
+                                "type" : "double",
+                                "defaultValue" : 38.0000000002678,
+                                "interp" : "eioe"
+                              },
+                              "translation1" : {
+                                "type" : "double",
+                                "defaultValue" : 35.99999999996,
+                                "interp" : "eioe"
+                              },
+                              "scale0" : {
+                                "type" : "double",
+                                "defaultValue" : 0.270833333334078,
+                                "interp" : "eioe"
+                              },
+                              "scale1" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0814814814814358,
+                                "interp" : "eioe"
+                              },
+                              "sourceCrop0" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "sourceCrop1" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "sourceCrop2" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "sourceCrop3" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop0" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop1" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop2" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "geometryCrop3" : {
+                                "type" : "double",
+                                "defaultValue" : 0.0,
+                                "interp" : "linr"
+                              },
+                              "opacity" : {
+                                "type" : "double",
+                                "defaultValue" : 1.0,
+                                "interp" : "linr"
+                              }
+                            },
+                            "effects" : [
+
+                            ],
+                            "start" : 465,
+                            "duration" : 50,
+                            "mediaStart" : 0,
+                            "mediaDuration" : 50,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "WinSubProjectDisplayName" : "",
+                              "clipSpeedAttribute" : false,
+                              "default-scale0" : 1.0,
+                              "default-scale1" : 1.0,
+                              "default-translation0" : 0.0,
+                              "default-translation1" : 0.0
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+    "metadata" : {
+      "IsLocked" : "False",
+      "WinTrackHeight" : "7.93156110756607e-312"
+    }
+                      }
+                    ]
+,
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 919,
+                    "mediaStart" : 0.0,
+                    "mediaDuration" : 919.0,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "IsGroupExpanded" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "default-scale0" : 1.0,
+                      "default-scale1" : 1.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : -0.5
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 64,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\SusanMazzara\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\new-project-from-git1ec8c710.autosave.tscproj",
+    "CanvasZoom" : 50,
+    "Date" : "2021-09-15 05:19:17 PM",
+    "Fit" : 0,
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "",
+    "ProjectDimensionsChanged" : "1",
+    "Title" : "new-project-from-git",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic",
+    "canvasDetached" : "False",
+    "canvasPositionHeight" : "0",
+    "canvasPositionLeft" : "0",
+    "canvasPositionTop" : "0",
+    "canvasPositionWidth" : "0"
+  }
+}

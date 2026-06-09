@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdefjclpreprocessor" xml:lang="en-us">
+<title>Sample JCL procedure for starting custom preprocessors</title><?Pub
+Caret -2?>
+<shortdesc>This example shows a sample JCL procedure for starting
+a custom preprocessor.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>custom preprocessor
+JCL</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>The sample JCL procedure ELAXFCP1 is used when you start
+the include preprocessor that is supplied with the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product.
+This JCL procedure must be used as a template to create a JCL procedure
+that starts your own custom preprocessor. ELAXFCP1 was copied to ELAXFCP9
+and altered to call TMPLT00. <codeblock>
+//ELAXFCP9 PROC LNGPRFX='IGYV3R40',
+//            CICSLOD='CICSVS.TS230.CICS',
+//            DB2LOD='DSN.DSN7',
+//            LODPRFX='FOWLERM'
+//*
+//PREPROC1 EXEC PGM=TMPLT00,REGION=0M,
+//            PARM=('TRACE(ON)')
+//STEPLIB  DD DISP=SHR,DSN=MEL.LOAD
+//         DD DISP=SHR,DSN=&amp;LODPRFX..I1.L1;
+//SYSPPOUT DD DSN=&amp;&amp;TEMPFILE;,DISP=(MOD,PASS),
+//        UNIT=SYSALLDA,SPACE=(1800,(2500,2500))
+//*
+//COBOL    EXEC PGM=IGYCRCTL,REGION=0M,
+//            PARM=('EXIT(ADEXIT(ELAXMGUX))',
+//            'ADATA',
+//            'LIB',
+//            'TEST(ALL,SYM,SEP)',
+//            'LIST',
+//            'FLAG(I,I)'&amp;CICS;&amp;DB2;&amp;COMP;)
+//STEPLIB  DD  DSNAME=FOWLERM.ERRFDBK8.FIDUCIA1.LOAD,
+//             DISP=SHR
+//         DD  DSNAME=&amp;LNGPRFX..SIGYCOMP;,
+//             DISP=SHR
+//         DD DSNAME=&amp;CICSLOD..SDFHLOAD;,
+//             DISP=SHR
+//         DD DSNAME=&amp;DB2LOD..SDSNLOAD;,
+//             DISP=SHR
+//         DD DSNAME=&amp;DB2LOD..SDSNEXIT;,
+//             DISP=SHR
+//SYSIN    DD DISP=(OLD,DELETE),DSN=&amp;&amp;TEMPFILE;
+//SYSLIN   DD DUMMY
+//SYSLIB   DD DUMMY
+//SYSADATA DD DUMMY
+//SYSPRINT DD SYSOUT=*
+//SYSUT1   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//SYSUT2   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//SYSUT3   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//SYSUT4   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//SYSUT5   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//SYSUT6   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//SYSUT7   DD UNIT=SYSALLDA,SPACE=(CYL,(1,1))
+//*
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link href="tzdcustbld.dita" type="task"></link>
+<link href="rzdefxmlpreprocessor.dita" type="reference"></link>
+<link href="tzdefpreprocessor.dita" type="task"></link>
+</related-links>
+<?tm 1435190824 0?>
+</reference>
+<?Pub *0000002858?>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<map id="common_hostbased_toc" linking="none" operatingsystem="windows" product="SSQ2R2"
+title="Configuring host-based projects" xml:lang="en-us">
+<topicmeta>
+<copyright>
+<copyryear year="2005, 2025, 2026"/>
+<copyrholder/>
+</copyright>
+</topicmeta>
+<?Pub Caret -2?>
+<topicref href="topics/czdhostbased.dita" type="concept" otherprops="IDz">
+<topicref href="topics/tzdcfghostbased.dita" type="task">
+<topicref href="topics/tzdprojinstfile.dita" type="task">
+<topicref href="topics/rzdprojinstschema.dita" type="reference"> </topicref>
+</topicref>
+<topicref href="topics/tzdprojdeffile.dita" type="task">
+<topicref href="topics/rzdprojdefschema.dita" type="reference"> </topicref>
+</topicref>
+<topicref href="topics/tzdsubpdeffile.dita" type="task">
+<topicref href="topics/rzdsubpdefschema.dita" type="reference"> </topicref>
+</topicref>
+<topicref href="topics/tzdsubppropfile.dita" type="task">
+<topicref href="topics/rzdsubppropschema.dita" type="reference"> </topicref>
+</topicref>
+</topicref>
+<topicref href="topics/tzdusehostbased.dita" type="task"/>
+<topicref href="topics/tzdslvhostbased.dita" type="task"/>
+</topicref>
+</map>
+<?Pub *0000001155?>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="jclsubmissionmethod" xml:lang="en-us">
+<title>Submitting JCL to build a project or subproject</title><?Pub
+Caret -2?>
+<shortdesc>You can create a load module by submitting JCL.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>JCL submission method</indexterm><indexterm>submission
+method, JCL</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>Right-click a partitioned data set member and click <uicontrol>Generate
+JCL</uicontrol>.</cmd></step>
+<step><cmd>Click the phrase that specifies the type of JCL to create: </cmd>
+<choicetable>
+<chrow>
+<choption><uicontrol>For Compile</uicontrol></choption>
+<chdesc>Generates JCL for compiling the selected member.</chdesc>
+</chrow>
+<chrow>
+<choption><uicontrol>For Compile Link</uicontrol></choption>
+<chdesc>Generates JCL for compiling and linking the selected member.</chdesc>
+</chrow>
+<chrow>
+<choption><uicontrol>For Compile Link Go</uicontrol></choption>
+<chdesc>Generates JCL for creating and running a load module.</chdesc>
+</chrow>
+</choicetable>
+<stepresult rev="803">If you selected <uicontrol>For Compile Link</uicontrol> or <uicontrol>For
+Compile Link Go</uicontrol>, the <wintitle>Load Module Member Name</wintitle> window
+opens.<ul>
+<li>If <menucascade><uicontrol>Generate JCL</uicontrol><uicontrol>For
+Compile Link</uicontrol></menucascade> or <uicontrol>For Compile Link
+Go</uicontrol> was not performed on the resource, and <uicontrol>Rebuild
+Subproject</uicontrol> was not performed on the subproject, the initial
+value in the load module name window is the name of the resource.</li>
+<li>If <menucascade><uicontrol>Generate JCL</uicontrol><uicontrol>For
+Compile Link</uicontrol></menucascade> or <uicontrol>For Compile Link
+Go</uicontrol> was not performed, and you specify a load module name
+when you request <uicontrol>Rebuild Subproject</uicontrol>, the initial
+value in the load module name window is the load module name that
+is specified with <uicontrol>Rebuild Subproject</uicontrol>. </li>
+</ul>  </stepresult></step>
+<step rev="803"><cmd>To change the load module member name, type a
+new name in the <uicontrol>Member name</uicontrol> field and click <uicontrol>OK</uicontrol>.</cmd>
+<info>After the load module name is specified for a resource, it is
+remembered. You can disable this window by using the <wintitle>z/OS
+Solutions</wintitle> preference page.</info><stepresult>The <wintitle>JCL
+Data Set and Member Name</wintitle> window opens.</stepresult></step>
+<step><cmd>You can overwrite both the name of the JCL data set (as
+specified in the project properties) and the name of the JCL member
+(as specified by <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword>);
+in any case, click <uicontrol>OK</uicontrol>.</cmd><stepresult>If
+the specified JCL file exists, a confirmation message is displayed
+to prevent you from unintentionally overwriting an existing JCL member.</stepresult>
+</step>
+<step><cmd>To create the JCL, click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>A confirmation message is displayed to indicate that the
+JCL was created in the specified data set.</stepresult></step>
+<step><cmd>From the <wintitle>JCL Generation Complete</wintitle> window,
+do any of the following actions:</cmd>
+<choices>
+<choice>Click <uicontrol>Submit</uicontrol> to submit the JCL.</choice>
+<choice>Click <uicontrol>Open</uicontrol> to open the JCL member in
+an editor.</choice>
+<choice>Click <uicontrol>OK</uicontrol> to close the window without
+submitting the JCL.</choice>
+</choices>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdzossol.dita" scope="local" type="reference"/>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1435190839 0?>
+</task>
+<?Pub *0000004076?>

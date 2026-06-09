@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_set_other_srch_opts" xml:lang="en-us">
+<title>Setting other search options</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Setting other search options</navtitle>
+<searchtitle>Setting other search options</searchtitle>
+</titlealts>
+<shortdesc>More search options are available in the <wintitle>Remote
+z/OS Search</wintitle> window.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Remote z/OS Search<indexterm>other search options</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps-unordered>
+<step id="search_in"><cmd>Set <uicontrol>Search in</uicontrol> options
+to define the scope of a search. You can set the following search
+scope options:</cmd>
+<choices>
+<choice><uicontrol>System</uicontrol> to choose a remote system to
+search. This list shows all defined remote system connections. If
+you select a remote system to which you are not currently connected,
+you are prompted to log in to that system.</choice>
+<choice><uicontrol>Existing filters</uicontrol> shows all defined
+filters for the selected remote system. If you are searching for data
+set members, this list also shows partitioned data sets.</choice>
+<choice><uicontrol>Other contexts</uicontrol> to specify a filter
+string to search. This option allows for searching outside of defined
+filters. <note>If you search on one or more remote resources outside
+the <wintitle>Remote Systems</wintitle> view (such as a remote data
+set in the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view),
+this option is enabled, and it specifies <systemoutput>&lt;selected
+resources></systemoutput> as the filter string.</note></choice>
+</choices>
+</step>
+<step><cmd>Set <uicontrol>Search result options</uicontrol>.</cmd><info>Click <uicontrol>Search
+Options</uicontrol> to show the search result options on the window.
+You can set the following search result options:</info>
+<choices>
+<choice><uicontrol>Search results limit</uicontrol> to set the maximum
+number of search results to return. The default setting is <systemoutput>1000</systemoutput>.
+ If you search for data sets or data set members, this option limits
+the number of files that are returned. If you search for content strings,
+this option limits the number of strings that are returned.</choice>
+<choice><uicontrol>Include migrated</uicontrol> to search and return
+migrated data sets.</choice>
+<choice><uicontrol>Include offline volumes</uicontrol> to search and
+return <tm tmtype="tm" trademark="MVS">MVS</tm> volumes that are offline.</choice>
+</choices>
+</step>
+<step><cmd>Set <uicontrol>Content string options</uicontrol>.</cmd>
+<info>For data set member and sequential data set searches, click <uicontrol>Search
+Options</uicontrol> to show the content string options on the window.
+These options are not displayed for partitioned data set searches.
+You can set these content string options:</info>
+<choices>
+<choice><uicontrol>Case sensitive</uicontrol> finds only strings that
+match the case in which you enter the search string.</choice>
+<choice><uicontrol>Visual format</uicontrol> supports bidirectional
+search strings in visual order (allows for typing a search string
+right to left).</choice>
+<choice><uicontrol>Search in logical files</uicontrol> enables searching
+in smart logical files.</choice>
+</choices>
+<info>The <uicontrol>Visual format</uicontrol> and <uicontrol>Search
+in logical files</uicontrol> options are displayed only when the <uicontrol>Bidirectional
+development specific capabilities</uicontrol> preference is set on
+the <wintitle>Bidirectional Development</wintitle> preference page.</info>
+</step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdcmn145.dita" scope="local" type="topic">
+</link>
+</related-links>
+<?tm 1435190808 1?>
+</task>
+<?Pub *0000003983?>

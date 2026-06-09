@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdprojinstschema" xml:lang="en-us">
+<title>Project instance schema</title><?Pub Caret -2?>
+<shortdesc>The project instance schema defines tags that are used
+to define a project instance file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>project instance
+schema</indexterm></indexterm><indexterm>project instance schema</indexterm>
+<indexterm>configuring host-based projects<indexterm>project instance
+schema</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  &lt;xsd:element name="PROJECT-INSTANCE">
+    &lt;xsd:annotation>
+      &lt;xsd:documentation>
+        Defines a specific instance of a project
+      &lt;/xsd:documentation>
+    &lt;/xsd:annotation>
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="WSED-VERSION" minOccurs="1">&lt;/xsd:element>
+        &lt;xsd:element ref="PROJECT" minOccurs="1">&lt;/xsd:element>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+
+&lt;xsd:element name="WSED-VERSION" type="xsd:string">&lt;/xsd:element>
+
+&lt;xsd:element name="PROJECT">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The project instance consists of a pointer to a reusable
+      project definition file and an optional override of the
+      default name
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="PROJECT-NAME" minOccurs="0">&lt;/xsd:element>
+      &lt;xsd:element ref="PROJECT-DEF-PATH" minOccurs="1">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="PROJECT-NAME" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Optional override of the project name in the project
+      definition file
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="PROJECT-DEF-PATH" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The path to the project definition file to be used by
+      this instance. The path is relative to the root project
+      configuration folder on the remote system.
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;/xsd:schema>
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="tzdprojinstfile.dita" type="task"></link>
+</related-links>
+<?tm 1435190795 0?>
+</reference>
+<?Pub *0000002696?>

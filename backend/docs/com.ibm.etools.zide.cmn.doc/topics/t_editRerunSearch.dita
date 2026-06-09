@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_editRerunSearch" xml:lang="en-us">
+<title>Edit and rerun a search</title>
+<?Pub Caret -2?>
+<shortdesc>You can edit and rerun a <wintitle>Remote z/OS Search</wintitle> or <wintitle>Remote z/OS
+File Search</wintitle> query from the <wintitle>Remote Systems</wintitle> view. </shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>remote z/OS search<indexterm>saving</indexterm></indexterm>
+<indexterm>saving a search query</indexterm>
+</keywords>
+<keywords>
+<indexterm>search query<indexterm>saving</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>remote z/OS file search<indexterm>saving</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>Run a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> search or remote <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> file search and have the search results displayed in the <wintitle>Remote
+z/OS Search</wintitle> view. See the related topics for instructions.</prereq>
+<steps>
+<step><cmd>In the <wintitle>Remote z/OS Search</wintitle> view, display the results of the search
+query you want to edit and rerun.</cmd><info>If you completed more than one search, use the search
+history list to select the search query you want to edit and rerun.</info></step>
+<step><cmd>Click <image href="../images/editAndRun.png" placement="inline"><alt>Edit and run a
+search query in <wintitle>Remote Systems</wintitle> view</alt></image>
+<uicontrol>Edit and run a search query</uicontrol>.</cmd>
+<stepresult>The search window opens with your previous search criteria.</stepresult></step>
+<step><cmd>Edit the search criteria and click <uicontrol>OK</uicontrol>.</cmd>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn145.dita" type="topic"/>
+<link format="dita" href="t_search_remote_zos_file.dita" scope="local" type="task"/>
+<link href="tzdcmn103.dita" type="topic"/>
+<link format="html" href="../../com.ibm.etools.getstart.wsentdev.doc/topics/searchqueries.html"
+scope="peer" type="topic"><linktext>Quick task: Creating reusable z/OS search
+queries</linktext></link>
+</related-links>
+<?tm 1435190809 11?>
+</task>
+<?Pub *0000003974?>

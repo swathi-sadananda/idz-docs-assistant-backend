@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdprojdefschema" xml:lang="en-us">
+<title>Project definition schema</title><?Pub Caret -2?>
+<shortdesc>The project definition schema defines tags that are used
+to define a project definition file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>project definition
+schema</indexterm></indexterm><indexterm>project definition schema</indexterm>
+<indexterm>configuring host-based projects<indexterm>project definition
+schema</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+&lt;xsd:element name="PROJECT-STRUCTURE">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Top level element of a host-based project definition
+      file
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="WSED-VERSION">&lt;/xsd:element>
+      &lt;xsd:element ref="PROJECT">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="WSED-VERSION" type="xsd:string">&lt;/xsd:element>
+
+&lt;xsd:element name="PROJECT">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Defines the structure of a host-based project
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="PROJECT-NAME">&lt;/xsd:element>
+      &lt;xsd:element ref="PROJECT-TYPE">&lt;/xsd:element>
+      &lt;xsd:element ref="SUBPROJECT-LIST">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="PROJECT-NAME" type="xsd:string">&lt;/xsd:element>
+
+&lt;xsd:element name="PROJECT-TYPE" type="projectType">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Currently only the zOS project type is defined.
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:simpleType name="projectType">
+  &lt;xsd:restriction base="xsd:string">
+    &lt;xsd:enumeration value="zos-project"/>
+  &lt;/xsd:restriction>
+&lt;/xsd:simpleType>
+
+&lt;xsd:element name="SUBPROJECT-LIST">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The list of subprojects contained by this project. All
+      subprojects must be associated with this remote system.
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element maxOccurs="unbounded" ref="SUBPROJECT">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Pointer to a subproject definition file. A possible
+      future enhancement would be to allow for overriding the
+      project name. Currently, the subproject name must be
+      identical to the subproject definition file name.
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="SUBPROJECT-FULL-PATH">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT-FULL-PATH" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The path to the subproject definition file. The path is
+      relative to the root project configuration folder on the
+      host.
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;/xsd:schema>
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="tzdprojdeffile.dita" type="task"></link>
+</related-links>
+<?tm 1435190795 0?>
+</reference>
+<?Pub *0000003804?>

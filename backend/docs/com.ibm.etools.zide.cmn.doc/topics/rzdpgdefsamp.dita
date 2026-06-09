@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdpgsyssamp" xml:lang="en-us">
+<title>Sample default values file</title><?Pub Caret -2?>
+<shortdesc>This example illustrates a default values file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>property groups<indexterm>default values example</indexterm></indexterm>
+<indexterm>default values example</indexterm><indexterm>configuring
+property groups<indexterm>default values example</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;DEFAULT-VALUES>
+  &lt;CATEGORY-INSTANCE>
+    &lt;CATEGORY>COBOL_SETTINGS&lt;/CATEGORY>
+    &lt;PROPERTY>
+      &lt;NAME>HOST_COMPILE_OPTIONS&lt;/NAME>
+      &lt;VALUE>TEST&lt;/VALUE>
+    &lt;/PROPERTY>
+    &lt;PROPERTY>
+      &lt;NAME>COMPILE_JCL_PROCEDURE_NAME&lt;/NAME>
+      &lt;VALUE>ELAXFCOC&lt;/VALUE>
+    &lt;/PROPERTY>
+  &lt;/CATEGORY-INSTANCE>
+&lt;/DEFAULT-VALUES>
+</codeblock></section>
+</refbody>
+<?tm 1435190794 0?>
+</reference>
+<?Pub *0000001216?>

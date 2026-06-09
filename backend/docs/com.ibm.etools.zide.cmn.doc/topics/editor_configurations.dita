@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN"  "ibm-topic.dtd">
+<topic id="editor_configurations" xml:lang="en-us">
+<title>Editor Configurations (remote property group)</title>
+<titlealts>
+<navtitle>Editor Configurations (remote property group)</navtitle>
+<searchtitle>Editor Configurations (remote property group)</searchtitle>
+</titlealts>
+<shortdesc
+conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#ecfg0001/ecfg0001_shortdesc"/>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>Editor Configurations (remote property group)</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<div conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#ecfg0001/ecfg0001_body"/>
+</body>
+<related-links>
+<link href="defining_copy_and_include_libraries.dita"><linktext>Defining copy, include, and macro
+libraries</linktext></link>
+</related-links>
+</topic>

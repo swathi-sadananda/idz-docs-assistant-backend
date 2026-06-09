@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsamepreproc" rev="760" xml:lang="en-us">
+<title>Adding the same preprocessor with different options</title><?Pub
+Caret -2?>
+<shortdesc>You can call the same preprocessor more than once for a
+single build operation by adding it to a property group multiple times
+with different options.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preprocessors<indexterm>adding to a property
+group with different options</indexterm></indexterm><indexterm>adding
+a preprocessor to a property group multiple times</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must define a property group on a local or remote system.</prereq>
+<context>You can run the same preprocessor multiple times with different
+options by adding it to the property group multiple times. If your
+site has a preprocessor that takes an argument that tells the preprocessor
+to look for certain statements in the source program, for example,
+you can define one entry in the <uicontrol>Preprocessors</uicontrol> list
+that tells the preprocessor to look for <codeph>GOTO</codeph> statements
+and another that looks for <codeph>DISPLAY</codeph> statements. Each
+definition points to the same preprocessor, but runs it with different
+arguments.</context>
+<steps>
+<stepsection>To add multiple entries for the same preprocessor with
+different options:</stepsection>
+<step><cmd>Open a property group in the property group editor.</cmd>
+</step>
+<step><cmd>Open the <wintitle>Local Preprocessors</wintitle> page
+of <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local PL/I
+Settings</wintitle>.</cmd></step>
+<step><cmd>In the <uicontrol>Preprocessors</uicontrol> section, click <uicontrol>Add</uicontrol>.</cmd>
+<stepresult>The fields in the Preprocessor Options section are cleared.</stepresult>
+</step>
+<step><cmd>In the <uicontrol>Preprocessor Name (fully qualified)</uicontrol> field,
+specify the preprocessor name or to choose to the preprocessor file
+name, click <uicontrol>Browse</uicontrol>.</cmd></step>
+<step><cmd>In the <uicontrol>Preprocessor Description</uicontrol> field,
+specify a unique description for this instance of the preprocessor.</cmd>
+<info>The description is used as the label in the list of preprocessors
+in the Preprocessors section. The descriptions that you write for
+each instance must uniquely identify which instance is being run.
+To continue the example that is given above, you can type <userinput>Locate
+GOTO</userinput> for the first instance and <userinput>Locate DISPLAY</userinput> for
+the second.</info></step>
+<step><cmd>Complete the remaining fields with the options that you
+want for the first execution of the preprocessor. </cmd><info>For
+a detailed description of the fields, see the context-sensitive help.</info>
+</step>
+<step><cmd>Click <uicontrol>Add</uicontrol> again to clear the fields
+and add another entry to the <uicontrol>Preprocessors</uicontrol> list.</cmd>
+</step>
+<step><cmd>In the <uicontrol>Preprocessor Name (fully qualified)</uicontrol> field,
+specify the same preprocessor name.</cmd></step>
+<step><cmd>In the <uicontrol>Preprocessor Description</uicontrol> field,
+specify a unique description for the second instance of the preprocessor.</cmd>
+</step>
+<step><cmd>Complete the remaining fields with the options that you
+want for the second execution of the preprocessor.</cmd></step>
+<step><cmd>Click Ctrl+S to save your changes or <uicontrol>Add</uicontrol> to
+add another preprocessor to the list.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190822 0?>
+</task>
+<?Pub *0000003799?>

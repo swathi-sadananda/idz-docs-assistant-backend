@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configuring_pkcs12" xml:lang="en-US">
+<title>Configuring client authentication with PKCS12</title>
+<titlealts>
+<navtitle>Configuring client authentication with PKCS12</navtitle>
+<searchtitle>Configuring client authentication with PKCS12</searchtitle>
+</titlealts>
+<abstract>
+<shortdesc>Use these instructions to configure the client to connect to z/OS by using Transport
+Layer Security (TLS) client authentication with a locally installed PKCS12 file generated from a
+RACF certificate.</shortdesc>
+</abstract>
+<body>
+<section>
+<title>Host TLS configuration</title>
+<p>Before you configure TLS on the client, you must configure the z/OS server for TLS. The
+instructions for configuring the host are in the <cite><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/ZEXPL_full"/> Host
+Configuration Guide</cite> in <xref format="html" scope="external"
+href="https://www.ibm.com/docs/en/explorer-for-zos/3.4?topic=tasks-optional-sslproperties-rse-encrypted-communication"
+>ssl.properties, the RSE encrypted communication</xref>. This configuration is done by a z/OS system
+administrator with the assistance of a security administrator. If you are unsure if the z/OS system
+has been configured for TLS, check with your z/OS system administrator.</p>
+</section>
+<section>
+<title>Configuring a new z/OS connection for TLS</title>
+<p>To define a new connection to a z/OS system that is configured for TLS, do these steps:<ol>
+<li conref="tzdcmn032.dita#tzdcmn032/define"/>
+<li conref="tzdcmn032.dita#tzdcmn032/type"/>
+<li conref="tzdcmn032.dita#tzdcmn032/hostname"/>
+<li>Click <uicontrol>Next</uicontrol>.</li>
+<li>On the <wintitle>Connection Configuration</wintitle> page, specify these options:<itemgroup>
+<ul>
+<li><uicontrol>Daemon Port: </uicontrol> Specify a valid port number. Consult your z/OS system
+administrator for the port number to use.</li>
+<li rev="751"><uicontrol>Authentication method:</uicontrol>Select <uicontrol>certificate</uicontrol>
+to use client certificate authentication. </li>
+</ul>
+</itemgroup></li>
+<li>Click <uicontrol>Finish</uicontrol>.</li>
+<li id="config-cli-cert">To configure the client certificate, follow the instructions in <xref
+href="#configuring_pkcs12/cli-cert-pref"/>.</li>
+</ol></p>
+</section>
+<section>
+<title>Configuring TLS on an existing z/OS connection</title>
+<p>If you already have a z/OS connection defined, and you want to change the connection properties
+to use TLS, do these steps:<ol>
+<li>In the <wintitle>Remote Systems</wintitle> view, right-click the connection name and select
+<uicontrol>Properties</uicontrol>.</li>
+<li>In the navigation pane of the <wintitle>Properties</wintitle> window, select
+<uicontrol>Connector Services</uicontrol>.</li>
+<li>Expand the entries in the <uicontrol>Available Services</uicontrol> list and click
+<uicontrol>Launcher Properties</uicontrol>.</li>
+<li>In the <uicontrol>Authentication method</uicontrol> row of the <uicontrol>Properties</uicontrol>
+table, click the <uicontrol>Value</uicontrol> cell, then expand the drop-down list and select
+<uicontrol>certificate</uicontrol>.</li>
+<li>Click <uicontrol>Apply and Close</uicontrol>.</li>
+<li conref="#configuring_pkcs12/config-cli-cert"/>
+</ol></p>
+</section>
+<section id="cli-cert-pref">
+<title>Configuring the client certificate</title>
+<ol>
+<li>From the menu bar, click
+<menucascade><uicontrol>Window</uicontrol><uicontrol>Preferences</uicontrol></menucascade>.</li>
+<li>In the navigation pane of the <wintitle>Properties</wintitle> window, select <uicontrol>Client
+Certificates</uicontrol>.</li>
+<li>Specify these values on the <wintitle>Client Certificates Preferences</wintitle> page:<sl>
+<sli><uicontrol>Java Cryptography Extension (JCE) Provider</uicontrol>: IBMJCE</sli>
+<sli><uicontrol>Keystore Type</uicontrol>: PKCS12</sli>
+<sli><uicontrol>hostIdMappings Object Identifier (OID)</uicontrol>: The OID value
+<uicontrol>1.3.18.0.2.18.1</uicontrol> can remain or be cleared so that there is no value. If the
+value is not cleared, the certificate must have this OID included. You can define multiple
+hostIdMappings if you need to access multiple z/OS systems or multiple applications, but only the
+first entry in the set of hostIdMappings is used. If the first entry is not the one that is
+authorized to the RSE server user ID, then the session fails with the error message
+<msgph>checkCertificate:Invalid Certificate Exception: SERVAUTH Definition Error</msgph> even if one
+of the additional entries maps to a valid SERVAUTH definition for the RSE server user ID.</sli>
+</sl></li>
+<li>Click <uicontrol>Apply and Close</uicontrol>.</li>
+<li>To connect with the certificate, disconnect and then reconnect to the z/OS system. If the
+certificate is signed by its own CA or a self-signed certificate is used, then you are prompted to
+trust the certificate before connecting. If you are using a well-known CA, there is no prompt for
+the trust and the z/OS system is connected.</li>
+</ol>
+</section>
+</body>
+</topic>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzhidearch" xml:lang="en-us">
+<title>Hiding archived data sets</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Hiding archived data sets</navtitle>
+<searchtitle>Hiding and showing archived data sets</searchtitle>
+</titlealts>
+<shortdesc>You can hide archived data sets so that they are not displayed
+under an <uicontrol>MVS Files</uicontrol> filter.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>migrated data sets<indexterm>hide</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>migrated data sets<indexterm>show</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>hide migrated data sets</indexterm></keywords>
+<keywords><indexterm>show migrated data sets</indexterm></keywords>
+<keywords><indexterm>data sets in offline volumes<indexterm>hide</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>data sets in offline volumes<indexterm>show</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>hide data sets in offline volumes</indexterm>
+</keywords>
+<keywords><indexterm>show data sets in offline volumes</indexterm>
+</keywords>
+<keywords><indexterm>archived data sets<indexterm>hide</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>archived data sets<indexterm>show</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>hide archived data sets</indexterm></keywords>
+<keywords><indexterm>show archived data sets</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>Archived data sets include data sets that were migrated or
+are on offline volumes.</context>
+<steps-unordered>
+<stepsection>The <wintitle>Remote Systems</wintitle> view normally
+shows archived data sets.</stepsection>
+<step><cmd>To see the status of archived files for an <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files filter, right-click the filter.</cmd>
+<stepresult>When the checkbox beside <uicontrol>Show Archived Data
+Sets</uicontrol> is selected, archived data sets are displayed under
+the filter. When it is clear, archived data sets are hidden.</stepresult>
+</step>
+<step><cmd> To hide archived data sets under a particular <uicontrol>MVS
+Files</uicontrol> filter, right-click the filter name and then click <uicontrol>Show
+Archived Data Sets</uicontrol> to clear the checkbox.</cmd><stepxmp>For
+example, to hide archived data sets from the <uicontrol>My Data Sets</uicontrol> filter,
+right-click <uicontrol>My Data Sets</uicontrol> and click <uicontrol>Show
+Archived Data Sets</uicontrol>.</stepxmp><stepresult>This action affects
+only the selected <uicontrol>MVS Files</uicontrol> filter. It does
+not affect other filters, such as <uicontrol>Retrieved Data Sets</uicontrol>.</stepresult>
+</step>
+<step><cmd> To show hidden archived data sets under a particular <uicontrol>MVS
+Files</uicontrol> filter, right-click the filter name and then click <uicontrol>Show
+Archived Data Sets</uicontrol> to select the checkbox.</cmd></step>
+</steps-unordered>
+</taskbody>
+<?tm 1435190816 1?>
+</task>
+<?Pub *0000003406?>

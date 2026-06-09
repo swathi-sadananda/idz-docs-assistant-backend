@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<concept id="czdbidi" xml:lang="en-us">
+<title>Supporting bidirectional languages</title>
+<abstract>
+<note type="notice" id="bidi_deprecated"><ph id="bidi-deprecated-content">Bidirectional language
+support in <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full"/> will continue
+with respect to current available functionality but will not be extended to new
+capabilities.</ph></note>
+<shortdesc><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"
+/> provides tools that help you develop applications that use bidirectional languages like Arabic
+and Hebrew.</shortdesc>
+</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>bidirectional languages</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody>
+<p>The term bidirectional support applies to special software and special user interfaces added to
+<keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> to
+support bidirectional languages like Arabic and Hebrew. <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> provides tools
+that you can configure and use for supporting bidirectional (bidi) languages.</p>
+<section>
+<title>Background and concepts</title>
+<ul>
+<li><xref href="czdbiditerms.dita" type="concept"/></li>
+<li><xref href="czdbidiconv.dita" type="concept"/></li>
+<li><xref href="czdsmartlog.dita" type="concept"/></li>
+<li><xref href="czdbiditools.dita" type="concept"/></li>
+<li><xref href="czdbidiwhy.dita" type="concept"/></li>
+</ul>
+</section>
+<section>
+<title>Using bidirectional support</title>
+<ul>
+<li><xref href="tzdbidicfg.dita" type="task"/></li>
+<li><xref href="tzdbidiedit.dita" type="task"/></li>
+<li><xref href="tzdbidifs.dita" type="task"/></li>
+<li><xref href="tzdbidivtc.dita" type="task"/></li>
+<li><xref href="tzdbidicff.dita" type="task"/></li>
+<li><xref href="czdbidiinh.dita" type="concept"/></li>
+<li><xref href="tzdbidicodep.dita" type="task"/></li>
+<li><xref href="tzdbidipds.dita" type="task"/></li>
+<li><xref href="tzdbidimap.dita" type="task"/></li>
+<li><xref href="tzdbidiuss.dita" type="task"/></li>
+<li><xref href="tzdbidisyn.dita" type="task"/></li>
+</ul>
+</section>
+</conbody>
+<?tm 1337269548 0?>
+</concept>
+<?Pub Caret -2?>
+<?Pub *0000002442?>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="AllocateVSAM" xml:lang="en-us">
+<title>Allocating VSAM data sets</title>
+<!--<titlealts><navtitle></navtitle><searchtitle></searchtitle></titlealts>-->
+<shortdesc>Use the <wintitle>Allocate VSAM Data Set</wintitle> wizard
+to allocate VSAM data sets in the <wintitle>Remote  Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>allocate VSAM data set</indexterm><indexterm>VSAM
+data set<indexterm>allocate</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<!--<context>Use the VSAM allocation function available in the <tm
+tmtype="reg" trademark="z/OS">z/OS</tm> integrated development environment
+(zIDE) when the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> client
+and server are both at version 8.0.3 or later. For versions before
+8.0.3, the same function is available through File Manager Integration,
+which is deprecated in version 8.0.3. The function of VSAM allocation
+and the response you might see when you request this function vary
+according to the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> version
+that is installed and the status of File Manager on the <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> system:<table><title>System responses to
+VSAM allocation requests</title>
+<tgroup cols="3"><colspec colname="col1"/><colspec colname="col2"/>
+<colspec colname="col3"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Version</entry>
+<entry colname="col2">File Manager status</entry>
+<entry colname="col3">System response to VSAM allocation request</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">8.0.3 or later</entry>
+<entry colname="col2">N/A</entry>
+<entry colname="col3">zIDE <wintitle>Allocate VSAM Data Set</wintitle> wizard
+opens.</entry>
+</row>
+<row>
+<entry>Before 8.0.3</entry>
+<entry>Active</entry>
+<entry>File Manager Integration <wintitle>Allocate VSAM Data Set</wintitle> wizard
+opens.</entry>
+</row>
+<row>
+<entry>Before 8.0.3</entry>
+<entry>Inactive</entry>
+<entry>Warning message is displayed.</entry>
+</row>
+</tbody>
+</tgroup>
+</table></context>-->
+<?Pub Caret 1622?>
+<steps>
+<step><cmd>Select the <uicontrol>MVS Files</uicontrol> subsystem of
+a remote system connection.</cmd></step>
+<step><cmd>Right-click and select <menucascade><uicontrol>Menu</uicontrol>
+<uicontrol>Allocate VSAM Data Set</uicontrol></menucascade>.</cmd><info><note>You
+can also press Ctrl+4 to allocate a new VSAM data set.</note></info>
+</step>
+<step><cmd>On the first page of the wizard:</cmd>
+<substeps>
+<substep><cmd>Accept the name that is provided in the <uicontrol>Connection
+Name</uicontrol> field.</cmd></substep>
+<substep><cmd>Select or type the high-level qualifier for the data
+set from the list.</cmd></substep>
+<substep><cmd>In the <uicontrol>Data Set Name</uicontrol> field, specify
+the name that follows the combination of high-level qualifier and
+period. </cmd><stepxmp>For example, if the high-level qualifier is <filepath>MYFILES</filepath> and
+if you want to allocate the data set <filepath>MYFILES.TEST.VSAM</filepath>,
+type the string <userinput>TEST.VSAM</userinput> in the <uicontrol>Data
+Set Name</uicontrol> field.</stepxmp></substep>
+<substep><cmd>Click <uicontrol>Next</uicontrol>.</cmd></substep>
+</substeps>
+</step>
+<step><cmd>On page 2, click <uicontrol>Specify characteristics (Advanced
+allocation)</uicontrol> and then click <uicontrol>Next</uicontrol> to
+specify allocation values such as VSAM file type, associations, and
+cluster attributes.</cmd></step>
+<step><cmd>Specify the allocation values. </cmd><info>For field-level
+help, see the related links. For details on what values are required
+for different uses, contact your <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+administrator. </info></step>
+<step><cmd>To allocate the data set, click <uicontrol>Finish</uicontrol>.</cmd>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="rzvsamchar.dita" type="reference"></link>
+<link format="dita" href="allocateLike.dita" scope="local" type="task">
+</link>
+</related-links>
+<?tm 1435190812 3?>
+</task>
+<?Pub *0000004360?>

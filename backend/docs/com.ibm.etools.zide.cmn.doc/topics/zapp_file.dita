@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="zapp_file" xml:lang="en-US">
+<title>Exporting and importing from a ZAPP file</title>
+<titlealts>
+<navtitle>Exporting and importing from a ZAPP file</navtitle>
+<searchtitle>Exporting and importing from a ZAPP file</searchtitle>
+</titlealts>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>ZAPP file property group</indexterm>
+<indexterm>property group<indexterm>importing from a ZAPP file</indexterm><indexterm>exporting to a
+ZAPP file</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>
+<title>What is a ZAPP file?</title>
+<p>A <term>ZAPP</term> file is a <filepath>.yaml</filepath> or <filepath>.json</filepath> file that
+specifies options for a Z APPlication (<q>ZAPP</q>) development environment. ZAPP files have several
+uses and functions, one of which is to define property group options in an <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full"/> or <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/WaziVS_full"/> development
+environment. For a full description of ZAPP files and how to define property group options in them,
+see <xref href="../../com.ibm.wazi.developer.vscode.doc/zapp.html" format="html" scope="peer"
+>Configure your applications with ZAPP files</xref> in the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/WaziVS_fam"/>
+documentation.</p>
+<p>Before <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"
+/> can make use of the options in a ZAPP file, it must import them into a property group. The import
+operation occurs automatically when you load a z/OS project that contains a ZAPP file into the
+workspace. You can also export property groups into ZAPP files. This topic explains how the product
+imports ZAPP files, and how to export property groups to ZAPP files.</p>
+<note>
+<div id="zapp-editor-issues">If you attempt to edit the ZAPP file and encounter any issues with the
+Eclipse YAML editor, you can open a bug report at <xref format="html"
+href="https://github.com/eclipse-wildwebdeveloper/wildwebdeveloper" scope="external"
+>https://github.com/eclipse-wildwebdeveloper/wildwebdeveloper</xref>.</div>
+</note>
+</section>
+<section>
+<title>How ZAPP files are imported into the workspace</title>
+<p>A ZAPP file that is in a local or remote z/OS project generates a property group automatically. A
+common use case illustrates this process:</p>
+<ol>
+<li>Add a Git repository that contains a ZAPP file to the <wintitle>Git Repositories</wintitle>
+view. For instructions, see <xref format="html"
+href="https://www.ibm.com/docs/en/developer-for-zos/latest?topic=guide-tasks#Adding_a_Repository"
+scope="external">Adding a Repository</xref>.</li>
+<li>Use the <uicontrol>Create a z/OS Project</uicontrol> menu action to add the repository to the
+<wintitle>z/OS Projects</wintitle> view. For instructions, see <xref
+href="tzdcmn042.dita#tzdcmn042/git-repo">Creating a z/OS project from a Git repository</xref>.<note
+type="important">The project must have only one ZAPP file in the root folder of the
+project.</note></li>
+<li>A read-only local property group is generated and added to the <wintitle>Property Group
+Manager</wintitle>.</li>
+</ol>
+<image placement="break" href="../images/importZapp.png">
+<alt>A property group imported from a ZAPP file</alt>
+</image>
+</section>
+<section>
+<title>Exporting to a ZAPP file</title>
+<ol>
+<li>In the <wintitle>Property Group Manager</wintitle>, right-click a local or remote property group
+and select <uicontrol>Generate ZAPP</uicontrol>.<image placement="break"
+href="../images/generateZapp.png">
+<alt>Generate ZAPP file from Property Groups window</alt>
+</image></li>
+<li>In the <wintitle>Generate ZAPP file from Property Groups</wintitle> window, click
+<uicontrol>Browse</uicontrol> to navigate to a project to save the ZAPP file in. Select the project
+that you want to apply the property group options to.</li>
+<li>From the file extension list, choose <filepath>.yaml</filepath> or <filepath>.json</filepath>.
+The file name must be <filepath>zapp</filepath> and cannot be altered.</li>
+<li>Click <uicontrol>OK</uicontrol>. The ZAPP file is generated and added to the project. The
+product also generates a copy of the property group and adds it to the <wintitle>Property Group
+Manager</wintitle>.<image placement="break" href="../images/generatedZapp.png">
+<alt>z/OS Projects view with a generated ZAPP file and Property Group Manager with a read-only
+property group</alt>
+</image><note type="tip">In the generated property group, all fields that were displayed from the
+ZAPP file are read-only. If you need to update any of the read-only fields, you must update them in
+the ZAPP file. The product keeps the ZAPP file and the generated property group in sync. All other
+property group options can be changed in the property group editor.</note></li>
+</ol>
+</section>
+<section>
+<title>Supported and unsupported ZAPP conversions</title>
+<p>When a ZAPP file is imported into the workspace, the product generates a property group based on
+the options defined in the ZAPP file. The conversion supports a defined set of options.</p>
+<p>The following ZAPP options are used when generating property groups:<table frame="all" rowsep="1"
+colsep="1" id="table_zx3_jxv_23c">
+<tgroup cols="2">
+<colspec colnum="1" colname="c1" colwidth="1*"/>
+<colspec colnum="2" colname="c2" colwidth="1*"/>
+<thead>
+<row>
+<entry>ZAPP option category</entry>
+<entry>Support</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>Local SYSLIB and COPYLIB</entry>
+<entry>Supported for all languages</entry>
+</row>
+<row>
+<entry>Local MACLIB</entry>
+<entry>Supported for HLASM</entry>
+</row>
+<row>
+<entry>Local PROCLIB</entry>
+<entry>Supported for JCL</entry>
+</row>
+<row>
+<entry>Remote SYSLIB and COPYLIB</entry>
+<entry>Supported for all languages</entry>
+</row>
+<row>
+<entry>Remote MACLIB</entry>
+<entry>Supported for HLASM</entry>
+</row>
+<row>
+<entry>Remote PROCLIB</entry>
+<entry>Supported for JCL</entry>
+</row>
+<row>
+<entry>Compiler options</entry>
+<entry>Supported for COBOL and PL/I</entry>
+</row>
+<row>
+<entry>Preprocessor settings</entry>
+<entry>Not supported</entry>
+</row>
+<row>
+<entry>Editor configuration options</entry>
+<entry>Not supported</entry>
+</row>
+<row>
+<entry>JCL substitution settings</entry>
+<entry>Not supported</entry>
+</row>
+<row>
+<entry>Runtime environment settings</entry>
+<entry>Not supported</entry>
+</row>
+</tbody>
+</tgroup>
+</table><note>
+<ul>
+<li>Options that are not supported are available only in property groups and must be configured
+directly in the property group editor.</li>
+<li>PROCLIB entries in a ZAPP file are used to resolve JCL procedure definitions. A libraries item
+with the name proclib can be defined for local or remote locations. When a ZAPP file is imported,
+PROCLIB entries are mapped to the corresponding property group settings.</li>
+</ul>
+</note></p>
+</section>
+</body>
+</topic>

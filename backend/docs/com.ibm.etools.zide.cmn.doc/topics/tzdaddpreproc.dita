@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdaddpreproc" rev="760" xml:lang="en-us">
+<title>Adding a preprocessor to a property group</title>
+<shortdesc>You can define a local, site-developed preprocessor and
+add it to a property group.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preprocessors<indexterm>adding to a property
+group</indexterm></indexterm><indexterm>adding multiple preprocessors
+to a property group</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must define a property group on a local or remote system.</prereq>
+<steps>
+<stepsection>To add a preprocessor to a property group:</stepsection>
+<step><cmd>Open a property group in the property group editor.</cmd>
+</step>
+<step><cmd>Open the <wintitle>Local Preprocessors</wintitle> page
+of <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local PLI
+Settings</wintitle>.</cmd></step>
+<step><cmd>In the <uicontrol>Preprocessors</uicontrol> section, click <uicontrol>New</uicontrol>.</cmd>
+<stepresult>The fields in the Preprocessor Options section are cleared.</stepresult>
+</step>
+<step><cmd>Complete the field. </cmd><info>See the context-sensitive
+help for a detailed description of the fields.</info></step>
+<step><cmd>Click Ctrl+S to save your changes or <uicontrol>New</uicontrol> to
+add another preprocessor to the list.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1337269567 0?>
+</task>
+<?Pub *0000001637?>

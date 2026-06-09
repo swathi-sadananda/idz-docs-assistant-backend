@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn118" xml:lang="en-us">
+<title>Viewing submitted jobs</title><?Pub Caret -2?>
+<shortdesc>You can either obtain or purge the output of jobs that
+are listed in the <wintitle>Remote Systems</wintitle> view or the <wintitle>Remote
+System Details</wintitle> view by selecting the Job ID or job step,
+and invoking actions from the menu. When you obtain the output of
+a job or step, you see details from the actual JES Log message.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>submitted jobs<indexterm>viewing</indexterm></indexterm>
+<indexterm>job output<indexterm>obtaining</indexterm></indexterm>
+<indexterm>obtaining job output</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Make sure that you are <xref href="tzdcmn032.dita">connected
+to the remote system</xref>.</prereq>
+<context><note type="restriction">For obtaining up-to-date output
+for active jobs, getting the active job output is not supported for
+JES3 releases earlier than <tm tmtype="reg" trademark="z/OS">z/OS</tm> V1R10.
+This limitation is caused by JES API limitations in the earlier releases.
+Use JES3 release <tm tmtype="reg" trademark="z/OS">z/OS</tm> V1R10
+or later.</note></context>
+<steps>
+<step><cmd>Open the <wintitle>Remote Systems</wintitle> view or the <wintitle>Remote
+System Details</wintitle> view.</cmd></step>
+<step><cmd>Expand the entries under the <uicontrol>JES</uicontrol> subsystem
+to locate the job you submitted or use the <uicontrol>Retrieve Job</uicontrol> menu
+item to find the job ID.</cmd><info><note type="tip">For quick access
+to your job in the <wintitle>Remote Systems</wintitle> view, click
+the <uicontrol>Locate Job</uicontrol> button on the job submission
+confirmation window.  This action highlights the job ID in the<uicontrol> Retrieved
+Jobs</uicontrol> filter of the JES subsystem.</note></info></step>
+<step><cmd>Look at the job status to see whether the job is still
+running.</cmd></step>
+<step><cmd>Refresh the user interface to recheck the job status.</cmd>
+<stepresult>When the job is completed, the job status is updated to
+reflect its state.</stepresult></step>
+<step><cmd>Choose the output that you want to display:  </cmd>
+<choices>
+<choice>If you want to obtain the output of the whole job, right-click
+the job, and click <uicontrol>Open</uicontrol>.</choice>
+<choice>If you want to obtain the output of a particular step, click
+the plus sign (+) beside a job ID, then select a step. Right-click
+and select <uicontrol>Open</uicontrol>.</choice>
+</choices>
+<stepresult>The output is displayed in the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX editor. You can use <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX commands and
+functions, such as viewing contents in hexadecimal mode, on the job
+output. For more information about the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX editor, see the related
+topics.</stepresult></step>
+</steps>
+<postreq>You can also perform the following tasks in the Remote Systems
+and <wintitle>Remote System Details</wintitle> views:<ul>
+<li>You can either obtain or purge held output by selecting the Job
+ID or job step and selecting actions from the menu.<note rev="7601">If
+you perform an operation (such as purge or cancel) on a job, you must
+manually refresh the <wintitle>Remote Systems</wintitle> view or <wintitle>Remote
+System Details</wintitle> view before the job status is updated.</note></li>
+<li>You can refresh jobs under particular job filters. The <uicontrol>Refresh</uicontrol> menu
+item appears on the job filters that belong to a connected system
+when you right-click the job filter. You can select multiple job filter
+nodes and refresh them at any time. A busy indicator displays until
+the refresh function is complete.</li>
+<li>You can sort jobs by the Job ID or any other column. Job IDs can
+be sorted in ascending or descending order by clicking the Job ID
+column.</li>
+<li>You can add, remove, and modify job filters from these views.</li>
+<li>To add a job filter, right-click <uicontrol>JES</uicontrol> in
+the <wintitle>Remote System Details</wintitle> view and select <menucascade>
+<uicontrol>New</uicontrol><uicontrol>New JES Job Filter</uicontrol>
+</menucascade>. The <wintitle>New JES Job Filter</wintitle> wizard
+opens. You can add a job filter when the system is connected or disconnected.</li>
+<li>To remove a job filter, right-click the job filter, click <uicontrol>Delete</uicontrol>,
+and confirm your delete on the removal windows. You can remove a job
+filter when the system is connected or disconnected.</li>
+<li>You can modify job filter properties from these views. For example,
+you can change the job filter output retrieval limit. The wizard page
+for modifying the job filter displays the system short name and the
+job filter name. After you modify the job filter, the job information
+is refreshed. </li>
+</ul>You can also monitor the status of submitted jobs using the Remote
+Monitor, as described in <xref href="tzdmonitor.dita" type="task" />.</postreq>
+</taskbody>
+<related-links>
+<link href="tzdcmn117.dita" type="task" />
+<link href="tzdcmn119.dita" type="task" />
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference" />
+<link format="dita" href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/tzdretrievejob.dita" scope="local" type="task" />
+</related-links>
+
+</task><?Pub *0000005642?><?tm 1665694011362 5 z/OS||z Systems ?>

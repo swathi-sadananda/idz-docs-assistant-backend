@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tza100" xml:lang="en-us">
+<title>Creating COBOL programs from a template</title><?Pub Caret -2?>
+<shortdesc>You can create new COBOL programs from a template.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>creating COBOL programs from a template</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>To specify the program location on a partitioned data set
+or a sequential data set, you must have an existing <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject.</prereq>
+<context><p>For more information about modifying the program template,
+see <xref href="tza10104.dita" scope="local" type="task"></xref>.</p><p otherprops="IDz">For more information about COBOL templates, see <xref format="dita"
+href="tza415.dita" scope="local" type="concept"/>.</p></context>
+<steps>
+<stepsection>To create a new COBOL program from a template, complete
+the following steps:</stepsection>
+<step><cmd>Click <menucascade><uicontrol>File</uicontrol><uicontrol>New</uicontrol>
+<uicontrol>Other</uicontrol></menucascade>.</cmd><info>You can also
+use the Ctrl+N key combination.</info></step>
+<step><cmd>Expand the <uicontrol>COBOL</uicontrol> category.</cmd>
+</step>
+<step><cmd>Select <uicontrol>COBOL Program</uicontrol>.</cmd></step>
+<step><cmd>Click <uicontrol>Next</uicontrol>.</cmd></step>
+<step><cmd>In the <wintitle>New COBOL Program</wintitle> panel, complete
+the following steps:</cmd>
+<substeps>
+<substep><cmd>Specify the program name.</cmd></substep>
+<substep><cmd>Specify the author of the program.</cmd></substep>
+<substep><cmd>Specify the program location. </cmd><info>The options
+are as follows:<dl><dlentry>
+<dt>Partitioned Data Set</dt>
+<dd>Specify the following parameters:<ul>
+<li><uicontrol>Remote location</uicontrol></li>
+<li><uicontrol>Host code page</uicontrol></li>
+<li><uicontrol>Data set name</uicontrol></li>
+<li><uicontrol>Member</uicontrol></li>
+<li><uicontrol>Allocate PDS if new</uicontrol></li>
+</ul>You can specify the data set characteristics in the next wizard
+panel.</dd>
+</dlentry><dlentry>
+<dt>Sequential Data Set</dt>
+<dd>Specify the following parameters:<ul>
+<li><uicontrol>Remote location</uicontrol></li>
+<li><uicontrol>Host code page</uicontrol></li>
+<li><uicontrol>Data set name</uicontrol></li>
+</ul>You can specify the data set characteristics in the next wizard
+panel.</dd>
+</dlentry><dlentry>
+<dt rev="rdz80">Local file</dt>
+<dd>You can specify the parent folder in the next wizard panel.</dd>
+</dlentry></dl></info></substep>
+<substep><cmd>You can also select the following options:</cmd><info><dl>
+<dlentry>
+<dt>Add comment to generated program</dt>
+<dd>When the program is generated, comment templates are added.</dd>
+</dlentry><dlentry>
+<dt>Open Snippets view when finished</dt>
+<dd>The <wintitle>Snippets</wintitle> view is a clipboard-like feature
+that inserts chunks of text into source editors. You can use this
+feature for chunks of code (for example, algorithms and data definitions)
+that you commonly insert into any source file.</dd>
+</dlentry></dl></info></substep>
+<substep><cmd>Click <uicontrol>Finish</uicontrol> to create the program
+or <uicontrol>Next</uicontrol> to continue to the next step.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>Perform one of the following actions:</cmd>
+<choices>
+<choice>For a local file, select the parent folder in the <wintitle>Local
+COBOL Program</wintitle> panel.</choice>
+<choice>For data set locations, select the data set characteristics
+in the <wintitle>Data Set Allocation</wintitle> panel:<dl><dlentry>
+<dt>Copy characteristics from an existing data set</dt>
+<dd>Select an existing connected data set.</dd>
+</dlentry><dlentry>
+<dt>Specify characteristics by usage type</dt>
+<dd>You can set the following characteristics:<parml><plentry>
+<pt>Category</pt>
+<pd><ul>
+<li><uicontrol>SOURCE</uicontrol></li>
+<li><uicontrol>LISTING</uicontrol></li>
+<li><uicontrol>Others</uicontrol></li>
+</ul></pd>
+</plentry><plentry>
+<pt>Type</pt>
+<pd><ul>
+<li><uicontrol>ASM</uicontrol></li>
+<li><uicontrol>C/C++</uicontrol></li>
+<li><uicontrol>COBOL</uicontrol></li>
+<li><uicontrol>JCL</uicontrol></li>
+<li><uicontrol>PL/I</uicontrol></li>
+<li><uicontrol>REXX</uicontrol></li>
+</ul></pd>
+</plentry></parml></dd>
+</dlentry><dlentry>
+<dt>Specify characteristics</dt>
+<dd>Select this option to set advanced allocation characteristics.</dd>
+</dlentry></dl></choice>
+</choices>
+<substeps>
+<substep><cmd>Click <uicontrol>Finish</uicontrol> to create the program
+or <uicontrol>Next</uicontrol> to continue to the next step.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd rev="rdz80">If you specified a data set in step 5, specify
+the characteristics for the new PDS or sequential file in the <wintitle>Data
+Set Characteristics</wintitle> panel:</cmd><info><ul>
+<li><uicontrol>Volume Serial</uicontrol></li>
+<li><uicontrol>Generic Unit</uicontrol></li>
+<li><uicontrol>Space Units</uicontrol></li>
+<li><uicontrol>Primary Quantity</uicontrol></li>
+<li><uicontrol>Secondary Quantity</uicontrol></li>
+<li><uicontrol>Directory Blocks</uicontrol></li>
+<li><uicontrol>Record Format</uicontrol></li>
+<li><uicontrol>Record Length</uicontrol></li>
+<li><uicontrol>Block Size</uicontrol></li>
+<li><uicontrol>Data Set Type</uicontrol></li>
+<li><uicontrol>Expiration Date</uicontrol></li>
+</ul></info>
+<substeps>
+<substep><cmd>Click <uicontrol>System Managed Storage</uicontrol> to
+specify the following parameters:</cmd><info><ul>
+<li><uicontrol>Data Class</uicontrol></li>
+<li><uicontrol>Storage Class</uicontrol></li>
+<li><uicontrol>Management Class</uicontrol></li>
+</ul></info></substep>
+<substep><cmd>Click <uicontrol>Finish</uicontrol> to create the program
+or <uicontrol>Next</uicontrol> to continue to the next step.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>In the <wintitle>COBOL Program Features</wintitle> panel,
+select the features to be used in the COBOL program.</cmd><info>Features
+provide a way to initially generate COBOL programs that perform operations
+similar to other programs. This initial generation is accomplished
+by naming and using common sections of code that go in each division.</info>
+<substeps>
+<substep rev="rdz80"><cmd>To set the features, select one or more
+of the following checkboxes:</cmd><info><sl outputclass="checkoff">
+<sli><uicontrol>Use BMS Maps</uicontrol></sli>
+<sli><uicontrol>Invoke CICS commands</uicontrol></sli>
+<sli><uicontrol>Use SQL statements</uicontrol></sli>
+<sli><uicontrol>Handle SQL error return codes</uicontrol></sli>
+</sl></info></substep>
+<substep><cmd>Click <uicontrol>Finish</uicontrol> to create the program,
+or select features and click <uicontrol>Next</uicontrol> to continue
+to the next step.</cmd></substep>
+</substeps>
+</step>
+<step importance="optional"><cmd>In the <wintitle>COBOL Compiler Options</wintitle> panel,
+override compiler options.</cmd></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol> to create the program.</cmd>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link
+href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdcmn024.dita"
+scope="local" type="concept"></link>
+</related-links>
+<?tm 1435190834 1?>
+</task>
+<?Pub *0000007312?>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn113" xml:lang="en-us">
+<title>Adding user variables and variable values for JCL substitution</title>
+<shortdesc>The windows for specifying user variables and variable
+values for JCL procedures allow for adding, editing, and removing
+user variables and values. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>JCL substitution<indexterm>adding user variables</indexterm><indexterm>variable
+values</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>The same process can be used to add user variables and values
+for JCL procedures on any of the <uicontrol>JCL Substitution</uicontrol> pages
+in the property group editor. The following process shows how to add
+user variables and variable values for a COBOL program.</context>
+<steps>
+<step><cmd>To add a user variable and parameter value for a JCL procedure
+that is used with a COBOL program, open the <uicontrol>COBOL Settings</uicontrol> page
+of the property group editor. </cmd></step>
+<step><cmd>In the left pane of the window, select <uicontrol>JCL Substitution</uicontrol>.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Add User Variable</uicontrol>.</cmd>
+<stepresult>The <wintitle>Add User Variable</wintitle> window opens.</stepresult>
+</step>
+<step><cmd>Type the variable name in the <uicontrol>Variable name</uicontrol> field.</cmd>
+</step>
+<step><cmd>Type the value of the variable in the <uicontrol>Variable
+value</uicontrol> field.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>. </cmd><info>The variable
+name and value are added to the table. </info></step>
+<step><cmd>Repeat steps 1-6 as necessary to add the rest of your variables
+and values.</cmd></step>
+</steps>
+<result><p>When you specify variable names and values on a <uicontrol>JCL
+Substitution</uicontrol> page and then generate JCL or trigger a remote
+build or syntax check, a <codeph>SET</codeph> statement is generated
+just before the <codeph>EXEC PROC</codeph> statement. </p></result>
+<example>Assume that you create the following variable names and values:<table>
+<tgroup cols="2"><colspec colname="col1"/><colspec colname="col2"/>
+<thead>
+<row>
+<entry colname="col1" valign="top">Variable Name</entry>
+<entry colname="col2" valign="top">Variable Value</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">PARM</entry>
+<entry colname="col2">LIST</entry>
+</row>
+<row>
+<entry colname="col1">ERRFDBK</entry>
+<entry colname="col2"><filepath>HLQ.IDECOBOL.XML</filepath></entry>
+</row>
+</tbody>
+</tgroup>
+</table>The following SET statement is generated:<codeblock>//SETSTMT SET PARM=LIST,
+//  ERRFDBK=HLQ.IDECOBOL.XML</codeblock></example>
+</taskbody>
+</task>
+<?Pub *0000002998?>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsubjobview" xml:lang="en-us">
+<title>Submitting a job from the <wintitle>Remote Systems</wintitle> or <wintitle>z/OS
+Projects</wintitle> view</title><?Pub Caret -2?>
+<shortdesc>You can submit a job from the <wintitle>Remote Systems</wintitle> or <wintitle>z/OS
+Projects</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>submitting a job</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><xref href="tzdcmn032.dita">Connect to the remote system</xref>.</prereq>
+<steps>
+<stepsection>To submit a job:</stepsection>
+<step><cmd>From the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS
+Projects</wintitle> view, expand the list of folders until you display
+the name of the JCL member of interest.</cmd></step>
+<step><cmd>Right-click the JCL member and click <uicontrol>Submit</uicontrol> <ph
+rev="80">or press Ctrl+Alt+M.</ph></cmd><stepresult> A job submission
+confirmation window opens.</stepresult></step>
+<step importance="optional"><cmd>To locate the job ID in the <wintitle>Remote
+Systems</wintitle> view, click <uicontrol>Locate Job</uicontrol>.</cmd>
+<stepresult> The job ID is highlighted in the <uicontrol>Retrieved
+Jobs</uicontrol> filter of the JES subsystem.</stepresult></step>
+<step importance="optional"><cmd>To be notified when the job completes,
+click <uicontrol>Notify</uicontrol>.</cmd><stepresult>A JES job notify
+background job is created and displayed in the lower right corner
+of the workbench status bar as follows:<image
+href="../images/jobNotification2.gif" placement="break"><alt>Job Notification</alt>
+</image>You can click the progress bar to open the job in the progress
+view. When the job completes a message is displayed in the lower left
+corner of the workbench status bar as follows:<image
+href="../images/jobNotification.gif" placement="break"><alt>Job completion
+message</alt></image>The message is also written to the <wintitle>Remote
+Console</wintitle>.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn118.dita" type="task"></link>
+<link href="tzdcmn119.dita" type="task"></link>
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference"/>
+</related-links>
+<?tm 1435190838 0?>
+</task>
+<?Pub *0000002464?>

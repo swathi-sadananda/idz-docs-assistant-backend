@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="clicert" translate="yes" xml:lang="en-us">
+<title>Setting preferences for client certificate authentication</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Client Certificates</navtitle>
+<searchtitle>Client Certificates</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>Client Certificates</wintitle> preference
+page to specify preferences for client certificate authentication.</shortdesc>
+<prolog>
+<metadata>
+<keywords><indexterm>client certificates<indexterm>preferences</indexterm></indexterm>
+<indexterm>preferences<indexterm>client certificates</indexterm></indexterm>
+<indexterm>JCE provider</indexterm><indexterm>keystore type</indexterm>
+<indexterm>hostIdMappings OID</indexterm><indexterm>Java Cryptography
+Extension</indexterm><indexterm>MS-CAPI</indexterm><indexterm>Microsoft
+Cryptography API</indexterm><indexterm>Java CSP</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>With client certificate authentication, you can authenticate
+with remote systems by using a security device such as an integrated
+circuit card (like a smart card). <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> relies
+on the <tm tmtype="tm" trademark="Java">Java</tm> Cryptographic Service
+Provider (<tm tmtype="tm" trademark="Java">Java</tm> CSP) for the
+retrieval of the certificates. The certificates are used solely for
+client certificate authentication. All updates to the certificates
+are outside the scope of <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword>.</context>
+<steps>
+<stepsection>To set up client certificates on your workstation:</stepsection>
+<step><cmd>Specify values for these fields:</cmd><info><dl><dlentry>
+<dt><uicontrol
+conref="uicontrol_conrefs.dita#uicontrol_conrefs/uicontrol_cryptographyProviderName"></uicontrol></dt>
+<dd>Specify the name of the security provider as provided by the vendor
+that supplies the cryptography software that is used to access the
+certificates.</dd>
+</dlentry><dlentry>
+<dt><uicontrol
+conref="uicontrol_conrefs.dita#uicontrol_conrefs/uicontrol_keyStoreType"></uicontrol></dt>
+<dd>Specify the keystore type that the <tm tmtype="tm" trademark="Java">Java</tm> CSP
+uses for retrieving the certificates that are stored in the <tm
+tmtype="tm" trademark="Microsoft">Microsoft</tm> Cryptography API
+(MS-CAPI) keystore. Use the name of the keystore that the security
+provider gives.</dd>
+</dlentry><dlentry>
+<dt><uicontrol
+conref="uicontrol_conrefs.dita#uicontrol_conrefs/uicontrol_oidValue"></uicontrol></dt>
+<dd>Specify the <apiname>hostIdMappings</apiname> OID. Do not change
+the value that is specified on the preferences page from the default
+value of 1.3.18.0.2.18.1 unless instructed otherwise by the systems
+administrator. The <apiname>hostIdMappings</apiname> extension (Object
+Identifier 1 3 18 0 2 18 1) is an <tm tmtype="reg" trademark="IBM">IBM</tm> extension
+that is also available for public use. The security software on the
+remote system (such as <tm tmtype="reg" trademark="RACF">RACF</tm>)
+automatically maps a valid certificate to the <tm tmtype="reg"
+trademark="RACF">RACF</tm> user ID that is provided in the extension.
+ Changing this value might cause the certificate authentication to
+fail.</dd>
+</dlentry></dl></info></step>
+<step rev="rdz91"><cmd>To ensure that each keystore has a unique alias,
+select the <uicontrol
+conref="uicontrol_conrefs.dita#uicontrol_conrefs/uicontrol_uniqueAliasesValue"></uicontrol> check
+box.</cmd><info><note>Select this option only when you are using the
+Sun MSCAPI <tm tmtype="tm" trademark="Java">Java</tm> Cryptography
+Extension (JCE) Provider and only when the aliases are not unique.
+Do not select this option for other JCE providers.</note></info></step>
+<step rev="rdz91"><cmd>To filter certificates by key usage, select
+one or more of these checkboxes that are listed under <uicontrol
+conref="uicontrol_conrefs.dita#uicontrol_conrefs/uicontrol_keyusageValue"></uicontrol>:</cmd>
+<info><sl outputclass="checkoff" translate="no">
+<sli><uicontrol>Digital signature</uicontrol></sli>
+<sli><uicontrol>Non-repudiation</uicontrol></sli>
+<sli><uicontrol>Key encipherment</uicontrol></sli>
+<sli><uicontrol>Data encipherment</uicontrol></sli>
+<sli><uicontrol>Key agreement</uicontrol></sli>
+<sli><uicontrol>Certificate signing</uicontrol></sli>
+<sli><uicontrol>CRL Signing</uicontrol></sli>
+<sli><uicontrol>Encipher only</uicontrol></sli>
+<sli><uicontrol>Decipher only</uicontrol></sli>
+</sl>For information about the types of key usage, see <q>Key usage
+extensions and extended key usage.</q><note type="tip">You can filter
+by key usage alone or combined with filtering by <apiname>hostIdMappings</apiname> OID.</note></info>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita" scope="peer"
+type="topic"><linktext>Opening the Preferences window</linktext></link>
+<link format="html"
+href="https://www.ibm.com/support/knowledgecenter/SSKTMJ_9.0.1/admin/conf_keyusageextensionsandextendedkeyusage_r.html"
+scope="external">
+<linktext>Key usage extensions and extended key usage</linktext>
+</link>
+</related-links>
+<?tm 1435190797 8?>
+</task>
+<?Pub *0000005559?>

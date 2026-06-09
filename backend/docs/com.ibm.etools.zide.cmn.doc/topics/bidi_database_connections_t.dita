@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<task id="bidi_database_connections_t" xml:lang="en-us">
+<title>Enabling bidirectional support for database connections</title>
+<titlealts>
+<navtitle>Enabling bidirectional support for database connections</navtitle>
+<searchtitle>Enabling bidirectional support for database connections</searchtitle>
+</titlealts>
+<shortdesc>To enable support for bidirectional languages on database connections, you must enable
+the Eclipse <uicontrol>Bidirectional development capabilities</uicontrol> preference and also set
+the text layout to Visual on the Default Bidi Settings page of the database connection
+properties.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>bidirectional support for database connections</indexterm>
+</keywords>
+<keywords>
+<indexterm>database connections<indexterm>bidirectional support</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<steps>
+<step>
+<cmd>In the <wintitle>Preferences</wintitle> window, select<uicontrol> Bidirectional
+Development</uicontrol>, and then select the <uicontrol>Bidirectional development
+capabilities</uicontrol> checkbox and click <uicontrol>Apply</uicontrol>.</cmd>
+</step>
+<step><cmd>In the <wintitle>Preferences</wintitle> window:</cmd><substeps>
+<substep><cmd>Expand <uicontrol>Data Management</uicontrol> and select <uicontrol>Bidirectional
+Settings</uicontrol>.</cmd></substep>
+<substep><cmd>Select the <uicontrol>Enable support for interpreting bidirectional data in database
+tables</uicontrol> checkbox.</cmd></substep>
+<substep><cmd>Click <uicontrol>Apply and Close</uicontrol>.</cmd></substep>
+</substeps></step>
+<step><cmd>In the <wintitle>Data</wintitle> perspective:</cmd><substeps>
+<substep><cmd>In the <wintitle>Data Source Explorer</wintitle> view, select a database
+connection.</cmd></substep>
+<substep><cmd>Right-click and select <uicontrol>Properties</uicontrol>.</cmd></substep>
+<substep><cmd>Select <uicontrol>Default Bidi Settings</uicontrol>, and then, from the
+<uicontrol>Text Layout</uicontrol> list, select <uicontrol>Visual</uicontrol>.</cmd></substep>
+<substep><cmd>Set the text direction, and then click <uicontrol>Apply and
+Close</uicontrol>.</cmd></substep>
+</substeps></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita" format="dita"
+scope="peer"><linktext>Opening the Preferences window</linktext></link>
+</related-links>
+</task>

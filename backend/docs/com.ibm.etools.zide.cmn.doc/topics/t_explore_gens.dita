@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_explore_gens" xml:lang="en-us">
+<title>Exploring PDSEv2 member generations</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Exploring PDSEv2 member generations</navtitle>
+<searchtitle>Exploring PDSEv2 member generations</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>PDSEv2 Generations</wintitle> view to
+browse, compare, copy, and delete partitioned data set extended version
+2 data set member generations.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm><wintitle>PDSEv2 Generations</wintitle> view</indexterm>
+</keywords>
+<keywords><indexterm>generations<indexterm>PDSEv2</indexterm><indexterm>browse</indexterm><indexterm>compare</indexterm><indexterm>copy</indexterm><indexterm>delete</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>browse<indexterm>PDSEv2 generations</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>compare<indexterm>PDSEv2 generations</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>copy<indexterm>PDSEv2 generations</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>delete<indexterm>PDSEv2 generations</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Connect to a remote system that supports PDSEv2.</prereq>
+<context><p>Partitioned data set extended version 2 (PDSEv2) can retain
+a number of generations of data set members. Generations of a PDSEv2
+member are identified by numbers. The current generation is always
+0, and previous generations are numbered with positive integers. If
+a PDSEv2 member has 10 generations, for example, the current generation
+is 0, the oldest generation is 1, and each subsequent generation number
+is incremented by 1. The following screen capture shows a PDSEv2 member
+with four generations. The most recent member generation is 0, the
+next most recent generation is 4, and the oldest generation is 2.<image
+href="../images/memberGenerationNumbers.gif" placement="break"><alt>Member
+generation numbers in the PDSEv2 Generations view</alt></image></p><p>When
+you allocate a PDSEv2, you specify the maximum number of generations.
+The default value is 0. When a PDSEv2 member exceeds the maximum number
+of generations, the oldest generation is discarded. Data set I/O functions,
+such as read, write, rename, or delete, operate on the current generation.</p><p>You
+can use the <wintitle>PDSEv2 Generations</wintitle> view to browse,
+compare, copy, and delete partitioned data set extended version 2
+data set member generations. For more information about PDSEv2 member
+generations, see the related topics.</p><note type="notice">Operations
+that you perform in the <wintitle>PDSEv2 Generations</wintitle> view
+are different from similarly named operations in the <wintitle>Remote
+Systems</wintitle> and <wintitle>z/OS Projects</wintitle> view.<ul>
+<li>The <uicontrol>Open</uicontrol>, <uicontrol>Browse</uicontrol>, <uicontrol>Delete</uicontrol>, <uicontrol>Copy
+to the New Generation</uicontrol>, <uicontrol>Copy</uicontrol>, and <uicontrol>Compare
+With</uicontrol> menu items in the <wintitle>PDSEv2 Generations</wintitle> view
+operate on the <term>selected generation</term>.<image
+href="../images/GenerationsViewMenu.gif" placement="break"><alt>Pop-up
+menu in the PDSEv2 Generations view</alt></image></li>
+<li>The <uicontrol>Open</uicontrol>, <uicontrol>Browse</uicontrol>, <uicontrol>Delete</uicontrol>, <uicontrol>Copy</uicontrol>,
+and <uicontrol>Compare With</uicontrol> menu items in the <wintitle>Remote
+Systems</wintitle> and <wintitle>z/OS Projects</wintitle> views operate
+on the <term>current generation</term>.<image
+href="../images/RemoteSystemMenu.gif" placement="break"><alt>Pop-up
+menu in Remote Systems view</alt></image></li>
+</ul>The <uicontrol>Delete</uicontrol> menu item, for example, in
+the <wintitle>PDSEv2 Generations</wintitle> view deletes only the
+selected generation. All other generations remain. The <uicontrol>Delete</uicontrol> menu
+item in the <wintitle>Remote Systems</wintitle> and <wintitle>z/OS
+Projects</wintitle> views deletes the current generation and all previous
+generations of the member. The <uicontrol>Rename</uicontrol> menu
+item in the <wintitle>Remote Systems</wintitle> and <wintitle>z/OS
+Projects</wintitle> views renames the current generation and deletes
+all previous generations of the member. The <uicontrol>Search</uicontrol> menu
+item in the <wintitle>Remote Systems</wintitle> and <wintitle>z/OS
+Projects</wintitle> views searches only the current generation.</note></context>
+<steps>
+<step><cmd>To open the <wintitle>PDSEv2 Generations</wintitle> view:</cmd>
+<substeps>
+<substep><cmd>In the <wintitle>Remote Systems</wintitle> view or the <wintitle>z/OS
+Projects</wintitle> view, select a PDSEv2 member.</cmd></substep>
+<substep><cmd>Right-click and select <uicontrol>PDSEv2 Generations</uicontrol>.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>Select one or more member generations, and then right-click
+and click one of these menu items. To select multiple member generations,
+press and hold the Ctrl key while you make your selections.</cmd>
+<choicetable>
+<chrow>
+<choption><uicontrol>Open</uicontrol></choption>
+<chdesc>Opens the selected generation in an editor. This menu item
+is enabled only when the current generation (0) is selected.</chdesc>
+</chrow>
+<chrow>
+<choption><uicontrol>Browse</uicontrol></choption>
+<chdesc>Opens the selected generation in read-only mode in an editor.
+You cannot modify the content in the editor.</chdesc></chrow>
+<chrow>
+<choption><uicontrol>Delete</uicontrol></choption>
+<chdesc>Deletes the selected generation and refreshes the view. Deleting
+a generation might create a gap in generation numbers. This menu item
+is available only when previous generations are selected.</chdesc>
+</chrow>
+<chrow>
+<choption><uicontrol>Copy to the New Generation</uicontrol></choption>
+<chdesc>Creates a new generation, copies the content of the selected
+generation to it, and refreshes the view. This menu item is enabled
+only when one generation is selected.</chdesc></chrow>
+<chrow>
+<choption><uicontrol>Copy</uicontrol></choption>
+<chdesc>Copies the content of the selected generation to the clipboard.
+The copy can be pasted as a new member of a partitioned data set in
+the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view.</chdesc>
+</chrow>
+<chrow>
+<choption><menucascade><uicontrol>Compare With</uicontrol><uicontrol>Each
+Other</uicontrol></menucascade></choption>
+<chdesc>Opens two generations in the comparison editor in read-only
+mode. This menu item is enabled only when two generations are selected.
+Older generations are opened in read-only mode.</chdesc></chrow>
+</choicetable>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="html"
+href="https://www.ibm.com/support/knowledgecenter/SSLTBW_2.1.0/com.ibm.zos.v2r1.idad400/pdsegenerations.htm"
+scope="external" type="reference"><linktext>PDSE Member Generations</linktext>
+</link>
+</related-links>
+<?tm 1435190814 0?>
+</task>
+<?Pub *0000007140?>

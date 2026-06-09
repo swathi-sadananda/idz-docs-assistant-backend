@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="t_connect_interactive_ispf_gateway" xml:lang="en-us">
+<title>Connecting to a remote system through the Interactive ISPF Gateway</title>
+<titlealts>
+<navtitle>Through Interactive ISPF Gateway</navtitle>
+<searchtitle>Connect to z/OS through Interactive ISPF Gateway</searchtitle>
+</titlealts>
+<shortdesc>Use this procedure to connect to a remote <tm trademark="z/OS" tmtype="reg">z/OS</tm> system when the Interactive ISPF Gateway is enabled on the server.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>remote system<indexterm>connecting<indexterm>Interactive ISPF
+Gateway</indexterm></indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>The <ph otherprops="IDz">product client and server must be version 9.5 or later, and the
+</ph>Interactive ISPF Gateway must be enabled on the server. For more information about enabling the
+Interactive ISPF Gateway on the server, see <ph otherprops="Wazi"><xref
+href="../../com.ibm.guide.hostconfig.doc/topics/rsedenvvars.dita"/> in</ph> the Host Configuration
+Guide.</section>
+<p>To minimize problems connecting to the remote system through the Interactive ISPF Gateway,
+observe these practices:<ul>
+<li>When you log on to TSO through the Interactive ISPF Gateway, do not specify a procedure that
+starts ISPF panel applications. </li>
+<li>As with regular TSO logon through a 3270 session, TSO stores the logon data in your security TSO
+segment, replacing what was already there. This situation can result in unexpected logon values if
+you uses different values to log on to a TSO session through 3270.</li>
+<li> If you use multiple Interactive ISPF Gateways simultaneously, or if you log on to TSO through
+3270 and through the Interactive ISPF Gateway simultaneously, TSO and ISPF must be set up to allow
+multiple simultaneous logons.</li>
+</ul></p>
+<ol>
+<li> In the <wintitle>Remote Systems</wintitle> view, select a <tm trademark="z/OS" tmtype="reg"
+>z/OS</tm> connection to a server that has the Interactive ISPF Gateway enabled. </li>
+<li id="connect"> Right-click and select <uicontrol>Connect</uicontrol>. </li>
+<li id="userid"> On the <wintitle>Enter Password</wintitle> window, type your user ID and password.
+<itemgroup>Passwords are limited to 30 characters.</itemgroup>
+</li>
+<li importance="optional" id="save"> To save your user ID and password, select the <uicontrol>Save
+user ID</uicontrol> and <uicontrol>Save password</uicontrol> checkboxes. <itemgroup>
+<note>The <uicontrol>Save password</uicontrol> checkbox can be disabled. For more information, see
+<option>#_RSE_JAVAOPTS="$_RSE_JAVAOPTS -DDENY_PASSWORD_SAVE</option> in the related topics.</note>
+</itemgroup>
+</li>
+<li id="ok"> Click <uicontrol>OK</uicontrol>. <itemgroup>If the remote system is configured to
+secure the connection with encrypted communication, the <wintitle>Import Host Certificate</wintitle>
+window opens. This window opens the first time that you attempt to connect to a remote system
+secured with encrypted communication. Subsequent connections use the imported host certificate. When
+a remote system connection is secured, the <wintitle>Properties</wintitle> view for the
+<wintitle>MVS Files</wintitle> subsystem displays <systemoutput>TSL Enabled</systemoutput>.
+</itemgroup>
+</li>
+<li importance="optional" id="ssl"> Click <uicontrol>Finish</uicontrol> to import the host
+certificate. <itemgroup>The <wintitle>TSO Logon</wintitle> window opens. The fields on this window
+are populated with default values. For more information about the values you need to specify, see
+your systems administrator. These values, or any new values that you enter, are saved on the
+<wintitle>TSO Logon</wintitle> page of the <wintitle>Properties for TSO Commands</wintitle>
+window.<note type="important">The procedure name you specify in the <uicontrol>Procedure</uicontrol>
+field cannot start an ISPF panel. If the procedure starts an ISPF panel, the logon request
+fails.</note><image placement="break" href="../images/t_connect_interactive_ispf_gateway_2.gif">
+<alt>TSO Logon window</alt>
+</image></itemgroup>
+</li>
+<li id="complete"> Click <uicontrol>OK</uicontrol>. <itemgroup>The connection is
+completed.</itemgroup>
+</li>
+<li importance="optional" id="ptc"> If the remote system is configured for push-to-client, you might
+be prompted to accept configuration updates. <itemgroup>For more information about updating
+configurations and preferences, see the related links.</itemgroup>
+</li>
+</ol>
+</body>
+<related-links>
+<link format="dita" href="tzdupdcfg.dita" scope="local" type="task" />
+<link href="https://www.ibm.com/support/knowledgecenter/en/SSBDYH_3.1.1/com.ibm.zexpl.config.hostconfig.doc/topics/opjstp.html" format="html" scope="external"><linktext>Defining extra Java startup parameters with
+_RSE_JAVAOPTS</linktext></link>
+</related-links>
+</topic><?tm 1665694005216 2 z/OS ?>

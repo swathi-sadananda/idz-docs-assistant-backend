@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<task id="tzdincpreproc" rev="760" xml:lang="en-us">
+<title>Using the local include preprocessor</title>
+<?Pub Caret -2?>
+<shortdesc>The local include preprocessor allows for the incorporation of external source files into
+programs by using include directives other than the PL/I directive %INCLUDE or COBOL COPY
+statement.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>include preprocessor</indexterm>
+</keywords>
+<keywords>
+<indexterm>PL/I include preprocessor</indexterm>
+</keywords>
+<keywords>
+<indexterm>PPINCL01</indexterm>
+</keywords>
+<keywords>
+<indexterm>++INC</indexterm>
+</keywords>
+<keywords>
+<indexterm>++INCLUDE</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>Create a local property group and associated it with a local COBOL or PL/I source file or
+local project.<note type="other"
+othertype="Limitation">The local include preprocessor is not supported on macOS clients.</note><p importance="optional">You can set content type
+associations for the include preprocessor to define which file extensions the preprocessor searches
+when it looks for copy and include files. For instructions for defining content type associations,
+see the related topics. When you define content type associations for the include preprocessor, the
+product passes an <codeph>EXT( )</codeph> parameter to the include preprocessor that contains a list
+of allowable file extensions, such as <codeph>EXT("cpy","inc","mac")</codeph>.</p></prereq>
+<context>The local include preprocessor is in the
+<filepath>com.ibm.systemz.preprocessor.include</filepath> plug-in that is unpacked when you install
+the product. You can use the local include preprocessor with an individual COBOL or PL/I program or
+a local <tm tmtype="reg" trademark="z/OS">z/OS</tm> project that contains one or more COBOL or PL/I
+programs. You can also use it alone or as part of a multi-preprocessor build operation.<ul>
+<li>When the include preprocessor is the only preprocessor that is called before a compilation, the
+input file is the COBOL or PL/I program that was selected for a <uicontrol>Syntax Check</uicontrol>
+or <uicontrol>Show Dependencies</uicontrol> operation.</li>
+<li>When the include processor is called for a project build, each COBOL or PL/I program in the
+project is processed and then compiled. The input file in this case is the current COBOL or PL/I
+source that is being processed.</li>
+<li>When the include preprocessor is called as part of a multiple-preprocessor operation and is
+started after a previous preprocessor, the input file to the include preprocessor is the output file
+from the previous active preprocessor. This file is the one listed in the <uicontrol>Preprocessor
+Output File Name</uicontrol> entry field of previous active preprocessors. For more information
+about setting up multiple-preprocessor operations, see <xref format="dita"
+href="tzdmultlocproc.dita" scope="local" type="task"/>. </li>
+</ul></context>
+<steps>
+<stepsection>To use the local include preprocessor:</stepsection>
+<step><cmd>Open the property group editor for the property group that is associated with the
+resource or project and open to the PL/I page.</cmd>
+</step>
+<step><cmd>From the list on the left, click <uicontrol>Local Preprocessor</uicontrol> to open the
+<wintitle>Local Preprocessor</wintitle> page.</cmd></step>
+<step><cmd>Click <uicontrol>New</uicontrol>.</cmd></step>
+<step><cmd>Complete the fields in the <uicontrol>Preprocessor Options</uicontrol> section of the
+<wintitle>Local Preprocessor</wintitle> page.</cmd><info>
+<dl>
+<dlentry>
+<dt><uicontrol>Preprocessor Description</uicontrol></dt>
+<dd>Type a description, such as <userinput>Include preprocessor</userinput>.</dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Preprocessor Name</uicontrol></dt>
+<dd>Type the name for the include preprocessor. The default value is
+<userinput>${bundle:com.ibm.systemz.preprocessor.include}/bin/<varname>operatingSystem</varname>/PPINCL01</userinput>,
+where <varname>operatingSystem</varname> is 
+<filepath>macos</filepath> or <filepath>win32</filepath>. The ${bundle} variable points to an
+unpacked bundle or plug-in. This variable is used to find the include preprocessor.<note
+otherprops="IDz">If you are using a property group created in V14.1.4 or an earlier release, then a
+<uicontrol>Preprocessor Name</uicontrol> that uses the ${INSTDIR} variable to point to the
+installation directory remains valid. For version 14.1.5, the PPINCL01 preprocessor is included both
+in the product installation path and in the
+<filepath>com.ibm.systemz.preprocessor.include</filepath> plug-in.</note></dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Preprocessor Arguments</uicontrol></dt>
+<dd>The include preprocessor can take the following arguments:<ul>
+<li><userinput>TRACE(ON|OFF)</userinput> On the workstation, this option provides more output to the
+TPF Remote Console. On 390 systems, this option provides more JES output. This output is intended
+for use by an <tm tmtype="reg" trademark="IBM">IBM</tm> technical support representative and must
+not be used during the regular course of development because it increases the amount of unwanted
+output and can decrease performance. If you must contact your <tm tmtype="reg" trademark="IBM"
+>IBM</tm> technical support representative for problem determination, you can copy this output it
+into your correspondence. The default for this option is TRACE(OFF). If the option is not specified,
+the default value is used.</li>
+<li>
+<userinput>FORMAT(ON|OFF)</userinput> On the workstation and on 390 systems, this option changes the
+readability of the XML generated for error messages. FORMAT(ON) causes the statement table to be
+written in six columns, making the XML file more readable. Setting this option significantly
+decreases the performance of parsing the XML file, causing operations to take longer. The default
+for this option is FORMAT(OFF). If the option is not specified, the default value is used.</li>
+<li><userinput>NOCOPY(ON|OFF)</userinput> If your source contains COPY REPLACE statements, the
+include preprocessor does not support processing the COPY REPLACE statement. The preprocessor does
+not replace strings in the copy file, nor does it find the member name that is specified in the COPY
+REPLACE statement. To avoid this problem, use the NOCOPY(ON) preprocessor option. This option allows
+the <parmname>-INC</parmname> and <parmname>++INCLUDE</parmname> statements to be processed, but the
+COPY statements and the <parmname>%INCLUDE</parmname> statements are not processed by the include
+preprocessor. The compiler processes those statements after the preprocessor. <p>If your source
+contains COPY statements with the member name enclosed in quotation marks or apostrophes, the
+include preprocessor does not support processing these statements. To avoid this problem, use the
+<parmname>NOCOPY(ON)</parmname> preprocessor option. This option allows the
+<parmname>-INC</parmname> and <parmname>++INCLUDE</parmname> statements to be processed, but the
+COPY statements and the <parmname>%INCLUDE</parmname> statements are not processed by the include
+preprocessor. The compiler processes those statements after the preprocessor.</p></li>
+<li rev="911"><userinput>CMT(ON|OFF)</userinput> When you specify <userinput>CMT(ON)</userinput> and
+open an expanded source file, the include preprocessor comments the original <codeph>COPY</codeph>
+or <codeph>INCLUDE</codeph> statement, places the copybook or include file into the source file, and
+then places another comment to indicate the end of the copybook or include file. The expanded
+copybook or include file and the comments look like this example:<codeblock>* COPY ABC
+01  XYZ     PIC X
+01  FIRST  PIC 9</codeblock></li>
+<li>For more information about showing expanded source, see the related topics.</li>
+</ul><note type="restriction">By
+default, this field is empty. If you define content types for the include preprocessor and you
+specify any preprocessor arguments in this field, then you must manually add any file extensions
+that you want the preprocessor to recognize by using the EXT( ) argument, such as
+<codeph>EXT("cpy","inc"," ")</codeph>.</note></dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Preprocessor Output File Name</uicontrol></dt>
+<dd>Specify a file name to be used for preprocessor output. If you omit this option, an output file
+name is generated.</dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Support Error Feedback</uicontrol></dt>
+<dd> Select this checkbox to log errors that are generated by the preprocessor. Selecting this
+checkbox enables the <uicontrol>Error Feedback XML File Name</uicontrol> field. This option is
+enabled by default.</dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Error Feedback XML File Name</uicontrol>
+</dt>
+<dd>Specify the unqualified name of the XML file to be generated for error feedback. If you omit
+this option, an error feedback XML file name is generated.</dd>
+</dlentry>
+<dlentry>
+<dt><uicontrol>Environment Variables (Set Statements)</uicontrol></dt>
+<dd> Specify any environment variables to be passed to the preprocessor. This field contains a value
+for the SYSLIB, but you must change the value to point to the folder that contains your include
+files. <ph rev="80">The path length for the SYSLIB environment variable is limited to 4 K. No error
+message is issued for lengths that exceed 4 K, but SYSLIB statements greater than 4 K might cause
+syntax check operations to end abnormally in the include preprocessor program.</ph></dd>
+</dlentry>
+</dl>
+</info></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdpscreate.dita" scope="local" type="topic"/>
+<link format="dita" href="tzdpsassign.dita" scope="local" type="topic"/>
+<link href="tzdcmn042.dita" type="topic"/>
+<link format="dita" href="tzdaddpreproc.dita" scope="local" type="task"/>
+</related-links>
+</task>

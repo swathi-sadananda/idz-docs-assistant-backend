@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdp2hmap" xml:lang="en-us">
+<title>Mapping local files to remote resources</title><?Pub Caret -2?>
+<shortdesc>To be able to synchronize files in a local project to a
+remote system, you first need to map the local files to remote resources
+(<tm tmtype="tm" trademark="MVS">MVS</tm> data sets or <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> System
+Services files).</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>mapping local files to remote resources</indexterm>
+<indexterm>remote synchronization<indexterm>mapping local files to
+remote resources</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><note type="attention">The remote synchronization function
+is deprecated.</note>Before you can map resources in a local project
+to resources on a remote system, you must allocate the remote data
+sets (on <tm tmtype="tm" trademark="MVS">MVS</tm>) or create the files
+(on <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm>) to which the local files are to be mapped.
+Local files must map to a sequential data set (for example, <filepath>HLQ.QUAL.SDSNAME</filepath>),
+a partitioned data set member (for example, <filepath>HLQ.QUAL(MEMNAME)</filepath>),
+or a <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> file (for example, <filepath>/path1/path2/file.ext</filepath>).
+For information about allocating <tm tmtype="tm" trademark="MVS">MVS</tm> data
+sets, see the related topics.</prereq>
+<steps>
+<stepsection>To map local files to remote resources, do these steps: </stepsection>
+<step><cmd>Double-click the <filepath>.RemoteMapping</filepath> file
+in the project.</cmd><stepresult>This action opens the Pushable Manifest
+Editor. This editor displays two tree views:<ul>
+<li>The tree of resources in the local project is on the left.</li>
+<li>The list of resources in the remote system to which the project
+is connected is on the right.</li>
+</ul></stepresult></step>
+<step><cmd>Map local and remote resources manually or by browsing
+to find them:</cmd>
+<choices>
+<choice>To enter them manually, do these steps:<ol>
+<li>Specify the name of the remote system in the <uicontrol>Host</uicontrol> field.</li>
+<li>Select either <tm tmtype="tm" trademark="MVS">MVS</tm> or <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> as
+the type for each resource you want to map.</li>
+<li>Enter the location (that is the <tm tmtype="tm" trademark="MVS">MVS</tm> data
+set name, member name, or <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> file name) of the remote resource.</li>
+</ol></choice>
+<choice>To map resources by browsing for them, do these steps: <ol>
+<li>Expand the tree on the right.</li>
+<li>Select the data set, member, or <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> file you would like a local
+resource to map to.</li>
+<li>Find the local resource on the left.</li>
+<li>Click the <uicontrol>&lt;---</uicontrol> button. You might have
+to expand the left side of the view to see this button. Clicking the
+button sets the Resource Type (<tm tmtype="tm" trademark="MVS">MVS</tm> or <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm>)
+and Remote location (remote data set, member, or file) and the Host
+(remote system).</li>
+</ol></choice>
+</choices>
+</step>
+<step><cmd>Save the <filepath>.RemoteMapping</filepath> file after
+you make changes.</cmd></step>
+</steps>
+<result>If you have automatic build enabled, any errors in the file are displayed in the
+<wintitle>Problems</wintitle> view. If automatic build is not enabled, you can invoke the build by
+choosing <menucascade>
+<uicontrol>Project</uicontrol>
+<uicontrol>Build Project</uicontrol>
+</menucascade> from the menu bar. If the <wintitle>Problems</wintitle> view is not visible, you can
+open it by selecting <uicontrol>Window</uicontrol><ph otherprops="IDz"> (on <tm trademark="Windows" tmtype="tm">Windows</tm>) or <uicontrol><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full_ui" /></uicontrol>
+(on macOS)</ph> &gt; <menucascade>
+<uicontrol>Show View</uicontrol>
+<uicontrol>Problems</uicontrol>
+</menucascade>. Clicking any error in the <wintitle>Problems</wintitle> view highlights the line
+that must be corrected in the Pushable Manifest Editor.<note>You must build the project to cause the
+<wintitle>Problems</wintitle> view to be updated. </note></result>
+</taskbody>
+<related-links>
+<link href="tzdcmn039.dita" type="task" />
+<link href="rzdp2herr.dita" type="reference" />
+</related-links>
+
+</task><?Pub *0000004736?><?tm 1665694017870 21 z/OS||Windows||UNIX||MVS ?>

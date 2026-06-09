@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<topic id="tzdpropgrp" xml:lang="en-us">
+<title>Defining resource options with property groups</title>
+<?Pub Caret -2?>
+<shortdesc>You can create property groups with property values that can be shared by <tm tmtype="tm"
+trademark="MVS">MVS</tm> subprojects, local <tm trademark="z/OS" tmtype="reg">z/OS</tm> projects,
+and their resources.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>property groups</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>
+<title>Overview</title>
+<p>System properties, subproject properties, local project properties, and resource properties make
+the development environment more convenient. You can build code at a keystroke, for example, because
+compilers and linkage editors are referenced as property values. Properties define the
+characteristics of a local or remote resource. They are created for each resource when the resource
+is first accessed and maintained until the resource is deleted. Disconnecting from a remote system
+makes the properties and resources unviewable, but the properties persist and can be viewed again
+when you reconnect to the system. </p>
+<p>When you modify a resource by an operation that you initiate from within the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> client, the
+properties of the resource are kept up-to-date. When you modify a resource from outside the client,
+such as by using ISPF, the properties of the resource become out of sync until they are refreshed
+from the workstation.</p>
+<p>You define resource properties in <term>property groups</term>, or named sets of property values
+that can be easily shared and reused among projects, systems, and users. A <term>property
+group</term> is a set of property values that you define for local <tm trademark="z/OS" tmtype="reg"
+>z/OS</tm> projects or specific local and remote resources. After the property group is defined, the
+values in it can be applied to the <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects,
+subprojects, and resources that you create on that system. Property groups provide a way to manage
+resource properties; share them across systems, projects, resources, and users; and maintain
+consistency in your development and build environment. The systems, projects, and resources you
+define have default properties. If no property groups are defined for a system, then the default
+properties are in effect for the system and its resources.</p>
+<p>You can, for example, define a property group with values required for debugging and apply that
+property group to your resources when you must debug a project or subproject. If you must change a
+specific property value, such as the JCL job card and data set, you can change this property in the
+property group, and the change is propagated to all resources associated with that property group. </p>
+<p>You can add, copy, delete, edit, import, and export property groups. Physical resources, such as
+systems, files, and data sets, and logical resources, such as projects and subprojects, can be
+associated with a property group that can be overridden for specific situations. Property groups are
+independent of each other. That is, changing property values in one property group has no effect on
+the property values in other property groups.</p>
+<p>Your site can create system property groups and default property values and make them available
+to users. When a connection is made to a system, if these files are found, then those property
+groups or default values are loaded and can be used. For instructions for creating default property
+values, see <xref href="tzdcfgpg.dita" type="task"/>.</p>
+</section>
+<section><title>How property groups are used</title>Many product components use property groups to
+set options for the functions they support. The topics in this section explain how to create, edit,
+and assign property groups to resources. For more information about the options in property groups
+and how they are used by various product components and functions, see these topics:<ul>
+<li><xref href="tzdbldopts.dita">Property group options for editors, compilers, preprocessors, and
+build functions</xref></li>
+<li><xref href="../../com.ibm.etools.rdz.language.editors.doc/topics/t_config_preproc_ext.dita"
+scope="peer">Property group options for configuring preprocessors</xref></li>
+<li otherprops="IDz"><xref href="../../com.ibm.cdz.remote.doc/topics/setcpp_editorproperties_t.dita"
+scope="peer">Property group options for the Remote C/C++ Editor</xref></li>
+<!--ZUnit Content Removed for Version 17.0.0
+https://jsw.ibm.com/browse/ZDPT-12578
+<li otherprops="IDz"><xref href="../../com.ibm.etools.rdz.zunit.doc/topics/t_set_property_group_options.dita" scope="peer">Property group options for ZUnit</xref></li>
+<li otherprops="IDz"><xref href="../../com.ibm.etools.rdz.zunit.doc/topics/r_propgroup_dyntestrunner.dita">Property group options for the ZUnit dynamic test runner</xref></li>-->
+<li><xref href="../../com.ibm.idz.dbbz.doc/topics/DBBz_create_pgroup.dita">Property groups for the
+Dependency Based Build Integration</xref></li>
+<li otherprops="ewm"><xref
+href="../../com.ibm.rational.rtc.rdz.doc/topics/rdzrtcz_int_local_projects.dita">Property groups for
+Engineering Workflow Management local projects</xref></li>
+</ul></section>
+<section id="open-property-group-manager"><title>The Property Group
+Manager</title><indexterm>Property Group Manager
+view<indexterm>opening</indexterm></indexterm><p>The <wintitle>Property Group Manager</wintitle>
+view provides tools for creating, deleting, editing, importing, exporting, and copying property
+groups. Because it is one of the default views in the <wintitle>z/OS Projects
+</wintitle>perspective, it is usually open when you start the workspace. If it is not already open,
+do these steps to open it:</p><ol>
+<li> From the menu bar, click <uicontrol>Window</uicontrol><ph otherprops="IDz"> (on <tm
+trademark="Windows" tmtype="tm">Windows</tm>) or <uicontrol><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full_ui"/></uicontrol>
+(on macOS)</ph> &gt; <menucascade>
+<uicontrol>Show View</uicontrol>
+<uicontrol>Other</uicontrol>
+</menucascade>. </li>
+<li>In the <wintitle>Show View</wintitle> window, expand <uicontrol>z/OS Project
+Views</uicontrol>.</li>
+<li>Select <uicontrol>Property Group Manager</uicontrol> and click <uicontrol>OK</uicontrol>.</li>
+</ol><p>The <wintitle>Property Group Manager</wintitle> opens. <ph rev="90">It lists all system
+connections, the property groups that are defined for each system, and the last edit date for each
+property group.</ph> You can sort the list by clicking the table headings. Property groups are
+sorted first by system name and then by property group name or description. To reverse the sort
+order, click the column heading again.</p></section>
+<p>For more information about creating and managing property groups, select one of the following
+topics:</p>
+</body>
+<related-links>
+<link href="tzdnewsubproject.dita" type="task"/>
+<link href="tzdcfgpg.dita" type="task"/>
+<link href="../../com.ibm.etools.rdz.installing.doc/topics/tzdmigprop.dita" type="topic"/>
+<link format="html" href="../../com.ibm.etools.getstart.wsentdev.doc/topics/propgrp.html" scope="peer" type="topic"><linktext>Quick task: Managing properties with property groups</linktext></link>
+</related-links>
+</topic><?Pub *0000004985?><?tm 1665694018244 5 z/OS||MVS ?>

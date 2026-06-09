@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="tzdzossol" xml:lang="en-us">
+<?acro_status spelling="0" grammar="0" style="2" terminology="0" terminologyAdmitted="0" reuse="0" total="2" score="56" status="green" ?>
+<title><tm tmtype="reg" trademark="z/OS">z/OS</tm> Solutions preferences</title>
+<shortdesc>Use the <wintitle>z/OS Solutions</wintitle> preference
+page to set general preferences for <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects,
+subprojects, and files.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS Solutions preferences</indexterm><indexterm>preferences<indexterm>z/OS
+Solutions</indexterm><indexterm>dependent files</indexterm><indexterm>system
+name</indexterm><indexterm>compare editor</indexterm></indexterm>
+<indexterm>dependent files</indexterm><indexterm>system name</indexterm>
+<indexterm>compare editor</indexterm></keywords>
+</metadata></prolog>
+<!--This topic was converted from a task topic to a reference topic.-->
+<refbody>
+<section><title>Purpose</title>You can set the following preferences
+on this page.<dl rev="751"><dlentry>
+<dt>Show warning message on opening files</dt>
+<dd>Opening large files can cause out-of-memory errors and a forced
+shutdown of the workbench. Select this option to check the size of
+any file that is being opened (sequential data sets, partitioned data
+set members, or local files) and display a warning if it is larger
+than the specified threshold. This warning gives you the option to
+cancel the file open operation or continue it. This option is enabled
+by default, and the default threshold is 2500 KB. To specify a different
+threshold, enter a value in the <uicontrol>Maximum file size to open
+without warning (in KB)</uicontrol> field.</dd>
+</dlentry><dlentry>
+<dt>Prompt to add dependent files to <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects</dt>
+<dd>Select this option to enable a prompt to add dependent files to <tm
+tmtype="tm" trademark="MVS">MVS</tm> subprojects. This prompt is displayed
+when you are editing a remote file and choose to open or browse a
+dependent file. </dd>
+</dlentry><dlentry>
+<dt>Display system name on remote subprojects (requires refresh on
+existing subprojects)</dt>
+<dd><tm tmtype="reg" trademark="z/OS">z/OS</tm> projects can contain
+subprojects with resources on multiple remote systems. Select this
+option to display the name of the remote system on which the resources
+of each subproject are located.</dd>
+</dlentry><dlentry rev="803">
+<dt> Always prompt for a load module name during build</dt>
+<dd>Select this option to enable <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> to
+prompt you for a load module name when you build a subproject, or
+when you generate JCL for a COBOL, PL/I, or Assembler file. Clear
+this option to disable this prompt. When this option is cleared, the
+name of the member that is nominated as the entry point is the load
+module name.</dd>
+</dlentry></dl></section>
+</refbody>
+<?tm 1435190798 5?>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+</reference><?Pub Caret 0?>
+<?Pub *0000003241?>

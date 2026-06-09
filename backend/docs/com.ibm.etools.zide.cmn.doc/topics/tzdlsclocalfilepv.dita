@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdlsclocalfilepv" xml:lang="en-us">
+<title>Local syntax check of a local file from the <wintitle>z/OS
+Projects</wintitle> view</title><?Pub Caret -2?>
+<shortdesc>Follow these steps to do a local syntax check of a local
+file from the <wintitle>z/OS Projects</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local syntax check<indexterm>local file from
+z/OS Projects or Enterprise Projects view</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>Before you check syntax locally,
+you must set local build options. You must do this action only once.</prereq>
+<steps>
+<step><cmd>Select the file that contains the code you want to check.</cmd>
+</step>
+<step><cmd>Right-click and select <uicontrol>Local Syntax Check</uicontrol> <ph
+rev="80">or press Ctrl+Alt+L.</ph> The local compiler is started to
+perform the syntax check.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190836 0?>
+</task>
+<?Pub *0000001376?>

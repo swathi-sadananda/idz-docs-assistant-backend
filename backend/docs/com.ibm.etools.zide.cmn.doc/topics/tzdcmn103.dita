@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdcmn103" xml:lang="en-us">
+<title>Working with search results</title>
+<?Pub Caret -2?>
+<shortdesc>After you complete a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> search, the
+results are reported in the <wintitle>Remote z/OS Search</wintitle> view. Use this view to sort or
+filter the search results, edit or browse returned files, refine the search results, or add returned
+files to a project or subproject.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>working with search results</indexterm>
+<indexterm>search results</indexterm>
+<indexterm>results<indexterm>search</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section id="prefs">
+<title>Setting preferences</title>
+<p>You can set several search options and preferences to control the content and function of the
+<wintitle>Remote z/OS Search</wintitle> view. To open the preferences page, select
+<uicontrol>Preferences</uicontrol> from the <wintitle>Remote z/OS Search</wintitle> view menu:<image
+placement="break" href="../images/remote_zos_search_preferences.jpg">
+<alt>Remote z/OS Search view menu</alt>
+</image></p>
+<ul>
+<li>To limit the number of search results that are returned in this view, use the <uicontrol>Search
+results limit</uicontrol> field of the <wintitle>Remote z/OS Search</wintitle> window. The default
+setting is 1000. If you search for data sets or data set members, this option limits the number of
+files returned. If you search for content strings, this option limits the number of strings
+returned.</li>
+<li>To control how often the search results are updated, use the <uicontrol>Result update
+frequency</uicontrol> control of the <wintitle>Remote z/OS Search</wintitle> preferences page. The
+search function returns search results incrementally so that you can begin working with search
+results before all results are returned.</li>
+<li>To enable a preview of the files that contain a returned content string, use the
+<uicontrol>Search result preview</uicontrol> fields of the <wintitle>Remote z/OS Search</wintitle>
+preferences page. These options control the response time for content previews and the number of
+lines of content to preview.</li>
+</ul>
+<p>For more information about these options and preferences, see the related links.</p>
+</section>
+<section id="results">
+<title>Working with results</title>
+<p>The <wintitle>Remote z/OS Search</wintitle> view opens automatically after a search request is
+issued. This view reports the results of searches in the following scopes:<ul>
+<li><tm tmtype="reg" trademark="z/OS">z/OS</tm> systems</li>
+<li><tm tmtype="reg" trademark="z/OS">z/OS</tm> projects</li>
+<li><tm tmtype="tm" trademark="MVS">MVS</tm> subprojects</li>
+</ul>A remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> search can return two types of results: <dl>
+<dlentry>
+<dt>Files</dt>
+<dd>If you enter a search string in the <uicontrol>With name</uicontrol> field of the
+<wintitle>Remote z/OS Search</wintitle> window, the search results contain a list of sequential data
+sets, partitioned data sets, or partitioned data set members.</dd>
+</dlentry>
+<dlentry>
+<dt>Content strings</dt>
+<dd>If you enter a search string in the <uicontrol>Content strings</uicontrol> field of the
+<wintitle>Remote z/OS Search</wintitle> window, the search results contain a list of content
+strings. The results are listed under the data set or partitioned data set member that contains the
+strings.</dd>
+</dlentry>
+</dl>How you work with search results differs according to the type of results returned. </p>
+</section>
+<section id="file">
+<title>Files</title>
+<ul id="file_steps">
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/sort"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/expand"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/hide"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/resize"> </li>
+<li>To filter the search results, type a string in the <uicontrol>Filter data set</uicontrol> or
+<uicontrol>Filter member</uicontrol> field. <itemgroup>This field filters the search results as you
+type. When the view shows the results of a file search, the filter string is compared to the value
+in the Name column for top-level results. Results that do not match the filter are removed from the
+view. The filter text is not applied to the second-level items, such as data set members of
+partitioned data set search results.<p>Filter string comparisons are not case-sensitive. If you use
+* in a filter string, it matches any string. Wildcard characters are not allowed in the high-level
+qualifier.</p>
+</itemgroup><itemgroup>If your original search request returns all sequential data sets that match
+<filepath>MYUSERID.*,</filepath> for example, you can type <userinput>MYUSERID.COBOL.*</userinput>
+in this field to show only the search results that match this filter.</itemgroup>
+</li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/view"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/add"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/previous"> </li>
+</ul>
+</section>
+<section id="content">
+<title>Content strings</title>
+<ul id="content_steps">
+<li>Expand the data set or data set member names to see the returned content strings.</li>
+<li>To preview the file that contains the returned string, hover the mouse pointer over the
+string.<itemgroup>Several lines that precede and follow the returned string open in a window. Use
+the <wintitle>Remote z/OS Search</wintitle> preferences page to control the size and timing of the
+preview window.</itemgroup></li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/sort"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/expand"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/hide"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/resize"> </li>
+<li>To filter the search results, type a string in the <uicontrol>Filter text</uicontrol>
+field.<itemgroup>This field filters the search results as you type. When the view shows the results
+of a content string search, the filter string is compared to the value in the Name column for
+top-level and second-level items. Results that do not match the filter are removed from the view. If
+the filter removes all second-level items, the parent top-level item is also removed. If any
+second-level item matches, the parent top-level item is retained. Filter string comparisons are not
+case-sensitive. If you use * in a filter string, it matches any string. </itemgroup><itemgroup>If
+your original search request returns all file content that matches <filepath>T*,</filepath> for
+example, you can type <userinput>TEST*</userinput> in this field to show only the search results
+that match this filter.</itemgroup></li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/view"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/add"> </li>
+<li conref="zide_task_conrefs.dita#zidetaskconrefs/previous"> </li>
+</ul>
+</section>
+</body>
+<?tm 1435190809 5?>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita" scope="peer"
+type="topic"><linktext>Opening the Preferences window</linktext></link>
+<link href="tzdcmn145.dita" type="topic"/>
+<link format="dita" href="t_export_search_results.dita" scope="local" type="task"/>
+<link href="tzdsavesearch.dita"/>
+<link format="dita" href="tzdsearchpref.dita" scope="local" type="task"/>
+</related-links>
+</topic>
+<?Pub *0000007629?>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="r_dschar" xml:lang="en-us">
+<title>Data set characteristics</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Data set characteristics</navtitle>
+<searchtitle>Data set characteristics</searchtitle>
+</titlealts>
+<shortdesc>You can define data set characteristics when you allocate
+a data set or view the characteristics of an existing data set in
+the data set <wintitle>Properties</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>data set characteristics</indexterm></keywords>
+<keywords><indexterm>characteristics<indexterm>data set</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The following list includes some of the data set characteristics
+that you can set when you allocate a data set or view in the <wintitle>Properties</wintitle> view
+when you select a data set name. In the <wintitle>Properties</wintitle> view,
+these characteristics are read-only. You cannot set values for them
+in this view. Not all of these characteristics are displayed in the <wintitle>Properties</wintitle> view.
+If System Managed Storage attributes are not available for a data
+set, the <wintitle>Properties</wintitle> view displays <systemoutput>**NONE**</systemoutput> for
+those attributes.</p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_vs"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_gu"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_su"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_sutrk"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_sub"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_sucyl"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_pq"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_secq"></p><p><uicontrol>Extents</uicontrol>:
+The number of contiguous tracks, cylinders, or blocks for primary
+and secondary space allocation. Reading or writing contiguous tracks
+is faster than reading or writing data that is scattered over the
+disk.</p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_db"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_rf"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_rl"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_bs"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_dst"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_nog"
+rev="95"></p><p><uicontrol>DSORG</uicontrol>: Data set organization,
+such as physical sequential (PS), partitioned (PO), or direct access
+(DA).</p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_ed"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_ea"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/aldw0003_sms"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/allw0004_dc"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/allw0004_sc"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/allw0004_mc"></p></section>
+</refbody>
+<related-links>
+<link format="dita" href="tzdcmn039.dita" scope="local" type="task">
+</link>
+<link format="html" href="../../../zosbasics/com.ibm.zos.zconcepts/zconc_datasetstruct.htm"
+scope="peer">
+<linktext>Quick reference: Data set structure (links to the z/OS basic skills information
+center)</linktext>
+</link>
+</related-links>
+<?tm 1435190812 0?>
+</reference>
+<?Pub *0000004447?>

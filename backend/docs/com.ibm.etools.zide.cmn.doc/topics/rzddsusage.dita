@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><reference id="rzddsusage" xml:lang="en-us">
+<title>Data set categories and types</title><?Pub Caret -2?>
+<shortdesc>You can allocate data sets with default characteristics
+assigned according to their categories and types.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>allocating data sets<indexterm>categories and
+types</indexterm></indexterm><indexterm>data set<indexterm>categories
+and types</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>When you allocate a new data set, one option that is presented
+on the <wintitle>New Data Set</wintitle> wizard is <uicontrol>Specify
+characteristics by usage type</uicontrol>. With this option, you can
+select a category and type for your new data set and assigns data
+set characteristics appropriate to your choice. The following table
+lists the categories and types available and their default data set
+characteristics.<table><title>Data set categories and types</title>
+<tgroup cols="2"><colspec colname="col1" /><colspec colname="col2" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Categories</entry>
+<entry colname="col2">Types</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><uicontrol>SOURCE</uicontrol></entry>
+<entry colname="col2"><dl><dlentry>
+<dt>ASM</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>C/C++</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>COBOL</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>JCL</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 200</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>PLI</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt><tm tmclass="IGNORE" tmtype="tm" trademark="REXX">REXX</tm></dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 200</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry></dl></entry>
+</row>
+<row>
+<entry colname="col1"><uicontrol>LISTING</uicontrol></entry>
+<entry colname="col2"><dl><dlentry>
+<dt>ASM</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 150</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FBA</li>
+<li><uicontrol>Record Length:</uicontrol> 133</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>BINDER</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 150</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FBA</li>
+<li><uicontrol>Record Length:</uicontrol> 121</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>COBOL</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 150</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FBA</li>
+<li><uicontrol>Record Length:</uicontrol> 133</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>PLIv3r1</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 150</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> VBA</li>
+<li><uicontrol>Record Length:</uicontrol> 132</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>PLIv3r2</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 150</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> VBA</li>
+<li><uicontrol>Record Length:</uicontrol> 137</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry></dl></entry>
+</row>
+<row>
+<entry colname="col1"><uicontrol>Others</uicontrol></entry>
+<entry colname="col2"><dl><dlentry>
+<dt>ADATA [ASM]</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> VB</li>
+<li><uicontrol>Record Length:</uicontrol> 8188</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>DBRMLIB</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>EQALANGX</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> VB</li>
+<li><uicontrol>Record Length:</uicontrol> 1562</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>LOADMOD</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> U</li>
+<li><uicontrol>Record Length:</uicontrol> 0</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>OBJECT</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol>80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>ProgramObject</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> U</li>
+<li><uicontrol>Record Length:</uicontrol> 0</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry>
+<dlentry>
+<dt>SYSEVENT</dt>
+<dd>
+<ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 300</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> VB</li>
+<li><uicontrol>Record Length:</uicontrol> 4095</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul>
+</dd>
+</dlentry><dlentry>
+<dt>SYSDEFSD</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 200</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> FB</li>
+<li><uicontrol>Record Length:</uicontrol> 80</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>XML</dt>
+<dd><ul>
+<li><uicontrol>Space units:</uicontrol> BLOCKS</li>
+<li><uicontrol>Primary Quantity:</uicontrol> 200</li>
+<li><uicontrol>Secondary Quantity:</uicontrol> 100</li>
+<li><uicontrol>Directory Blocks:</uicontrol> 20</li>
+<li><uicontrol>Record Format:</uicontrol> VBA</li>
+<li><uicontrol>Record Length:</uicontrol> 16383</li>
+<li><uicontrol>Block Size:</uicontrol> 0</li>
+</ul></dd>
+</dlentry></dl></entry>
+</row>
+</tbody>
+</tgroup>
+</table></section>
+</refbody>
+
+</reference><?Pub *0000010198?><?tm 1665694003208 1 REXX ?>

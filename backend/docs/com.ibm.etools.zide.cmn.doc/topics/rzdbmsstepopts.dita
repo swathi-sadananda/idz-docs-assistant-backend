@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdbmsstepopts" xml:lang="en-us">
+<title>BMS step options</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>BMS step options</navtitle>
+<searchtitle>BMS step options</searchtitle>
+</titlealts>
+<abstract><shortdesc>Use the <uicontrol>BMS Step Options</uicontrol> to edit the ASMMAP step of the
+ELAXFBMS JCL procedure that is included with the product.</shortdesc>Before you start, verify that
+the ELAXFBMS procedure is customized for your site. For more information about customizing the
+ELAXF* JCL procedures, see <xref href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita"
+scope="peer">ELAXF* remote build procedures</xref>.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>BMS step options</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used to generate JCL
+for the selected procedure.</section>
+<section>
+<title>Fields</title>
+<p><uicontrol>BMS Map Object Library:</uicontrol> The location where the generated physical map
+object is placed.</p>
+<p><uicontrol>BMS DSECT Step Name:</uicontrol> The name of the step for assembling macros to produce
+the symbolic map.</p>
+<p><uicontrol>BMS DSCTLIB Library:</uicontrol> The location where the symbolic map is placed.</p>
+<note>For fields that take partitioned data sets as their value, you can drag a partitioned data set
+name from the <wintitle>Remote Systems</wintitle> view, <wintitle>z/OS Projects</wintitle> view, or
+<wintitle>Remote z/OS Search</wintitle> results view and drop it in the field. To change the order
+of partitioned data set names in a field, place the cursor in the field and click <uicontrol>Change
+Order</uicontrol> from the menu. </note>
+</section>
+</refbody>
+<?tm 1435190820 0?>
+<related-links>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+</reference>
+<?Pub *0000001675?>

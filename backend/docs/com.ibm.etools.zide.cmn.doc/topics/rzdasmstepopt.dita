@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdasmstepopt" xml:lang="en-us">
+<title>Assembler step options</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Assembler step options</navtitle>
+<searchtitle>Assembler step options</searchtitle>
+</titlealts>
+<abstract><shortdesc>Use the <uicontrol>Assembler Step Options</uicontrol> to edit the ASM step of
+the ELAXFASM JCL procedure that is included with the product. </shortdesc> Before you start, verify
+that the ELAXFASM procedure is customized for your site. For more information about customizing the
+ELAXF* JCL procedures, see <xref href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita"
+scope="peer">ELAXF* remote build procedures</xref>.</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>Assembler step options</indexterm>
+<indexterm>ELAXFASM</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<section><title>Purpose</title>The options that you specify on this window are used to generate JCL
+for the selected procedure. <note type="tip">For fields that take partitioned data sets as their
+value, you can drag a partitioned data set name from the <wintitle>Remote Systems</wintitle> view,
+<ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, or <wintitle>Remote z/OS Search</wintitle>
+results view and drop it in the field. To change the order of partitioned data set names in a field,
+place the cursor in the field and click <uicontrol>Change Order</uicontrol> from the menu.
+</note></section>
+<section>
+<title>Fields</title>
+<div conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#asmp0001/asm-step-opts"/>
+</section>
+</refbody>
+<?tm 1435190820 0?>
+<related-links>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+</reference>
+<?Pub *0000003929?>

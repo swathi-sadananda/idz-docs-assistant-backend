@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="zidetaskconrefs" xml:lang="en-us">
+<title>zIDE task conrefs</title>
+<body>
+<ol>
+<!--The following steps are used in topics/tzdcmn103.dita-->
+<li id="sort">To sort the search results, click the heading
+of the column you want to sort the results by.<itemgroup>This
+action toggles the sort order between ascending and descending order.</itemgroup>
+</li>
+<li id="expand">To expand or collapse all search results, click
+the expand <image href="../icons/expand.gif" placement="inline"><alt>Expand
+button</alt></image> or collapse <image href="../icons/collapse.gif"
+placement="inline"><alt>Collapse button</alt></image> button.
+</li>
+<li id="hide">To add or remove columns from the view, click
+the edit button <image href="../icons/edit.gif" placement="inline"><alt>Edit
+button</alt></image>.</li><?Pub Caret 63?>
+<li id="resize">To change the size of a column, select a column
+divider and move it to the left or right.</li>
+<li id="view">To view the member or data set that contains
+a result string in read-only mode, select the <uicontrol>Browse</uicontrol> action
+from the pop-up menu. To edit a member or data set, select <uicontrol>Open</uicontrol>.
+<itemgroup><note>The Browse and Open actions appear only if you select
+a partitioned data set member or sequential file. They do not appear
+if you select a partitioned data set.</note></itemgroup></li>
+<li id="add">To add a data set, member, folder, or file to
+an existing subproject, select it and choose <uicontrol>Add to Subproject</uicontrol> from
+the menu.<itemgroup><note>The <uicontrol>Add to Subproject</uicontrol> action
+is available only if an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject
+is available for each <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+on which results are collected.</note></itemgroup><itemgroup><ul>
+<li>If you already have at least one <tm tmtype="tm" trademark="MVS">MVS</tm> subproject
+defined, a window opens to prompt you to choose a destination subproject. </li>
+<li>If you do not have any <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects
+defined, an error message prompts you to create a subproject before
+attempting the addition.</li>
+<li>If your selection was added to an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject,
+selecting <uicontrol>Add to Subproject</uicontrol> changes the focus
+to your selection on the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</li><?Pub Caret 22?>
+</ul></itemgroup></li>
+<li id="previous">To show the results of previous searches,
+click the drop-down menu and select a search result set from the list.
+</li>
+</ol>
+</body>
+</topic>
+<?Pub *0000002923?>

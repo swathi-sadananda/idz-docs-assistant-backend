@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcreatemem" xml:lang="en-us">
+<title>Creating a partitioned data set member in an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject</title><?Pub Caret -2?>
+<titlealts>
+<searchtitle>Creating a PDS member in an MVS subproject</searchtitle>
+</titlealts>
+<shortdesc>Follow these steps to create a new partitioned data set
+member in an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS subproject<indexterm>creating a partitioned
+data set member</indexterm></indexterm></keywords>
+<keywords><indexterm>subproject, MVS<indexterm>creating a partitioned
+data set member</indexterm></indexterm></keywords>
+<keywords><indexterm>member, partitioned data set<indexterm>creating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>partitioned data set member<indexterm>creating</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a remote system.</prereq>
+<steps>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+navigate to the partitioned data set in which you want to create the
+member.</cmd></step>
+<step><cmd>Select the data set, then select <uicontrol>New > Create
+Member.</uicontrol> </cmd><stepresult>A window opens, showing the
+data set name that the new member is created in. You are prompted
+to enter the new name.</stepresult></step>
+<step><cmd>Type the new member name and click <uicontrol>OK</uicontrol>. </cmd>
+<info>When you allocate data sets or create partitioned data set members
+from within an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject,
+the names are validated against <tm tmtype="reg" trademark="z/OS">z/OS</tm> naming
+rules to avoid spending the time that would be necessary to process
+allocation errors on <tm tmtype="reg" trademark="z/OS">z/OS</tm>.
+(The same type of validation is done for actions you perform in the <wintitle>Remote
+Systems</wintitle> view.)</info><stepresult>The new member name is
+displayed in the window.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn049.dita" type="topic"></link>
+<link href="tzdcmn051.dita" type="task"></link>
+<link href="tzdcmn082.dita" type="task"></link>
+</related-links>
+<?tm 1435190833 5?>
+</task>
+<?Pub *0000002472?>

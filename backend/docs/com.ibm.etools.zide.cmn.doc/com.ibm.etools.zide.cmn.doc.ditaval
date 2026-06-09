@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<val>
+<revprop action="include" color="blue" val="80"/>
+<revprop action="include" color="#0000a0" val="751">
+<startflag>
+<alt-text>Start 7.5.1 changes:</alt-text>
+</startflag>
+<endflag>
+<alt-text>End 7.5.1 changes:</alt-text>
+</endflag>
+</revprop>
+<revprop action="include" color="#0000a0" val="760">
+<startflag>
+<alt-text>Start 7.6.0 changes:</alt-text>
+</startflag>
+<endflag>
+<alt-text>End 7.6.0 changes</alt-text>
+</endflag>
+</revprop>
+<revprop action="include" val="edit1"/>
+<revprop action="include" color="teal" val="7601">
+<startflag>
+<alt-text>Start 7.6.0.1 changes:</alt-text>
+</startflag>
+<endflag>
+<alt-text>End 7.6.0.1 changes:</alt-text>
+</endflag>
+</revprop>
+<revprop action="include" val="rdz80"/>
+<revprop action="include" val="802"/>
+<revprop action="include" val="803"/>
+<revprop action="include" val="v85"/>
+<revprop action="include" val="851"/>
+<prop action="include" att="product" val="rdz"/>
+<revprop action="include" val="rdz85"/>
+<prop action="include" att="product" val="tpf"/>
+<revprop action="include" val="rdz803"/>
+<revprop action="include" val="susan"/>
+<revprop action="include" val="90"/>
+<revprop action="include" val="901"/>
+<revprop action="include" val="91"/>
+<revprop action="include" color="#ff0000" val="911"/>
+<prop action="include" att="product" val="SSQ2R2"/>
+<prop action="include" att="operatingsystem" val="windows"/>
+
+<prop action="include" att="operatingsystem" val="win32"/>
+<prop action="include" att="operatingsystem" val="win64"/>
+<revprop action="include" val="rdz91"/>
+<revprop action="include" color="red" val="95"/>
+<revprop action="include" val="140"/>
+<prop action="exclude" att="otherprops" val="not"/>
+<revprop action="include" val="14011"/>
+<revprop action="include" val="14011a"/>
+<revprop action="include" val="14011b"/>
+<revprop action="include" val="141"/>
+<revprop action="include" val="1413"/>
+<prop action="include" att="otherprops" val="IDz"/>
+<prop action="exclude" att="otherprops" val="editor_list_rdp"/>
+<prop action="exclude" att="otherprops" val="ZOT"/>
+<prop action="exclude" att="otherprops" val="ZOD"/>
+<prop action="include" att="otherprops" val="IDz_name"/>
+<prop action="exclude" att="otherprops" val="ZOD_name"/>
+<prop action="exclude" att="otherprops" val="ZOT_name"/>
+<revprop action="include" val="14.1.5"/>
+<revprop action="include" backcolor="gray" color="blue" val="14.2.1"/>
+<prop action="include" att="otherprops" val="Wazi"/>
+<revprop action="include" color="blue" val="150"/>
+<prop action="include" att="otherprops" val="ewm"/>
+</val>

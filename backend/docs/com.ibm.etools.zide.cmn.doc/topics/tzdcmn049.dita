@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdcmn049" xml:lang="en-us">
+<title>Adding a remote file to an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject</title>
+<?Pub Caret -2?>
+<shortdesc>You can add a remote file to an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject by
+using a menu command or by dragging a file.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>MVS subproject<indexterm>adding a remote file</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>subproject, MVS<indexterm>adding a remote file</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>
+<title>From the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view</title>
+<ol id="zproj_steps">
+<li>Select the <tm tmtype="tm" trademark="MVS">MVS</tm> subproject that you want to add resources
+to.</li>
+<li>From the menu, select <uicontrol>Add Resources</uicontrol>. <itemgroup>The <wintitle>Add
+Resources to Subproject</wintitle> window opens. It lists all data set filters that are defined for
+the remote system connection.</itemgroup></li>
+<li>To select resources to add: <ul>
+<li>Click <uicontrol>Select All</uicontrol> to add all resources to the subproject.</li>
+<li>Select the checkbox beside a filter name to add all resources from that filter.</li>
+<li>Click <uicontrol>+</uicontrol> to expand a filter and then select the checkbox beside a file
+name to add individual files.</li>
+</ul>
+</li>
+<li>Click <uicontrol>OK</uicontrol> to add your selections to the subproject.</li>
+</ol>
+</section>
+<section>
+<title>From the <wintitle>Remote Systems</wintitle> view</title>
+<ol id="remsys_steps">
+<li>To add a remote file to your <tm tmtype="tm" trademark="MVS">MVS</tm> subproject by using a menu
+command from the <wintitle>Remote Systems</wintitle> view:</li>
+<li>Switch to the <ph conref="zide_conrefs.dita#zide_conrefs/perspective"/> perspective. </li>
+<li>Select the <wintitle>Remote Systems</wintitle> view. </li>
+<li>Select the remote file that you want to add to your <tm tmtype="tm" trademark="MVS">MVS</tm>
+subproject.</li>
+<li>Right-click and select <uicontrol>Add to Subproject</uicontrol>. </li>
+<li>Type or select the subproject name and click <uicontrol>Finish</uicontrol>. </li>
+</ol>
+</section>
+<section>
+<title>Drag method</title>
+<ol id="drag_steps">
+<li>To add a remote file to an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject by using the drag
+method:</li>
+<li>Switch to the <ph conref="zide_conrefs.dita#zide_conrefs/perspective"/> perspective. </li>
+<li>Select the <wintitle>Remote Systems</wintitle> view. </li>
+<li>Select the remote file that you want to add to your <tm tmtype="tm" trademark="MVS">MVS</tm>
+subproject.</li>
+<li>Drag the file to an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject in the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view. <itemgroup>The subproject must be connected to
+the same <tm tmtype="tm" trademark="MVS">MVS</tm> system from which the file originated.</itemgroup>
+</li>
+</ol>
+</section>
+</body>
+<related-links>
+<link href="tzdcmn144.dita" type="task"/>
+<link href="tzdcmn050.dita" type="task"/>
+<link href="tzdcmn051.dita"/>
+</related-links>
+<?tm 1435190832 9?>
+</topic>
+<?Pub *0000003786?>

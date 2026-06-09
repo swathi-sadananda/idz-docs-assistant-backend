@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn086" xml:lang="en-us">
+<title>Generating JCL</title>
+<shortdesc>You might want to create a JCL file that can be viewed,
+edited, and submitted to the remote system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>generating JCL</indexterm><indexterm>JCL, generating</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must first connect to the remote system and set the properties
+that are required for JCL generation.</prereq>
+<context>You can generate JCL for a partitioned data set or a partitioned
+data set member in an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject
+or on a remote system. The generate JCL action is not supported for
+sequential data sets or <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects.</context>
+<steps>
+<stepsection>To generate JCL, follow these steps:</stepsection>
+<step><cmd>On a source partitioned data set member, right-click and
+select <uicontrol>Generate JCL</uicontrol> and one of the following
+menu options:</cmd><info><dl><dlentry>
+<dt>For Compile</dt>
+<dd>Generates JCL for compiling the selected program.</dd>
+</dlentry><dlentry>
+<dt>For Compile Link</dt>
+<dd>Generates JCL for compiling and linking the selected program.</dd>
+</dlentry><dlentry>
+<dt>For Compile Link Go</dt>
+<dd>Generates JCL for compiling, linking, and running the selected
+program.<note type="tip">When the <tm tmtype="reg" trademark="CICS">CICS</tm>, <tm tmtype="tm" trademark="IMS" tmclass="IGNORE">IMS</tm>, or <tm tmtype="reg" trademark="Db2">Db2</tm> runtime
+environments are configured in the <wintitle>COBOL Settings</wintitle> or <wintitle>PL/I
+Settings</wintitle> property group pages, the application is expected
+to run on the subsystem for which the properties are configured and
+the GO step is not generated. To generate a GO step, ensure that the <uicontrol>CICS</uicontrol>, <uicontrol>IMS</uicontrol>,
+or <uicontrol>Db2</uicontrol> options are not selected on the <wintitle>Runtime
+Environments</wintitle> page. If you require these options to be set,
+then generate the JCL by using either the <menucascade><uicontrol>Generate
+JCL</uicontrol><uicontrol>For Compile</uicontrol></menucascade> or <menucascade>
+<uicontrol>Generate JCL</uicontrol><uicontrol>For Compile Link</uicontrol>
+</menucascade> actions.</note></dd>
+</dlentry><dlentry>
+<dt>For Compile Link Debug</dt>
+<dd>Generates JCL for compiling, linking, and debugging the selected program. For information about
+setting runtime debug options for the generated JCL, see <xref href="../../com.ibm.debug.pdt.zpcl.doc/topics/r_runtime_debug_options.dita" scope="peer">Runtime
+debug options</xref>.</dd>
+</dlentry><dlentry>
+<dt>For Compile Link Code Coverage</dt>
+<dd>Generates JCL for compiling, linking, and running code coverage for the selected program. For
+information about setting runtime code coverage options for the generated JCL, see <xref href="../../com.ibm.debug.pdt.zpcl.doc/topics/r_runtime_code_coverage_options.dita" scope="peer">Runtime code coverage options</xref>.</dd>
+</dlentry></dl><?Pub Caret 1185?></info></step>
+<step><cmd>On the <wintitle>JCL Data Set and Member Name</wintitle> window,
+specify the job name, the data set where you want to save the JCL,
+and the name of the source program. </cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>A message
+window opens when JCL generation is complete. This message window
+includes <uicontrol>Submit</uicontrol> and <uicontrol>Open</uicontrol> buttons
+that you can use to submit the generated JCL or open the JCL in an
+editor session.</stepresult></step>
+<step><cmd>To submit the JCL, click <uicontrol>Submit</uicontrol>.</cmd>
+</step>
+<step><cmd>To open the generated JCL in an editor session, click <uicontrol>Open</uicontrol>.</cmd>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn117.dita" type="task" />
+<link href="tzdcmn118.dita" type="task" />
+<link href="tzdcmn119.dita" type="task" />
+<link href="tzdsubmitjcl.dita" type="task" />
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference" />
+<link href="tzdbldopts.dita" type="task" />
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic" />
+</related-links>
+
+</task><?Pub *0000004320?><?tm 1665694010531 5 MVS||IMS||Db2||CICS ?>

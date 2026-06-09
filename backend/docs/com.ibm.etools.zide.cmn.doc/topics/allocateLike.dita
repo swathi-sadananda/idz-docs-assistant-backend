@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="AllocateLike" xml:lang="en-us">
+<title>Allocating a VSAM file from an existing file</title><?Pub Caret -2?>
+<!--<titlealts><navtitle></navtitle><searchtitle></searchtitle></titlealts>-->
+<shortdesc>Use the <uicontrol>Allocate Like</uicontrol> menu item
+to allocate a VSAM file from an existing file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>allocate like</indexterm><indexterm>VSAM data
+set<indexterm>allocate like</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, select
+a VSAM file and right-click to display the menu.</cmd></step>
+<step><cmd>From the menu, select <uicontrol>Allocate Like</uicontrol>.</cmd>
+</step>
+<step><cmd>On the first page of the wizard:</cmd>
+<substeps>
+<substep><cmd>Accept the name that is provided in the <uicontrol>Connection
+Name</uicontrol> field.</cmd></substep>
+<substep><cmd>Select or type the high-level qualifier for the data
+set from the list.</cmd></substep>
+<substep><cmd>In the <uicontrol>Data Set Name</uicontrol> field, specify
+the name that follows the combination of high-level qualifier and
+period. </cmd><stepxmp>For example, if the high-level qualifier is <filepath>MYFILES</filepath> and
+if you want to allocate the data set <filepath>MYFILES.TEST.VSAM,</filepath> type
+the string <userinput>TEST.VSAM</userinput> in the <uicontrol>Data
+Set Name</uicontrol> field.</stepxmp></substep>
+<substep><cmd>Click <uicontrol>Next</uicontrol>.</cmd></substep>
+</substeps>
+</step>
+<step><cmd>On page two, click <uicontrol>Copy characteristics from
+an existing data set</uicontrol> and then click <uicontrol>Next</uicontrol> to
+specify allocation values such as VSAM file type, associations, and
+cluster attributes.</cmd></step>
+<step><cmd>Specify the allocation values. </cmd><info>See the related
+links for field-level help. For details on what values are required
+for different uses, contact your <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+administrator. </info></step>
+<step><cmd>To allocate the data set, click <uicontrol>Finish</uicontrol>.</cmd>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="allocateVSAM.dita" scope="local" type="task">
+</link>
+<link format="dita" href="rzvsamchar.dita" type="reference"></link>
+</related-links>
+<?tm 1435190812 1?>
+</task>
+<?Pub *0000002563?>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcfgpg" xml:lang="en-us">
+<title>Configuring default property values</title><?Pub Caret -2?>
+<shortdesc>You configure default property values for a remote system
+by creating a set of configuration files on that system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>default property values<indexterm>configuring</indexterm></indexterm>
+<indexterm>configuring<indexterm>default property values</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>You can configure default property values to define site-specific
+defaults for particular properties. When a user connects to a system
+for the first time, <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> determines
+whether a default values file exists on the system. If so, the default
+values are stored in the workspace so that whenever users create a
+property group for that system, the defaults from the default values
+file are used. For properties that do not have default values in the
+default values file, the default <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> property
+values are used. If the default values file on the system is updated
+after the default values are transferred to the workspace, users are
+prompted to replace the defaults in the workspace with the ones from
+the system.  If no default property values are configured for a remote
+system, the system uses default values that are included with <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword>. <p>To
+configure default property values on a remote system, you must define
+a default values file that defines property values that are available
+to users when they connect to the system for the first time.</p><p>When
+a user connects to a system for the first time, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+determines whether a default values file exists on the system. If
+so, the default values are stored in the workspace so that whenever
+users create a property group for that system, the defaults from the
+default values file are used. For properties that do not have default
+values in the default values file, the default <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> property
+values are used. If the default values file on the system is updated
+after the default values are transferred to the workspace, users are
+prompted to replace the defaults in the workspace with the ones from
+the system. The default values file is <filepath>defaultvalues.xml</filepath> and
+contains the following tags. It must be encoded in UTF-8. For the
+default values schema, see the related topics.<codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;DEFAULT-VALUES>
+  &lt;CATEGORY-INSTANCE>
+    &lt;CATEGORY><varname>category name</varname>&lt;/CATEGORY>
+    &lt;PROPERTY>
+      &lt;NAME><varname>property name</varname>&lt;/NAME>
+      &lt;VALUE><varname>property value</varname>&lt;/VALUE>
+    &lt;/PROPERTY>
+  &lt;/CATEGORY-INSTANCE>
+&lt;/DEFAULT-VALUES>
+
+</codeblock><dl><dlentry>
+<dt><codeph>&lt;CATEGORY-INSTANCE></codeph></dt>
+<dd>Specify one <codeph>&lt;CATEGORY-INSTANCE></codeph> tag for each
+property category for which you want to define default values. This
+tag can contain one &lt;CATEGORY> tag and one or more <codeph>&lt;PROPERTY></codeph> tags.</dd>
+</dlentry><dlentry>
+<dt><codeph>&lt;CATEGORY></codeph></dt>
+<dd>Specify the name of a property category for which you want to
+define default values. For a list of valid category names, see the
+related links. </dd>
+</dlentry><dlentry>
+<dt><codeph>&lt;PROPERTY></codeph></dt>
+<dd>Specify one or more property <codeph>&lt;NAME></codeph> and <codeph>&lt;VALUE></codeph> pairs
+to include for the category. For a list of valid property names, see
+the related links. </dd>
+</dlentry></dl> </p></context>
+</taskbody>
+<related-links>
+<link href="rzdpgdefschema.dita" type="reference"></link>
+<link href="rzdpgdefsamp.dita" type="reference"></link>
+<link href="rzdpgcats.dita" type="reference"></link>
+</related-links>
+<?tm 1435190794 0?>
+</task>
+<?Pub *0000004492?>

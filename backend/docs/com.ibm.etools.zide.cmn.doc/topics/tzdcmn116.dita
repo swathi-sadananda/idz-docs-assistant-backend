@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn116" xml:lang="en-us">
+<title>Searching the local file system</title>
+<titlealts>
+<navtitle>Searching the local file system</navtitle>
+</titlealts>
+<shortdesc>You can search your local file system for a file with a
+known name or pattern.</shortdesc>
+<taskbody>
+<prereq><p><indexterm>local file system<indexterm>searching</indexterm></indexterm></p>If
+you are going to work with local files in the <wintitle>Remote Systems</wintitle> view,
+you must first define a filter for the local file system. This filter
+might be mapped to the root of the system or to a specific location
+in the file system.</prereq>
+<steps>
+<step><cmd>Select the local file system that you want to search by
+clicking the file system in the tree view.</cmd></step>
+<step><cmd>Click <uicontrol>+</uicontrol> to expand <uicontrol>Local</uicontrol> and <uicontrol>Local
+Files</uicontrol>.</cmd><stepresult>The view lists filters for the
+local system. </stepresult></step>
+<step><cmd>Expand the appropriate filter to see your local folders
+and files. </cmd></step>
+<step><cmd>Select a folder to search and then click <uicontrol>Search</uicontrol> on
+the menu.</cmd><stepresult>The <wintitle>Search</wintitle> window
+opens with the <uicontrol>Folder</uicontrol> populated. The cursor
+is positioned at the <uicontrol>Search string (leave empty for file
+search)</uicontrol> field. </stepresult></step>
+<step><cmd>If you want to specify a name pattern to search, enter
+the name pattern in the <uicontrol>File name patterns</uicontrol> field
+and select <uicontrol>Search</uicontrol>.</cmd><stepresult>If the
+search is successful, the results are displayed. </stepresult></step>
+<step><cmd>Look through the list of results and select the file that
+you want to see.</cmd></step>
+<step><cmd>Click <uicontrol>Open</uicontrol>. </cmd><stepresult>The
+file opens in the editor.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn137.dita" type="task"></link>
+</related-links>
+</task>
+<?Pub *0000002201?>

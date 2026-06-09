@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdlsclocalfilelpex" xml:lang="en-us">
+<title>Local syntax check of a local file from an editor</title><?Pub
+Caret -2?>
+<shortdesc>Follow these steps to do a local syntax check of a local
+file from an editor.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local syntax check<indexterm>local file from
+an editor</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq><note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>Before you check syntax locally,
+you must set local build options. You must do this action only once.</prereq>
+<steps>
+<step><cmd>Open the file in the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor, COBOL Editor, or PL/I Editor.</cmd></step>
+<step><cmd>In the content area of the editor, right-click and select <uicontrol>Local
+Syntax Check</uicontrol> or <uicontrol>Save and Syntax Check</uicontrol>.
+The local compiler is started to perform the syntax check. When the
+syntax check is completed, any errors are displayed. Control is returned
+to you and you can continue working.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190836 1?>
+</task>
+<?Pub *0000001498?>

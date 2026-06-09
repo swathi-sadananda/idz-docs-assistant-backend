@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdmvsdetails" xml:lang="en-us">
+<title><tm tmtype="tm" trademark="MVS">MVS</tm> Files details view</title><?Pub
+Caret -2?>
+<titlealts>
+<searchtitle>MVS Files subsystem details view</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>MVS Files subsystem details</wintitle> view
+to explore <tm tmtype="tm" trademark="MVS">MVS</tm> files on the remote
+system</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS Files details</indexterm><indexterm>Remote
+System Details view<indexterm>MVS Files</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>From the <wintitle>Remote Systems</wintitle> view, you can
+open the <wintitle>MVS Files</wintitle> subsystem details view. This
+view displays details about the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem on the selected <tm tmtype="reg" trademark="z/OS">z/OS</tm> system. </context>
+<steps-unordered>
+<stepsection>To explore files in the <wintitle>MVS Files subsystem
+details</wintitle> view:</stepsection>
+<step><cmd>To open the <wintitle>MVS Files subsystem details</wintitle> view,
+do either of the following steps:</cmd>
+<substeps>
+<substep>
+<cmd>In the <wintitle>Remote Systems</wintitle> view, select <uicontrol>MVS Files</uicontrol> and
+then click <menucascade otherprops="ZOD ZOT">
+<uicontrol>Show In</uicontrol>
+<uicontrol>Remote Details View</uicontrol>
+</menucascade><uicontrol otherprops="IDz">Show in Table</uicontrol> on the menu.</cmd>
+</substep>
+<substep><cmd>From the <wintitle>Remote System Details</wintitle> view,
+double-click the name of the remote system to which you are connected,
+then double-click <uicontrol>MVS Files.</uicontrol></cmd></substep>
+</substeps>
+<stepresult>The <wintitle>MVS Files</wintitle> subsystem contains
+the following entries:<ul>
+<li><uicontrol>My Data Sets</uicontrol> - the default <tm tmtype="tm"
+trademark="MVS">MVS</tm> files filter.</li>
+<li><uicontrol>Retrieved Data Sets</uicontrol> - the last 10 data
+sets that you searched for by using the <uicontrol>Retrieve Data Set</uicontrol> action
+or added by using the allocate actions.</li>
+<li>Any other <tm tmtype="tm" trademark="MVS">MVS</tm> file filters
+that you created.</li>
+<li><uicontrol>My Favorites</uicontrol> - any search query results
+you saved by using the <wintitle>Remote z/OS Search</wintitle> view.</li>
+</ul></stepresult></step>
+<step><cmd>To drill down to the <tm tmtype="tm" trademark="MVS">MVS</tm> files
+located by each filter, double-click the filter in this view. </cmd>
+</step>
+<step><cmd>Use the following icons and menu to lock, unlock, or refresh
+the view, navigate through the files and filters in the view, change
+the columns that are displayed in the view, or locate a specific resource
+in the view.</cmd>
+<choicetable>
+<chrow>
+<choption><image href="../images/lockunlock.png" placement="inline">
+<alt>lock/unlock icon</alt></image> Lock and Unlock</choption>
+<chdesc>Toggles the selected resource between locked and unlocked
+status. If the resource is unlocked, selecting an object in the <wintitle>Remote
+Systems</wintitle> view updates the details view.</chdesc></chrow>
+<chrow>
+<choption><image href="../images/refresh.png" placement="inline"><alt>Refresh
+icon</alt></image> Refresh</choption>
+<chdesc>Refreshes the view.</chdesc></chrow>
+<chrow>
+<choption><image href="../images/backwardforward.png" placement="inline">
+<alt>backward/forward icon</alt></image> Move Backward and Move Forward</choption>
+<chdesc>Navigates backward and forward among pages you previously
+viewed.</chdesc></chrow>
+<chrow>
+<choption><image href="../images/moveup.png" placement="inline"><alt>Move
+up one level icon</alt></image> Move up one level</choption>
+<chdesc>Navigates up the hierarchy of <tm tmtype="tm" trademark="MVS">MVS</tm> Files,
+filters, data sets, and partitioned data set members.</chdesc></chrow>
+<chrow>
+<choption><image href="../images/customize.png" placement="inline"><alt>Customize
+table icon</alt></image> Customize Table</choption>
+<chdesc>Opens the <wintitle>Customize Table</wintitle> window, which
+you can use to add, remove, or reorder columns in the view.</chdesc>
+</chrow>
+<chrow>
+<choption>Select Input</choption>
+<chdesc>Switches to a different local or remote object.</chdesc></chrow>
+<chrow>
+<choption>Position To</choption>
+<chdesc>Locates the first resource that matches the string you enter
+in the <wintitle>Position To</wintitle> window.</chdesc></chrow>
+<chrow>
+<choption>Subset</choption>
+<chdesc>Opens the <wintitle>Subset</wintitle> window to select criteria
+for limiting the contents that are displayed in the view.</chdesc>
+</chrow>
+</choicetable>
+</step>
+</steps-unordered>
+</taskbody>
+<?tm 1435190810 8?>
+</task>
+<?Pub *0000004756?>

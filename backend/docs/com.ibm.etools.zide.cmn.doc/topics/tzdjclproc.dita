@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdjclproc" xml:lang="en-us">
+<title>Setting options for procedures and steps</title>
+<shortdesc>Use the <wintitle>Procedures and Steps</wintitle> pages of the property group editor to
+edit, add, remove, or alter the order of the supplied procedures and to display or edit step
+options.</shortdesc>
+<taskbody>
+<context>The <wintitle>Procedures and Steps</wintitle> page is available on the
+<uicontrol>Assembler</uicontrol>, <uicontrol>BMS</uicontrol>, <uicontrol>C/C++</uicontrol>,
+<uicontrol>COBOL</uicontrol>, <uicontrol>Link</uicontrol>, <uicontrol>MFS</uicontrol>,
+<uicontrol>PL/I</uicontrol>, <uicontrol>Run</uicontrol>, and <uicontrol>ZUnit</uicontrol> property
+group tabs.<p>The <uicontrol>Procedure and step table</uicontrol> lists the procedures and steps
+that are defined for the property group and their status. It includes the following columns:<ul>
+<li><uicontrol>Procedure Name:</uicontrol> Displays the name of the procedures that are used to
+generate the steps. By default, this option is set to match a procedure that is included with the
+product.</li>
+<li><uicontrol>Step Name:</uicontrol> Displays the step name that is specified in the procedure.
+This step name is used to generate any override DD cards or statements in the generated JCL, remote
+project builds, or remote syntax check. </li>
+<li><uicontrol>Status:</uicontrol> Indicates whether the step is enabled or disabled. This column is
+displayed only on the C/C++, COBOL, and PL/I <wintitle>Procedures and Steps</wintitle> page.</li>
+</ul></p></context>
+<steps-unordered>
+<stepsection>You can set the following options for procedures and steps:</stepsection>
+<step><cmd>Click a step name to display the options in the <uicontrol>Step options</uicontrol> area
+of the page.</cmd></step>
+<step><cmd>To change the status of a procedure, click the <uicontrol>Status</uicontrol> cell in that
+procedure's row and then click <uicontrol>Enable Procedure</uicontrol> or <uicontrol>Disable
+Procedure</uicontrol>.</cmd></step>
+<step><cmd>Click <uicontrol>Add Step</uicontrol> to add a step.</cmd>
+<stepresult>The <uicontrol>Add a New Step</uicontrol> area of the page opens.</stepresult></step>
+<step><cmd>Click <uicontrol>Remove Step</uicontrol> to remove the selected step from the
+procedure.</cmd></step>
+<step><cmd>Click <uicontrol>Up</uicontrol> or <uicontrol>Down</uicontrol> to move the selected step
+up or down in the procedure.</cmd></step>
+<step><cmd>When you select a step from the table, its name is displayed in the list below the table,
+and the options that are defined for it are displayed in the <uicontrol>Step options</uicontrol>
+area of the page. To edit the procedure or step name, click <uicontrol>Edit</uicontrol> beside the
+list and edit the names that are shown in the <uicontrol>Procedure Name</uicontrol> and
+<uicontrol>Step Name</uicontrol> fields.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Check Data Sets</uicontrol> to check that data sets specified in the
+step options field exist on the remote system.</cmd><info>
+<note>If a data set name contains the &lt;HLQ> variable substitution, <uicontrol>Check Data
+Sets</uicontrol> cannot validate the data set name.</note>
+<?Pub Caret 69?>
+</info></step>
+<step><cmd>For more information about specific step options, see the following topics:</cmd><info>
+<ul>
+<li><xref format="dita" href="rzdasmstepopt.dita" scope="local" type="reference"/></li>
+<li><xref format="dita" href="rzdbmsstepopts.dita" scope="local" type="reference"/></li>
+<li><xref href="../../com.ibm.mvs.projects.doc/topics/rmvsproperties1_t.dita">C and C++ step
+options</xref></li>
+<li><xref format="dita" href="rzdcicsstepopts.dita" scope="local" type="reference"/></li>
+<li><xref format="dita" href="rzdcobstepopt.dita" scope="local" type="reference"/></li>
+<li><xref format="dita" href="rzddb2stepopts.dita" scope="local" type="reference"/></li>
+<li><xref format="dita" href="rzdlinkstepopt.dita" scope="local" type="reference"/></li>
+<li><xref format="dita" href="mfs_step_opts_r.dita" scope="local" type="reference"/></li>
+<li><xref format="dita" href="rzdrunstepopts.dita" scope="local" type="reference"/></li>
+<!--ZUnit Content Removed for Version 17.0.0
+https://jsw.ibm.com/browse/ZDPT-12578
+<li><xref href="r_zunit_runner_step_options.dita">ZUnit test runner step options (Deprecated)</xref></li>-->
+</ul>
+</info></step>
+</steps-unordered>
+</taskbody>
+<related-links otherprops="Wazi">
+<link format="dita" href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita" scope="local"
+type="topic"/>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+<?tm 1337269565 0?>
+</task>
+<?Pub *0000005196?>

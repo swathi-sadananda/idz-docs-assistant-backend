@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdcmn044" xml:lang="en-us">
+<title>Remote-to-local file mapping</title><?Pub Caret -2?>
+<abstract>When you define a remote system, you <term>map</term> (associate)
+the lowest level qualifier in each <tm tmtype="tm" trademark="MVS">MVS</tm> data
+set name to a file name extension for the related workstation file
+in your subprojects. <shortdesc><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> includes
+a set of defined remote-to-local file mappings. The **COBOL file mapping,
+for example, maps <tm tmtype="tm" trademark="MVS">MVS</tm> files with
+a low-level qualifier <filepath>COBOL</filepath> to workstation files
+with the <filepath>.cbl</filepath> file name extension.</shortdesc></abstract>
+<prolog><metadata>
+<keywords><indexterm>mapping<indexterm>remote to local file</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>remote-to-local file mapping</indexterm></keywords>
+<keywords><indexterm>code pages</indexterm></keywords>
+<keywords><indexterm>file types</indexterm></keywords>
+<keywords><indexterm>transfer types</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<section><title>Mapping</title><p>A mapping indicates how <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> processes
+file transfers between <tm tmtype="reg" trademark="z/OS">z/OS</tm> and
+the workstation; specifically, the mapping indicates whether file
+transfers are based on an exchange of text (in which case ASCII/EBCDIC
+conversions occur) or on an exchange of binary data. A mapping also
+helps you to know, at a glance, the general purpose of a particular
+file.</p><p>If you use the same low-level qualifier for several data
+sets, the same mappings affect file transfers for each of those data
+sets. Given the mappings that are included in <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" />,
+for example, you can transfer members of the partitioned data sets <filepath>USER01.COBOL</filepath> and <filepath>USER01.TEST.COBOL</filepath> to
+and from workstation-based files that have the extension <filepath>.cbl</filepath>.</p><p>In
+the workbench, a preference that is related to the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor causes workstation-based
+files of a particular type to be treated in a particular way. In accordance
+with this preference, for example, a file of type <filepath>.cbl</filepath> is presented with the syntax highlighting that is appropriate to a COBOL source file. However, when the editor processes a <tm trademark="z/OS" tmtype="reg">z/OS</tm>-based data set, the mapping of a qualifier (like <filepath>COBOL</filepath>)
+to a file name extension (like <filepath>.cbl</filepath>) determines
+how the data set is processed.</p><p>You can see remote-to-local file
+mappings in the <wintitle>z/OS File System Mapping</wintitle> view
+of the <wintitle>z/OS Projects</wintitle> perspective. The following
+screen capture shows this view.</p><p> You can customize these mappings
+to match the naming conventions on your remote system either through
+the <wintitle>z/OS File System Mapping</wintitle> view or on the <uicontrol>Mapping</uicontrol> page
+of the <wintitle>Properties</wintitle> window. For more information
+about customizing these mappings, see <xref href="tzdcmn035.dita" />.
+For more information about the properties of file mappings, see the
+remaining sections of this topic.</p><image href="../images/file_mappings.gif" placement="break"><alt>z/OS file
+system mappings</alt></image></section>
+<section><title>Workstation file extension</title><p>The type of a
+file is indicated by its workstation file extension. In the mappings
+that are shown in the screen capture, a <filepath>.cbl</filepath> extension,
+for example, is considered to be a COBOL source file. Each file can
+have only one file type. JCL with embedded COBOL source, for example,
+is not supported. The default workstation file extension for a new
+mapping is undefined.</p></section>
+<section><title>Transfer mode</title><p>The transfer mode can be either
+text, indicating that a conversion between ASCII and EBCDIC occurs,
+or binary. The default transfer mode for a new mapping is text.</p></section>
+<section><title>Code page</title><p>Each file can have only one code
+page, but you can specify a group of files as having the same code
+page. When you specify code pages, specify both a local and a host
+code page and keep them consistent. The default host and local code
+pages for a new mapping are inherited from the system properties of
+the remote and local file systems.</p><p>For a list of supported host
+code pages, see <xref format="dita" href="rzdcodepages.dita" scope="local" type="reference" />. The availability of local
+code pages is based on the text file encodings that are supported
+by the Eclipse text editor. Be sure to specify code pages to be consistent
+with the compiler settings of your files.</p></section>
+<section><title>Priority</title><p>If a file matches more than one
+file mapping, the mapping with the highest priority is the one that
+applies. In the following example, a file named <filepath>MYUSERID.SOURCE.COBOL</filepath> matches
+both of these file mapping definitions. Because the **COBOL mapping
+has the higher priority, its properties are applied during a file
+transfer between the remote and local systems. It is transferred to
+the workstation with these file transfer properties: <filepath>.cbl</filepath> file
+extension, text transfer mode, inherited workstation code page.<datasimpletable>
+<simpletableSummary />
+<simpletable>
+<sthead>
+<stentry>Mapping Criterion</stentry>
+<stentry>Workstation File Extension</stentry>
+<stentry>Transfer Mode</stentry>
+<stentry>Host Code Page</stentry>
+<stentry>Local Code Page</stentry>
+<stentry>Priority</stentry>
+</sthead>
+<strow>
+<stentry>**COBOL</stentry>
+<stentry>.cbl</stentry>
+<stentry>default (text)</stentry>
+<stentry>default (inherited)</stentry>
+<stentry>default (inherited)</stentry>
+<stentry>1</stentry>
+</strow>
+<strow>
+<stentry>**COBOL*</stentry>
+<stentry>default (undefined)</stentry>
+<stentry>binary</stentry>
+<stentry>default (inherited)</stentry>
+<stentry>default (inherited)</stentry>
+<stentry>2</stentry>
+</strow>
+</simpletable>
+</datasimpletable></p><p /></section>
+</conbody>
+<related-links>
+<link href="tzdcmn035.dita" type="task" />
+<link format="dita" href="c_file_trans_code_page.dita" scope="local" type="concept" />
+</related-links>
+
+</concept><?Pub *0000006791?><?tm 1665694121874 6 z/OS||z Systems||MVS ?>

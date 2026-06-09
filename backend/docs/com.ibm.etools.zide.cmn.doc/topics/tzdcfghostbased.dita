@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcfghostbased" xml:lang="en-us">
+<title>Configuring host-based projects</title>
+<shortdesc>You configure host-based projects for a remote system by
+creating a set of configuration files on that system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>configuring</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>configuring<indexterm>host-based projects</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>When you connect to a remote system on which host-based project
+configuration files are present and set up correctly, the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"></ph> view is populated
+with host-based projects. You are not able to create workstation-based
+projects that are associated with that system. On systems where the
+configuration files are not present, clients do not have access to
+host-based projects. They can create their own workstation-based projects
+that are associated with the system.<p>To configure host-based projects
+on a remote system, you must define four types of configuration files.
+See the related topics for instructions and examples.</p><ul>
+<li><term>Project instance files</term> that are specific to a single
+user ID and point to reusable project definition files.</li>
+<li rev="901"><term rev="901">Project definition files</term> that
+define the structure and contents of the project and that multiple
+users can reuse.</li>
+<li rev="901"><term>Subproject definition files</term> that define
+the structure and contents of the subproject and that multiple users
+can reuse.</li>
+<li><term>Properties files</term> that define the subproject properties
+and that multiple subprojects can reuse.</li>
+</ul>Unlike other push-to-client configurations, you cannot create
+host-based projects on a model workspace and export them. Host-based
+projects must be created manually on the remote system.</context>
+<steps>
+<step><cmd>Ensure that push-to-client is enabled on the remote system
+on which you want to create host-based projects.</cmd></step><?Pub
+Caret -1?>
+<step>
+<cmd>In the remote system folder that is identified in the <parmname>pushtoclient.folder</parmname>
+parameter of the <filepath>pushtoclient.properties</filepath> file, create a subfolder that is named
+<filepath>projects</filepath>.</cmd>
+<stepxmp>For example, if you use the default folder name
+<filepath>/var/zexpl/pushtoclient</filepath>, then the folder for host-based project configuration
+files is <filepath>/var/zexpl/pushtoclient/projects</filepath>.</stepxmp>
+</step>
+<step><cmd>Add an entry to the <filepath>keymapping.xml</filepath> file
+that defines the location of host-based project configuration files
+on the remote system.</cmd><stepxmp>For example, to define<filepath>/var/zexpl/pushtoclient/projects</filepath> as the location
+for host-based project configuration files, add the following entry to the
+<filepath>keymapping.xml</filepath>
+file:<codeblock>&lt;location>
+   &lt;fileId>com.ibm.ftt.projects.configurations.HostBasedConfigurationFile&lt;/fileId>
+   &lt;containerPath>/var/zexpl/pushtoclient/projects&lt;/containerPath>
+   &lt;fileMask>&lt;/fileMask>
+   &lt;encoding>UTF-8&lt;/encoding>
+&lt;/location>
+</codeblock></stepxmp><info>For more information about the <filepath>keymapping.xml</filepath> file
+and an example of the file, see <xref href="rzdkeymap.dita"></xref>.</info>
+</step>
+<step>
+<cmd>Create project instance files, project definition files, subproject definition files, and
+subproject property files in the host-based project configuration file folder.</cmd>
+<stepxmp>For example, in the <filepath>/var/zexpl/pushtoclient/projects</filepath> folder on the
+remote system, create the project instance files, project definition files, subproject definition
+files, and subproject property files.</stepxmp>
+<info>For more information about how to tag these configuration files and for sample files, see the
+related topics.</info>
+</step>
+</steps>
+<!--<example>The following example shows a complete host-based project
+configuration on a remote system. It illustrates how the push-to-client
+and host-based project configuration files are structured and related
+to each other.</example>-->
+</taskbody>
+<related-links>
+<link href="czdhostbased.dita" type="concept"></link>
+<link href="tzdprojinstfile.dita" type="task"></link>
+<link href="tzdprojdeffile.dita" type="task"></link>
+<link href="tzdsubpdeffile.dita" type="task"></link>
+<link href="tzdsubppropfile.dita" type="task"></link>
+</related-links>
+<?tm 1287682654 0?>
+</task>
+<?Pub *0000004758?>

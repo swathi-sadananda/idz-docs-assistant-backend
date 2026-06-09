@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_compare_lang_pref" xml:lang="en-us">
+<title>Setting language-specific preferences for comparing files</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Setting language-specific preferences for comparing files</navtitle>
+<searchtitle>Compare/Patch preferences for COBOL, PL/I, and JCL files</searchtitle>
+</titlealts>
+<shortdesc>You can set language-specific preferences for comparing
+COBOL, PL/I, and JCL files from the menu bar, in the compare editor,
+or in the apply patch window.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Compare/Patch preferences<indexterm>COBOL</indexterm><indexterm>PL/I</indexterm><indexterm>JCL</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>COBOL<indexterm>Compare/Patch preferences</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>PL/I<indexterm>Compare/Patch preferences</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>JCL<indexterm>Compare/Patch preferences</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>ignore sequence area</indexterm></keywords>
+<keywords><indexterm>ignore information area</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>
+<p>This topic explains how to set preferences for the Text Compare editor. For information about how
+to set preferences for the LPEX compare tool, see <ul>
+<li><xref href="../../../SSQ2R2_14.1.0/com.ibm.lpex.doc.user/ui/ulcompare.htm" format="html"
+scope="peer">Preferences - Compare</xref>.</li>
+<!--<li><xref
+href="https://developer.ibm.com/mainframe/videos/quick-look-idz-ignore-case-comparison-feature/"
+format="html" scope="external">Ignore Case Comparison Feature</xref>.</li> -->
+</ul></p>
+</prereq>
+<context>Typically, the sequence number area is in the following locations:<ul>
+<li>COBOL files: Columns 1-6.</li>
+<li>PL/I files: Columns 73-80</li>
+<li>JCL files: Columns 73-80</li>
+</ul>In COBOL files, the information area is typically the eight columns
+to the right of margin R, for example, columns 73-80. For <tm
+tmtype="reg" trademark="AIX">AIX</tm> COBOL, the information area
+can span columns 73-80 or 253-260 depending on the SRCFORMAT option
+setting. For <tm tmtype="tm" trademark="MVS">MVS</tm> COBOL, the information
+area is columns 73-80.</context>
+<steps>
+<step><cmd>From the menu bar:</cmd>
+<substeps>
+<substep>
+<cmd>On the <wintitle>Preferences</wintitle> window, do one of these steps:</cmd>
+<info>
+<ul>
+<li>Click <menucascade>
+<uicontrol>COBOL</uicontrol>
+<uicontrol>Compare/Patch</uicontrol>
+</menucascade></li>
+<li>Click <menucascade>
+<uicontrol>PL/I</uicontrol>
+<uicontrol>Compare/Patch</uicontrol>
+</menucascade></li>
+<li>Click <menucascade>
+<uicontrol>JCL</uicontrol>
+<uicontrol>Compare/Patch</uicontrol>
+</menucascade></li>
+</ul>
+</info>
+</substep>
+<substep><cmd>To ignore the sequence area when you compare files,
+select <uicontrol>Ignore sequence area</uicontrol>.</cmd></substep>
+<substep>
+<note othertype="COBOL files" type="other">To ignore the information area when you compare files,
+select <uicontrol>Ignore information area</uicontrol>.</note>
+<cmd/>
+</substep>
+<substep>
+<note othertype="COBOL and PL/I files" type="other">To ignore case, select <uicontrol>Ignore
+case</uicontrol>.</note>
+<cmd/>
+</substep>
+<substep><cmd>To save the settings, click <uicontrol>OK</uicontrol>.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>On the toolbar or menu of the compare editor or on the
+menu of the apply patch window:</cmd>
+<substeps>
+<substep><cmd>To ignore the COBOL information area or the JCL and
+PL/I sequence area, click <image
+href="../images/ignore_identification_area.gif" placement="inline"><alt>Ignore
+information area</alt></image> or press Alt+Shift+].</cmd></substep>
+<substep>
+<note othertype="COBOL files" type="other">To ignore the COBOL sequence
+area, click <image href="../images/ignore_sequence_number_area.gif"
+placement="inline"><alt>Ignore sequence number area</alt></image> or
+press Alt+Shift+[.</note>
+<cmd></cmd></substep>
+</substeps>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="pdf" href="http://publibfp.boulder.ibm.com/epubs/pdf/c2754040.pdf" scope="external">
+<linktext>COBOL AIX Programming Reference (search for SRCFORMAT compiler option)</linktext>
+</link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1435190813 2?>
+</task>
+<?Pub *0000003832?>

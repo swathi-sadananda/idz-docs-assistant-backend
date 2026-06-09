@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdmvspref" xml:lang="en-us">
+<title>Setting preferences for <uicontrol>MVS Files</uicontrol> subsystems</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>MVS Files</navtitle>
+<searchtitle>MVS Files preferences</searchtitle>
+</titlealts>
+<shortdesc>Use the <wintitle>MVS Files</wintitle> page to set preferences
+for the <uicontrol>MVS Files</uicontrol> subsystem in the <wintitle>Remote
+Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preferences<indexterm>MVS files</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>MVS Files<indexterm>preferences</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To set preferences for <uicontrol>MVS Files</uicontrol>:</stepsection>
+<step>
+<cmd>In the <wintitle>Preferences</wintitle> window, navigate to <menucascade>
+<uicontrol>Remote Systems</uicontrol>
+<uicontrol>z/OS</uicontrol>
+<uicontrol>MVS Files</uicontrol>
+</menucascade> .</cmd>
+</step>
+<step><cmd>Use the <wintitle>MVS Files</wintitle> page to set the
+following preferences:</cmd><info><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_lpds"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_gdsl"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_sods"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_deps"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_swm"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_pma"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_smnsn"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_eecc"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_smpg"></p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_da">For
+more information about each of these actions, see the related topics.</p><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_dac">For
+more information about each of these actions, see the related topics.</p>
+<p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/enable_recall"/><p
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mfpf0001_lns"></p></info>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdlargepds.dita" type="task"></link>
+<link format="dita" href="tzdlargefilter.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdalias.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdgdg.dita" scope="local" type="task"></link>
+<link format="dita" href="tzdretrievemem.dita" scope="local" type="topic">
+</link>
+<link href="tzdcmn065.dita" type="topic"></link>
+<link
+href="https://www.ibm.com/support/knowledgecenter/en/SSBDYH_3.1.1/com.ibm.zexpl.config.hostconfig.doc/topics/opjstp.html"
+scope="external" type="task" format="html">
+<linktext>Defining extra Java startup parameters with _RSE_JAVAOPTS</linktext>
+</link>
+<link format="dita" href="rzdlogicalnot.dita" scope="local" type="task">
+</link>
+<link format="dita" href="c_non_standard_names.dita" scope="local"
+type="concept"></link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1435190797 0?>
+</task>
+<?Pub *0000003644?>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn140" xml:lang="en-us">
+<title>Task error reporting and handling</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Task error reporting and handling</navtitle>
+</titlealts>
+<shortdesc>Use the Remote Error List to find and correct syntax check
+and build errors.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>task error reporting</indexterm><indexterm>task
+error handling</indexterm></keywords>
+</metadata></prolog>
+<task id="syntaxerrors" xml:lang="en-us">
+<title>Syntax errors</title>
+<taskbody>
+<steps>
+<step><cmd>In the editor, right-click and select <uicontrol>Syntax
+check</uicontrol>.</cmd><stepresult>If the compilation fails, the
+error message is displayed, along with an indication of the line number
+in error in the source code.</stepresult></step>
+<step><cmd>Double-click the error message.</cmd><stepresult>The cursor
+is placed in the editor view at the line that contains the error.</stepresult>
+</step>
+<step><cmd>Make the correction and press CTRL+S to save the file.</cmd>
+</step>
+<step><cmd>Perform the syntax check again.</cmd><stepresult>If you
+fixed the problem, the error message is removed from the <wintitle>Remote
+Error List</wintitle>.</stepresult></step>
+</steps>
+</taskbody>
+</task>
+<task id="builderrors" xml:lang="en-us">
+<title>Build errors</title>
+<taskbody>
+<steps>
+<step><cmd>From the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+right-click the project and select <uicontrol>Rebuild Project</uicontrol>. </cmd>
+<stepresult>If the build fails, error messages are shown in the Remote
+Error List.</stepresult></step>
+<step><cmd>Make the required corrections. </cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to save your changes.</cmd>
+</step>
+<step><cmd>Perform the build again. </cmd><stepresult>If you fixed
+the problem, the error message is removed from the <wintitle>Remote
+Error List</wintitle>.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn054.dita" type="task"></link>
+<link href="tzdcmn056.dita" type="task"></link>
+</related-links>
+</task>
+<?tm 1435190839 0?>
+</task>
+<?Pub *0000002396?>

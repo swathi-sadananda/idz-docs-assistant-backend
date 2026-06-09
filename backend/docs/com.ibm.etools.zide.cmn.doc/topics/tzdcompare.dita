@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<task id="tzdcompare" xml:lang="en-us">
+<title>Comparing remote files</title>
+<?Pub Caret -2?>
+<shortdesc>You can compare up to three different files on a remote system and copy changes between
+the files.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>Compare with each other</indexterm>
+<indexterm>comparing remote files</indexterm>
+</keywords>
+<keywords>
+<indexterm>comparing MVS resources</indexterm>
+<indexterm>comparing remote MVS files</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>The Text Compare editor uses the Eclipse text editor to compare two files. You can set
+preferences for text comparisons by using the Compare/Patch preference settings. Open the
+<wintitle>Preferences</wintitle> window, and navigate to <menucascade>
+<uicontrol>General</uicontrol>
+<uicontrol>Compare/Patch</uicontrol>
+</menucascade>.
+<!--Using the settings on this page, you can, for example, select the <uicontrol>Ignore white space</uicontrol> option to control whether white-space changes are shown in the compare viewer. v14.1.2: Ignore white space is now a general editor option, not language specific.-->
+You can also set language-specific preferences for comparing COBOL, PL/I, and JCL files. For more
+information about setting text comparison preferences, see the related links.<p rev="751">When you
+compare remote files from the <wintitle>Remote Systems</wintitle> view or the <wintitle>z/OS
+Projects</wintitle> view, the compare editor performs several file checks to ensure that the files
+you are comparing are fundamentally compatible:<ul>
+<li>It checks the record format and record length parameters of the two files and displays a warning
+if these parameters are different. You have the option of continuing with the comparison or
+canceling it.</li>
+<li>If you edit either file, it checks the length of each record, and, when you save the file, warns
+you if any record exceeds the maximum record length.</li>
+<li>If you attempt to save a file with records that exceed the maximum record length, it warns you
+that the records are truncated and gives you an opportunity to correct the records. The warning
+message includes detailed information about line numbers that exceed the maximum record length.</li>
+<li>It checks whether either file is locked. Locked files are opened in read-only mode.</li>
+<li>Files that contain characters that cannot be transferred from the remote system to the local
+system and back with the given remote and local code pages are opened as read-only.</li>
+</ul></p></prereq>
+<steps>
+<stepsection>To compare files on a remote system, do these steps:</stepsection>
+<step><cmd>From the <wintitle>Remote Systems</wintitle> view or the <wintitle>z/OS
+Projects</wintitle> view, select the files and then select <menucascade>
+<uicontrol>Compare With</uicontrol><uicontrol>Each Other</uicontrol>
+</menucascade>.</cmd><stepresult>The files open side by side in the Text Compare editor. The editor
+locks both files during the Text Compare edit session. If it cannot obtain a lock on either file, it
+displays a warning message. You can either cancel the compare request or continue with it. If you
+choose to continue, the file that cannot be locked is opened in read-only mode. <ph rev="751">If the
+files differ either in record format or in record length, a window opens warning you of the
+difference and prompts you to continue with or cancel the comparison. When the files open, the text
+compare editor includes line numbers for each file to help you navigate through the files and locate
+any lines that exceed the maximum length.</ph></stepresult></step>
+<step><cmd>Perform any of the following actions on the files:</cmd>
+<choices>
+<choice>Click <image href="../images/copyl2r.gif" placement="inline">
+<alt>Copy All from Left to Right</alt></image> to copy all file changes from left to right.</choice>
+<choice>Click <image href="../images/copyr2l.gif" placement="inline">
+<alt>Copy All Nonconflicting Changes from Right to Left</alt></image> to copy all nonconflicting
+changes from right to left.</choice>
+<choice>Click <image href="../images/copycurl2r.gif" placement="inline">
+<alt>Copy Current Change from Left to Right</alt></image> to copy the current change from left to
+right.</choice>
+<choice>Click <image href="../images/copycurr2l.gif" placement="inline">
+<alt>Copy Current Change from Right to Left</alt></image> to copy the current change from right to
+left.</choice>
+<choice>Click <image href="../images/nextdif.gif" placement="inline">
+<alt>Next Difference</alt></image> to locate the next difference.</choice>
+<choice>Click <image href="../images/prevdif.gif" placement="inline">
+<alt>Previous Difference</alt></image> to locate the previous difference.</choice>
+<choice>Click <image href="../images/nextchg.gif" placement="inline">
+<alt>Next Change</alt></image> to locate the next change.<note><uicontrol>Next Change</uicontrol>
+locates a block of text that is different between the files that are being compared, and
+<uicontrol>Next Difference</uicontrol> locates a string within a change block.</note></choice>
+<choice>Click <image href="../images/prevchg.gif" placement="inline">
+<alt>Previous Change</alt></image> to locate the previous change.</choice>
+</choices>
+<info rev="751">The compare function uses the Eclipse text editor rather than the <tm tmtype="reg"
+trademark="z Systems">z Systems</tm> LPEX Editor, so capabilities that are available when you edit
+remote files by using <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor, such as
+display of visual record boundaries, are not available.</info>
+</step>
+<step><cmd>To save your changes, press Ctrl+S.</cmd><stepresult rev="751">If the changes you made
+cause any records to exceed the maximum length, a File Truncation Warning opens. You can click
+<uicontrol>Details</uicontrol> on this warning to see a list of specific line numbers and their
+length.</stepresult></step>
+<step><cmd>Click <uicontrol>Yes</uicontrol> to save your files or <uicontrol>No</uicontrol> to
+return to the text compare edit session.</cmd><info>If you click <uicontrol>No</uicontrol> to return
+to the edit session, the editor positions the file at the first line that exceeds the record length
+limit.</info></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+<link format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/tasks/tasks-68b.htm" type="task"
+scope="peer"><linktext>Setting preferences for comparing files</linktext>
+</link>
+<link format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-11.htm"
+type="reference" scope="peer"><linktext>Compare/Patch preferences</linktext></link>
+<link format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-25.htm" rev="751"
+type="reference" scope="peer"><linktext>Compare editor</linktext></link>
+<link href="t_compare_lang_pref.dita" type="task"/>
+</related-links>
+</task><?Pub *0000007069?><?tm 1665694012635 2 z Systems ?>

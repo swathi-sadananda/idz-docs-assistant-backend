@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn155" xml:lang="en-us">
+<title>Using separate <tm tmtype="reg" trademark="CICS">CICS</tm> translation
+for COBOL with <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server for <tm tmtype="reg" trademark="OS/390">OS/390</tm></title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Using separate CICS translation</navtitle>
+</titlealts>
+<shortdesc>You can use <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server for <tm tmtype="reg" trademark="OS/390">OS/390</tm> to provide
+translation support for <codeph>EXEC CICS</codeph> statements. Using
+separate <tm tmtype="reg" trademark="CICS">CICS</tm> translation causes <tm
+tmtype="reg" trademark="CICS">CICS</tm> translation to occur as a
+separate step from the compilation step. The translation results are
+handed off to your compiler.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>COBOL<indexterm>CICS Transaction Server for OS/390<indexterm>Using
+separate CICS translation</indexterm></indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><p>Use integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translation
+whenever possible, but you might need to use separate <tm tmtype="reg"
+trademark="CICS">CICS</tm> translation under the following circumstances:</p><ul>
+<li>You prefer to use your own tested and stable JCL to compile your
+code</li>
+<li>Your compiler does not support integrated <tm tmtype="reg"
+trademark="CICS">CICS</tm> translation</li>
+</ul><p><note>To perform syntax checks on your code, you must use
+integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translation. </note></p><p><note
+type="important">The syntax check feature does not support separate <tm
+tmtype="reg" trademark="CICS">CICS</tm> translation. </note></p></context>
+<steps>
+<stepsection>To enable separate <tm tmtype="reg" trademark="CICS">CICS</tm> translation
+support for COBOL using <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction
+Server for <tm tmtype="reg" trademark="OS/390">OS/390</tm>, follow
+these steps:</stepsection>
+<step><cmd>Select the resource and then select <menucascade><uicontrol>Property
+Group</uicontrol><uicontrol>Edit Associated Property Group</uicontrol>
+</menucascade></cmd></step>
+<step><cmd>To open the <wintitle>COBOL Settings</wintitle> page, click
+the <uicontrol>COBOL</uicontrol> tab.</cmd></step>
+<step><cmd>Click <uicontrol>Runtime Environments</uicontrol>.</cmd>
+</step>
+<step><cmd>Select the <uicontrol>CICS</uicontrol> checkbox.</cmd>
+<stepresult>This action activates the list beside the checkbox.</stepresult>
+</step>
+<step><cmd>From the list, select the level of <tm tmtype="reg"
+trademark="CICS">CICS</tm> installed on the remote system.</cmd></step>
+<step><cmd>Click <uicontrol>Procedures and Steps</uicontrol>.</cmd>
+</step>
+<step><cmd>Enable the translation procedure: </cmd>
+<substeps>
+<substep><cmd>Select <uicontrol>ELAXFCOT</uicontrol>.</cmd></substep>
+<substep><cmd>Click <uicontrol>Enable Procedure</uicontrol>.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>Click + next to ELAXFCOT.</cmd></step>
+<step><cmd>Select <uicontrol>COBTRAN</uicontrol>.</cmd></step>
+<step><cmd>Click <uicontrol>Edit</uicontrol>.</cmd><stepresult>The <tm
+tmtype="reg" trademark="CICS">CICS</tm> Translator Step Options area
+opens.</stepresult></step>
+<step><cmd>Complete the following fields and save the settings:</cmd>
+<info><dl><dlentry>
+<dt>Options</dt>
+<dd>Options to be set for your <tm tmtype="reg" trademark="CICS">CICS</tm> translator.
+Leave this field blank to use the default of options.</dd>
+</dlentry><dlentry>
+<dt>SYSLIB</dt>
+<dd>The location of your system library (SYSLIB). You must specify
+this location so that your <tm tmtype="reg" trademark="CICS">CICS</tm> translator
+can find your copy members.</dd>
+</dlentry></dl></info></step>
+<step><cmd>Click the <uicontrol>Link</uicontrol> tab.</cmd></step>
+<step><cmd>Expand <uicontrol>ELAXFLNK</uicontrol>, select <uicontrol>LINK</uicontrol>.</cmd>
+<stepresult>The <wintitle>Link Step Options</wintitle> window opens.</stepresult>
+</step>
+<step><cmd>Complete the following fields and click <uicontrol>OK:</uicontrol></cmd>
+<info><dl><dlentry>
+<dt>Link libraries</dt>
+<dd>Libraries to link your code with. For example, you might specify
+CICSVS.TS230.CICS.SDFHLOAD and CEEV2R10.SCEELKED in this field.</dd>
+</dlentry><dlentry>
+<dt>Use specified link instructions</dt>
+<dd>Select this option and enter the following link-edit control cards
+in the field: <ul>
+<li><userinput>INCLUDE SYSLIB(DFHELII)</userinput></li>
+<li><userinput>INCLUDE SYSLIB(EQUDCCXT)</userinput></li>
+<li><userinput>ORDER CEESTART</userinput></li>
+</ul>  </dd>
+</dlentry><dlentry>
+<dt>Load module location</dt>
+<dd>The data set where your load module must be placed after the link
+step. For example, you might set this location to the DFHRPL concatenation
+of your <tm tmtype="reg" trademark="CICS">CICS</tm> region.</dd>
+</dlentry></dl></info></step>
+<step><cmd>Close and save the property group.</cmd></step>
+</steps>
+<postreq>You can now run remote syntax checks and perform remote builds
+on your configured resource. You can specify more copy libraries,
+compiler options, and JCL in the compiler properties pane by clicking
++ to expand <uicontrol>ELAXFCOT</uicontrol>, clicking <uicontrol>COBTRAN</uicontrol>,
+and then clicking <uicontrol>Edit step.</uicontrol></postreq>
+</taskbody>
+<related-links>
+<link format="dita" href="../../com.ibm.guide.hostconfig.doc/topics/elaxf.dita" scope="local"
+type="topic" otherprops="Wazi"/>
+<link href="rzdembed.dita" type="reference"></link>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+<?tm 1435190858 20?>
+</task>
+<?Pub *0000005889?>

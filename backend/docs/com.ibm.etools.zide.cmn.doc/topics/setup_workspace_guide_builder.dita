@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN" "ibm-topic.dtd">
+<topic id="setup_workspace_guide_builder" xml:lang="en-us">
+<title>Setting up a workspace for editing source code</title>
+<titlealts>
+<navtitle>Setting up a workspace for editing: Guide Builder</navtitle>
+<searchtitle>Setting up a workspace for editing source code</searchtitle>
+</titlealts>
+<abstract>
+<shortdesc>Learn what tasks you need to complete to setup your workspace for editing source code in
+COBOL, High-level Assembler, JCL, PL/I, or REXX. Link to the guide builder to generate a
+documentation set that is tailored to these tasks and to the languages and editors you need to
+use.</shortdesc>
+<p>When you are ready to generate the documentation set, click this link: <xref
+href="https://guide-builder-test.dcs.ibm.com/guide/viewer/guide:SSQ2R2_16.0.0_test:f2bba784-57c6-45b7-9c83-ff0fab574815?preview=true"
+scope="external" format="html">
+<image placement="break" href="../images/guide-builder.png" align="center"
+alt="Open Guide Builder to Build My Documentation"/>
+</xref></p>
+</abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>workspace<indexterm>setting up for editing</indexterm></indexterm>
+<indexterm>source code development<indexterm>setting up for</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<section>
+<title id="roadmap">Roadmap</title>
+<p>Use this roadmap to understand the tasks you must complete to set up a development environment
+for editing source code.</p>
+<ol>
+<li>Verify installed components: If your source files are located in a Git repository<ph
+otherprops="ewm">, a <tm trademark="Jazz" tmtype="reg">Jazz</tm> repository, </ph> or on <tm
+trademark="z/OS" tmtype="reg">z/OS</tm> under control of the CA Endevor source control manager,
+verify that the features necessary for accessing these repositories are installed with the
+product.</li>
+<li>Set up access to your source files. The product provides access to source files in several locations:<ul>
+<li>On a <tm trademark="z/OS" tmtype="reg">z/OS</tm> system</li>
+<li>In a Git repository</li>
+<li otherprops="ewm">In a <tm trademark="Jazz" tmtype="reg">Jazz</tm> repository</li>
+<li>On a <tm trademark="z/OS" tmtype="reg">z/OS</tm> system under CA Endevor source control</li>
+</ul></li>
+<li>Set up a property group. Property groups provide a central location for settings that the
+product uses for several functions. Some common tasks in the development of COBOL applications use
+property group settings:<ul>
+<li>Editing source files</li>
+<li>Generating JCL</li>
+<li>Compiling source code</li>
+<li>Running applications</li>
+</ul>Property groups support other functions as well, such as unit testing, debug, and code
+coverage, but this section describes property group settings for editing, compilation, and
+runtime.</li>
+<li>Create a <tm trademark="z/OS" tmtype="reg">z/OS</tm> project. Although you can work with your
+source files directly in an <tm trademark="MVS" tmtype="tm">MVS</tm> file system or source control
+repository, adding them to a <tm trademark="z/OS" tmtype="reg">z/OS</tm> project has several benefits:<ul>
+<li>You can include in the project only the exact resources you need.</li>
+<li><tm trademark="z/OS" tmtype="reg">z/OS</tm> projects are enabled for a number of product
+features, such as integration with EGit, <tm trademark="IBM" tmtype="reg">IBM</tm> Dependency Based
+Build, <ph otherprops="ewm">Engineering Workflow Management, </ph>and Z Systems Development and Test
+Environment.</li>
+<li><tm trademark="z/OS" tmtype="reg">z/OS</tm> projects are shareable either through export and
+import or through the push-to-client feature.</li>
+</ul>The product provides several methods for creating <tm trademark="z/OS" tmtype="reg">z/OS</tm>
+projects depending on where your source files are located.</li>
+<li>Set up the editors. The product provides editors that are optimized specifically for development
+in each of these source languages: COBOL, High-Level Assembler, JCL, PL/I, and REXX. The workbench
+<wintitle>Preferences</wintitle> window contains several pages for setting options for editor
+functions.</li>
+</ol>
+</section>
+</body>
+</topic>
+<?tm 1644961068142 44 z/OS||MVS||Jazz||IBM||CA Endevor ?>

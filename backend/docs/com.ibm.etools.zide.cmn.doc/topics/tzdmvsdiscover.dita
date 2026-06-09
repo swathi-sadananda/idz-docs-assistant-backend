@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdmvsdiscover" xml:lang="en-us">
+<title>Detecting the <tm tmtype="tm" trademark="MVS">MVS</tm> file type</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Detecting the MVS file type</navtitle>
+<searchtitle>Detecting the MVS file type</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>Discover File Type</uicontrol> action to determine the type of content
+in a partitioned data set member, assign a file type extension to it, associate it with a default
+editor, and enable advanced editing support, such as syntax checking and content assist. </shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>MVS file type</indexterm>
+<indexterm>Detect file type</indexterm>
+<indexterm>Discovery File Type</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>This menu item is helpful for partitioned data sets (PDSs) that do not have a file mapping
+defined and that contain members with mixed content types. <p>If you have a partitioned data set
+named <codeph>MYUSERID.MIXED.SOURCE</codeph>, for example, and it contains COBOL source files,
+copybooks, SQL procedures, REXX procedures, and JCL files, you can use the <uicontrol>Discover File
+Type</uicontrol> action to assign file type extensions to each file. If the extensions assigned are
+associated with a default editor, then that default editor is used to open the file when you edit
+it. The default editor for PDS members with undefined file mapping is the <ph otherprops="IDz"><tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor</ph><ph otherprops="ZOD ZOT">text editor</ph>.</p></prereq>
+<context>
+<p>This menu item is available only for members of partitioned data sets that are not included in any <tm trademark="z/OS" tmtype="reg">z/OS</tm> File System Mapping definitions. It is not available for sequential data sets, for partitioned data sets (<tm trademark="MVS" tmtype="tm">MVS</tm> file folders) or for PDS members that already have a file type extension. </p>
+<!-- <p>For more information, see <i>Discover File Type Quick Look</i> under <xref
+href="https://developer.ibm.com/mainframe/videos/category/idz/" format="html" scope="external"
+>Videos</xref>.</p> -->
+</context>
+<steps-unordered>
+<step>
+<cmd>In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view,
+select a partitioned data set member. Right-click and select <uicontrol>Discover File
+Type</uicontrol>.</cmd>
+<info>
+<note type="other" othertype="Limitations">
+<p>Some file types, such as REXX execs, XML files, and <tm trademark="Java" tmtype="tm">Java</tm> files, might be misidentified or not identified by the scanner. If the scanner misidentifies the file, do these steps:<ol>
+<li>Select the file in the Remote Systems view.<note>The Mapping properties are not available from the <tm trademark="z/OS" tmtype="reg">z/OS</tm> Projects view.</note></li>
+<li>Right-click and select <uicontrol>Properties</uicontrol>. The <wintitle>Properties</wintitle>
+window displays.</li>
+<li>In the <wintitle>Properties</wintitle> window, select <uicontrol>Mapping</uicontrol>.</li>
+<li>In the Extensions group, select <uicontrol>Other</uicontrol> and type a file extension in the
+text box.</li>
+</ol></p>
+</note>
+<p><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> does
+not prompt you to create or associate a property group with a file that has no file type
+mapping.</p>
+</info>
+</step>
+</steps-unordered>
+<result>
+<p>The file type scanner runs. The message, <msgph>Set mapping for filename</msgph>, displays in the
+status area at the bottom of the workbench. After the file is scanned, the appropriate file type
+extension is added to the file. <uicontrol>Discover File Type</uicontrol> supports the following
+file type extensions: <ul>
+<li>.asm</li>
+<li>.bms</li>
+<li>.mfs</li>
+<li>.c</li>
+<li>.cpp</li>
+<li>.h</li>
+<li>.cbl</li>
+<li>.cpy</li>
+<li>.java</li>
+<li>.jcl</li>
+<li>.pli</li>
+<li>.inc</li>
+<li>.plx</li>
+<li>.rexx</li>
+<li>.sql</li>
+<li> .xml</li>
+</ul></p>
+<p>The scanner also updates the file icon and the file mapping properties, as shown in these before
+and after screen captures for a COBOL file. Before the <uicontrol>Discover File Type</uicontrol>
+action, the file name displays without the extension and with the <ph otherprops="ZOD ZOT">text
+editor</ph><ph otherprops="IDz"><tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor</ph> icon ( <image href="../images/LPEX_Editor.jpg" placement="inline">
+<alt><ph otherprops="IDz">LPEX Editor</ph><ph otherprops="ZOD">text editor</ph> icon</alt>
+</image>). The file mapping property for the file extension is <uicontrol>Inherit from system
+mapping (undefined)</uicontrol>. After the <uicontrol>Discover File Type</uicontrol> action, the
+file name displays without the extension and with the COBOL Editor icon ( <image href="../images/COBOL_Editor.jpg" placement="inline">
+<alt>COBOL Editor icon</alt>
+</image>). The file mapping property for the file extension is <uicontrol>Other: cbl</uicontrol>. </p>
+<table id="table_ih3_qvf_xdb">
+<tgroup cols="3">
+<colspec colnum="1" colname="col1" />
+<colspec colnum="2" colname="col2" />
+<colspec colnum="3" colname="col3" />
+<thead>
+<row>
+<entry>Item</entry>
+<entry>Before</entry>
+<entry>After</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>File name and icon</entry>
+<entry><image href="../images/CBL.jpg" placement="inline">
+<alt>File name and icon before detecting</alt>
+</image></entry>
+<entry><image href="../images/CBL_cbl.jpg" placement="inline">
+<alt>File name and icon after detecting</alt>
+</image></entry>
+</row>
+<row>
+<entry>Mapping properties</entry>
+<entry>image<image href="../images/mapping_before.gif" placement="inline">
+<alt>Mapping page</alt>
+</image></entry>
+<entry><image href="../images/mapping_after.gif" placement="inline">
+<alt>Mapping page</alt>
+</image></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</result>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.rdz.language.editors.doc/topics/tzfileassociation.dita#tzfileassociation" format="dita" scope="peer" type="task">
+<linktext>Associating file types with an editor</linktext>
+</link>
+<link href="tzdcmn035.dita" format="dita" scope="peer">
+<linktext>Mapping data sets and partitioned data set members</linktext>
+</link>
+</related-links>
+
+</task><?Pub *0000002982?><?tm 1665694016562 7 z/OS||z Systems||MVS||Java ?>

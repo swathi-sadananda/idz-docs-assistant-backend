@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdbiditools" xml:lang="en-us">
+<title>Bidirectional layouts and tools</title>
+<shortdesc>The smart logical layout is the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> default
+layout. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>smart logical layout<indexterm>file extension
+definition</indexterm></indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p>MFS editor, BMS editor, and other tools-generated code is in smart logical layout. The use of
+smart logical format is encouraged. Bidirectional users who are working with smart logical data must
+understand the following conditions:<ul>
+<li>Correct language (file extension) definition is important when you work with smart logical
+program sources. Incorrect language selection can cause incorrect bidirectional conversion and data
+corruption because the smart logical algorithm is sensitive to programming language syntax.</li>
+<li>Only tools that support the smart logical layout that is described in this help system must be
+used for work with smart logical files.</li>
+</ul></p>
+<note othertype="Next" type="other"><xref href="czdbidiwhy.dita"
+type="concept"></xref></note>
+</conbody>
+<?tm 1337269549 0?>
+</concept>

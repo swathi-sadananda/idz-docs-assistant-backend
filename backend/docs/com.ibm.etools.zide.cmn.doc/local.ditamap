@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>From the local workstation</title>
+<topicref href="topics/c_local_systems.dita" navtitle="From the local workstation" type="concept">
+<topicref href="topics/tzdcmn137.dita" navtitle="Exploring the local file system" type="task"/>
+<topicref href="topics/tzdcmn116.dita" navtitle="Searching the local file system" type="task"/>
+</topicref>
+</map>

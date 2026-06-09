@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN" "ibm-topic.dtd">
+<?Pub Sty _display FontColor="red"?><topic id="zide_conrefs" xml:lang="en-US">
+<title>zide_platform_conrefs</title>
+<body>
+<?Pub Caret 34?>
+<p id="windows"><image href="../images/ngwin.gif" placement="inline">
+<alt>Information specific to Windows</alt></image> Local COBOL and PL/I builds that use the native
+COBOL and PL/I compilers are supported only on <tm tmtype="tm" trademark="Windows">Windows</tm>
+platforms and in the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZE_fam"/> edition of the
+product.</p>
+</body>
+</topic>

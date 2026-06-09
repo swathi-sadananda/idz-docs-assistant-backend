@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdefpreprocessor" xml:lang="en-us">
+<title>Supporting error feedback for custom preprocessors</title><?Pub
+Caret -2?>
+<shortdesc>You can set custom preprocessor properties for supporting
+error feedback.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>client setup</indexterm><indexterm>preprocessor
+properties</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To set up properties to support error feedback for custom
+preprocessors, do these steps:</stepsection>
+<step><cmd>From a properties window, open the <wintitle>Add a New
+Step</wintitle> or <wintitle>User-Defined Step Options</wintitle> window.</cmd>
+<info>To open these windows, do the following steps:</info>
+<substeps>
+<substep><cmd>From the Assembler Settings, COBOL Settings, or PL/I
+Settings page of the properties window, select the <uicontrol>Procedures
+and Steps</uicontrol> tab.</cmd></substep>
+<substep><cmd>Select the procedure name to which you want to add a
+custom step or that has an existing custom step.</cmd></substep>
+<substep><cmd>To enable the procedure, click <uicontrol>Enable procedure</uicontrol>.</cmd>
+<info>A procedure must be enabled before you can add a step to it
+or edit an existing step.</info></substep>
+<substep><cmd>Click <uicontrol>Add step</uicontrol> to open the <wintitle>Add
+a New Step</wintitle> window or <uicontrol>Edit step</uicontrol> to
+open the <wintitle>User-Defined Step Options</wintitle> window.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>Click the <uicontrol>Support Error Feedback</uicontrol> check
+box.</cmd><stepresult>The <uicontrol>Data Set Qualifier for Compiler
+Errors</uicontrol> field is activated.</stepresult></step>
+<step><cmd>Specify the error feedback qualifier that is used to generate
+the SYSXMLSD DD card in the JCL.</cmd><info>If your preprocessor writes
+the XML file in UTF-8, then make sure the qualifier name that is specified
+includes ERRWDZ. Files with ERRWDZ as a qualifier are transferred
+in binary format to avoid any code page translations. To handle the
+file transfer, a default mapping for **ERRWDZ is defined in the <wintitle>z/OS
+File System Mappings</wintitle> view. </info></step>
+</steps>
+<postreq>See the Related References for samples of JCL and an XML
+file that is generated for error feedback for a custom preprocessor.</postreq>
+</taskbody>
+<related-links>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link href="tzdefcobolpli.dita" type="task"></link>
+<link href="tzdefotherlang.dita" type="task"></link>
+<link href="rzdefjclpreprocessor.dita" type="reference"></link>
+<link href="rzdefxmlpreprocessor.dita" type="reference"></link>
+</related-links>
+<?tm 1435190824 0?>
+</task>
+<?Pub *0000002947?>

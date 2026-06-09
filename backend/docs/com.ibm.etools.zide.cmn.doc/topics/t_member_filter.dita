@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_member_filter" xml:lang="en-us">
+<title>Creating member filters</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Creating member filters</navtitle>
+<searchtitle>Creating member filters</searchtitle>
+</titlealts>
+<shortdesc>Search for member names and add them to a filter in the <filepath>My
+Favorites</filepath> folder of the <filepath>MVS Files</filepath> subsystem.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>creating member filters</indexterm></keywords>
+<keywords><indexterm>member filters<indexterm>creating</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>filters<indexterm>creating member filters</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you can create a filter for a partitioned data set
+member, you must create a connection to a remote system. For instructions,
+see <xref href="tzdcmn032.dita#tzdcmn032"></xref>.</prereq>
+<context>The member filter function is an implementation of <wintitle>Remote
+z/OS Search</wintitle>. When you create a member filter, you are creating
+a query that returns a set of data set members and saving it to the <filepath>My
+Favorites</filepath> folder of the <filepath>MVS Files</filepath> subsystem.</context>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, expand
+a <tm tmtype="reg" trademark="z/OS">z/OS</tm> connection name and
+select <uicontrol>MVS Files</uicontrol>.</cmd></step>
+<step><cmd>Right-click and select <menucascade><uicontrol>New</uicontrol>
+<uicontrol>Member Filter</uicontrol></menucascade>.</cmd></step>
+<step><cmd>In the <uicontrol>Filter name</uicontrol> field, type a
+name for the new member filter.</cmd></step>
+<step><cmd>In the <uicontrol>With name</uicontrol> field, type a member
+name or a search string.</cmd><info>You can use wildcard characters
+in this field. Valid characters include an asterisk (*) to match any
+string, and question mark (?) to match a single character. <note
+type="important">To use the ? wildcard character, both the client
+and server must be version 9.0.1 or later.</note></info><stepxmp>In
+a partitioned data set that contains members that are named <filepath>TEST01</filepath>, <filepath>TEST001</filepath>,
+and <filepath>TEST0001</filepath>, the search string <userinput>TEST*1</userinput> matches
+all those member names. The search string <userinput>TEST?1</userinput> matches
+only <filepath>TEST01</filepath>.</stepxmp></step>
+<step><cmd>In the <uicontrol>Existing filters</uicontrol> list, select
+one or more filters to search for members.</cmd><info>To search in
+specific data sets, expand the filters and select one or more data
+sets.</info></step>
+<step importance="optional"><cmd>In the <uicontrol>Other contexts</uicontrol> field,
+specify a filter string to search. Use this option to search outside
+your defined filters. If you initiate a search on one or more remote
+resources outside the <wintitle>Remote Systems</wintitle> view (such
+as on a remote data set in the <wintitle>z/OS Projects</wintitle> view),
+this option is enabled and specifies <uicontrol>&lt;selected resources></uicontrol> as
+the filter string.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd></step>
+</steps>
+<result><p>The new member filter is added to the <filepath>My Favorites</filepath> folder
+in the <filepath>MVS Files</filepath> subsystem. The <wintitle>Remote
+z/OS Search</wintitle> view opens and displays the members whose names
+match the search string that you defined for the filter.</p></result>
+<postreq><p>In the <wintitle>Remote z/OS Search</wintitle> view, you
+can do any actions on the data set members that you can do in the <wintitle>Remote
+Systems</wintitle> view. If you select a member that contains COBOL
+or PL/I source, you can, for example, complete these tasks:<ul>
+<li>Edit the member</li>
+<li>Nominate the member as an entry point</li>
+<li>Generate JCL</li>
+<li>Associate a property group with the member</li>
+<li>Show dependencies</li>
+<li>Check the syntax</li>
+</ul>If you select a JCL member, you can submit the JCL to JES.</p><p>In
+the <wintitle>Remote Systems</wintitle> view, you can do these actions
+with the member filter:<ul>
+<li>To run the query again, double-click it, or right-click and select <uicontrol>Run
+Query</uicontrol>.</li>
+<li>To modify the filter, select it and then select <uicontrol>Edit
+and Run</uicontrol> from the menu.</li>
+</ul></p><p>For more information about using the <wintitle>Remote
+z/OS Search</wintitle> view and saved queries, see the related topics.</p></postreq>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdcmn103.dita" scope="local" type="topic"/>
+<link format="dita" href="tzdsavesearch.dita" scope="local" type="task"/>
+<link format="dita" href="tzdretrievemem.dita" scope="local" type="topic"/>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1435190810 1?>
+</task>
+<?Pub *0000005048?>

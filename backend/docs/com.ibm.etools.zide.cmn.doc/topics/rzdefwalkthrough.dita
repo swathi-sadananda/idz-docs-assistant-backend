@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdefwalkthrough" xml:lang="en-us">
+<title>Sample code walk-through</title><?Pub Caret -2?>
+<shortdesc>The sample code snippets illustrate how the output from
+preprocessors can be linked by using the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> error
+feedback mechanism and multiple preprocessor support.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>sample code walk-through</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><title>Code snippets</title>This example makes reference
+to the following code snippets:<dl><dlentry>
+<dt>COBOL segment</dt>
+<dd>The following COBOL program segment is from the DEMODATA source
+code. This program was preprocessed and compiled. The lines that begin
+with FRAGMENT are at line 48, 55, and 74.  The misspelled display
+statement "DSPLAY" is at line 54. The member NOTTHERE is intentionally
+missing from the FRAGMNT concatenation so that the preprocessor flags
+an error at that line.<codeblock>
+       Procedure Division.
+FRAGMENT HELLO;
+           Initialize Program-pass-fields
+                      Program-other-fields
+                      Program-flags.
+           copy  MYINC6.
+           Perform until Loop-done
+               Dsplay " "
+FRAGMENT NOTTHERE;
+               Display "Enter a name or Q to quit:"
+               Move Spaces to Input-name
+               Accept Input-name
+               IF Input-name = Spaces
+                 Move "Q" to Input-name
+               End-IF
+
+               Move 1 to Char-count
+               Inspect Input-name Tallying Char-count For Leading Spaces
+               Move Input-name(Char-count: 30 - Char-count) to Temp-name
+
+               If function upper-case (Temp-name) = "Q"
+                     or Temp-name = Spaces
+                  Set Loop-done to true
+               Else
+                  Call 'PrintApp' using Program-pass-fields
+               End-if
+           End-perform.
+FRAGMENT BYE;
+           Goback.
+</codeblock></dd>
+</dlentry><dlentry>
+<dt>Fragment MEL.A001.DATA.FRAGMENT(BYE)</dt>
+<dd><codeblock>***************************************************
+*BYE
+***************************************************
+</codeblock></dd>
+</dlentry><dlentry>
+<dt>Fragment MEL.A001.DATA.FRAGMENT(HELLO)</dt>
+<dd><codeblock> **************************************************
+ *HELLO
+ ***************************************************
+</codeblock></dd>
+</dlentry></dl></section>
+<section><title>Preprocessor output</title>The code sample at the
+end of this section shows the output XML file of the preprocessor.
+The preprocessor XML file contains a set of values for the source
+that is read in &lt;FILEREFERENCETABLE>. This XML file also has the
+messages that the preprocessor generated between the &lt;MESSAGE>
+tag.  The &lt;OUTFILEREFERENCETABLE> values describe the output files
+that the preprocessor created for consumption by the compiler. The
+&lt;STATEMENTTABLE> values describe each output line that the preprocessor
+created. Each of the ordered quads describes a single output line
+in the following way:<codeblock>(oln,ofn,iln,ifn)</codeblock><dl>
+<dlentry>
+<dt>oln</dt>
+<dd>Output line number:the line number in the expanded source file.</dd>
+</dlentry><dlentry>
+<dt>ofn</dt>
+<dd>Output file number. A preprocessor often emits only a single output
+file, but it is possible for a preprocessor to write out copy members
+to be fed to the compiler.</dd>
+</dlentry><dlentry>
+<dt>iln</dt>
+<dd>Input line number: the line number from the input file that was
+processed to cause the output line to be written.</dd>
+</dlentry><dlentry>
+<dt> ifn</dt>
+<dd>Input file number: the file number of the input file that is being
+read. It contains the line of input that is described by iln.</dd>
+</dlentry></dl>From the preprocessor XML file, the following information
+can be determined:<ul>
+<li>The program that was preprocessed was <filepath>MEL.A001.DATA.COBOL(DEMODATA)</filepath>.</li>
+<li>The files that are used during the preprocess were <filepath>MEL.A001.DATA.COBOL(DEMODATA)</filepath>, <filepath>MEL.A001.DATA.FRAGMENT(HELLO)</filepath>,
+and <filepath>MEL.A001.DATA.FRAGMENT(BYE)</filepath>. </li>
+<li>The preprocessor produced a single output file, <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath>.</li>
+<li>The preprocessor error <msgph>DD:FRAGMNT(NOTTHERE) not found</msgph> occurred
+on line 55 of the input source file 1, <filepath>MEL.A001.DATA.COBOL(DEMODATA)</filepath>.</li>
+<li>The statement table entry (48,1,1,2) indicates that line 48 of
+the output file 1, <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath>,
+was written as a result of reading line number 1 of input file 2, <filepath>MEL.A001.DATA.FRAGMENT(HELLO)</filepath>. </li>
+</ul><fig id="output_xml_file"><title>Output XML file</title>
+<codeblock>
+&lt;?xml version="1.0" standalone="yes"?>
+&lt;BUILD>
+&lt;PACKAGE>
+&lt;FILEREFERENCETABLE>
+&lt;FILECOUNT>3&lt;/FILECOUNT>
+&lt;FILE>
+&lt;FILENUMBER>1&lt;/FILENUMBER>
+&lt;FILENAME>
+MEL.A001.DATA.COBOL(DEMODATA)
+&lt;/FILENAME>
+&lt;/FILE>
+&lt;FILE>
+&lt;FILENUMBER>2&lt;/FILENUMBER>
+&lt;FILENAME>
+MEL.A001.DATA.FRAGMENT(HELLO)
+&lt;/FILENAME>
+&lt;/FILE>
+&lt;FILE>
+&lt;FILENUMBER>3&lt;/FILENUMBER>
+&lt;FILENAME>
+MEL.A001.DATA.FRAGMENT(BYE)
+&lt;/FILENAME>
+&lt;/FILE>
+&lt;/FILEREFERENCETABLE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>DEMO9999E&lt;/MSGNUMBER>
+&lt;MSGLINE>55&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+DD:FRAGMNT(NOTTHERE) not found
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;OUTFILEREFERENCETABLE>
+&lt;OUTFILECOUNT>
+1
+&lt;/OUTFILECOUNT>
+&lt;OUTFILE>
+&lt;OUTFILENUMBER>
+1
+&lt;/OUTFILENUMBER>
+&lt;OUTFILENAME>
+SYS09225.T113157.RA000.MEL1.TEMPFILE.H01
+&lt;/OUTFILENAME>
+&lt;/OUTFILE>
+&lt;/OUTFILEREFERENCETABLE>
+&lt;STATEMENTTABLE>
+(1,1,1,1);(2,1,2,1);(3,1,3,1);(4,1,4,1);(5,1,5,1);(6,1,6,1);
+(7,1,7,1);(8,1,8,1);(9,1,9,1);(10,1,10,1);(11,1,11,1);(12,1,12,1);
+(13,1,13,1);(14,1,14,1);(15,1,15,1);(16,1,16,1);(17,1,17,1);(18,1,18,1);
+(19,1,19,1);(20,1,20,1);(21,1,21,1);(22,1,22,1);(23,1,23,1);(24,1,24,1);
+(25,1,25,1);(26,1,26,1);(27,1,27,1);(28,1,28,1);(29,1,29,1);(30,1,30,1);
+(31,1,31,1);(32,1,32,1);(33,1,33,1);(34,1,34,1);(35,1,35,1);(36,1,36,1);
+(37,1,37,1);(38,1,38,1);(39,1,39,1);(40,1,40,1);(41,1,41,1);(42,1,42,1);
+(43,1,43,1);(44,1,44,1);(45,1,45,1);(46,1,46,1);(47,1,47,1);(48,1,1,2);
+(49,1,2,2);(50,1,3,2);(51,1,49,1);(52,1,50,1);(53,1,51,1);(54,1,52,1);
+(55,1,53,1);(56,1,54,1);(57,1,55,1);(58,1,56,1);(59,1,57,1);(60,1,58,1);
+(61,1,59,1);(62,1,60,1);(63,1,61,1);(64,1,62,1);(65,1,63,1);(66,1,64,1);
+(67,1,65,1);(68,1,66,1);(69,1,67,1);(70,1,68,1);(71,1,69,1);(72,1,70,1);
+(73,1,71,1);(74,1,72,1);(75,1,73,1);(76,1,1,3);(77,1,2,3);(78,1,3,3);
+(79,1,75,1);(80,1,76,1);(81,1,77,1);(82,1,78,1);(83,1,79,1);
+&lt;/STATEMENTTABLE>
+&lt;/PACKAGE>
+&lt;/BUILD>
+</codeblock>
+</fig>    </section>
+<section><title>Compiler output</title><p>The code sample at the end
+of this section shows the output XML file of the compiler. The compiler
+XML file is generated by the compiler when the appropriate compiler
+options are used. These compiler options are inserted automatically
+when a syntax check, build, or show dependencies operation is performed.
+The compiler XML file has a slightly different format than the preprocessor
+XML file. User-written preprocessors and builders must follow the
+preprocessor XML file format.</p><p>The compiler XML file shows that
+there is a compilation error: <msgph>&amp;quot;DSPLAY&amp;quot; was
+invalid.  Skipped to the next verb, period or procedure-name definition</msgph>.
+This error pertains to line 56 of input file 1, <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath>.
+The compiler reports only errors against the file that was fed to
+it. The compiler does not know about <filepath>MEL.A001.DATA.COBOL(DEMODATA)</filepath>.
+It knows about input file number 1, <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath>.
+From the naming convention, and from the JCL procedure that was used
+to invoke the preprocessor and compiler, you can determine that <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath> is
+a temporary file that is deleted once the job is complete.</p><p>Combining
+the two XML files, you can find the correct line of source to map
+the compilation error back to:<ul>
+<li>The compilation error was reported against file number 1.</li>
+<li>The compiler FILEREFERENCETABLE indicates that file 1 is <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath>.</li>
+<li>From the preprocessor XML file, you can find the file <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath> in
+the OUTFILEREFERENCETABLE.  It has an OUTFILENUMBER of 1.  So, the
+output file number is 1, and the output line number is 56.</li>
+</ul>Expressed another way:</p><codeblock>oln = 56
+ofn = 1</codeblock>From the STATEMENTTABLE, you need to find <varname>iln</varname>,
+and <varname>ifn</varname>, where the ordered quad is (56,1,iln,ifn).
+From this information, you can determine the following values:<codeblock>iln = 54
+ifn = 1</codeblock>In summary, the compiler reported an error at line
+56 in file <filepath>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01</filepath>.
+This line corresponds to line 54 in <filepath>MEL.A001.DATA.COBOL(DEMODATA)</filepath>.
+The compilation error is reported against line 54 of file <filepath>MEL.A001.DATA.COBOL(DEMODATA)</filepath>.<codeblock>
+&lt;?xml version="1.0" standalone="yes"?>
+&lt;!-- ************************************************************************************ -->
+&lt;BUILD>
+&lt;PACKAGE>
+&lt;FILEREFERENCETABLE>
+&lt;FILECOUNT>2&lt;/FILECOUNT>
+&lt;FILE>
+&lt;FILENUMBER>1&lt;/FILENUMBER>
+&lt;FILENAME>SYS09225.T113157.RA000.MEL1.TEMPFILE.H01&lt;/FILENAME>
+&lt;/FILE>
+&lt;FILE>
+&lt;FILENUMBER>2&lt;/FILENUMBER>
+&lt;FILENAME>MEL.A001.COPYLIB1.COPYLIB(MYINC6)&lt;/FILENAME>
+&lt;/FILE>
+&lt;/FILEREFERENCETABLE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2112-E&lt;/MSGNUMBER>
+&lt;MSGLINE>55&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+The "PERFORM" statement did not have a matching scope terminator.  A scope terminator was assumed on line 82.  The execution results may not be correct.
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2072-S&lt;/MSGNUMBER>
+&lt;MSGLINE>56&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+"DSPLAY" was invalid.  Skipped to the next verb, period or procedure-name definition.
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS0002-E&lt;/MSGNUMBER>
+&lt;MSGLINE>57&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+A character other than "*", "D", "/" or "-" was found in column 7.  A blank was assumed.
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2008-E&lt;/MSGNUMBER>
+&lt;MSGLINE>57&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+A period was required before procedure-name "T".  A period was assumed before "T".
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2145-E&lt;/MSGNUMBER>
+&lt;MSGLINE>57&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+A period was required.  A period was assumed before "NOTTHERE".
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2015-I&lt;/MSGNUMBER>
+&lt;MSGLINE>57&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+The paragraph or section prior to paragraph or section "NOTTHERE" did not contain any statements.
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2145-E&lt;/MSGNUMBER>
+&lt;MSGLINE>58&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+A period was required.  A period was assumed before "DISPLAY".
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;MESSAGE>
+&lt;MSGNUMBER>IGYPS2113-E&lt;/MSGNUMBER>
+&lt;MSGLINE>75&lt;/MSGLINE>
+&lt;MSGFILE>1&lt;/MSGFILE>
+&lt;MSGTEXT>
+The explicit scope terminator "END-PERFORM" was found without a matching verb.  The scope terminator was discarded.
+&lt;/MSGTEXT>
+&lt;/MESSAGE>
+&lt;/PACKAGE>
+&lt;/BUILD>
+</codeblock></section>
+</refbody>
+<?tm 1435190825 0?>
+</reference>
+<?Pub *0000012165?>

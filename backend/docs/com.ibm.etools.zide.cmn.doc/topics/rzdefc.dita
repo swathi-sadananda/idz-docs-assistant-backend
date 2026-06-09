@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdefcobol" xml:lang="en-us">
+<title>C program for error feedback</title><?Pub Caret -2?>
+<shortdesc>The following sample C program, ZFLDATA, dynamically queries
+the DSName for a passed-in DDName. The PL/I sample program in Related
+References illustrates the call to this C program to query the DSName
+for the SYSXMLSD DDName for error feedback.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>sample C program</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>As part of the processing, <xref format="dita"
+href="rzdefpli.dita" scope="local" type="reference">TMPLT00</xref> calls
+a C routine called ZFLDATA. This routine has a single purpose. It
+takes a data set DD name, and if possible, it returns the data set
+name that the DD name refers to. The following example shows the source
+for ZFLDATA.<codeblock>
+#include &lt;stdio.h>
+#include &lt;string.h>
+#define FILENAMEMAX 255
+#define ATTRMAX 100
+
+int main(void)
+{
+   FILE *stream;
+   char dsn[FILENAMEMAX];
+   char filename[FILENAMEMAX];
+   char fileattrs[ATTRMAX];
+   int rc;
+   int getFileData(char * dsn, char * filename, char * fileattrs);
+
+
+   memset(filename ,'\0',sizeof(filename));
+   memset(filename ,'\0',sizeof(fileattrs));
+   memcpy(filename ,"DD:SYSXMLSD",sizeof("DD:SYSXMLSD"));
+   memcpy(fileattrs ,"a+",
+		   sizeof("a+"));
+
+
+   rc = ZFLDATA(dsn,filename,fileattrs);
+
+
+
+   if (rc != 0)
+      printf("fldata failed\n");
+   else
+      printf("filename is %s\n",dsn);
+}
+
+int ZFLDATA(char * dsn, char *fn, char *fileattrs)
+  {
+	 fldata_t fileinfo;
+	 fldata_t * fileinfoptr;
+	 int rc;
+	 FILE *stream;
+
+	 /******************************************************/
+	 /*Get a stream for the file and attributes passed in  */
+	 /******************************************************/
+	 stream = fopen(fn,fileattrs);
+     if (stream == NULL)
+     {
+        perror("***FAILURE OPENING FILE*****");
+     }
+
+     /******************************************************/
+     /*Get the actual data set name on DASD from fldata    */
+     /******************************************************/
+	 memset(dsn ,'\0',
+  		   sizeof(dsn));
+	 fileinfoptr = &amp;fileinfo;
+     rc = fldata(stream, dsn, &amp;fileinfo;);
+	 if (rc != 0)
+	   {
+	         printf("fldata failed\n");
+	   }
+	 else
+	 {
+	     memcpy (dsn,
+	  		   fileinfoptr->__dsname,
+	  		   strlen(fileinfoptr->__dsname));
+	 }
+     fclose(stream);
+	 return rc;
+	}
+
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="rzdefschema.dita" type="reference"></link>
+<link format="dita" href="rzdefpli.dita" scope="local" type="reference">
+</link>
+<link href="rzdefassembler.dita" type="reference"></link>
+<link href="tzdefclient.dita" type="task"></link>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link format="dita" href="tzdbldprep.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdrunprep.dita" scope="local" type="task">
+</link>
+</related-links>
+<?tm 1435190823 0?>
+</reference>
+<?Pub *0000003239?>

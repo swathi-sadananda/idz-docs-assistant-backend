@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdupdcfg" xml:lang="en-us">
+<title>Updating workspace configurations and preferences</title>
+<titlealts>
+<navtitle>Updating workspace configurations and preferences</navtitle>
+<searchtitle>Updating configurations and preferences</searchtitle>
+</titlealts>
+<shortdesc><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/updAvailIntro"
+/> When updates are available, the client is prompted to install the updates when you connect to a
+remote system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>configuration and preference updates</indexterm>
+</keywords>
+<keywords><indexterm>updating<indexterm>configurations and preferences</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>If updates for <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> configurations
+and preferences are available when you connect to a remote system, the <wintitle>Updates
+Available</wintitle> window opens with one of the following messages:<ul
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/updAvailMsgs"
+><li/></ul><p rev="803"><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cfgGroup"/>
+Configuration groups and the ability to select or refuse updates are controlled by parameters in the
+<filepath>pushtoclient.properties</filepath> file on the remote system. This window lists the
+updates that are available for installation. The following configurations and preferences can be
+enabled for automatic update:</p><?Pub Caret 208?><ul>
+<li>Eclipse settings. These configuration files update the settings in the
+<wintitle>Preferences</wintitle> page. For general information about Eclipse workbench preferences,
+see <xref format="html" href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-72.htm" scope="peer"
+>Preferences</xref>. For specific information about <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> preferences, see
+<xref format="dita" href="tzdcmn010.dita" scope="local" type="task"/>.<note type="attention"><ph
+conref="../../com.ibm.etools.rdz.language.editors.doc/topics/tzdebetemplates_cobol.dita#tzdebetemplates_cobol/ptc_code_templates"
+/></note></li>
+<li>Remote system connections. These configuration files update the remote system connections that
+are defined in the <wintitle>Remote Systems</wintitle> view. For information about remote system
+connections, see <xref format="dita" href="tzdcmn032.dita" scope="local" type="topic"/>.</li>
+<li otherprops="IDz">Host-based projects. These configuration files update <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> projects that are defined on the remote system. For more information
+about host-based projects, see <xref format="dita" href="czdhostbased.dita" scope="local"
+type="concept"/>.</li>
+<li>Property groups. These configuration files update all property groups that are defined for the
+remote system. For more information about property groups, see <xref format="dita"
+href="tzdpropgrp.dita" scope="local" type="topic"/>.</li>
+<li>Default values. These configuration files update default values for a remote system. For more
+information about default values, see <xref format="dita" href="tzdcfgpg.dita" scope="local"
+type="task"/>.</li>
+<li><tm tmtype="reg" trademark="z/OS">z/OS</tm> file system mappings. These configuration files
+update the <tm tmtype="reg" trademark="z/OS">z/OS</tm> file system mappings that are defined for the
+remote system. For information about file system mappings, see <xref format="dita"
+href="tzdcmn035.dita" scope="local" type="task"/>. Three types of <tm tmtype="reg" trademark="z/OS"
+>z/OS</tm> file system mapping configuration files are available:<ul>
+<li>Resource mappings are defined for specific data sets on a remote system.</li>
+<li otherprops="IDz">Bidirectional conversion tables are defined for systems that use bidirectional
+code pages.</li>
+<li>System mappings are defined for a remote system.</li>
+</ul></li>
+<li rev="803" otherprops="IDz">Menu Manager menus and actions. These configuration files update the
+menus and actions that are defined by using the <wintitle>Menu Manager</wintitle> preference pages.
+For more information about using Menu Manager, see <xref
+href="../../com.ibm.tpf.toolkit.menumanager.doc/topics/menumanager_c.dita"/>.</li>
+</ul></context>
+<steps>
+<stepsection>To install the configuration updates:</stepsection>
+<step rev="803"><cmd>If you are prompted to choose a <uicontrol>Configuration group</uicontrol>,
+select one from the list.</cmd><info><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cfgGroupBind"
+/> For more information about creating a workspace, see <xref format="html"
+href="../../eclipse-docs/org.eclipse.platform.doc.user_4.31.0.v20240228-1609/reference/ref-workspaceswitch.htm" scope="peer">Switching
+workspaces</xref>.</info></step>
+<step><cmd>If you are required to install all updates, click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>The configuration files and preferences are updated. </stepresult>
+</step>
+<step><cmd>If you are allowed to select or refuse updates, do these
+steps: </cmd>
+<substeps>
+<substep><cmd>Select the checkbox next to the configuration files you want to update. </cmd><info
+rev="91"><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/updAllSubset"
+/></info></substep>
+<substep importance="optional"><cmd>To prevent future notifications of configuration and preference
+updates, select the checkbox next to <uicontrol>Do not notify me of future
+updates</uicontrol>.</cmd>
+<info><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/doNotNotify"
+/></info>
+</substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>The
+selected configuration files and preferences are updated.</stepresult>
+</substep>
+</substeps>
+</step>
+</steps>
+<result>Unless you select the <uicontrol>Do not notify me of future
+updates</uicontrol> option, the push-to-client feature handles future
+updates according to the preference setting on the <wintitle>Configuration
+Files</wintitle> preference page: <ul>
+<li><uicontrol>Notify me of all updates</uicontrol>: When this option
+is set, you are prompted to update any available configurations and
+preferences each time you connect to the remote system. If you do
+not select all of the updates or if any new updates become available,
+you are prompted to install them.</li>
+<li><uicontrol>Notify me of updates that I have not rejected</uicontrol>:
+When this option is set, you are not prompted to update previously
+rejected configurations the next time you connect, even if they are
+updated on the server.</li>
+<li><uicontrol>Do not notify me of updates</uicontrol>: When this
+option is set, you are never notified of updates. Selecting the <uicontrol>Do
+not notify me of future updates</uicontrol> option on the <wintitle>Updates
+Available</wintitle> window sets this preference option.</li>
+</ul>      </result>
+<example>As an example, assume that the push-to-client feature prompts
+you to update the following configurations when you connect to the
+remote system. <ul>
+<li>Property Group Configuration Files</li>
+<li>Eclipse Preferences</li>
+<li><tm tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping
+Configuration Files</li>
+</ul>If you choose to update the Property Group Configuration Files
+and the Eclipse Preferences, but not the <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> File System Mapping Configuration Files,
+then the next time you connect, the <wintitle>Updates Available</wintitle> window
+prompts you according to the Configuration Files preference:<table>
+<tgroup cols="2"><colspec colname="col1"/><colspec colname="col2"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Configuration Files preference</entry>
+<entry colname="col2">Updates Available actions</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><uicontrol>Notify me of all updates</uicontrol></entry>
+<entry colname="col2">The window opens and prompts you to install <tm
+tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping Configuration
+Files (because you did not update them previously) and any other newly
+updated configurations.</entry>
+</row>
+<row>
+<entry colname="col1"><uicontrol>Notify me of updates that I have
+not rejected</uicontrol></entry>
+<entry colname="col2">The window opens if any new updates exist, except
+for <tm tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping
+Configuration Files. The window does not prompt update for <tm
+tmtype="reg" trademark="z/OS">z/OS</tm> File System Mapping Configuration
+Files.</entry>
+</row>
+<row>
+<entry colname="col1"><uicontrol>Do not notify me of updates</uicontrol></entry>
+<entry colname="col2">The window does not open.</entry>
+</row>
+</tbody>
+</tgroup>
+</table></example>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdptcprefs.dita" scope="local" type="task">
+</link>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita"/>
+</related-links>
+<?tm 1435190797 9?>
+</task>
+<?Pub *0000010039?>

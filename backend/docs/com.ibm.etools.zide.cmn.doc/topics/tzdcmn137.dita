@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn137" xml:lang="en-us">
+<title>Exploring the local file system</title>
+<titlealts>
+<navtitle>Exploring the local file system</navtitle>
+</titlealts>
+<shortdesc>The remote systems view displays locations on your local
+file system. You can navigate in a local system from this view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local file system<indexterm>exploring</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>To explore the local file system in the <wintitle>Remote Systems</wintitle> view,
+you must define a filter for the local system. This filter can be
+mapped to the root of the system or to a specific location on the
+system.</prereq>
+<steps>
+<step><cmd>Select the file system that you want to explore by clicking
+the file system on the tree view.</cmd><stepresult>The content of
+the selected system expands as you continue to click the <uicontrol>+</uicontrol> symbols
+to expand.</stepresult></step>
+<step><cmd>Continue navigating until you find the file you are looking
+for.</cmd></step>
+<step><cmd>Select the file. </cmd><stepresult>The properties information
+is displayed in the <wintitle>Properties</wintitle> view. If the correct
+version of the file is displayed, you can open the file for editing.</stepresult>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn116.dita" type="task"></link>
+</related-links>
+</task>
+<?Pub *0000001615?>

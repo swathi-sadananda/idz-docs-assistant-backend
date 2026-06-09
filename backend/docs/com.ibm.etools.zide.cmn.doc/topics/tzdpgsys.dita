@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdpgsys" xml:lang="en-us">
+<title>The system property group file</title><?Pub Caret -2?>
+<shortdesc>The system property group file defines property groups
+that are available to users when they connect to a remote system.
+This file is generated when an administrator exports property groups
+for distribution to client workspaces. It is not necessary to create
+this file; information about its content and structure are included
+here for reference only.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>property groups<indexterm>system property group
+file</indexterm></indexterm><indexterm>system property group file</indexterm>
+<indexterm>configure property groups<indexterm>system property group
+file</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>When a user connects to a system for the first time, the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+determines whether a system property group file exists on the remote
+system. If so, the property groups that are defined in that file are
+loaded from the system file, and users see them in the <wintitle>Property
+Group Manager</wintitle> view. If a <term>current property group</term> is
+specified in the file, that property group is associated with the <uicontrol>MVS
+Files</uicontrol> node in the <wintitle>Remote Systems</wintitle> view.
+The property groups are persisted in the workspace just like the property
+groups the user creates. If the system property group file is updated,
+users are prompted to replace the property groups that were originally
+loaded from the system with the updated property groups.<p>The system
+property group file is <filepath>propertygroups.xml</filepath> and
+contains the following tags. It is encoded in UTF-8. For the system
+property group schema, see the related topics.</p><codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;PROPERTY-GROUPS>
+  &lt;PROPERTY-GROUP>
+    &lt;NAME><varname>property group name</varname>&lt;/NAME>
+	  &lt;DESCRIPTION><varname>property group description</varname>&lt;/DESCRIPTION>
+    &lt;APPLICATION-LANGUAGE><varname>application language</varname>&lt;/APPLICATION-LANGUAGE>
+    &lt;CATEGORY-INSTANCE>
+      &lt;CATEGORY><varname>category name</varname>&lt;/CATEGORY>
+      &lt;PROPERTY>
+        &lt;NAME><varname>property name</varname>&lt;/NAME>
+        &lt;VALUE><varname>property value</varname>&lt;/VALUE>
+      &lt;/PROPERTY>
+    &lt;/CATEGORY-INSTANCE>
+  &lt;/PROPERTY-GROUP>
+&lt;/PROPERTY-GROUPS>
+</codeblock><dl><dlentry>
+<dt>&lt;PROPERTY-GROUPS></dt>
+<dd>Contains one or more &lt;PROPERTY-GROUP> tags.</dd>
+</dlentry><dlentry>
+<dt>&lt;PROPERTY-GROUP></dt>
+<dd>Defines a property group and the property categories for the group.
+This tag can contain one &lt;NAME> tag, one &lt;DESCRIPTION> tag,
+and one or more &lt;CATEGORY-INSTANCE> tags.</dd>
+</dlentry><dlentry>
+<dt>&lt;NAME></dt>
+<dd>Specify the name of the property group, such as <userinput>COBOL
+property group</userinput>.</dd>
+</dlentry><dlentry>
+<dt>&lt;DESCRIPTION></dt>
+<dd>A description of the property group, such as <userinput>Contains
+properties for compiling COBOL programs to run in debug mode</userinput>.
+This tag is optional.</dd>
+</dlentry><dlentry>
+<dt>&lt;APPLICATION-LANGUAGE></dt>
+<dd>Specify the application language, such as "COBOL" or "PL/I". 
+This tag is optional.</dd>
+</dlentry><dlentry>
+<dt>&lt;CATEGORY-INSTANCE></dt>
+<dd>Specify the property categories to be included in the property
+group. This tag can contain one &lt;NAME> tag and one or more &lt;PROPERTY>
+tags.</dd>
+</dlentry><dlentry>
+<dt>&lt;CATEGORY></dt>
+<dd>Specify the name of a property category to include in the property
+group. See the Related References for a list of valid category names.</dd>
+</dlentry><dlentry>
+<dt>&lt;PROPERTY></dt>
+<dd>Specify one or more property &lt;NAME> and &lt;VALUE> pairs to
+include for the category. For a list of valid property names, see
+the related topics.</dd>
+</dlentry></dl> </context>
+</taskbody>
+<related-links>
+<link href="rzdpgsysschema.dita" type="reference"></link>
+<link href="rzdpgsyssamp.dita" type="reference"></link>
+<link href="rzdpgcats.dita" type="reference"></link>
+</related-links>
+<?tm 1435190793 0?>
+</task>
+<?Pub *0000004478?>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdretrieveds" rev="80" xml:lang="en-us">
+<title>Retrieving data sets</title>
+<titlealts>
+<navtitle>Retrieving data sets</navtitle>
+<searchtitle>Retrieving data sets</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>Retrieve Data Set</uicontrol> action
+to find and add data sets to the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>retrieve data sets</indexterm></keywords>
+<keywords><indexterm>Retrieved Data Sets<indexterm>add a data set</indexterm><indexterm>remove
+a data set</indexterm></indexterm></keywords>
+<keywords><indexterm>add a data set to Retrieved Data Sets</indexterm>
+</keywords>
+<keywords><indexterm>remove a data set from Retrieved Data Sets</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>The <wintitle>Retrieve Data Set</wintitle> window searches the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files subsystem for data sets that match a search string that you enter.
+Ensure that the name of data set that you are working with contains at least two qualifiers such as
+<filepath>NEW.JCL</filepath>. Otherwise, errors might occur. This function is similar to, but not
+identical to, the ISPF option 3.4, Data Set List Utility. The following list shows some of the
+differences between <wintitle>Retrieve Data Set</wintitle> and ISPF 3.4:<ul>
+<li><wintitle>Retrieve Data Set</wintitle> does not show data sets that are in the catalog but not
+on the volume.</li>
+<li><wintitle>Retrieve Data Set</wintitle> shows VSAM clusters, but does not show their index and
+data components, or their alternate index, data components, or path. The
+<wintitle>Properties</wintitle> view for VSAM clusters shows the index, data components, alternate
+index, and path.</li>
+<li><wintitle>Retrieve Data Set</wintitle> shows generation data groups under the Retrieved Data
+Sets filter. Generation data sets are shown under their respective generation data groups.</li>
+<li>The wildcard character * functions differently in the <wintitle>Retrieve Data Set</wintitle>
+window and ISPF. In the <wintitle>Retrieve Data Set</wintitle> window, an * in a search string can
+cross qualifier boundaries. The search string <userinput>USERID.*O*</userinput>, for example,
+matches both <filepath>USERID.LOAD</filepath> and <filepath>USERID.TEST.COBOL</filepath> in the
+<wintitle>Retrieve Data Set</wintitle> window, but matches only <filepath>USERID.LOAD</filepath> in
+ISPF 3.4.</li>
+</ul></context>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, select <uicontrol>MVS
+Files</uicontrol> and then select <uicontrol>Retrieve Data Set</uicontrol> from
+the menu or press Ctrl+R.</cmd><info rev="802">You can also open this
+window by selecting any of the following <wintitle>Remote System</wintitle> view
+resources and pressing Ctrl+R: any <tm tmtype="tm" trademark="MVS">MVS</tm> file
+filter, a sequential or partitioned data set, or a data set member.</info>
+<stepresult>The <wintitle>Retrieve Data Set</wintitle> window opens.
+If you complete previous searches, the last search pattern that is
+used is shown in the window.</stepresult></step>
+<step><cmd>Type a data set name pattern to search for and press <uicontrol>Enter</uicontrol>.</cmd>
+<stepresult>Matching data sets are listed in the window. The sort
+order for matches is determined by the <uicontrol>Sort Order for Data
+Sets > Remote Systems view</uicontrol> setting on the <wintitle>MVS
+Files</wintitle> preference page. The window also displays the number
+of matches.</stepresult></step>
+<step importance="optional"><cmd>You can type a new search pattern
+to update the list of matches.</cmd><stepxmp>If you type an invalid
+data set name pattern, for example, or if you receive many matches,
+you can retype or refine the search pattern to try the search again
+or narrow down the list of matches.</stepxmp></step>
+<step importance="optional" rev="802"><cmd>To find a member of a partitioned
+data set, select a partitioned data set name from the data set list
+and then click the <uicontrol>Find Member</uicontrol> link or press
+Ctrl+F.</cmd><stepresult> The <wintitle>Find Member</wintitle> window
+opens. You can use this window to add a partitioned data set to the <uicontrol>Retrieved
+Data Sets</uicontrol> filter and highlight the member name, or to
+open the member in an editor. For more information about using the <wintitle>Find
+Member</wintitle> window, see the related links.</stepresult></step>
+<step importance="optional" rev="90"><cmd>To save the search pattern
+or selected data sets to a new filter:</cmd>
+<substeps>
+<substep importance="optional"><cmd>Select one or more data sets from
+the list. To select multiple data sets, hold down the Ctrl key while
+you select them.</cmd></substep>
+<substep><cmd>Click <uicontrol>Add these matches to a new filter</uicontrol>.</cmd>
+<stepresult>If you select more than one data set, the <wintitle>New
+Filter</wintitle> window opens. </stepresult></substep>
+<substep><cmd>Type a name for the new filter and click <uicontrol>OK</uicontrol>.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>Select <ph rev="90">one or more data sets</ph> and click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>The data sets are added to the <uicontrol><image
+href="../images/retrieved.png" placement="inline"><alt>Retrieved data
+sets icon</alt></image> Retrieved Data Sets</uicontrol> filter in
+the <tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem and the
+first selected data set is highlighted in the view. If you selected <uicontrol>Add
+these matches to a new filter</uicontrol>, all matching data sets
+are added to the new filter and the first selected data set is highlighted
+there.<note><ph id="retrieved_data_sets"><uicontrol><image
+href="../images/retrieved.png" placement="inline"><alt>Retrieved data
+sets icon</alt></image> Retrieved Data Sets</uicontrol> is a system-controlled
+filter. By default, it shows the last 10 data sets found by the <uicontrol>Retrieve
+Data Set</uicontrol> action or added by using the allocate actions.
+Its unique status is indicated visually by a unique icon: a filter
+icon that is superimposed with a pushpin. The only way to populate <uicontrol>Retrieved
+Data Sets</uicontrol> is by using the <wintitle>Retrieve Data Set</wintitle> window
+or by using the allocate actions. <ph rev="90">You cannot rename or
+delete <uicontrol>Retrieved Data Sets</uicontrol>, but you can remove
+data sets from it and change the number of data sets that are shown
+in it. To add search results to a filter that you can rename or delete,
+use the <uicontrol>Add these matches to a new filter</uicontrol> option.</ph></ph></note></stepresult>
+</step>
+<step id="remove" rev="90"><cmd>To remove a data set from <uicontrol><image
+href="../images/retrieved.png" placement="inline"><alt>Retrieved data sets icon</alt></image>
+Retrieved Data Sets</uicontrol>, select one or more data sets, right-click, and select
+<uicontrol>Remove from Retrieved Data Sets</uicontrol> from the menu.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="t_retrieveds_remove.dita" scope="local"
+type="task"></link>
+<link format="dita" href="tzdmvspref.dita" scope="local" type="task"/>
+<link format="dita" href="tzdretrievemem.dita" scope="local" type="topic"/>
+<link format="html"
+href="https://mediacenter.ibm.com/media/0_r3kgdqro"
+scope="external">
+<linktext>Demonstration: Retrieve data sets</linktext>
+</link><?Pub Caret 0?>
+</related-links>
+<?tm 1435190811 4?>
+</task>
+<?Pub *0000007449?>

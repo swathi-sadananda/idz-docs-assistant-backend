@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="r_pg_subvars" xml:lang="en-us">
+<title>Substitution variables in property group pages</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Substitution variables in property group pages</navtitle>
+<searchtitle>Substitution variables in property group pages</searchtitle>
+</titlealts>
+<shortdesc>You can use substitution variables in property group pages
+to increase their flexibility and portability.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>substitution variables<indexterm>property group
+pages</indexterm></indexterm></keywords>
+<keywords><indexterm>property group pages<indexterm>substitution variables</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The property group pages support the following substitution
+variables:<simpletable>
+<sthead>
+<stentry>Variable</stentry>
+<stentry>Description</stentry>
+<stentry>Where it is allowed</stentry>
+</sthead>
+<strow>
+<stentry><varname>&lt;HLQ></varname></stentry>
+<stentry>The current high-level qualifier. <p>This variable gets its
+value from two different places, depending on where you are using
+it in the product.<ul>
+<li> In the <wintitle>z/OS Projects</wintitle> view, <varname>&lt;HLQ></varname> comes
+from the HLQ property that is set on the subproject.  The values available
+for <varname>&lt;HLQ></varname> in the subproject come from the filters
+that you set in the <wintitle>Remote Systems</wintitle> view.  In
+a subproject, <varname>&lt;HLQ></varname> resolves to the value that
+is set on the subproject.   </li>
+<li>In the <wintitle>Remote Systems</wintitle> view, the <varname>&lt;HLQ></varname> is
+the leftmost qualifier of the fully qualified data set member that
+you selected for the action. </li>
+</ul></p></stentry>
+<stentry>Any field that takes a data set name.</stentry>
+</strow>
+<strow>
+<stentry><varname>&lt;JOBNAME></varname></stentry>
+<stentry>A generated job name for batch jobs.</stentry>
+<stentry><uicontrol>JCL job card</uicontrol> on the <wintitle>JCL
+Job Card and Data Set</wintitle> page.</stentry>
+</strow>
+<strow>
+<stentry><varname>&lt;MEM></varname></stentry>
+<stentry>The current data set member that you selected and upon which
+the action is run.  If you are building a subproject, it is the current
+member that is processed in the course of the subproject build.</stentry>
+<stentry>Any field that takes a member name.</stentry>
+</strow>
+<strow>
+<stentry><varname>&lt;USERID></varname></stentry>
+<stentry>The user ID that you used to connect to the remote system.</stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+<?tm 1435190819 0?>
+</reference>
+<?Pub *0000002838?>

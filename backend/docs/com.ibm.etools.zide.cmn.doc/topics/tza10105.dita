@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tza10105" xml:lang="en-us">
+<!--Moved from reference directory to tasks directory in RDz 8.0-->
+<?Pub Caret -2?>
+<title>Setting preferences for features used by New COBOL Program
+wizard</title>
+<titlealts>
+<navtitle>Setting preferences for features</navtitle>
+<searchtitle>Setting preferences for features that are used by New
+COBOL Program wizard</searchtitle>
+</titlealts>
+<shortdesc>You can define and customize the features available to
+your generated COBOL programs. Some predefined features are provided.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>setting preferences for features used by New
+COBOL Program wizard</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context rev="rdz80"><p>You can do these tasks: <ul>
+<li>List current features for COBOL generation and add new features</li>
+<li>Resequence, rename, exclude from the COBOL Program wizard, or
+delete some or all of the features</li>
+<li>Export features (including ones that you created) so that they
+can be shared</li>
+<li>Import features </li>
+<li>Restore all features to their product defaults</li>
+</ul></p></context>
+<steps rev="rdz80">
+<stepsection>To work with preferences for COBOL generation features,
+complete the following steps:</stepsection>
+<step>
+<cmd>On the <wintitle>Preferences</wintitle> page, navigate to <menucascade>
+<uicontrol>COBOL</uicontrol>
+<uicontrol>Features</uicontrol>
+</menucascade>.</cmd>
+<stepresult>A list of the currently configured COBOL features is displayed. The default features are
+as follows:<sl outputclass="checkoff">
+<sli><uicontrol>Use BMS Maps</uicontrol></sli>
+<sli><uicontrol>Invoke CICS commands</uicontrol></sli>
+<sli><uicontrol>Use SQL statements</uicontrol></sli>
+<sli><uicontrol>Handle SQL error return codes</uicontrol></sli>
+</sl></stepresult>
+</step>
+<step><cmd>Perform one or more of the following tasks:</cmd>
+<choicetable relcolwidth="1 6">
+<chhead>
+<choptionhd>Task</choptionhd>
+<chdeschd>Steps</chdeschd></chhead>
+<chrow>
+<choption>Change the order of the list </choption>
+<chdesc><ol>
+<li>Select the name of a feature.</li>
+<li>Click <uicontrol>Up</uicontrol> or <uicontrol>Down</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Add a feature to the list</choption>
+<chdesc><ol>
+<li>Click <uicontrol>New</uicontrol>. The <q><wintitle>New feature</wintitle></q> window
+opens.</li>
+<li>Type the name of the new feature and click <uicontrol>OK</uicontrol>.</li>
+<li>For each feature, you can define and customize the code that you
+want to insert into each section of your COBOL program (for example,
+the Working Storage section or the Procedure Division). In the tabbed
+editors for each section, enter the code to define each feature. The
+tabs are as follows:<ul>
+<li><uicontrol>Environment</uicontrol></li>
+<li><uicontrol>File</uicontrol></li>
+<li><uicontrol>Working Storage</uicontrol></li>
+<li><uicontrol>Local Storage</uicontrol></li>
+<li><uicontrol>Linkage</uicontrol></li>
+<li><uicontrol>Procedure</uicontrol></li>
+</ul></li>
+<li>Click <uicontrol>Apply</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Rename a feature</choption>
+<chdesc><ol>
+<li>Select the name of a feature, and click <uicontrol>Rename</uicontrol>.
+The <q><wintitle>Rename feature</wintitle></q> window opens.</li>
+<li>Type the new name, and click <uicontrol>OK</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Exclude a feature</choption>
+<chdesc><ol>
+<li>Clear the checkbox. You do not need to delete the feature.</li>
+<li>Click <uicontrol>Apply</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Delete one or more features</choption>
+<chdesc><ol>
+<li>Select the name of a feature, and click <uicontrol>Delete</uicontrol>.
+The <q><wintitle>Confirm delete</wintitle></q> window opens.</li>
+<li>Click <uicontrol>Yes</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Save one or more features to a file</choption>
+<chdesc><ol>
+<li>Click <uicontrol>Export All</uicontrol>, or select one or more
+features and click <uicontrol>Export</uicontrol>. The <q><wintitle>Export
+COBOL features</wintitle></q> window opens.</li>
+<li>Specify the location and file name of the XML file to be created,
+and click <uicontrol>Save</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Use features from an existing XML file</choption>
+<chdesc><ol>
+<li>Click <uicontrol>Import</uicontrol>. The <q><wintitle>Import COBOL
+features</wintitle></q> window opens.</li>
+<li>Select an XML file, and click <uicontrol>Open</uicontrol>.</li>
+</ol></chdesc></chrow>
+<chrow>
+<choption>Restore the COBOL feature defaults</choption>
+<chdesc><ol>
+<li>Click <uicontrol>Restore Defaults</uicontrol>. The <q><wintitle>Confirm
+Restore Defaults</wintitle></q> window opens.</li>
+<li>Click <uicontrol>OK</uicontrol>. All COBOL feature customizations
+are removed. The product defaults are restored.</li>
+</ol></chdesc></chrow>
+</choicetable>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190835 0?>
+</task>
+<?Pub *0000005221?>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="setup-eclipse" xml:lang="en-US">
+<title>Setting up an Eclipse development environment</title>
+<titlealts>
+<navtitle>Setting up an Eclipse development environment</navtitle>
+<searchtitle>Setting up an Eclipse development environment</searchtitle>
+</titlealts>
+<abstract>Preparing your Eclipse workspace for developing z/OS applications consists of three areas
+of setup. Each of these areas is described in this section:<ul>
+<li>Setting up a workspace for developing with a specific language. If you know that you plan to
+work mainly in Assembler, COBOL, or PL/I, you can start with <xref
+href="setup_workspace_guide_builder.dita"/>.</li>
+<li>Setting up property groups for passing information about your source files to compilers, runtime
+environments, debug tools, and testing tools.</li>
+<li>Setting Eclipse preferences for the product tooling.</li>
+</ul>Additionally, you create customized menus for your Eclipse workspace and add these to the
+pop-up menus in various Eclipse editors and views.<shortdesc>All of these set-up options are
+explained in the topics in this section.</shortdesc></abstract>
+<body/>
+</topic>

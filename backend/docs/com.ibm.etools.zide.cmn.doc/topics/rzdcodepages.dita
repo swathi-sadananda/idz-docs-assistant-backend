@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><reference id="rzdcodepages" xml:lang="en-us">
+<title>Supported host code pages</title>
+<?Pub Caret -2?>
+<shortdesc>These host code pages are supported. The default value is <tm trademark="IBM" tmtype="reg">IBM</tm>-037 (mixed-case English).</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>code pages</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<!-- The supported host code pages in RDz are defined in the internal settings file "com.ibm.ftt.core/encoding.xml." Update this topic when code pages are added into this settings file.-->
+<table outputclass="presentation" id="table_cbx_gth_hvb">
+<tgroup cols="4">
+<colspec colname="col1" />
+<colspec colname="col2" />
+<colspec colname="col3" />
+<colspec colname="col4" />
+<tbody>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-037</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-273</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-277</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-278</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-280</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-284</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-285</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-297</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-420</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-424</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-425 </entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-500</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-803</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-870 </entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-871</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-875</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-930</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-933</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-935</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-937</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-939</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-1026</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-1047</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-1140</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-1141</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-1142</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-1143</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-1144</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-1145</entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-1146</entry>
+<entry colname="col3"><tm trademark="IBM" tmtype="reg">IBM</tm>-1147</entry>
+<entry colname="col4"><tm trademark="IBM" tmtype="reg">IBM</tm>-1148</entry>
+</row>
+<row>
+<entry colname="col1"><tm trademark="IBM" tmtype="reg">IBM</tm>-1149 </entry>
+<entry colname="col2"><tm trademark="IBM" tmtype="reg">IBM</tm>-1364</entry>
+<entry colname="col3">UTF-8</entry>
+<entry colname="col4">UTF-16</entry>
+</row>
+<row>
+<entry colname="col1">UTF16BE</entry>
+<entry colname="col2">UTF-16LE</entry>
+<entry colname="col3" />
+<entry colname="col4" />
+</row>
+</tbody>
+</tgroup>
+</table>
+</refbody>
+
+</reference><?Pub *0000002862?><?tm 1670257711861 35 IBM ?>

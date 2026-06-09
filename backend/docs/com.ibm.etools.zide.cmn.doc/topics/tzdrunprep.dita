@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdrunprep" xml:lang="en-us">
+<title>Running the sample preprocessor TMPLT00</title><?Pub Caret -2?>
+<shortdesc>Learn how to run the sample PL/I preprocessor TMPLT00.</shortdesc>
+<prolog><metadata>
+<keywords>
+<!--Insert <indexterm> tags here-->
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>The sample PL/I preprocessor TMPLT00 is run as part of a
+build operation for a COBOL program.  The preprocessor runs with the
+COBOL program as input.  The output of the preprocessor is used as
+input to the compiler.  The preprocessor runs when you select the <uicontrol>Rebuild
+Subproject</uicontrol>, <uicontrol>Syntax Check > Remote</uicontrol>,
+or <uicontrol>Show Dependencies</uicontrol> actions for a COBOL program.
+ See <xref format="dita" href="rzdefwalkthrough.dita" scope="local"
+type="reference"></xref> for an example of this process.<p>To start
+the preprocessor, the build properties of your COBOL property group
+must include a call to the preprocessor.  Set the following build
+properties in your COBOL property group:</p><table><title>Property
+Group for COBOL Parts</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="53*"/><colspec
+colname="col2" colwidth="144*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Property Group Page</entry>
+<entry colname="col2">Property Group Settings</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">COBOL Settings</entry>
+<entry colname="col2">On the <wintitle>Procedures and Steps</wintitle> page:<ul>
+<li>Enable the ELAXFCP9 procedure.</li>
+<li>Add a step that is called PREPROC1 and set the following step
+options:<sl>
+<sli><uicontrol>Support Error Feedback:</uicontrol> Select this check
+box.</sli>
+<sli><uicontrol>Data Set Qualifier for Compiler Errors:</uicontrol> &lt;HLQ>.FRAGDMO</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site, such as:</sli>
+</sl><codeblock>//PREPROC1.FRAGMENT DD DSN=&lt;HLQ>.A001.DATA.FRAGMENT,DSP=SHR</codeblock></li>
+</ul></entry>
+</row>
+<row>
+<entry colname="col1">Runtime Options</entry>
+<entry colname="col2">On the <wintitle>Procedures and Steps</wintitle> page:<ul>
+<li>Enable the ELAXFCP9 procedure.</li>
+<li>Specify the following options for the COBOL step:<sl>
+<sli><uicontrol>Copy Libraries:</uicontrol> &lt;HLQ>.A001.COPYLIB1.COPYLIB</sli>
+<sli><uicontrol>Support Error Feedback:</uicontrol> Select this check
+box.</sli>
+<sli><uicontrol>Data Set qualifier for Compiler Errors:</uicontrol> &lt;HLQ>.ERRCOB</sli>
+<sli><uicontrol>Additional JCL:</uicontrol> Include any additional
+JCL required by your site.</sli>
+</sl></li>
+</ul></entry>
+</row>
+</tbody>
+</tgroup>
+</table></context>
+</taskbody>
+<?tm 1435190825 0?>
+</task>
+<?Pub *0000002916?>

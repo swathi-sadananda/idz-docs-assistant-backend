@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdefschema" xml:lang="en-us">
+<title>Error feedback XML schema</title><?Pub Caret -2?>
+<shortdesc>The error feedback XML schema defines tags that are used
+to define an error feedback XML file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>XML schema</indexterm></indexterm>
+<indexterm>XML file for error feedback<indexterm>schema</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><title>XML schema</title>The following sample shows the XML
+schema for the error feedback file. For a description of the tags,
+see <xref format="dita" href="rzdefschema.dita#rzdefschema/eftags"
+scope="local" type="section"></xref>.<codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  &lt;xsd:element name="OUTFILECOUNT" type="xsd:string"/>
+  &lt;xsd:element name="FILENUMBER" type="xsd:string"/>
+  &lt;xsd:element name="PACKAGE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="FILEREFERENCETABLE" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="MESSAGE" maxOccurs="unbounded" minOccurs="0"/>
+        &lt;xsd:element ref="OUTFILEREFERENCETABLE" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="STATEMENTTABLE" maxOccurs="1" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="FILENAME" type="xsd:string"/>
+  &lt;xsd:element name="MESSAGE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="MSGNUMBER" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="MSGLINE" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="MSGFILE" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="MSGTEXT" maxOccurs="1" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="OUTFILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="OUTFILENUMBER" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="OUTFILENAME" maxOccurs="1" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MSGNUMBER" type="xsd:string"/>
+  &lt;xsd:element name="OUTFILEREFERENCETABLE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="OUTFILECOUNT" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="OUTFILE" maxOccurs="unbounded" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="BUILD">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="PACKAGE" maxOccurs="1" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MSGTEXT" type="xsd:string"/>
+  &lt;xsd:element name="OUTFILENUMBER" type="xsd:string"/>
+  &lt;xsd:element name="FILECOUNT" type="xsd:string"/>
+  &lt;xsd:element name="OUTFILENAME" type="xsd:string"/>
+  &lt;xsd:element name="MSGLINE" type="xsd:string"/>
+  &lt;xsd:element name="FILE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="FILENUMBER" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element ref="FILENAME" maxOccurs="1" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+  &lt;xsd:element name="MSGFILE" type="xsd:string"/>
+  &lt;xsd:element name="STATEMENTTABLE" type="xsd:string"/>
+  &lt;xsd:element name="FILEREFERENCETABLE">
+    &lt;xsd:complexType>
+      &lt;xsd:sequence>
+        &lt;xsd:element ref="FILECOUNT" maxOccurs="1" minOccurs="1"/>
+        &lt;xsd:element maxOccurs="unbounded" ref="FILE" minOccurs="1"/>
+      &lt;/xsd:sequence>
+    &lt;/xsd:complexType>
+  &lt;/xsd:element>
+&lt;/xsd:schema>
+</codeblock></section>
+<section id="eftags"><title>Error feedback tags</title>The format
+of the error feedback file originated with the PL/I compiler XML format.
+This file format takes several enhancements to allow for the following
+options:<ul>
+<li>User-written builders that create multiple files, rather than
+a single output file.</li>
+<li>The ability to determine whether an input file was an original
+file that the user started with, or if the file is an intermediate
+file that was created as the result of a processing step, by checking
+to see whether the first reference of the file was in the FILEREFERENCETABLE
+or OUTPUTFILEREFERENCETABLE.</li>
+<li>The ability to chain several processing steps together, and be
+able to map any line in the ultimate output to whichever line in the
+original source.</li>
+</ul>The error feedback file contains the following tags:<dl><dlentry>
+<dt>BUILD</dt>
+<dd>This tag is an all-encompassing tag that is used to denote the
+beginning and the ending of the processing.</dd>
+</dlentry><dlentry>
+<dt>PACKAGE</dt>
+<dd>This tag is also an encompassing tag that is only enveloped by
+the BUILD tag. This tag is only for compatibility with the compiler
+error feedback file. </dd>
+</dlentry><dlentry>
+<dt>FILEREFERENCETABLE</dt>
+<dd>This tag is used to encompass tags that describe the files that
+are used during the processing.</dd>
+</dlentry><dlentry>
+<dt>FILECOUNT</dt>
+<dd>This tag describes the number of files that were used during processing.</dd>
+</dlentry><dlentry>
+<dt>FILE</dt>
+<dd>This tag describes an individual file that is used during the
+processing.</dd>
+</dlentry><dlentry>
+<dt>FILENUMBER:</dt>
+<dd>This tag describes the number that is assigned to the input file
+by the processor.</dd>
+</dlentry><dlentry>
+<dt>FILENAME</dt>
+<dd>This tag is the file name of the file that is used during the
+processing.  It is the name of the file that corresponds with the
+FILENUMBER tag.</dd>
+</dlentry><dlentry>
+<dt>MESSAGE</dt>
+<dd>This tag describes a message that is produced by the processor.</dd>
+</dlentry><dlentry>
+<dt>MSGNUMBER</dt>
+<dd>This tag describes the message number of the message that was
+produced by the processor.</dd>
+</dlentry><dlentry>
+<dt>MSGLINE</dt>
+<dd>This tag describes the line in the input file that caused the
+processor to produce the message.</dd>
+</dlentry><dlentry>
+<dt>MSGFILE</dt>
+<dd>This tag describes the file number of the input file that caused
+the processor to produce the message.</dd>
+</dlentry><dlentry>
+<dt>MSGTEXT</dt>
+<dd>This tag is the text of the message that is produced by the processor.</dd>
+</dlentry><dlentry>
+<dt>OUTFILEREFERENCETABLE</dt>
+<dd>This tag describes the files that are produced by the processor.
+This tag is newly added. It was developed for describing multiple
+files that can be generated during a single process. These files can
+be used as input to any processing steps that might follow the current
+processing.</dd>
+</dlentry><dlentry>
+<dt>OUTFILENUMBER</dt>
+<dd>This tag describes the file number of an individual file that
+is produced by the processor.</dd>
+</dlentry><dlentry>
+<dt>OUTFILENAME</dt>
+<dd>This tag describes the file name of an individual file that is
+produced by the processor.</dd>
+</dlentry><dlentry>
+<dt>STATEMENTTABLE</dt>
+<dd>This tag describes the statements that are produced during a process.
+This tag is a newly added tag that serves to describe each statement
+in the output file. The description is an ordered quad. Each entry
+is read as follows: (A,B,C,D), where: <sl>
+<sli>A = Line number that is written in the output file.</sli>
+<sli>B = File number of the output file.</sli>
+<sli>C = Line number of the input file that was read to generate line
+number A in File number B.</sli>
+<sli>D = File number of the input file that contained line number
+C, which was read to generate line number A in file number B. </sli>
+</sl>   </dd>
+</dlentry></dl></section>
+</refbody>
+<related-links>
+<link href="rzdefcobol.dita" type="reference"></link>
+<link href="rzdefassembler.dita" type="reference"></link>
+<link href="tzdefclient.dita" type="task"></link>
+<link href="czderrorfeedback.dita" type="concept"></link>
+<link format="dita" href="tzdcustbld.dita" scope="local" type="task">
+</link>
+</related-links>
+<?tm 1435190823 0?>
+</reference>
+<?Pub *0000008264?>

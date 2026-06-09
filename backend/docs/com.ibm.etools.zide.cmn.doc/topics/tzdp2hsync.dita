@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<?Pub Caret -1?>
+<task id="tzdp2hsync" xml:lang="en-us">
+<title>Synchronizing a local project with a remote system</title>
+<shortdesc>You can synchronize a local project with a remote system
+either manually or automatically.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>synchronizing a local project with a remote system</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><ul>
+<li><xref href="tzdp2hman.dita" type="task"></xref></li>
+<li><xref href="tzdp2hauto.dita" type="topic"></xref></li>
+</ul></context>
+</taskbody>
+</task>
+<?Pub *0000000793?>

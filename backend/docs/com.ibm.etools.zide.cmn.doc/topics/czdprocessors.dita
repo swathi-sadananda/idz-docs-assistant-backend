@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<concept id="czdprocessors" rev="760" xml:lang="en-us">
+<title>Local preprocessor options</title>
+<shortdesc>You can define and select which local preprocessor options
+to use to build local and remote COBOL and PL/I programs.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>local preprocessor options</indexterm><indexterm>preprocessors</indexterm>
+<indexterm>compilers</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p>The <wintitle>Local Preprocessor</wintitle> page is available on the <uicontrol>COBOL</uicontrol>
+and <uicontrol>PL/I</uicontrol> property group tabs.</p>
+<p>You use the <wintitle>Local Preprocessor</wintitle> page of the
+property group editor to specify information about local preprocessors
+to be started before the local COBOL or PL/I compiler. For more information
+about setting local preprocessor options, see the related links.</p>
+</conbody>
+<related-links>
+<link format="dita" href="tzdlocprocopts.dita" scope="local" type="task"/>
+<link format="dita" href="tzdincpreproc.dita" scope="local" type="task"/>
+<link format="dita" href="tzdmultlocproc.dita" scope="local" type="task"/>
+<link format="dita" href="tzdcustbld.dita" scope="local" type="task"/>
+<link format="dita" href="tzdpropgrp.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1337269566 0?>
+</concept><?Pub Caret -2?>
+<?Pub *0000001597?>

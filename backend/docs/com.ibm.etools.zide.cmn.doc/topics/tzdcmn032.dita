@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<topic id="tzdcmn032" xml:lang="en-us">
+<title>Connecting to a z/OS system</title>
+<titlealts>
+<navtitle>Connecting to a z/OS system</navtitle>
+<searchtitle>Connecting to a z/OS system</searchtitle>
+</titlealts>
+<shortdesc>To access z/OS files from the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> client, you must
+define a connection to a z/OS system.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>connection to a z/OS system<indexterm>creating</indexterm></indexterm>
+<indexterm>connection to a z/OS system<indexterm>creating</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<p>Define only one connection to a particular z/OS system in each workspace. If you define multiple
+connections to a single z/OS system, and your site uses the push-to-client function to distribute
+updates to z/OS system connections, then all connections to the z/OS system are updated. The
+<keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> product
+does not support different configurations of the same z/OS system in a single workspace. </p>
+<ol>
+<li id="define">In the <wintitle>Remote Systems</wintitle> view, click <image placement="inline"
+href="../images/new_connection.jpg"><alt>Define a connection to a remote system</alt></image>
+<uicontrol>Define a connection to a remote system</uicontrol> and double-click
+<uicontrol>z/OS</uicontrol>. </li>
+<li id="type">In the <wintitle>New Connection</wintitle> window, select <uicontrol>z/OS</uicontrol>
+and click <uicontrol>Next</uicontrol>.<itemgroup>
+<note type="tip">If you are creating a connection for the first time, you are prompted to create a
+profile before you can create the new connection. After you create the connection, you can share
+this profile to allow other users to have this connection in their <wintitle>Remote
+Systems</wintitle> view.</note>
+</itemgroup></li>
+<li id="hostname">Enter the following values in the fields on this window. <itemgroup>
+<dl>
+<dlentry>
+<dt>Host name</dt>
+<dd>The TCP/IP address of the z/OS system.</dd>
+</dlentry>
+<dlentry importance="optional">
+<dt>Connection name</dt>
+<dd>A name for the system, for example, <userinput>new.zos.system.connection</userinput>. This field
+defaults to the host name.</dd>
+</dlentry>
+<dlentry importance="optional">
+<dt>Description</dt>
+<dd>A description of the connection.</dd>
+</dlentry>
+<dlentry>
+<dt>Verify host name</dt>
+<dd>Select this checkbox to verify that the host name is valid before you connect.</dd>
+</dlentry>
+</dl>
+</itemgroup></li>
+<li rev="140">To define the connection with default values, click <uicontrol>Finish</uicontrol>. To
+set properties for the connection, click <uicontrol>Next</uicontrol>.</li>
+<li importance="optional">On the <wintitle>Connection Configuration</wintitle> page, specify these options:<itemgroup>
+<ul>
+<li><uicontrol>Daemon Port: </uicontrol> Specify a valid port number. Consult your host system
+administrator for the port number to use.</li>
+<li rev="751"><uicontrol>Authentication method:</uicontrol> Choose a method for authenticating with
+the z/OS system. Select <uicontrol>userid/password</uicontrol> if you log on to the z/OS system by
+using a user ID and password. Select <uicontrol>certificate</uicontrol> if you use client
+certificate authentication. Client certificate authentication is for users who must connect to a
+z/OS system by using a device such as an integrated circuit card (like smart card). For more
+information, see <xref href="tzdsmartcard.dita" type="task"/>.</li>
+</ul>
+</itemgroup></li>
+<li>In the <wintitle>Remote Systems</wintitle> view, select a <tm trademark="z/OS" tmtype="reg"
+>z/OS</tm> connection.</li>
+<li conref="t_connect_interactive_ispf_gateway.dita#t_connect_interactive_ispf_gateway/connect"> </li>
+<li conref="t_connect_interactive_ispf_gateway.dita#t_connect_interactive_ispf_gateway/userid"> </li>
+<li conref="t_connect_interactive_ispf_gateway.dita#t_connect_interactive_ispf_gateway/save"> </li>
+<li conref="t_connect_interactive_ispf_gateway.dita#t_connect_interactive_ispf_gateway/ok"> </li>
+<li id="ssl" importance="optional">Click <uicontrol>Finish</uicontrol> to import the host
+certificate.</li>
+<li conref="t_connect_interactive_ispf_gateway.dita#t_connect_interactive_ispf_gateway/ptc">
+<itemgroup/>
+</li>
+</ol>
+<section>The <wintitle>Remote Systems</wintitle> view displays the short name of the new connection
+with five nodes under the connection name:<ul>
+<li><uicontrol>z/OS UNIX Files</uicontrol> is the <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> file subsystem. This node contains two folders: My home
+and Root. You can create more <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> file folders by adding new filters to this node.</li>
+<li><uicontrol>z/OS UNIX Shells</uicontrol> is a command subsystem. When you open a <tm tmtype="reg"
+trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> command shell, its name is displayed under this
+node.</li>
+<li rev="80"><uicontrol>MVS Files</uicontrol> is the <tm tmtype="tm" trademark="MVS">MVS</tm> file
+subsystem. This node contains three folders: <filepath>My Data Sets</filepath> displays <tm
+tmtype="tm" trademark="MVS">MVS</tm> files that match the filter <varname>userid</varname>.* in
+which <varname>userid</varname> is the user ID with which you connected to the remote system. You
+can create more <tm tmtype="tm" trademark="MVS">MVS</tm> file folders by adding filters to this
+node. You can change the sort order of data sets by using the <wintitle>MVS Files</wintitle>
+preference page. <filepath>Retrieved Data Sets</filepath> displays data set names searched for and
+added by using the <uicontrol>Retrieve Data Sets</uicontrol> action or by allocating a data set.
+<filepath>My Favorites</filepath> displays search queries that you ran and saved in the
+<wintitle>Remote z/OS Search</wintitle> view.</li>
+<li><uicontrol>TSO Commands</uicontrol> is a command subsystem. When you open a TSO command shell,
+its name is displayed under this node.</li>
+<li rev="80"><uicontrol>JES</uicontrol> is the JES subsystem. This node contains three folders:
+<filepath>My Jobs</filepath> displays jobs that are submitted under the user ID with which you
+connected to the z/OS system. You can create more job folders by adding new filters to this node.
+<filepath>Retrieved Jobs</filepath> displays jobs searched for and added by using the
+<uicontrol>Retrieve Job</uicontrol> action. <filepath>Active Jobs</filepath> shows jobs that are
+running.</li>
+<li><uicontrol>Db2 for z/OS</uicontrol> provides tools for connecting to <tm trademark="Db2"
+tmtype="reg">Db2</tm> databases and running and tuning SQL queries. For more information about <tm
+trademark="Db2" tmtype="reg">Db2</tm> for <tm trademark="z/OS" tmtype="reg">z/OS</tm> tooling, see
+<xref href="../../com.ibm.idz.db24zos.doc/topics/overview.dita" scope="peer">Developing with <tm
+trademark="Db2" tmtype="reg">Db2</tm> for <tm trademark="z/OS" tmtype="reg">z/OS</tm></xref>.</li>
+</ul></section>
+<example>
+<image placement="break" href="../animations/connection.gif">
+<alt>Animation illustrating how to create a connection to a z/OS system</alt>
+</image>
+</example>
+<section>After you connect to the remote system, you can control the contents that are displayed
+under <uicontrol>JES</uicontrol>, <uicontrol>MVS Files</uicontrol>, and <uicontrol>z/OS UNIX
+Files</uicontrol> by defining filters for these subsystems. You can add search queries to the
+<uicontrol>MVS Files</uicontrol> folder by running and saving remote <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> searches. For instructions, see the related topics. System administrators
+can configure remote systems to automatically disconnect users after a period of inactivity. Contact
+your system administrator if you have any questions about maintaining an active connection to a
+remote system.</section>
+</body>
+<?Pub Caret -1?>
+<related-links>
+<link href="tzdsmartcard.dita" rev="760" type="task"/>
+<link format="dita" href="../../com.ibm.etools.rdz.troubleshooting.doc/topics/ts_rseg1242.dita"
+scope="local" type="reference"/>
+<link format="dita" href="tzdupdcfg.dita" scope="local" type="task"/>
+<link
+href="https://www.ibm.com/support/knowledgecenter/en/SSBDYH_3.1.1/com.ibm.zexpl.config.hostconfig.doc/topics/opjstp.html"
+scope="external" format="html"><linktext>Defining extra Java startup parameters with
+_RSE_JAVAOPTS</linktext></link>
+</related-links>
+</topic><?Pub *0000006206?><?tm 1684940602452 16 z/OS||UNIX||MVS||Db2 ?>

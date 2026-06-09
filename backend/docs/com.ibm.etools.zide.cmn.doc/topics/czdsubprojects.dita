@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdsubprojects" xml:lang="en-us">
+<title><tm tmtype="tm" trademark="MVS">MVS</tm> subprojects</title><?Pub
+Caret -2?>
+<shortdesc><tm tmtype="tm" trademark="MVS">MVS</tm> subprojects represent
+the programming resources that constitute a single load module. Subprojects
+that are created under the same remote system definition can share
+the system's properties. Subprojects that are defined under the same
+project can be built by using a single build command. <tm tmtype="tm"
+trademark="MVS">MVS</tm> subprojects allow for working with multiple
+load modules under a single project construct.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>MVS subprojects</indexterm><indexterm>subprojects,
+MVS</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<p><tm tmtype="tm" trademark="MVS">MVS</tm> subprojects inherit their
+current property group from the remote system under which they are
+defined. If you change the current property group for the system or
+change property values in that property group, they are propagated
+to the <tm tmtype="tm" trademark="MVS">MVS</tm> subproject. However,
+you can also assign a different property group to a project or subproject
+to differentiate its property values from the properties of the remote
+system. </p>
+<p>The <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view provides an option to turn off file
+extensions for files in <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects. From the menu, click <menucascade>
+<uicontrol>Show</uicontrol><uicontrol>MVS File Extensions</uicontrol>
+</menucascade>.</p>
+</conbody>
+<related-links>
+<link href="tzdnewsubproject.dita"></link>
+<link href="tzdcopysubproject.dita" type="task"></link>
+<link href="tzdcmn049.dita" type="topic"></link>
+<link href="tzdcmn144.dita" type="task"></link>
+<link href="tzdcreateds.dita" type="task"></link>
+<link href="tzdcreatemem.dita" type="task"></link>
+<link href="tzdcmn050.dita" type="task"></link>
+<link href="tzdcmn051.dita" type="task"></link>
+<link href="tzdcmn074.dita" type="task"></link>
+<link href="tzdcmn075.dita" type="task"></link>
+<link href="tzdcmn052.dita" type="task"></link>
+<link href="tzdcmn060.dita" type="task"></link>
+<link href="tzdcmn048.dita" type="task"></link>
+</related-links>
+<?tm 1435190831 6?>
+</concept>
+<?Pub *0000002819?>

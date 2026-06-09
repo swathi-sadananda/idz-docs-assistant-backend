@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdselpreproc" rev="760" xml:lang="en-us">
+<title>Selecting one or more preprocessors to run before a compilation</title>
+<shortdesc>You can select multiple local preprocessors to run before
+a compilation.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>preprocessors<indexterm>selecting for execution</indexterm></indexterm>
+<indexterm>selecting multiple preprocessors to execute before a compilation</indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must define a property group on a local or remote system
+and define one or more preprocessors in the property group.</prereq>
+<steps>
+<stepsection>To select one or more preprocessors to run before a compilation:</stepsection>
+<step><cmd>Open a property group in the property group editor.</cmd>
+</step>
+<step><cmd>Open the <wintitle>Local Preprocessors</wintitle> page
+of the <wintitle>Local COBOL Settings</wintitle> or <wintitle>Local
+PL/I Settings</wintitle>.</cmd></step>
+<step><cmd>In the <uicontrol>Preprocessors</uicontrol> section, click
+the checkbox beside each preprocessor you want to run.</cmd>
+<stepresult>You can select up to 10 local preprocessors for a single
+build operation. The preprocessors are run in the order that is shown
+in this list. If no preprocessors are selected, then the source file
+is compiled without the preprocessor step.</stepresult></step>
+<step><cmd>To change the order in which the preprocessors run, highlight
+a preprocessor name in the list and click <uicontrol>Up</uicontrol> or <uicontrol>Down.</uicontrol></cmd>
+<stepresult>The last preprocessor that is selected in the list is
+the last preprocessor run.  The output of that preprocessor, which
+is the name of the file in the <uicontrol>Preprocessor Output File
+Name</uicontrol> field is the name of the file that is passed to the
+COBOL or PL/I compiler.</stepresult></step>
+<step><cmd>Click Ctrl+S to save your changes.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1337269568 0?>
+</task>
+<?Pub *0000002246?>

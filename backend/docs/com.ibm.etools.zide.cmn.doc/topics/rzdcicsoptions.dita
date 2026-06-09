@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><reference id="rzdcicsoptions" xml:lang="en-us">
+<title><tm tmtype="reg" trademark="CICS">CICS</tm> preprocessor options
+for syntax checks</title><?Pub Caret -2?>
+<shortdesc>The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+sets <tm tmtype="reg" trademark="CICS">CICS</tm> preprocessor options
+appropriate to the level of <tm tmtype="reg" trademark="CICS">CICS</tm> installed
+on the workstation or remote system. You can follow several scenarios
+for local and remote syntax checking of <tm tmtype="reg" trademark="CICS">CICS</tm> programs
+and how the product handles each.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>CICS preprocessor options</indexterm><indexterm>CICS<indexterm>preprocessor
+options</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>
+<note conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/>
+</section>
+<section><title>Local syntax check of a remote <tm tmtype="reg"
+trademark="CICS">CICS</tm> program</title>The following scenarios
+illustrate how the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+sets compiler options for a local syntax check of a remote <tm
+tmtype="reg" trademark="CICS">CICS</tm> program:<ul>
+<li>On the <wintitle>Runtime Environments</wintitle> page for a remote
+file, you select <uicontrol>CICS (contains EXEC CICS statements)</uicontrol> and
+specify a level of <tm tmtype="reg" trademark="CICS">CICS</tm> from
+the list. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+sets compiler options for the local syntax check according to the
+remote compiler options specified:<ul>
+<li>Ensures <tm tmtype="reg" trademark="CICS">CICS</tm> <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1 or higher is installed.</li>
+<li>Changes the compiler options to include <tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>'),NOCOMPILE,
+where <varname>xx</varname> is the level of <tm tmtype="reg" trademark="CICS">CICS</tm> selected from the list.<note rev="80">For PL/I, the compiler option is pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>').</note></li>
+<li>Ignores Preprocessor options. </li>
+<li>Performs a syntax check with the <tm trademark="CICS" tmtype="reg">CICS</tm>('CTSxx') <ph rev="80">or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>')</ph> compiler option, causing
+the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator
+with the specified syntax to be started. </li>
+</ul></li>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a remote file, you specify the <tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') <ph rev="80">(for COBOL) or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') (for PL/I)</ph> option,
+where <varname>xx</varname> is the level of <tm tmtype="reg" trademark="CICS">CICS</tm>. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+uses the option that is specified for local syntax check using host <tm tmtype="reg" trademark="CICS">CICS</tm> syntax and does the following
+operations:<ul>
+<li>Ensures that <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> is
+installed.</li>
+<li>When the <tm tmtype="reg" trademark="CICS">CICS</tm> compiler
+option is specified, the Preprocessor options are ignored on a syntax
+check. </li>
+<li>Performs a syntax check with the <tm trademark="CICS" tmtype="reg">CICS</tm>('CTSxx') <ph rev="80">(for COBOL) or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') (for PL/I)</ph> compiler
+option, causing the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator
+with the specified syntax to be started. </li>
+</ul></li>
+</ul></section>
+<section><title>Local syntax check of a local <tm tmtype="reg" trademark="CICS">CICS</tm> program</title>The following scenarios
+illustrate how the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+sets compiler options for a local syntax check of a local <tm tmtype="reg" trademark="CICS">CICS</tm> program:<ul>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a local
+file, you specify that an integrated <tm tmtype="reg" trademark="CICS">CICS</tm> syntax
+check must take place. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+sets compiler options for the local syntax check as follows, ensuring
+that the integrated preprocessor is used:<ul>
+<li>Ensures <tm tmtype="reg" trademark="CICS">CICS</tm> <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1 or higher is installed.</li>
+<li>Changes the compiler options to include <tm tmtype="reg" trademark="CICS">CICS</tm>.</li>
+<li>Preprocessor options are ignored on the syntax check. </li>
+<li>Performs the syntax check using the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator. </li>
+</ul></li>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a local file, you specify the <tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') <ph rev="80">(for COBOL) or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') (for PL/I)</ph> option,
+where <varname>xx</varname> is the level of <tm tmtype="reg" trademark="CICS">CICS</tm>. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+sets compiler options for the local syntax check as follows, ensuring
+that the integrated preprocessor is used with the level of <tm tmtype="reg" trademark="CICS">CICS</tm> Transaction Server syntax
+specified:<ul>
+<li>Ensures that <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1
+or higher is installed.</li>
+<li>Ignores Preprocessor options. </li>
+<li>Performs the syntax check using the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator. </li>
+</ul></li>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a local
+file, you specify the -p preprocessor option that indicates use of
+CICSTCL (<tm tmtype="reg" trademark="CICS">CICS</tm> Translate Compile
+Link) with the integrated translator. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+uses the option that is specified for local syntax check with the
+integrated translator and does the following operations:<ul>
+<li>Ensures that <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1
+or higher is installed.</li>
+<li>Ignores Preprocessor options. </li>
+<li>Adds the <tm tmtype="reg" trademark="CICS">CICS</tm> compiler
+option for syntax check.</li>
+<li>Performs a syntax check with the <tm tmtype="reg" trademark="CICS">CICS</tm> compiler
+option, causing the integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator
+to be started. </li>
+</ul></li>
+</ul></section>
+<section><title>Local build of a local <tm tmtype="reg" trademark="CICS">CICS</tm> program</title>The
+following scenarios illustrate how the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+sets compiler options for a local build of a local <tm tmtype="reg" trademark="CICS">CICS</tm> program (building a DLL to run in a region):<ul>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a local
+file, you specify the -p preprocessor option, indicating use of CICSTCL
+(<tm tmtype="reg" trademark="CICS">CICS</tm> Translate Compile Link)
+with the integrated translator. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+uses the option that is specified for the local build with the integrated
+translator and runs two compilation passes as follows:<ul>
+<li>Ensures that <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1
+or higher is installed.</li>
+<li>On the compilation pass, the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product:<ul>
+<li>Changes options that are fed to the compiler to include <tm tmtype="reg" trademark="CICS">CICS</tm>.</li>
+<li>Ensures that the integrated translator is called and ignores the <uicontrol>Preprocessor</uicontrol> field. </li>
+<li>Performs the compilation as though it was a regular (not <tm tmtype="reg" trademark="CICS">CICS</tm>) compilation. </li>
+</ul></li>
+<li>On the CICSTCL pass, the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product:<ul>
+<li>Performs the CICSTCL pass with the -p and other options that are
+specified in the <uicontrol>Preprocessor</uicontrol> field.</li>
+</ul></li>
+</ul></li>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a local
+file, you specify the <tm tmtype="reg" trademark="CICS">CICS</tm> compiler
+option for completing a compilation with an integrated <tm tmtype="reg" trademark="CICS">CICS</tm> translator. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+uses the option that is specified for the local build with the integrated
+translator and runs two compilation passes as follows:<ul>
+<li>Ensures <tm tmtype="reg" trademark="CICS">CICS</tm> <tm tmtype="reg" trademark="TXSeries">TXSeries</tm> 6.1 or higher is installed.</li>
+<li>On the compilation pass, the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product:<ul>
+<li>Passes the <tm tmtype="reg" trademark="CICS">CICS</tm> compiler
+option to the compiler.</li>
+<li>Ensures that the integrated translator is called and ignores the <uicontrol>Preprocessor</uicontrol> field.</li>
+<li>Performs the compilation as though it were a regular (not <tm tmtype="reg" trademark="CICS">CICS</tm>) compilation. </li>
+</ul></li>
+<li>On the CICSTCL pass, the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product:<ul>
+<li>Infers, by the presence of the <tm tmtype="reg" trademark="CICS">CICS</tm> compiler
+option, that you also mean to use the integrated translator for the
+CICSTCL.</li>
+<li>Adds the -p preprocessor option and performs the CICSTCL pass
+with the -p and other options that are specified in the <uicontrol>Preprocessor</uicontrol> options
+field.</li>
+</ul></li>
+</ul></li>
+<li>On the <wintitle>Local Compile Options</wintitle> page for a local file, you specify the <tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') <ph rev="80">(for COBOL) or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>') (for PL/I)</ph> option,
+where <varname>xx</varname> is the level of <tm tmtype="reg" trademark="CICS">CICS</tm>. The <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product issues a warning message and writes a warning to the log. The <tm trademark="CICS" tmtype="reg">CICS</tm>('CTSxx') <ph rev="80">or pp(<tm trademark="CICS" tmtype="reg">CICS</tm>('CTS<varname>xx</varname>')</ph> compiler option
+is meant only for syntax checking.</li>
+</ul></section>
+</refbody>
+<related-links>
+<link href="rzddefcicsopts.dita" type="reference" />
+<link href="tzdshowdep.dita" type="task" />
+</related-links>
+
+</reference><?Pub *0000011311?><?tm 1665694654733 61 TXSeries||CICS ?>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?>
+<topic id="tzdpscreate" xml:lang="en-us">
+<title>Creating and editing property groups</title>
+<?Pub Caret -2?>
+<shortdesc>When you create property groups and associate them with resources, you can easily change
+property values for various uses.</shortdesc>
+<body>
+<section><title>Creating a property group</title><indexterm>property
+groups<indexterm>create</indexterm></indexterm><ol>
+<li>From the <wintitle>Property Group Manager</wintitle> view, select a system, open the menu and
+click <uicontrol>New Property Group</uicontrol>. The <wintitle>Property Group Editor</wintitle>
+opens. This editor contains a series of tabs that open each page of the editor. </li>
+<li>Type a name and description for the new property group. For example, to create a property group
+that contains property values for debugging COBOL programs, you might type
+<userinput>DebugCOBOL</userinput> for the name and <userinput>Properties for debugging COBOL
+programs</userinput> for the description.</li>
+<li id="dep_props" importance="optional" rev="851">
+<ph id="dep_props_cmd"><ph rev="150">For remote property groups, you</ph> can define several
+property group values on the <wintitle>Property Group Information</wintitle> page. These settings
+include the properties that are required to resolve dependencies when you edit a file. All of these
+settings are also available on other property group pages, but are placed on the <wintitle>Property
+Group Information</wintitle> page for quick access.</ph>
+<ul>
+<li><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/pgm0002_al"
+/></li>
+<li><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_syslib"
+/></li>
+<li><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/cblp0001_ajcl"
+/></li>
+<li><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/pgm0002_slpo"
+/></li>
+<li><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/pgm0002_srpo"
+/></li>
+</ul>
+</li>
+<li id="cats"> Click the <uicontrol>Categories</uicontrol> tab and select the checkboxes beside the
+categories for which you want to enter values for the property group.</li>
+<li id="open_tab"> Select each property category tab to open the property page for that category. </li>
+<li id="spec_values"> On each property category page, specify property values to be included in the
+property group. <ul>
+<li rev="760">For fields that take partitioned data sets as their values, you can drag a partitioned
+data set name from the <wintitle>Remote Systems</wintitle> view, <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view, or <wintitle>Remote z/OS Search</wintitle>
+results view and drop it in the field. To change the order of partitioned data set names in a field,
+place the cursor in the field and click <uicontrol>Change Order</uicontrol> from the menu. The
+property group editor checks that the value in a data set field is valid:<ul>
+<li>The system for the data set is compared to the system for the property group. If the system for
+the data set is different, an error message is displayed.</li>
+<li>The property group editor verifies that the value is an <tm tmtype="tm" trademark="MVS">MVS</tm>
+data set rather than a partitioned data set member, <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> System Services file, or local file.</li>
+<li>If multiple data sets are dropped in a field that accepts only one data set, an error message is
+displayed.</li>
+</ul></li>
+<li rev="760">Click <uicontrol>Check Data Sets</uicontrol>
+<ph rev="90">or <uicontrol>Check Remote Location</uicontrol></ph> to check that data sets <ph>or
+folders that are specified</ph> in the step options fields exist on the remote system.<note>If a
+data set name contains the &lt;HLQ&gt; variable substitution, <uicontrol>Check Data Sets</uicontrol>
+<ph rev="90">and <uicontrol>Check Remote Location</uicontrol></ph> cannot validate the data set
+name.</note></li>
+</ul></li>
+<li>
+<ph id="save">When you close the <wintitle>Property Group Editor,</wintitle> a window prompts you to
+save your changes. The name and description are displayed in the <wintitle>Property Group
+Manager</wintitle> view. If you do not save your changes, the property group is not created.</ph>
+</li>
+</ol></section>
+<section><title>Editing a property group</title><indexterm>property
+groups<indexterm>edit</indexterm></indexterm><p>When you edit a property group, you can select new
+or different property categories for the group or change property values in the group. This action
+is a good way to propagate property changes across multiple projects, subprojects, or data sets
+because it allows for making a property change in one place and having it take effect for all
+resources that are associated with the property group.</p><ul>
+<li>From the <wintitle>Property Group Manager</wintitle> view, double-click a property group name or
+select a property group to edit and then select <uicontrol>Edit</uicontrol> from the menu.</li>
+<li>From the <wintitle>Remote Systems</wintitle> view or the <wintitle>z/OS Projects</wintitle>
+view, select one of the following resources and then select <menucascade><uicontrol>Property
+Group</uicontrol>
+<uicontrol>Edit Associated Property Group</uicontrol></menucascade> from the menu:<itemgroup><ul>
+<li>The <tm tmtype="tm" trademark="MVS">MVS</tm> Files node</li>
+<li>An <tm tmtype="tm" trademark="MVS">MVS</tm> subproject</li>
+<li>A data set or data set member</li>
+<li rev="150">A local COBOL, PL/I, or Assembler project, directory, or file</li>
+</ul>This menu item is available only if a property group is associated with the selected
+resource.</itemgroup></li>
+</ul></section>
+<section><title>Copying a property group</title><indexterm>property
+groups<indexterm>copying</indexterm></indexterm><ol>
+<li>From the <wintitle>Property Group Manager</wintitle> view, select a property group to copy and
+then select <uicontrol>Copy</uicontrol> from the menu.<itemgroup>The <wintitle>Copy Property
+Group</wintitle> window opens. The <uicontrol>System</uicontrol> field on this window shows the
+system for which the property group is being created. You can copy property groups only within the
+same system.</itemgroup></li>
+<li>Type a name for the new property group and click <uicontrol>OK</uicontrol>. <itemgroup>The
+default name for a copy is <uicontrol>Copy of <varname>PropertyGroup</varname></uicontrol>. If
+another property group is already using the name that you enter, a message is displayed and
+<uicontrol>OK</uicontrol> is disabled.</itemgroup>
+</li>
+<li>If you want to change the property categories or values for the new property group, select it in
+the Property Group Manager and click <uicontrol>Edit.</uicontrol><itemgroup> The <wintitle>Property
+Group Editor</wintitle> opens.</itemgroup></li>
+</ol></section>
+</body>
+<related-links>
+<link href="tzdpropgrp.dita" type="topic"/>
+<link href="tzdpsexport.dita" type="topic"/>
+<link href="tzdpsassign.dita" type="topic"/>
+<link href="tzdnewsubproject.dita" type="task"/>
+<link href="../../com.ibm.etools.rdz.installing.doc/topics/tzdmigprop.dita" type="topic"/>
+<link format="dita" href="rzdcobstepopt.dita" scope="local" type="reference"/>
+<link format="dita" href="czdprocessors.dita" scope="local" type="concept"/>
+<link format="html" href="../../com.ibm.etools.rdz.language.editors.doc/topics/tzdebeconfigpreprocessorremote.html" scope="peer" type="task"><linktext>Configuring a remote preprocessor</linktext></link>
+</related-links>
+</topic>

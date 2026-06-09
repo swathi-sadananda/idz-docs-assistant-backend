@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdlargepds" rev="802" xml:lang="en-us">
+<title>Working with large filters</title><?Pub Caret -2?>
+<titlealts>
+<searchtitle>Working with large filters</searchtitle>
+</titlealts>
+<shortdesc>To improve performance for large filters, you can limit
+the number of data sets that are displayed in the <wintitle>Remote
+Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Remote Systems view<indexterm>working with large
+filters</indexterm><indexterm>filters<indexterm>large</indexterm></indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>To set preferences for working with large filters, see <xref
+format="dita" href="tzdmvspref.dita" scope="local" type="task"></xref>.</prereq>
+<context>When the default settings for the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files subsystem are in effect and a filter
+is expanded, the <wintitle>Remote Systems</wintitle> view displays
+a maximum of 50 data sets. You can take the following actions to browse
+through the data sets.<note>The examples use a smaller filter for
+purposes of illustration.</note></context>
+</taskbody>
+<task id="displayingmoredatasets" xml:lang="en-us">
+<title>Displaying more data sets</title>
+<taskbody>
+<context>When you first expand a large filter, the data sets in excess
+of 50 are shown by using placeholders:<image
+href="../images/filterplaceholder.gif" placement="break"><alt>Large
+filter placeholder</alt></image></context>
+<steps>
+<step><cmd>To show more data sets, double-click the placeholder.</cmd>
+<stepresult>The next 50 data sets are displayed and a placeholder
+is shown for the previous 50 data sets: <image
+href="../images/filter2placeholders.gif" placement="break"><alt>Large
+filter with two placeholders</alt></image></stepresult></step>
+<step><cmd>To continue to browse up and down through the data sets,
+double-click either the top or the bottom placeholder.</cmd><info>You
+can also browse through data sets by doing the following actions:<ul>
+<li>Select a filter name and then select <menucascade><uicontrol>Navigate</uicontrol>
+<uicontrol>Top</uicontrol></menucascade>, <menucascade><uicontrol>Navigate</uicontrol>
+<uicontrol>Bottom</uicontrol></menucascade>, <menucascade><uicontrol>Navigate</uicontrol>
+<uicontrol>Previous</uicontrol></menucascade>, or <menucascade><uicontrol>Navigate</uicontrol>
+<uicontrol>Next</uicontrol></menucascade> from the menu.</li>
+<li>Select a filter name, data set name, or placeholder and then press
+the keyboard shortcuts Ctrl+Home (top), Ctrl+End (bottom), Ctrl+PgUp
+(previous), or Ctrl+PgDn (next).</li>
+</ul></info></step>
+</steps>
+</taskbody>
+</task>
+<task id="locatingadataset" xml:lang="en-us">
+<title>Locating a data set</title>
+<taskbody>
+<prereq>To use the <uicontrol>Locate</uicontrol> command, you must
+set the <uicontrol>Sort Order for Data Sets</uicontrol> option on
+the <wintitle>MVS Files Preference</wintitle> page to <uicontrol>By
+name</uicontrol>. Otherwise, the sort order is changed to <uicontrol>By
+name</uicontrol> temporarily until the filter is refreshed.</prereq>
+<steps>
+<stepsection>To locate a specific data set, do these steps.</stepsection>
+<step><cmd>Select the filter name, and then select <uicontrol>Locate</uicontrol> from
+the menu or press keyboard shortcut Ctrl+L.</cmd></step>
+<step><cmd>In the <wintitle>Locate Data Set</wintitle> window, specify
+the data set name that you want to locate and click <uicontrol>OK</uicontrol>.</cmd>
+<info>You can specify a partial data set name, such as <userinput>HLQ</userinput>.
+If the name you search for does not exist, the data set name just
+before the search string is located.  Previous searches are preserved
+and added to a list in the <wintitle>Locate Data Set</wintitle> window.
+You can select a previous search string from this list.</info>
+<stepresult>The data set name is displayed and highlighted: <image
+href="../images/filterlocate.gif" placement="break"><alt>Located data
+set</alt></image></stepresult></step>
+</steps>
+</taskbody>
+</task>
+<task id="changingthenumberofdatasetstodisplay" xml:lang="en-us">
+<title>Changing the number of data sets to display</title>
+<taskbody>
+<steps-unordered>
+<stepsection>To change the numbers of data sets to display for a filter,
+do one of the following actions:</stepsection>
+<step><cmd>Select a placeholder and then select <uicontrol>Show More</uicontrol> or <uicontrol>Show
+Less</uicontrol> from the menu. A window opens prompting you to specify
+the number of data sets to display.</cmd></step>
+<step><cmd>Select a filter name and then select <uicontrol>Properties</uicontrol> from
+the menu. On the <wintitle>Properties</wintitle> page, select <uicontrol>Expansion</uicontrol> and
+specify the number of data sets to display in the <uicontrol>Expansion
+page size</uicontrol> field.</cmd></step>
+</steps-unordered>
+</taskbody>
+</task>
+<?tm 1435190811 1?>
+</task>
+<?Pub *0000005079?>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<map linking="none" operatingsystem="windows" product="SSQ2R2"
+xml:lang="en-us">
+<title>Remote debugging</title>
+<topicmeta>
+<copyright><copyryear year="2005, 2024"/><copyrholder></copyrholder>
+</copyright>
+</topicmeta>
+<topicref format="dita" href="topics/tzddebugaix.dita"
+navtitle="Debugging COBOL and CICS programs on AIX" scope="local"/><?Pub Caret -1?>
+</map>
+<?Pub *0000000635?>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdglobalvar" xml:lang="en-us">
+<title>Inserting global variables</title><?Pub Caret -2?>
+<shortdesc>You can add global JCL substitution variables to your JCL
+procedures.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>JCL substitution<indexterm>adding global variables</indexterm></indexterm>
+<indexterm>global variables<indexterm>JCL substitution</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>The same process can be used to add global variables for JCL
+procedures on any of the <uicontrol>JCL Substitution</uicontrol> tab
+pages.</prereq>
+<context>The following process shows how to add global variables for
+a COBOL program.</context>
+<steps>
+<step><cmd>To add a new global variable for a JCL procedure that is
+used with a COBOL program, open the <wintitle>COBOL Settings</wintitle> page
+of the property group editor. </cmd></step>
+<step><cmd>In the left pane of the window, select <uicontrol>JCL Substitution</uicontrol>.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Insert Global Variable</uicontrol>. </cmd>
+<stepresult>The <wintitle>Insert Global Variable</wintitle> window
+opens.</stepresult></step>
+<step><cmd>Select a variable name from the table.</cmd></step>
+<step><cmd> Click <uicontrol>Insert</uicontrol>.</cmd><info>The variable
+name and value are added to the table. Repeat these steps as necessary
+to add other global variables.</info></step>
+</steps>
+<result><p>When you add global variables to the <uicontrol>JCL Substitution</uicontrol> page
+and then generate JCL or trigger a remote build or syntax check, a <codeph>SET</codeph> statement
+is generated just before the <codeph>EXEC PROC</codeph> statement.
+The following global variables are available:<dl><dlentry>
+<dt>PDS</dt>
+<dd>Resolves to the partitioned data set to which the source member
+belongs.</dd>
+</dlentry><dlentry>
+<dt>TCPIPADD</dt>
+<dd>Resolves to the workstation IP address.</dd>
+</dlentry><dlentry>
+<dt>MEM</dt>
+<dd>Resolves to the source member for which a build, syntax check,
+or JCL generation action was requested.</dd>
+</dlentry><dlentry>
+<dt>HLQ</dt>
+<dd>Resolves to the high-level qualifier of the resource for which
+the build, syntax check, or JCL generation action was requested.</dd>
+</dlentry><dlentry>
+<dt>MSUBSTR</dt>
+<dd>Returns the member name substring that is based on starting and
+ending indexes that you specify.</dd>
+</dlentry><dlentry>
+<dt>USERID</dt>
+<dd>Resolves to the user ID that is used to log on to the remote system.</dd>
+</dlentry></dl></p></result>
+<example>Assume that an installation customized the COBOL compilation
+JCL procedure to add a custom preprocess step, for example, that expands
+the COBOL source and would like to write the output of that preprocess
+to a separate partitioned data set. The preprocessed member can be
+the input to the compilation step. The preprocessed member has the
+same name as the original COBOL source file, and the preprocessed
+output is written to a separate data set. To write the output from
+the preprocess step to a partitioned data set, you can add the following
+DD statements to the procedure:<codeblock>//*custom - preprocess 
+//SYS012 DD DSN=PDS.NAME(&amp;MEM),DISP=SHR ---> Writes the pre-processed output to PDS.NAME(&amp;MEM) 
+//... 
+//*compile step 
+//COBOL.SYSIN DD DSN=PDS.NAME(&amp;MEM),DISP=SHR 
+//.....</codeblock><p>&amp;MEM resolves to the source member for which
+a build, syntax check, or JCL generation action is requested, so the
+user can use the <wintitle>JCL Substitution</wintitle> page to insert
+the global variable <varname>MEM</varname> in the properties for the <tm
+tmtype="tm" trademark="MVS">MVS</tm> subproject and does not have
+to insert it for every member.</p> </example>
+</taskbody>
+<related-links>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1435190826 1?>
+</task>
+<?Pub *0000004095?>

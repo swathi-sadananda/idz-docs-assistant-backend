@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<task id="tzdbldopts" xml:lang="en-us">
+<title>Setting property group options for editors, compilers, preprocessors, and build</title>
+<shortdesc>Use the property group editor to set editor, preprocessor, compiler, and build options
+for your source files.</shortdesc>
+<taskbody>
+<context>Many of the property group tabs use the same pages to set options for editors,
+preprocessors, compilers, and build operations. The following table lists the pages that are reused
+and the tabs that use them. For more information about a property group page, click a link in the
+table.<p>This topic and its subtopics describe the content of the property group pages. For more
+information about how the options are used by editors, preprocessors, compilers, and build, debug,
+and test operations, see these topics:<ul>
+<li><xref
+href="../../com.ibm.etools.rdz.language.editors.doc/topics/property_group_settings_for_editing.dita"
+/></li>
+<li><xref href="czdprocessors.dita">Setting up preprocessors</xref></li>
+<li><xref format="html" href="../../com.ibm.debug.pdt.zpcl.doc/topics/bzosapp.html" scope="peer"
+>Building a z/OS application using property groups</xref></li>
+<li><xref href="../../com.ibm.idz.dbbz.doc/topics/DBBz_create_pgroup.dita">Property group options
+for DBB user builds</xref></li>
+<li><xref format="html"
+href="../../com.ibm.debug.pdt.zpcl.doc/topics/associate_property_groups.html" scope="peer">Using
+property groups for debug sessions</xref></li>
+<li><xref format="html" href="../../com.ibm.debug.pdt.zpcl.doc/topics/ldebugpropertygroups.html"
+scope="peer">Launching a debug session with property groups</xref></li>
+</ul></p><table frame="all" id="table_ejd_wd5_fnb"><title>Property group pages that are used on multiple
+tabs</title><desc>
+<p outputclass="summary">This table shows property group pages on the Assembler, BMS, COBOL, PL/I,
+Link, MFS, Run, and ZUnit tabs for remote and local property groups and provides links to help for
+each page.</p>
+</desc><tgroup cols="14">
+<colspec colname="c1" colnum="1" colwidth="1*"/>
+<colspec colname="c2" colnum="2" colwidth="1*"/>
+<colspec colname="newCol3" colnum="3" colwidth="1*"/>
+<colspec colname="newCol4" colnum="4" colwidth="1*"/>
+<colspec colname="c3" colnum="5" colwidth="1*"/>
+<colspec colname="c5" colnum="6" colwidth="1*"/>
+<colspec colname="newCol6" colnum="7" colwidth="1*"/>
+<colspec colname="c6" colnum="8" colwidth="1*"/>
+<colspec colname="newCol9" colnum="9" colwidth="1*"/>
+<colspec colname="c7" colnum="10" colwidth="1*"/>
+<colspec colname="c8" colnum="11" colwidth="1*"/>
+<colspec colname="c9" colnum="12" colwidth="1*"/>
+<colspec colname="newCol13" colnum="13" colwidth="1*"/>
+<colspec colnum="14" colname="newCol14" colwidth="1*"/>
+<thead>
+<row>
+<entry morerows="1">Page Name</entry>
+<entry namest="c2" nameend="newCol9" align="center">Remote Property Group Tabs</entry>
+<entry namest="c7" nameend="newCol14" align="center">Local Property Group Tabs</entry>
+</row>
+<row>
+<entry>Assembler</entry>
+<entry>BMS</entry>
+<entry>C/C++</entry>
+<entry>COBOL and PL/I</entry>
+<entry>Link</entry>
+<entry>MFS</entry>
+<entry>Run</entry>
+<entry>ZUnit</entry>
+<entry>Assembler</entry>
+<entry>COBOL</entry>
+<entry>PL/I</entry>
+<entry>REXX</entry>
+<entry>JCL</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry><xref format="dita" href="tzdrunopts.dita" scope="local" type="task">Runtime
+Environments</xref></entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref format="dita" href="tzdjclproc.dita" scope="local" type="task">Procedures and
+Steps</xref></entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref href="local_compiler_options.dita#local_compiler_options"/></entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref format="dita" href="czdprocessors.dita" scope="local" type="concept">Local
+Preprocessor</xref></entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref format="dita" href="c_jcl_substitution.dita" scope="local" type="concept">JCL
+Substitution</xref></entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref href="editor_configurations.dita#editor_configurations"/></entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref href="editor_configurations_local.dita"/></entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref href="editor_options.dita">Editor Options</xref></entry>
+<entry>✓</entry>
+<entry/>
+<entry>✓</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry><xref href="tzincllib.dita">Remote Libraries</xref></entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+<entry>✓</entry>
+</row>
+</tbody>
+</tgroup></table></context>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdpropgrp.dita" scope="local" type="topic"/>
+</related-links>
+</task>
+<?Pub *0000002109?>

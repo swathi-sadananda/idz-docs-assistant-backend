@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdpsexport" xml:lang="en-us">
+<title>Exporting and importing property groups</title>
+<shortdesc>You can export and import property groups for sharing with other users.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>property groups<indexterm>exporting</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<body>
+<section>
+<title>Exporting a property group</title>
+<ol>
+<li>From the <wintitle>Property Group Manager</wintitle> view, do one of the following steps: <ul>
+<li>To export all property groups for a system, select the system and then select
+<uicontrol>Export</uicontrol> from the menu.</li>
+<li>To export a single property group, select the property group and then select
+<uicontrol>Export</uicontrol> from the menu.</li>
+</ul> The <wintitle>Export Property Groups</wintitle> window opens.</li>
+<li>In the <uicontrol>Location</uicontrol> field, type the directory path where you want to the file
+to be stored or click <uicontrol>Browse</uicontrol> to navigate to the directory path.</li>
+<li>In the <uicontrol>File name</uicontrol> field, type a file name for the property group. Do not
+include the file extension.  The file extension <filepath>.xml</filepath> is automatically appended
+to the file name as needed.</li>
+<li>From the table view, select one or more property groups to export.<itemgroup rev="803"> You can
+click <uicontrol>Select All</uicontrol> or <uicontrol>Deselect All</uicontrol> to select all
+property groups or clear all groups. You can sort the list by clicking the table headings. To
+reverse the sort order, click the table headings again.</itemgroup></li>
+<li>Click <uicontrol>OK</uicontrol> to save the file. </li>
+</ol>
+</section>
+<section><title>Importing a property group</title><indexterm>property
+groups<indexterm>importing</indexterm></indexterm><ol>
+<li>From the <wintitle>Property Group Manager</wintitle> view, select the system into which you want
+to import property groups and then select <uicontrol>Import</uicontrol> from the menu. The
+<wintitle>Import Property Groups</wintitle> window opens.</li>
+<li>In the <uicontrol>File</uicontrol> field, type the path of the XML file or click
+<uicontrol>Browse</uicontrol> to navigate to the file. The property groups that are defined in the
+file are loaded into the table view.</li>
+<li>From the table view, select one or more property groups to import. You can sort the list by
+clicking the table headings. To reverse the sort order, click the table headings again.</li>
+<li>Click <uicontrol>OK</uicontrol> to import the property group from the file. <note>If you attempt
+to import a property group that contains unsupported categories, then the unsupported categories are
+ignored, but the supported categories are imported. This situation might occur, for example, if you
+attempt to import a property group into a previous version of <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/>, and the previous
+version does not recognize a category that was introduced in a more recent version.</note></li>
+</ol></section>
+</body>
+<related-links>
+<link href="tzdpropgrp.dita" type="topic"></link>
+<link href="tzdpscreate.dita" type="topic"></link>
+<link href="tzdpsassign.dita" type="topic"></link>
+<link href="tzdnewsubproject.dita" type="task"></link>
+<link href="../../com.ibm.etools.rdz.installing.doc/topics/tzdmigprop.dita" type="topic"></link>
+</related-links>
+</topic>
+<?Pub *0000002639?>

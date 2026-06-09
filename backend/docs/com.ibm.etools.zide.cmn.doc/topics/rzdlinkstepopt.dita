@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdlinkstepopt" xml:lang="en-us">
+<title>Link step options</title>
+<!--To optimize search results, add tags that clarify product name, target platform, or other contexts. Use Edit > Un Comment to have the tags made live.-->
+<!--<titlealts><navtitle></navtitle><searchtitle></searchtitle></titlealts>-->
+<shortdesc>Use the <uicontrol>Link Step Options</uicontrol> to specify
+link settings, including link options and JCL-related options and
+properties.</shortdesc>
+<!--To optimize PDF retrievability, add prolog and indexing tags that help crystalize why users should be looking up this topic (purpose, task, and what they will learn)-->
+<!--<prolog><metadata><keywords><indexterm></indexterm></keywords></metadata></prolog>-->
+<refbody>
+<section><title>Fields</title><p><uicontrol>Link options:</uicontrol> Specify
+any options that must be passed to the linkage editor. This field
+is limited to 100 characters.</p><p><uicontrol>Link libraries:</uicontrol> The
+names of the libraries to link your code with. Separate multiple libraries
+with spaces.</p><p><uicontrol>Specify the position of the link libraries:</uicontrol> Select
+this checkbox to leave a place holder for the libraries that might
+already be listed in your procedure. </p><p><uicontrol>How many existing
+link library data sets precede this entry?</uicontrol> Specify how
+many libraries you want in your expanded JCL before the link libraries
+specified in the <uicontrol>Link libraries</uicontrol> field.</p><p><uicontrol>Use
+specified link instructions:</uicontrol> Select this checkbox to
+pass link instructions to the linkage editor. Selecting this check
+box activates the text-entry pane, where you can enter the link instructions.<note
+rev="140">If the link instructions are being used and the specified
+instructions already include the required system object (i.e. - INCLUDE
+OBJ0000), the JCL generator will not generate the required system
+INCLUDE instruction prior to the link instructions you specified.
+You need to include the proper objects in the order you want.</note></p><?Pub
+Caret -1?><p><uicontrol>Load module location:</uicontrol> The data
+set where your load module must be placed after the link step.</p><p><uicontrol>Additional
+JCL:</uicontrol> Specify any additional JCL. You might use this field
+to override any default values defined in the step by your system
+administrator.</p><note>For fields that take partitioned data sets
+as their values, you can drag a partitioned data set name from the <wintitle>Remote
+Systems</wintitle> view, <wintitle>z/OS Projects</wintitle> view,
+or <wintitle>Remote z/OS Search</wintitle> results view and drop it
+in the field. To change the order of partitioned data set names in
+a field, place the cursor in the field and click Change Order from
+the menu. </note></section>
+</refbody>
+<?tm 1435190820 0?>
+</reference>
+<?Pub *0000003092?>

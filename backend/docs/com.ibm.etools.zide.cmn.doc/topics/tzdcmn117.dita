@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn117" xml:lang="en-us">
+<title>Submitting a JCL procedure from the editor</title>
+<shortdesc>You can submit pregenerated JCL or you can use an existing
+JCL procedure that is available for you to edit and submit.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm> JCL<indexterm>submitting</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a remote system and successfully
+locate the JCL procedure you want to submit.</prereq>
+<steps>
+<step><cmd>Open the JCL procedure. </cmd><stepresult>The procedure
+is opened in the editor.</stepresult></step>
+<step><cmd>Make any necessary changes. </cmd><stepxmp>For example,
+you might want to change the name of the load library to be allocated.</stepxmp>
+</step>
+<step><cmd>Save your changes.</cmd></step>
+<step><cmd>Do one of the following steps:</cmd>
+<substeps>
+<substep><cmd>Enter a submit command from the editor to submit the
+job to the remote system.</cmd></substep>
+<substep><cmd>Right-click the JCL procedure in the Remote Systems
+view or <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view
+and select <uicontrol>Submit</uicontrol> from the menu.</cmd></substep>
+</substeps>
+<stepresult> A job submission confirmation window opens.</stepresult>
+</step>
+<step importance="optional"><cmd>To locate the job ID in the <wintitle>Remote
+Systems</wintitle> view, click <uicontrol>Locate Job</uicontrol>.</cmd>
+<stepresult> The job ID is highlighted in the <uicontrol>Retrieved
+Jobs</uicontrol> filter of the JES subsystem.</stepresult></step>
+<step importance="optional"><cmd>To be notified when the job completes,
+click <uicontrol>Notify</uicontrol>.</cmd><stepresult>A JES job notify
+background job is created and displayed in the lower right corner
+of the workbench status bar as follows:<image
+href="../images/jobNotification2.gif" placement="break"><alt>Job Notification</alt>
+</image>You can click the progress bar to open the job in the progress
+view. When the job completes a message is displayed in the lower left
+corner of the workbench status bar as follows:<image
+href="../images/jobNotification.gif" placement="break"><alt>Job completion
+message</alt></image>The message is also written to the <wintitle>Remote
+Console</wintitle>.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn118.dita" type="task"></link>
+<link href="tzdcmn119.dita" type="task"></link>
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference"/>
+</related-links>
+<?tm 1287682701 0?>
+</task>
+<?Pub *0000002780?>

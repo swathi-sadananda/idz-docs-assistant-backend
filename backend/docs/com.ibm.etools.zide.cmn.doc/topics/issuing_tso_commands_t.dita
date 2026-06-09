@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="issuing_tso_commands_t" xml:lang="en-us">
+<title>Issuing TSO commands</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Issuing TSO commands</navtitle>
+</titlealts>
+<shortdesc>You can issue TSO commands on the remote system from your
+workstation.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>iIssuing TSO commands</indexterm><indexterm>TSO
+commands<indexterm>issuing</indexterm></indexterm><indexterm>commands<indexterm>issuing
+TSO</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you issue TSO commands, you must connect to the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system. <note>The TSO command shell supports interactive TSO command submission if the RSED daemon is configured to use Interactive ISPF Gateway. Contact your <tm trademark="z/OS" tmtype="reg">z/OS</tm> Systems Programmer to learn if Interactive ISPF Gateway is configured.</note></prereq>
+<steps>
+<stepsection>To issue a TSO EXEC command, follow these steps:</stepsection>
+<step><cmd>In the <wintitle>Remote System</wintitle> view, expand
+the remote system. </cmd></step>
+<step><cmd>Right-click <uicontrol>TSO Commands</uicontrol>.</cmd>
+<stepresult>A menu opens.</stepresult></step>
+<step><cmd>Select <uicontrol>Launch Shell</uicontrol>.</cmd><stepresult>The
+TSO command shell opens.</stepresult></step>
+<step><cmd>In the <uicontrol>Command</uicontrol> field, type an EXEC
+command and press Enter.</cmd><stepxmp>For example, type <cmdname>exec
+'MYUSERID.REXX.SCRIPTS(MYSCRIPT)'</cmdname>, where</stepxmp><info><ul>
+<li>MYUSERID is the high-level qualifier</li>
+<li><tm tmclass="IGNORE" tmtype="tm" trademark="REXX">REXX</tm> is
+the middle-level qualifier</li>
+<li>SCRIPTS is the low-level qualifier</li>
+<li>MYSCRIPT is a <tm tmclass="IGNORE" tmtype="tm" trademark="REXX">REXX</tm> script
+you wrote</li>
+</ul></info><stepresult>The command is sent to the server. Control
+is returned to you while the command processes in the background.
+The result of the command is displayed.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdtsosave.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000002174?><?tm 1665694000991 4 z/OS||REXX ?>

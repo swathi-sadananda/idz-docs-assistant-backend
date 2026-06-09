@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdretrievemem" rev="802" xml:lang="en-us">
+<title>Finding members</title>
+<titlealts>
+<navtitle>Finding members</navtitle>
+<searchtitle>Finding partitioned data set members</searchtitle>
+</titlealts>
+<shortdesc>Use the <uicontrol>Find Member</uicontrol> action to find partitioned data set members in
+the <uicontrol>MVS Files</uicontrol> subsystem or in a partitioned data set, to open a member in an
+editor, or to create a new partitioned data set member.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>retrieving members</indexterm>
+</keywords>
+<keywords>
+<indexterm>finding members</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<body>
+<p>This topic explains how to find a member in the <uicontrol>MVS Files</uicontrol> subsystem or in
+a specific partitioned data set. For information about a quick way to find and open a member in an
+editor, see <xref format="dita" href="tzdretrievemem_quickedit.dita" scope="local" type="task"/>. </p>
+<section id="mvs">
+<title>Finding a member in <tm tmtype="tm" trademark="MVS">MVS</tm> Files</title>
+<ol id="mvs_steps">
+<li>To find a partitioned data set member in the <uicontrol>MVS Files</uicontrol> subsystem:</li>
+<li>In the <wintitle>Remote Systems</wintitle> view, select <uicontrol>MVS Files</uicontrol>. </li>
+<li>Select <uicontrol>Find Member</uicontrol> from the menu or press Ctrl+F.<itemgroup>The
+<wintitle>Find Member</wintitle> window opens. The last search pattern that is used for previous
+searches is shown in the window.</itemgroup></li>
+<li importance="optional">Press Enter.<itemgroup>You can also type a fully qualified data set and
+member name pattern to find, for example, USERID.TEST.COBOL(MEM*).<note type="tip">
+<ul>
+<li rev="91">Use * to match multiple characters and ? to match a single character. The * and ?
+wildcard characters are allowed only as part of the member name portion of the pattern and not as
+part of the data set name.</li>
+<li>If the data set name does not exist, a message is displayed. </li>
+<li>No more than one set of parentheses is allowed.</li>
+<li>If extra characters are entered after a valid data set and member name pattern, an invalid
+member name pattern message is displayed.</li>
+<li>Normal data set name validation rules and member name validation rules apply for the specified
+data set and member name.</li>
+<li>The host encoding (based on either the <tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem
+or the selected data set) is used for the code variants to be used for data set name and member name
+validation.</li>
+<li>If you type the data set name and press the spacebar, parentheses with an asterisk are added to
+the pattern field. If you type the data set name followed by left parenthesis, an asterisk and the
+closing right parenthesis are added.</li>
+</ul>
+</note></itemgroup><itemgroup>Matching member names are listed in the window. The window also
+displays the number of matches.<note>If the search returns too many member names (the default
+threshold is 1000 members), a warning message is displayed. You can use the <wintitle>MVS
+Files</wintitle> preference page to specify the size of the result set to trigger this warning. For
+more information about this preference, see the related links.</note></itemgroup></li>
+<li importance="optional">Type a new search pattern to update the list of matches.<itemgroup>If you
+type an invalid member name pattern, if you attempt to access a data set that is protected by <tm
+tmtype="reg" trademark="RACF">RACF</tm> and that you are not authorized to access, or if you receive
+too many matches, you can retype or refine the search pattern to try the search again or narrow down
+the list of matches.</itemgroup></li>
+<li importance="optional">To open a member in an editor, do one of the following actions: <ul>
+<li>Select a member from the list and click <uicontrol>Open Member</uicontrol>.</li>
+<li>Type a partitioned data set member name, such as USERID.TEST.COBOL(MEMBER1), in the entry field
+and click <uicontrol>Open Member</uicontrol>.</li>
+</ul>
+<itemgroup><uicontrol>Open Member</uicontrol> is always enabled to facilitate the quick editing of a
+data set member. This button is enabled even when an invalid name message is displayed. When an
+invalid member name or pattern is entered in the <wintitle>Find Member</wintitle> window, the
+following message is displayed: <msgph>To open or create a member, enter a valid member
+name.</msgph></itemgroup><itemgroup> The member that you selected is opened in an
+editor.</itemgroup></li>
+<li importance="optional">To create a member filter with the member name pattern, select
+<uicontrol>Create a filter with the member name pattern</uicontrol> and click
+<uicontrol>OK</uicontrol>. <itemgroup>The <wintitle>New Member Filter</wintitle> window opens.
+Specify a name for the member filter and click <uicontrol>OK</uicontrol>. The new member filter is
+added to the <filepath>My Favorites</filepath> folder of <tm tmtype="tm" trademark="MVS">MVS</tm>
+Files and the matching data set members are displayed in the <wintitle>Remote z/OS Search</wintitle>
+view. For more information about member filters, see <xref format="dita" href="t_member_filter.dita"
+scope="local" type="task"/>.</itemgroup>
+</li>
+<li>To add a member from this list to Retrieved Data Sets in the <tm tmtype="tm" trademark="MVS"
+>MVS</tm> Files subsystem: <ol>
+<li>Select the member that you want. </li>
+<li>Click <uicontrol>OK</uicontrol>.</li>
+</ol>
+<itemgroup> The member that you selected is added to <filepath>Retrieved Data Sets</filepath> in the
+<tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem and highlighted in the
+view.</itemgroup></li>
+</ol>
+</section>
+<section>
+<title>Finding a member in a partitioned data set</title>
+<p>You can also find a member in a specific partitioned data set in the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files subsystem or in an <tm tmtype="tm" trademark="MVS">MVS</tm>
+subproject in the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view.</p>
+<ol id="pds_steps">
+<li>In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view,
+select a partitioned data set. </li>
+<li>Press Ctrl+F. <itemgroup>The <wintitle>Find Member</wintitle> window opens with the data set
+name in the field and an asterisk for the member name. For example,
+<filepath>USERID.TEST.COBOL(*)</filepath>.</itemgroup></li>
+<li>Inside the parentheses, type a member name pattern to find, for example,
+<filepath>MEM*</filepath> or MEM?0.</li>
+<li>Press Enter.<itemgroup>Matching member names are listed in the window. The window also displays
+the number of matches.</itemgroup></li>
+<li>Continue finding members as described in <xref href="#tzdretrievemem/mvs" format="dita"/>.
+<itemgroup>When you request the Find Member action for a specific data set, the member is
+highlighted under the data set name and not added to the Retrieved Data Sets filter.<note>If you
+request the Find Member action from the <wintitle>z/OS Projects</wintitle> view, but the member is
+not added to the <tm tmtype="tm" trademark="MVS">MVS</tm> subproject, it is highlighted in the
+<wintitle>Remote Systems</wintitle> view.</note></itemgroup>
+</li>
+</ol>
+</section>
+<section>
+<title>Creating a member by using the <wintitle>Find Member</wintitle> window</title>
+<p>You can use the <wintitle>Find Member</wintitle> window to create a member in the selected
+partitioned data set.</p>
+<ol id="create_steps">
+<li>In the <wintitle>Remote Systems</wintitle> view or <wintitle>z/OS Projects</wintitle> view,
+select a partitioned data set name. </li>
+<li>Press Ctrl+F.<itemgroup>The <wintitle>Find Member</wintitle> window opens with the data set name
+in the field and an asterisk for the member name. For example,
+USERID.TEST.COBOL(*).</itemgroup></li>
+<li>Type a new member name pattern in the parentheses, for example,
+<filepath>MEMBER1</filepath>.</li>
+<li>Click <uicontrol>Open Member</uicontrol>.<itemgroup>A window opens asking for confirmation of
+the creation of a new member.</itemgroup></li>
+<li>Click <uicontrol>Yes</uicontrol> to create the member. <itemgroup>The new member is created,
+opened in the editor, and highlighted in the <wintitle>Remote Systems</wintitle> view or
+<wintitle>z/OS Projects</wintitle> view.</itemgroup></li>
+</ol>
+</section>
+</body>
+<related-links>
+<link format="dita" href="tzdmvspref.dita" scope="local" type="task"/>
+<link format="dita" href="tzdretrieveds.dita" scope="local" type="task"/>
+<link format="dita" href="tzdretrievemem_quickedit.dita" scope="local" type="task"/>
+<?Pub Caret 0?>
+</related-links>
+<?tm 1435190811 9?>
+</topic>
+<?Pub *0000009656?>

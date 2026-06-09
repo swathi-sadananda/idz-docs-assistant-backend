@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzddeletefile" xml:lang="en-us">
+<title>Deleting a file on a remote system</title><?Pub Caret -2?>
+<shortdesc>You can delete a file in the <wintitle>Remote Systems</wintitle> view
+or the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>deleting a resource</indexterm><indexterm>resources<indexterm>deleting</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>
+<p>Deleting a resource deletes it from the remote system. If you want only to remove a resource from
+a subproject, use the <uicontrol>Remove from Subproject</uicontrol> action in the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view. These two actions have similar names, but their
+function is different. The <uicontrol>Delete</uicontrol> action deletes the file from the remote
+system. The <uicontrol>Remove from Subproject</uicontrol> action deletes the file from the
+subproject, but not from the remote system. The file remains on the remote system and can still be
+edited or added to another subproject.</p>
+<p>A third action is also similarly named, but different in function: <uicontrol>Remove from
+Retrieved Data Sets</uicontrol>. This action removes a file from the Retrieved Data Sets filter, but
+not from the remote system. The file remains on the remote system and can still be edited or added
+to a subproject.</p>
+<note>System administrators can disable the <uicontrol>Delete</uicontrol> action on the
+<wintitle>Remote Systems</wintitle> and <ph conref="zide_conrefs.dita#zide_conrefs/view"/> views.
+For instructions on disabling this action, refer to the <cite><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full"/> Host
+Configuration Guide</cite> (SC23-76585).</note>
+</context>
+<steps>
+<stepsection>To delete a resource:</stepsection>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view or the <wintitle>z/OS
+Projects</wintitle> view, right-click the resource that you want to
+delete and click <uicontrol>Delete.</uicontrol></cmd></step>
+<step><cmd>When you are prompted to confirm the deletion, click <uicontrol>Delete</uicontrol>.
+The resource is deleted.</cmd><info rev="751"> When you delete a generation
+data group, all generation data sets in the GDG are deleted and then
+the GDG base is deleted.</info></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdcmn051.dita" scope="local" type="task"/>
+<link href="t_retrieveds_remove.dita"/>
+</related-links>
+<?tm 1435190809 0?>
+</task>
+<?Pub *0000002033?>

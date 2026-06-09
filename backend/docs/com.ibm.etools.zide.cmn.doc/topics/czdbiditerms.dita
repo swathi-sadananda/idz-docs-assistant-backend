@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdbiditerms" xml:lang="en-us">
+<title>Bidirectional layout (or bidirectional format) terminology</title><?Pub Caret -2?>
+<shortdesc>Bidirectional text can be stored on the client or server
+system in different text layouts (different bidirectional formats).
+A bidirectional layout specifies how bidirectional text is being stored
+on a system. It can be defined by five basic bidirectional attributes
+for Arabic language, and by three attributes for Hebrew.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional layout terminology</indexterm>
+<indexterm>bidirectional format terminology</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<dl><dlentry>
+<dt>Global or text orientation</dt>
+<dd><indexterm>global orientation</indexterm><indexterm>text orientation</indexterm>Global
+orientation designates the direction in which the text is stored.
+It can be right-to-left (RTL) or left-to-right (LTR). Contextual text
+orientation is not supported in <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" />.</dd>
+</dlentry><dlentry>
+<dt>Ordering scheme (or text type)</dt>
+<dd><indexterm>ordering scheme</indexterm><indexterm>text type</indexterm>The
+ordering scheme defines the relationship between the order of text
+as stored in memory or on external media and its order for correct
+display. <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> recognizes
+three ordering schemes:<ul>
+<li><indexterm>visual ordering scheme</indexterm>In the <term>visual
+ordering scheme</term>, text is stored in the same order as it is
+displayed.</li>
+<li><indexterm>logical ordering scheme</indexterm>In the <term>logical
+ordering scheme</term>, text is stored in the order it is intended
+to be read. It must be reordered for display by using an algorithm
+that assumes that the letters of the Latin alphabet have a strong
+inherent left-to-right directionality and the letters of the Arabic
+or Hebrew alphabet have a strong right-to-left inherent directionality.
+This implicit (or logical) algorithm recognizes segments by their
+inherent directional characteristics and inverts segments automatically.</li>
+<li><indexterm>smart logical ordering scheme</indexterm> In the <term>smart
+logical ordering scheme</term>, the text is processed with a special
+algorithm introduced in <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> to
+improve the data exchange between <tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm> systems and <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" />.
+ This algorithm is described in more detail in <xref href="czdsmartlog.dita" type="concept" />.</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>Text shaping</dt>
+<dd><indexterm>text shaping</indexterm>Text shaping applies to the
+Arabic script in which characters assume different shapes according
+to their position in a word and how they connect to surrounding characters.</dd>
+</dlentry><dlentry>
+<dt>Symmetric swapping </dt>
+<dd><indexterm>symmetric swapping</indexterm>Symmetric swapping designates
+when specific characters such as ( &gt; [ { must be interchanged with
+) &lt; ] } to preserve the logical meaning of the presented text.</dd>
+</dlentry><dlentry>
+<dt>Numeric shaping</dt>
+<dd><indexterm>numeric shaping</indexterm>Numeric shaping designates
+whether numbers must be presented by using the European digit shapes
+or the Arabic-Indic digit shapes.</dd>
+</dlentry></dl>
+<p>No single combination of possible values of bidirectional layout
+attributes is predominant. Existing applications process data with
+different possible combinations of these values. Therefore, when a
+bidirectional data stream is passed to an application, it is important
+that the application recognizes the associated text attributes.</p>
+<note othertype="Next" type="other"><xref href="czdbidiconv.dita" type="concept" /></note>
+</conbody>
+
+</concept><?Pub *0000004309?><?tm 1670257711239 1 zSeries ?>

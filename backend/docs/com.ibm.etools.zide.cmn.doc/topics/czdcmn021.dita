@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="czdcmn021" xml:lang="en-us">
+<title>Local <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects</title>
+<?Pub Caret -2?>
+<shortdesc>Local <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects are defined on the local
+workstation and are not associated with a remote system.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>local projects<indexterm>defining</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody>
+<p>When you first define your local project, you set values for properties such as compiler options.
+You can also assign a property value at the level of a folder or file, file, as described later.</p>
+<p>You can export the values of project properties to an XML file. You and other team members can
+quickly define other local projects by importing the values from that file.</p>
+<p>The workstation-based compiler performs syntax checking in local projects. As is true in <tm
+tmtype="tm" trademark="MVS">MVS</tm> projects, any copybooks, include files, or macros are checked
+if they are referenced in the source and are accessible. Errors are displayed in the
+<wintitle>Remote Error List</wintitle> view, and you can double-click an error entry to open the
+file (potentially an included file) where the error was found.</p>
+</conbody>
+<related-links>
+<link href="czdcmn017.dita" type="concept"><linktext>z/OS projects</linktext></link>
+<link href="tzdcmn042.dita" type="topic"/>
+</related-links>
+<?tm 1435190827 3?>
+</concept>
+<?Pub *0000001946?>

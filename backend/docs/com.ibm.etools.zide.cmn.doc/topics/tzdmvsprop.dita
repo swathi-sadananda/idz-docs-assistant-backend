@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdmvsprop" xml:lang="en-us">
+<title>Viewing properties of the <tm tmtype="tm" trademark="MVS">MVS</tm> Files
+subsystem</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>MVS Files subsystem</navtitle>
+<searchtitle>MVS Files subsystem properties</searchtitle>
+</titlealts>
+<shortdesc>The <wintitle>Properties</wintitle> view for the <uicontrol>MVS
+Files</uicontrol> subsystem provides quick access to information about
+the <tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem and your
+remote system connection.</shortdesc>
+<taskbody>
+<context>The <uicontrol>MVS Files</uicontrol> subsystem <wintitle>Properties</wintitle> view
+displays the following information:<dl><dlentry>
+<dt>Connected</dt>
+<dd>The connection status of the subsystem: Yes or No.</dd>
+</dlentry><dlentry>
+<dt>Name</dt>
+<dd><tm tmtype="tm" trademark="MVS">MVS</tm> Files.</dd>
+</dlentry><dlentry>
+<dt>Number of children</dt>
+<dd>The number of folders, such as My Data Sets, Retrieved Data Sets,
+My Favorites, or any other filters you created.</dd>
+</dlentry><dlentry>
+<dt>Port</dt>
+<dd>The port that is defined for the subsystem during the remote system
+connection.</dd>
+</dlentry><dlentry>
+<dt>Property Group Name</dt>
+<dd>The name of the property group that is associated with the subsystem.</dd>
+</dlentry><dlentry>
+<dt>Property Group Overrides</dt>
+<dd>Whether any values in the property group were overridden: Yes
+or No.</dd>
+</dlentry><dlentry>
+<dt>Server Level</dt>
+<dd>The version of the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> server
+that is installed on the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system.</dd>
+</dlentry><dlentry>
+<dt>SSL</dt>
+<dd>Whether the remote system connection was secured with SSL: Enabled
+or Disabled.</dd>
+</dlentry><dlentry>
+<dt>Type</dt>
+<dd>Subsystem.</dd>
+</dlentry><dlentry>
+<dt>User ID</dt>
+<dd>The user ID with which you logged in to the remote system.</dd>
+</dlentry><dlentry>
+<dt>Version</dt>
+<dd>The version of <tm tmtype="reg" trademark="z/OS">z/OS</tm> installed
+on the server.</dd>
+</dlentry></dl></context>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdretrieveds.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdsavesearch.dita" scope="local" type="task">
+</link>
+<link format="dita" href="tzdpropgrp.dita" scope="local" type="topic">
+</link>
+<link format="dita" href="tzdpsassign.dita" scope="local" type="topic">
+</link>
+</related-links>
+<?tm 1435190810 5?>
+</task>
+<?Pub *0000002982?>

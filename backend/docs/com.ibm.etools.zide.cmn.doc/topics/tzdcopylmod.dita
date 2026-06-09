@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcopylmod" xml:lang="en-us">
+<title>Copying a load module</title>
+<titlealts>
+<navtitle>Copying a load module</navtitle>
+<searchtitle>Copying a load module</searchtitle>
+</titlealts>
+<shortdesc>You can copy a load module from one library to another.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>copying a load module</indexterm><indexterm>copy<indexterm>load
+module</indexterm></indexterm><indexterm>load module<indexterm>copy</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view, select
+the load module that you want to copy.</cmd></step>
+<step><cmd>Right-click the file and select <uicontrol>Copy</uicontrol>.</cmd>
+</step>
+<step><cmd>Select the destination container that you are copying to
+on the same remote system.</cmd><info>You can copy a load module in
+a PDS or a program object in a PDSE from one program library to another.
+ You can also use the <uicontrol>Copy</uicontrol> command to convert
+files between load modules and program objects. The target library
+must be on the same remote system as the load module that is being
+copied.</info></step>
+<step><cmd>Select <uicontrol>Paste</uicontrol>. </cmd><stepresult>The
+new file is created in the new destination with the same file name
+and the same properties. If the member exists in the destination,
+you are prompted to overwrite the member, rename it, or cancel the
+copy operation. <p>If alias processing is enabled and the selected
+member is an alias or has aliases, its primary member and all aliases
+of the primary member are copied.  If one of the copied members exists
+in the destination, you are prompted to overwrite the member or cancel
+the copy operation. For more information about enabling alias processing,
+see the related links.</p><p>If alias processing is not enabled and
+the selected member is an alias or has aliases, the copy operation
+fails.</p><p>For more information about enabling alias processing,
+see the related links.</p></stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdmvspref.dita" scope="local" type="task">
+</link>
+</related-links>
+</task>
+<?Pub *0000002394?>

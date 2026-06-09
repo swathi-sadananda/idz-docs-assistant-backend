@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdbidicff" xml:lang="en-us">
+<title>Changing the bidirectional format of a file</title><?Pub Caret -2?>
+<shortdesc>Each bidirectional file in the workspace can have a bidirectional
+format property that is associated with it.  This property has two
+possible values: <uicontrol>Default</uicontrol> for logical or visual
+files or <uicontrol>Smart logical</uicontrol> for files that are created
+by using the smart logical algorithm.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional support<indexterm>changing a file's
+format</indexterm></indexterm></keywords>
+<keywords><indexterm>bidirectional file format</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>You can use the <wintitle>Change file format </wintitle> window
+for the following purposes:<ul>
+<li>Convert smart logical and logical data to visual layout, which might be necessary for local
+syntax checking, as local compilers do not support LRM marks correctly.<note
+conref="tzdcmn055.dita#tzdcmn055/lcs-limitations"/></li>
+<li>Convert files in visual layout to smart logical layout for editing
+with the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX
+editor.</li>
+<li>Convert BMS files that are created by previous versions of the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> product
+to smart logical layout used by SFM, BMS, and other tools.</li>
+<li>Convert logical files to smart logical layout for correctly uploading
+them to the remote system.</li>
+</ul></context>
+<steps>
+<stepsection>To view and change the bidirectional format of a file,
+do these steps:</stepsection>
+<step><cmd>Select a file in the Navigator and then select <uicontrol>Change
+Bidi Format</uicontrol> from the menu.</cmd><info><note>This action
+is available for local files only. You cannot do this action for remote
+files.</note></info></step>
+<step><cmd>To change the bidirectional format property of the file,
+select <uicontrol>Change format property only</uicontrol>.</cmd></step>
+<step><cmd>To convert the file content to the required layout, select <uicontrol>Change
+file format</uicontrol>.</cmd></step>
+<step><cmd>To define current and target bidirectional layouts, select
+settings from the <uicontrol>Source attributes</uicontrol> and <uicontrol>Target
+attributes</uicontrol> areas.</cmd><info>For each of these attribute
+sets, you can choose the following settings:</info>
+<choicetable keycol="1">
+<chrow>
+<choption>Visual</choption>
+<chdesc>When this option is selected, the file uses visual layout.
+When it is clear, the file uses logical layout.</chdesc></chrow>
+<chrow>
+<choption>RTL</choption>
+<chdesc>When this option is selected, the file uses right-to-left
+file orientation. When it is clear, the file uses left-to-right orientation.</chdesc>
+</chrow>
+<chrow>
+<choption>Symmetric Swap</choption>
+<chdesc>When this option is selected, certain characters such as (
+&gt; [ { are interchanged with ) &lt; ] } to preserve the logical meaning
+of the presented text. <note>This option is enabled for Visual RTL
+files only.</note></chdesc></chrow>
+<chrow>
+<choption>Numeric Swap</choption>
+<chdesc>When this option is selected, Arabic (European) digit shapes
+are interchanged with Hindi digit shapes. This option toggles the
+file between Arabic (European) and Hindi numbers. If the file includes
+Arabic numbers and you select this checkbox, Arabic numbers are converted
+to Hindi. If the file includes Hindi numbers they are converted to
+Arabic.<note>This option is enabled for Visual RTL files only.</note></chdesc>
+</chrow>
+</choicetable>
+<stepresult>When the source and target settings for a particular attribute
+are the same, but conversion is requested, the file layout is toggled
+from smart logical to logical or from logical to smart logical.</stepresult>
+</step>
+</steps>
+<postreq><note othertype="Next" type="other"><xref href="czdbidiinh.dita" type="concept" /></note></postreq>
+</taskbody>
+
+</task><?Pub *0000004199?><?tm 1670257712636 1 z Systems ?>

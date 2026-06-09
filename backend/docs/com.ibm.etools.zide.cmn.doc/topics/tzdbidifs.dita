@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdbidifs" xml:lang="en-us">
+<title>Using bidirectional file search</title><?Pub Caret -2?>
+<shortdesc>Bidirectional file search allows for the correct processing
+of search strings that contain bidirectional markers. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional support<indexterm>file search</indexterm></indexterm>
+<indexterm>file search<indexterm>bidirectional</indexterm></indexterm>
+<indexterm>bidirectional support<indexterm>Remote z/OS search</indexterm></indexterm>
+<indexterm>Remote z/OS search<indexterm>bidirectional</indexterm></indexterm>
+<indexterm>bidirectional support<indexterm>Replace</indexterm></indexterm>
+<indexterm>Replace<indexterm>bidirectional</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context>When you enable bidirectional support for file search, two
+checkboxes are added to the <wintitle>File Search </wintitle>window:<ul>
+<li>A <uicontrol>Visual format</uicontrol> checkbox beside the <uicontrol>Containing
+text</uicontrol> entry field.</li>
+<li>A <uicontrol>Visual search in standard logical files</uicontrol> check
+box under the <uicontrol>File name patterns</uicontrol> field.</li>
+</ul>The <uicontrol>Visual format</uicontrol> checkbox is also added
+to the <wintitle>Remote z/OS Search</wintitle> and <wintitle>Replace</wintitle> windows.</context>
+<steps-unordered>
+<step><cmd>Select the <uicontrol>Visual format</uicontrol> checkbox
+to place the <uicontrol>Containing text</uicontrol> field in visual
+typing mode, which might be familiar to host emulator bidirectional
+users. </cmd><info>The default mode is Auto-push. It can be toggled
+by pressing Alt+Numpad. Press Alt+NumLock to toggle typing direction.
+Other key combinations familiar to <tm tmtype="reg" trademark="IBM">IBM</tm> Personal
+Communications users might be used as well. Text that is already inserted
+in the <uicontrol>Containing text</uicontrol> field is converted automatically
+to visual format when the <uicontrol>Visual format</uicontrol> check
+box is selected and to logical format when it is cleared. Use <uicontrol>Visual
+format</uicontrol> to search smart logical files.</info></step>
+<step><cmd>Select the <uicontrol>Visual search in standard logical
+files</uicontrol> checkbox to convert the target string to visual
+layout before it is compared to a search pattern. </cmd><info>This
+setting allows for finding some strings that cannot be located otherwise
+with standard logical search. Use <uicontrol>Visual search in standard
+logical files</uicontrol> to search regular logical files.</info></step>
+</steps-unordered>
+<postreq><xref href="tzdbidivtc.dita" type="task"></xref></postreq>
+</taskbody>
+<?tm 1435190800 1?>
+</task>
+<?Pub *0000002923?>

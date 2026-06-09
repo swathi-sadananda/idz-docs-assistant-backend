@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN"
+ "ibm-topic.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<topic id="tzdeditalias" xml:lang="en-us">
+<title>Editing a data set alias</title>
+<shortdesc>When you edit a data set alias, you need to be aware of
+how it is being used in relation to the data set it refers to. Some
+restrictions apply when the references data set is also open for editing.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>alias<indexterm>data set<indexterm>editing</indexterm></indexterm></indexterm>
+</keywords>
+<keywords><indexterm>alias<indexterm>data set<indexterm>adding to
+a project</indexterm></indexterm></indexterm></keywords>
+<keywords><indexterm>alias<indexterm>data set<indexterm>browsing</indexterm></indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<body>
+<p>When you open a data set or its alias for editing, if another alias
+or the referenced data set is already open, a message window opens
+indicating that the data set or alias cannot be opened for editing.</p>
+<p>If a data set alias is added to a project and the project is taken
+offline, the alias and the referenced data set can be edited independently.
+When you take the project back online, you must reconcile any differences
+between the alias in your project and the referenced data set on the
+remote system.</p>
+<note>Browsing a data set alias while the referenced data set is being
+edited is allowed.</note>
+</body>
+</topic>
+<?Pub *0000001555?>

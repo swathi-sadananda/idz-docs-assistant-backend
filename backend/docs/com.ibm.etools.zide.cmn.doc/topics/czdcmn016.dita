@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<concept id="czdcmn016" xml:lang="en-us">
+<title>Building your code</title>
+<?Pub Caret -2?>
+<abstract>The tools for building z/OS applications include both z/OS native tools, such as compilers
+and build job entry subsystem (JES) support, and the user build support available through the
+product integrations with IBM Dependency Based Build and <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RTC_full"/>. The product
+also integrates with Z Development and Test Environment so that you can deploy applications in a
+web-based IBM Z emulator for flexible, accessible testing, demonstration, and
+education.<shortdesc>Learn how to build your code by using both the z/OS native build and
+compilation tools and the integrations with Dependency Based Build, <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RTC_fam"/>, and Z
+Development and Test.</shortdesc></abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>project builds</indexterm>
+<indexterm>building a project</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody/>
+<?tm 1435190838 4?>
+</concept>
+<?Pub *0000001065?>

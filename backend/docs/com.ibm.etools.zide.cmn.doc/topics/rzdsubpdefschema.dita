@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN"
+ "ibm-reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="rzdsubpdefschema" xml:lang="en-us">
+<title>Subproject definition schema</title><?Pub Caret -2?>
+<shortdesc>The subproject definition schema defines tags that are
+used to define a subproject definition file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>subproject definition
+schema</indexterm></indexterm><indexterm>subproject definition schema</indexterm>
+<indexterm>configuring host-based projects<indexterm>subproject definition
+schema</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><codeblock>&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+&lt;xsd:element name="SUBPROJECT-STRUCTURE">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Top level element of a host-based subproject definition
+      file. Note: any string representing a file can contain
+      the substitution variable &lt;HLQ> which will be
+      replaced by the user's user ID at system connect time
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="WSED-VERSION">&lt;/xsd:element>
+      &lt;xsd:element ref="SUBPROJECT">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="WSED-VERSION" type="xsd:string">&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Defines the structure of a host-based subproject
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="SUBPROJECT-NAME">&lt;/xsd:element>
+      &lt;xsd:element ref="SUBPROJECT-NATURE-LIST">&lt;/xsd:element>
+      &lt;xsd:element ref="SUBPROJECT-PROPERTIES-LOCATION">&lt;/xsd:element>
+      &lt;xsd:element ref="SUBPROJECT-TYPE">&lt;/xsd:element>
+      &lt;xsd:element ref="FOLDER-LIST">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-LIST">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT-NAME" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>&lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT-NATURE-LIST">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      A list of Eclipse project natures to be associated with
+      this subproject
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="SUBPROJECT-NATURE" minOccurs="0">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT-NATURE" type="subprojectNatureType">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Currently only one nature is supported
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:simpleType name="subprojectNatureType">
+  &lt;xsd:restriction base="xsd:string">
+    &lt;xsd:enumeration value="com.ibm.ftt.projects.zos.zosnature"/>
+  &lt;/xsd:restriction>
+&lt;/xsd:simpleType>
+
+&lt;xsd:element name="SUBPROJECT-PROPERTIES-LOCATION" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The path to the subproject properties file. The path is
+      relative to the root project configuration folder on the
+      remote system.
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="SUBPROJECT-TYPE" type="subprojectType">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Currently only zos-subproject type is supported
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:simpleType name="subprojectType">
+  &lt;xsd:restriction base="xsd:string">
+    &lt;xsd:enumeration value="zos-subproject"/>
+  &lt;/xsd:restriction>
+&lt;/xsd:simpleType>
+
+&lt;xsd:element name="FOLDER-LIST">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      A list of folder resources contained by this subproject.
+      For MVS, this would be a partitioned data set
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+       &lt;xsd:element ref="FOLDER" minOccurs="0">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FOLDER">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Information related to the folder resource
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="FOLDER-NAME">&lt;/xsd:element>
+      &lt;xsd:element ref="FOLDER-TYPE">&lt;/xsd:element>
+      &lt;xsd:element ref="FOLDER-STATE">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FOLDER-NAME" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The fully qualified name of the folder resource on the
+      remote system e.g. A.B.C on MVS
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FOLDER-TYPE" type="folderType">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Currently the folder type must be "pds"
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:simpleType name="folderType">
+  &lt;xsd:restriction base="xsd:string">
+    &lt;xsd:enumeration value="pds"/>
+  &lt;/xsd:restriction>
+&lt;/xsd:simpleType>
+
+&lt;xsd:element name="FOLDER-STATE">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Information related to the state of the folder resource
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="STATE-IS-OFFLINE">&lt;/xsd:element>
+      &lt;xsd:element ref="PHYSICAL-FOLDER">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="STATE-IS-OFFLINE" type="isOfflineType">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Currently the state must be online
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:simpleType name="isOfflineType">
+  &lt;xsd:restriction base="xsd:string">
+    &lt;xsd:enumeration value="false"/>
+  &lt;/xsd:restriction>
+&lt;/xsd:simpleType>
+
+&lt;xsd:element name="PHYSICAL-FOLDER">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Information related to the physical folder on the remote
+      system
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="FOLDER-NAME">&lt;/xsd:element>
+      &lt;xsd:element ref="FOLDER-PHYSICAL-PATH">&lt;/xsd:element>
+      &lt;xsd:element ref="FOLDER-TYPE">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FOLDER-PHYSICAL-PATH" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The fully qualified name of the folder resource on the
+      remote system e.g. A.B.C on MVS
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE-LIST">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      A list of file resources contained by this subproject.
+      For MVS, this would be a partitioned data set member or a sequential
+      data set
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="FILE" minOccurs="0">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Information related to the file resource
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="FILE-NAME">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-EXTENSION">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-NAME-NO-EXTENSION">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-TYPE">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-STATE">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE-NAME" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The fully qualified name of the file resource on the
+      remote system, including mapped extension e.g.
+      A.B.COBOL/HELLO.cbl for a partitioned data set member on MVS where
+      A.B.COBOL is the partitioned data set name and HELLO is the member name
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE-EXTENSION" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      This should correspond to the extension defined by the
+      file system mapping for this system. E.g. **COBOL
+      data sets would have a .cbl extension
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE-NAME-NO-EXTENSION" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The fully qualified file name without the extension
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE-TYPE" type="fileType">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      For MVS this would be partitioned data set member or sequential data set
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;xsd:simpleType name="fileType">
+  &lt;xsd:restriction base="xsd:string">
+    &lt;xsd:enumeration value="pds-member"/>
+    &lt;xsd:enumeration value="sequential"/>
+  &lt;/xsd:restriction>
+&lt;/xsd:simpleType>
+
+&lt;xsd:element name="FILE-STATE">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Information related to the state of the file resource
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="STATE-IS-OFFLINE">&lt;/xsd:element>
+      &lt;xsd:element ref="PHYSICAL-FILE">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="PHYSICAL-FILE">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      Information related to the physical file on the remote
+      system
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+  &lt;xsd:complexType>
+    &lt;xsd:sequence>
+      &lt;xsd:element ref="FILE-NAME">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-PHYSICAL-PATH">&lt;/xsd:element>
+      &lt;xsd:element ref="FILE-TYPE">&lt;/xsd:element>
+    &lt;/xsd:sequence>
+  &lt;/xsd:complexType>
+&lt;/xsd:element>
+
+&lt;xsd:element name="FILE-PHYSICAL-PATH" type="xsd:string">
+  &lt;xsd:annotation>
+    &lt;xsd:documentation>
+      The fully qualified name of the file resource on the
+      remote system e.g. A.B.C on MVS
+    &lt;/xsd:documentation>
+  &lt;/xsd:annotation>
+&lt;/xsd:element>
+
+&lt;/xsd:schema>
+</codeblock></section>
+</refbody>
+<related-links>
+<link href="tzdsubpdeffile.dita" type="task"></link>
+</related-links>
+<?tm 1435190795 0?>
+</reference>
+<?Pub *0000011086?>

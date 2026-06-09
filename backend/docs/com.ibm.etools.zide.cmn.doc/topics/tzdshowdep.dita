@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdshowdep" xml:lang="en-us">
+<title>Setting compiler options for show dependencies and remote syntax
+check</title><?Pub Caret -2?>
+<shortdesc>To use the show dependencies and remote syntax check functions,
+you must set up appropriate compiler options.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>show dependencies<indexterm>setting compiler
+options</indexterm><indexterm>setting assembler options</indexterm></indexterm>
+<indexterm>remote syntax check<indexterm>setting compiler options</indexterm><indexterm>setting
+assembler options</indexterm></indexterm><indexterm>PL/I Settings<indexterm>show
+dependencies and remote syntax check</indexterm></indexterm><indexterm>COBOL
+Settings<indexterm>show dependencies and remote syntax check</indexterm></indexterm>
+<indexterm>Assembler Settings<indexterm>show dependencies and remote
+syntax check</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context><ph rev="803"><keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> provides
+show dependencies and remote syntax check functions that detect dependencies
+for COBOL, PL/I, and Assembler programs. These functions use the COBOL
+and PL/I compilers and <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/HLASM_fam"/> to locate the copy members,
+include files, and macros that are needed to compile a program properly.</ph> These
+functions are available from a number of locations in the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> interface:<ul>
+<li rev="150">From the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, select a local or
+remote COBOL or PL/I file or a remote Assembler file, or a local project that contains COBOL or PL/I
+files and then select <uicontrol>Show Dependencies</uicontrol>. <note>The <uicontrol>Show
+Dependencies</uicontrol> action is not supported for sequential data sets.</note></li>
+<li otherprops="IDz">From the <wintitle>Work Offline</wintitle> wizard, select <uicontrol>Show
+Dependencies</uicontrol> on the <wintitle>Show Dependencies for Selected Resources</wintitle>
+page.</li>
+<li rev="803">From the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view or an editor, select
+or open a COBOL, PL/I, or Assembler file and then select <menucascade>
+<uicontrol>Remote Syntax Check</uicontrol></menucascade>
+<ph rev="80">or press Ctrl+Alt+R.</ph></li>
+</ul></context>
+<steps>
+<stepsection>To set compiler options for a show dependencies or remote
+syntax check operation, do these steps:</stepsection>
+<step rev="803"><cmd>On the <wintitle>Procedures and Steps</wintitle> page
+of the <wintitle>COBOL</wintitle>, <wintitle>PL/I</wintitle>, or <wintitle>Assembler</wintitle> tab
+in the property group editor, expand the ELAXFCOC, ELAXFPL1, or ELAXFASM
+procedure name.</cmd></step>
+<step rev="803"><cmd>Double-click the COBOL, PLI, or ASM step.</cmd>
+<stepresult> The <wintitle>Step Options</wintitle> area opens.</stepresult>
+</step>
+<step><cmd>Select the <uicontrol>Support Error Feedback</uicontrol> check
+box. </cmd><info>This checkbox prompts the compiler to allocate an
+XML file during show dependencies or remote syntax check operations.
+The show dependencies and syntax check operations parse this XML file
+to display dependent files.</info></step>
+<step rev="803"><cmd>In the <uicontrol>Data Set Qualifier for Compiler
+Errors</uicontrol> field, type a qualifier to which you have access
+to allocate data sets. </cmd><info>This data set qualifier is used
+as a prefix for the names of the data sets that are allocated during
+the syntax check, show dependencies, and rebuild process.</info></step>
+</steps>
+<postreq>If show dependencies or remote syntax check requests do not
+succeed after you set these options, check that the TSO command server
+is configured properly. A simple way to check this server is to allocate
+a data set from the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view
+or <wintitle>Remote Systems</wintitle> view.</postreq>
+</taskbody>
+<related-links>
+<link href="rzdcobstepopt.dita" scope="local" type="reference"></link>
+<link href="rzdasmstepopt.dita" scope="local" type="reference"></link>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+<?tm 1435190821 2?>
+</task>
+<?Pub *0000004943?>

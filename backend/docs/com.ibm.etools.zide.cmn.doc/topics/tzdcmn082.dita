@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn082" xml:lang="en-us">
+<title>Allocating a partitioned data set or sequential file from an
+existing file</title>
+<titlealts>
+<searchtitle>Allocating a PDS or sequential file from an existing
+file</searchtitle>
+</titlealts>
+<shortdesc>You can allocate a partitioned or sequential data set from
+an existing data set.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>allocating<indexterm>partitioned data set from
+an existing file</indexterm><indexterm>PDS from an existing file</indexterm><indexterm>sequential
+file from an existing file</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be successfully logged on to a remote system.</prereq>
+<steps>
+<step><cmd>Navigate to the partitioned or sequential data set that
+has the same characteristics as the one you want to allocate.</cmd>
+</step>
+<step importance="optional"><cmd>Select the data set and open the <wintitle>Property</wintitle> view
+to be sure that you have what you want.</cmd></step>
+<step><cmd>Select <uicontrol>Allocate Like</uicontrol> from the menu.</cmd>
+<info><note>You can also press Ctrl+1 to allocate a new partitioned
+data set or Ctrl+2 to allocate a new sequential data set.</note></info>
+</step>
+<step><cmd>Specify the name of the data set to be allocated.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Next</uicontrol>.</cmd><stepresult>On
+the next wizard page, the selected data set name is shown and <uicontrol>Copy
+characteristics from an existing data set</uicontrol> is selected. </stepresult>
+</step>
+<step importance="optional"><cmd>Click <uicontrol>Next</uicontrol>. </cmd>
+<stepresult>The name of the new data set and its characteristics are
+displayed for verification purposes. You can change the characteristics
+if necessary.</stepresult></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol>.</cmd><stepresult>The
+data set is allocated and added to the <uicontrol>Retrieved Data Sets</uicontrol> filter.</stepresult>
+</step>
+<step><cmd>When the data set is allocated, you can work with it as
+you would with other data sets.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn039.dita" type="task"></link>
+<link href="tzdcmn050.dita" type="task"></link>
+</related-links>
+</task>
+<?Pub *0000002540?>

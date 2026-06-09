@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdusehostbased" xml:lang="en-us">
+<title>Using host-based projects</title>
+<shortdesc>After host-based projects are configured on the remote
+system, they are automatically available to any user who logs on to
+that system with a user ID corresponding to one of the user folders
+on the remote system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>using</indexterm></indexterm>
+<indexterm>using host-based projects</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>For each instance file in the user folder, a host-based project
+is created on the user's workstation, along with its subprojects and
+their properties.<p>Host-based projects behave similarly to workstation-based
+projects, with the following exceptions:</p><ul>
+<li>You cannot rename or delete the projects or subprojects.</li>
+<li>You cannot add or remove resources from the subprojects or subprojects
+from the project. </li>
+<li>You cannot create new remote projects or subprojects associated
+with host-based project systems.</li>
+<li>Any actions that allow the user to alter the structure or contents
+of a host-based project are disabled.</li>
+<li>Although properties for host-based subprojects can be changed
+in the user interface, they are not saved on the client after you
+disconnect from the remote system.</li>
+</ul><p>If changes to the structure of the project are required, the
+definitions on the remote system must be updated and the projects
+on the workstation refreshed. To refresh projects on the workstation,
+you must disconnect and reconnect to the system that contains the
+project definitions.</p><p>Because project definitions are on the
+remote system, host-based projects are not persisted on the workstation.
+They are removed when you disconnect from the system that contains
+the project definitions.</p><p>Each system that you connect to might
+or might not have host-based projects enabled. For a system with host-based
+projects enabled, no projects that are associated with that system
+are visible in the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view
+until you connect. For a system without host-based projects, any existing
+projects that are associated with that system are visible as soon
+as you open the <ph conref="zide_conrefs.dita#zide_conrefs/perspective"></ph> perspective.</p><p>If
+you require projects that persist after you disconnect and contain
+resources on a system with host-based projects enabled, you can set
+up a user ID on that system that does not have a corresponding user
+folder. If you connect with that user ID, you can create workstation-based
+remote projects that are persisted after you disconnect.</p>  </context>
+</taskbody>
+<related-links>
+<link href="czdhostbased.dita" type="concept"></link>
+<link href="tzdcfghostbased.dita" type="task"></link>
+<link href="tzdslvhostbased.dita" type="task"></link><?Pub Caret -2?>
+</related-links>
+<?tm 1287682675 0?>
+</task>
+<?Pub *0000003171?>

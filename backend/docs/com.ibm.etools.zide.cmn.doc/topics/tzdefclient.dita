@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<?Pub Caret -1?>
+<task id="tzdefclient" xml:lang="en-us">
+<title>Setting up the client for error feedback</title>
+<shortdesc>You can set options in the property group of a program
+to support error feedback.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>error feedback<indexterm>client setup</indexterm><indexterm>setting
+properties</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>You can use one of the following three scenarios for setting
+program properties to support error feedback:<ul>
+<li><xref href="tzdefcobolpli.dita"></xref> (default support)</li>
+<li><xref href="tzdefpreprocessor.dita"></xref></li>
+<li><xref href="tzdefotherlang.dita"></xref></li>
+</ul></context>
+</taskbody>
+<related-links>
+<link href="czderrorfeedback.dita" type="concept"></link>
+</related-links>
+</task>
+<?Pub *0000001066?>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn056" xml:lang="en-us">
+<title><ph otherprops="IDz">Checking syntax remotely</ph><ph otherprops="ZOD ZOT">Checking
+syntax</ph></title><?Pub Caret -2?>
+<shortdesc>You can perform a remote syntax check from a file that is open in the <ph otherprops="IDz"><tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor, </ph>COBOL Editor
+or PL/I Editor, from the <wintitle>Remote Systems</wintitle> view, or from the <ph conref="zide_conrefs.dita#zide_conrefs/view" /> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>syntax<indexterm>checking<indexterm>remotely</indexterm></indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to the remote system.</prereq>
+<context rev="802">The syntax check action is not supported for sequential
+data sets.</context>
+<steps>
+<stepsection>To check the syntax of your code using a remote compiler:</stepsection>
+<step><cmd>Select or open the file that contains the code you want
+to check.</cmd></step>
+<step><cmd>Right-click and select <uicontrol>Syntax Check &gt; Remote</uicontrol> <ph rev="80">or press Ctrl+Alt+R.</ph></cmd><info rev="802">If a JCL error
+occurs or the job ends abnormally, an error message displays to help
+you solve the problem. From this message window, you can do one of
+the following steps:<ul>
+<li>Open the job output to view the error messages and return codes.</li>
+<li>Open the property group that is associated with the file to view
+the build properties currently in use.</li>
+</ul></info><stepresult rev="802">If the job executes successfully,
+any syntax errors are reported to the <wintitle>Remote Error List</wintitle>.
+If there are no errors, control is returned to you and you can continue
+working.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="czdcmn017.dita" type="concept" />
+<link href="czdcmn021.dita" type="concept" />
+<link href="tzdcmn158.dita" type="task" />
+<link href="tzdpscreate.dita" type="topic" />
+<link href="tzdbldopts.dita" scope="local" type="task" />
+<link format="dita" href="tzdshowdep.dita" scope="local" type="task" />
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"><linktext>Determining the
+source of generated JCL</linktext></link>
+</related-links>
+
+</task><?Pub *0000002410?><?tm 1665694009790 1 z Systems ?>

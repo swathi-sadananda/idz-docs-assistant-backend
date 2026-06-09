@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsubppropfile" xml:lang="en-us">
+<title>Creating a subproject property file</title>
+<shortdesc>Subproject property files are in the <filepath><varname>PROJECT-HOME</varname></filepath> directory
+or one of its subfolders.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>host-based projects<indexterm>subproject property
+file</indexterm></indexterm><indexterm>subproject property file</indexterm>
+<indexterm>configuring host-based projects<indexterm>subproject property
+file</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must complete the steps in <xref href="tzdsubpdeffile.dita"
+type="task">creating a subproject definition file</xref>.</prereq>
+<context>Subproject property files must be encoded in UTF-8 and have
+an extension of <filepath>*.hbppr.</filepath><p>Subproject properties
+files support the substitution variable &lt;HLQ>, which is replaced
+by the user's user ID at connect time. This substitution variable
+allows sharing of property files between team members.</p><p>Although
+properties for host-based subprojects can be changed in the user interface,
+they are not saved on the client after you disconnect from the remote
+system.</p></context>
+</taskbody>
+<related-links>
+<link href="rzdsubppropschema.dita" type="reference"></link>
+</related-links>
+</task>
+<?Pub *0000001541?>

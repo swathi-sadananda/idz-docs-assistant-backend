@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdchghlq" xml:lang="en-us">
+<title>Changing the high-level qualifier of an <tm tmtype="tm"
+trademark="MVS">MVS</tm> subproject</title><?Pub Caret -2?>
+<shortdesc>You can change the high-level qualifier (HLQ) of an <tm
+tmtype="tm" trademark="MVS">MVS</tm> subproject after it is created.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>high-level qualifier<indexterm>changing</indexterm></indexterm>
+<indexterm>changing a high-level qualifier</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>When you create an <tm tmtype="tm" trademark="MVS">MVS</tm> subproject,
+you can choose a high-level qualifier for the subproject. The default
+HLQ is the user ID with which you are logged on to the remote system
+when you create a project. This HLQ is used to resolve the &lt;HLQ>
+substitution variable that is displayed in some property values associated
+with resources contained by the subproject. You can see the HLQ associated
+with a subproject by selecting the subproject and opening the <wintitle>Properties</wintitle> view.</context>
+<steps>
+<stepsection>To change the HLQ associated with a subproject:</stepsection>
+<step><cmd>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view,
+select the subproject.</cmd></step>
+<step><cmd>Click <uicontrol>Properties</uicontrol>.</cmd><stepresult>The <wintitle>Properties</wintitle> window
+opens.</stepresult></step>
+<step><cmd>Click <uicontrol>Info</uicontrol> to open the <wintitle>Info</wintitle> page.</cmd>
+</step>
+<step><cmd>Select a new HLQ from the <uicontrol>High-level Qualifier</uicontrol> list.</cmd>
+</step>
+<step><cmd>Click <uicontrol>OK</uicontrol> to save the change.</cmd>
+<info>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> product
+obtains the HLQs for this list from the filters that are defined under
+the <uicontrol>MVS Files</uicontrol> node in the <wintitle>Remote
+Systems</wintitle> view. <ph conref="zide_conrefs.dita#zide_conrefs/hlq"></ph></info>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdimpproj.dita" scope="local" type="task">
+</link>
+</related-links>
+<?tm 1435190832 3?>
+</task>
+<?Pub *0000002408?>

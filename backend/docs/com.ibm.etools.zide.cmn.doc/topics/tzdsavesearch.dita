@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdsavesearch" xml:lang="en-us">
+<title>Saving search queries</title><?Pub Caret -2?>
+<shortdesc>You can save a <wintitle>Remote z/OS Search</wintitle> or <wintitle>Remote
+z/OS File Search</wintitle> query and run it from the <wintitle>Remote
+Systems</wintitle> view. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>remote z/OS search<indexterm>saving</indexterm></indexterm>
+<indexterm>saving a search query</indexterm></keywords>
+<keywords><indexterm>search query<indexterm>saving</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>remote z/OS file search<indexterm>saving</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Before you can save a search query, you must first run a remote <tm
+tmtype="reg" trademark="z/OS">z/OS</tm> search or remote <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> file search and have the search results
+displayed in the <wintitle>Remote z/OS Search</wintitle> view. The
+search results must be limited to a single <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> system. See the related topics for instructions.</prereq>
+<steps>
+<stepsection>To save a remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> search
+or remote <tm tmtype="reg" trademark="z/OS">z/OS</tm> file search
+query:</stepsection>
+<step><cmd>In the <wintitle>Remote z/OS Search</wintitle> view, display
+the results of the search query you want to save.</cmd><info>If you
+completed more than one search, use the search history list to select
+the search query you want to save.</info></step>
+<step><cmd>Click the <image href="../images/SaveQuery.gif"
+placement="inline"><alt>Add query to My Favorites in <wintitle>Remote
+Systems</wintitle> view</alt></image> icon to save the search query.</cmd>
+<info>This icon is enabled only if the search scope is limited to
+a single <tm tmtype="reg" trademark="z/OS">z/OS</tm> system under
+the following conditions:<ul>
+<li rev="7601">You search for files.</li>
+<li>The search scope is for a single <tm tmtype="reg" trademark="z/OS">z/OS</tm> system.
+The scope can be an entire <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+or multiple partitioned data sets on the same system.</li>
+<li>The search scope does not include <tm tmtype="reg" trademark="z/OS">z/OS</tm> projects
+or <tm tmtype="tm" trademark="MVS">MVS</tm> subprojects.</li>
+</ul>.</info><stepresult>The <wintitle>Add Query to Remote Systems
+View</wintitle> window opens.</stepresult></step>
+<step><cmd>Type a name for the query and click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>The search query is added to the <uicontrol>My Favorites</uicontrol> folder
+of the <tm tmtype="tm" trademark="MVS">MVS</tm> Files subsystem.</stepresult>
+</step>
+</steps>
+<postreq>After you save a search query, you can do the following actions:<ul>
+<li>To run a saved query, select it in the <wintitle>Remote Systems</wintitle> view
+and click <uicontrol>Run Query</uicontrol> from the menu.</li>
+<li>To edit and run a saved query, select it in the <wintitle>Remote
+Systems</wintitle> view and click <uicontrol>Edit and Run</uicontrol> from
+the menu. This action opens the <wintitle>Remote z/OS Search</wintitle> or <wintitle>Remote
+z/OS File Search</wintitle> window, which you can use to change the
+search criteria and submit the search request.</li>
+</ul></postreq>
+</taskbody>
+<related-links>
+<link href="tzdcmn145.dita" type="topic"></link>
+<link format="dita" href="t_search_remote_zos_file.dita" scope="local"
+type="task"></link>
+<link href="tzdcmn103.dita" type="topic"></link>
+<link format="html"
+href="../../com.ibm.etools.getstart.wsentdev.doc/topics/searchqueries.html"
+scope="peer" type="topic"><linktext>Quick task: Creating reusable
+z/OS search queries</linktext></link>
+</related-links>
+<?tm 1435190809 11?>
+</task>
+<?Pub *0000003974?>

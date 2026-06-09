@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdhostintro" rev="760" xml:lang="en-us">
+<title>Developing z/OS applications with Eclipse</title>
+<titlealts>
+<navtitle>Developing z/OS applications with Eclipse</navtitle>
+<searchtitle>Developing z/OS applications with Eclipse</searchtitle>
+</titlealts>
+<shortdesc>The <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"/> Eclipse
+integrated development environment (zIDE) provides tools for developing COBOL, PL/I, Assembler,
+REXX, and C++ applications in local and remote systems. These tools include support for JCL
+procedures, <tm tmtype="reg" trademark="CICS">CICS</tm> and IMS applications, and <tm tmtype="reg"
+trademark="Db2">Db2</tm> programming.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>z/OS Integrated Development Environment</indexterm>
+<indexterm>zIDE</indexterm>
+<indexterm>z/OS development tools</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<concept id="zide_overview" xml:lang="en-us">
+<title>Overview</title>
+<conbody>
+<p>The following topics provide information about the zIDE development environment. They describe
+the zIDE perspectives and views, the types of projects you can create in zIDE, how to set properties
+for resources in zIDE, and the editors that you can use for COBOL, PL/I, Assembler, REXX, and C++
+source files.</p>
+<ul>
+<li><xref href="../../com.ibm.etools.getstart.wsentdev.doc/topics/rzdcmn001.dita" type="reference"
+/></li>
+<li><xref href="../../com.ibm.wsentdev.doc/topics/czdcmn026.dita" type="concept" /></li>
+<li><xref href="tzdpropgrp.dita" type="topic" /></li>
+<li><xref format="html" href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdcmn024.html" scope="peer" type="concept">Editing COBOL, PL/I, Assembler, and C++ files</xref></li>
+</ul>
+</conbody>
+</concept>
+<concept id="zide_gettingstarted" xml:lang="en-us">
+<title>Getting started</title>
+<conbody>
+<p>The following topics provide instructions for completing some of the basic tasks you must do when
+you develop applications in the zIDE.</p>
+<ul>
+<li>For client administrators: <xref format="dita" href="czdptc.dita" scope="local" type="concept" /></li>
+<li><xref format="html" href="../../com.ibm.etools.getstart.wsentdev.doc/topics/quicktasksbycomponent.html#quick_zide" scope="peer">Quick tasks for zIDE</xref></li>
+<li><xref href="tzdcmn043.dita" type="task" /></li>
+<li><xref href="tzdnewsubproject.dita" type="task" /></li>
+<li><xref href="../../com.ibm.uss.projects.doc/topics/creatinganewtpfproject_t.dita" type="task" /></li>
+<li><xref href="tzdcmn049.dita" type="topic" /></li>
+<li><xref format="html" href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdcmn024.html" scope="peer" type="concept">Editing COBOL, PL/I, Assembler, and C++ files</xref></li>
+</ul>
+</conbody>
+</concept>
+<concept id="zide_samp" xml:lang="en-us">
+<title>Samples and tutorials</title>
+<conbody>
+<p>The following samples and tutorials guide you through the development of applications with zIDE
+tools:</p>
+<ul>
+<li><xref format="dita"
+href="../../com.ibm.etools.getstart.wsentdev.doc/topics/rdz_remote_simplecobol_sample_abstract.dita"
+scope="local" type="sample"/></li>
+<li otherprops="IDz"><xref href="../../com.ibm.etools.getstart.wsentdev.doc/topics/azdjclovr.dita"
+/></li>
+<li><xref format="dita"
+href="../../com.ibm.etools.getstart.wsentdev.doc/topics/tut_global_auto_mart_intro.dita"
+scope="local" type="topic"/></li>
+</ul>
+</conbody>
+</concept>
+<concept id="concept_usz_xtj_vcc">
+<title><tm tmtype="reg" trademark="z/OS">z/OS</tm> application development tools</title>
+<conbody>
+<ul>
+<li otherprops="IDz"><xref href="../../com.ibm.host.connect.s3270.doc/topics/intro.dita"
+scope="peer">Remote Connection Emulator</xref></li>
+<li otherprops="IDz"><xref href="../../com.ibm.etools.est.doc/topics/cest_techoverview.dita"
+>Enterprise Service Tools for <tm tmtype="reg" trademark="CICS">CICS</tm></xref></li>
+<li><xref format="dita" href="../../com.ibm.etools.bmseditor.doc/concepts/tbm000.dita" scope="local"
+type="topic">BMS Screen Designer</xref></li>
+<li otherprops="IDz"><xref href="../../com.ibm.etools.est.doc/topics/cest_techoverview.dita"
+>Enterprise Service Tools for <tm tmtype="tm" trademark="IMS" tmclass="IGNORE">IMS</tm></xref></li>
+<li><xref format="dita" href="../../com.ibm.etools.mfseditor.doc/concepts/tmf000.dita" scope="local"
+type="topic">MFS Screen Designer</xref></li>
+<li otherprops="IDz"><xref href="../../com.ibm.idz.db24zos.doc/topics/overview.dita"/></li>
+</ul>
+</conbody>
+</concept>
+<concept id="zide_web" xml:lang="en-us">
+<title>Resources for learning available on the web</title>
+<conbody>
+<p>Many resources for learning and using the zIDE tools are available. Use the following links to
+learn more about how to put these tools to work:</p>
+<ul>
+<li><xref href="https://www.ibm.com/community/z/" scope="external" format="html"> <tm trademark="IBM" tmtype="reg">IBM</tm> Community</xref></li>
+<li><xref href="http://www.ibm.com/support/docview.wss?uid=swg27048563" scope="external" format="html">
+<keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> Library</xref></li>
+<li><xref format="html" href="https://www.youtube.com/playlist?list=PLZGO0qYNSD4XaiFf5fzmjziAwQHcxk1RB" scope="external"><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> playlist from <tm trademark="IBM" tmtype="reg">IBM</tm> User Education on YouTube</xref></li>
+<li><xref format="html" href="https://mediacenter.ibm.com/esearch/search?keyword=ibm%20developer%20for%20z" scope="external"><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_full" /> videos on <tm trademark="IBM" tmtype="reg">IBM</tm> Media Center</xref></li>
+<li><xref format="html" href="https://mediacenter.ibm.com/esearch/search?keyword=devops" scope="external">DevOps on <tm trademark="IBM" tmtype="reg">IBM</tm> Media Center</xref></li>
+</ul>
+</conbody>
+</concept>
+
+</concept><?Pub *0000006857?><?tm 1665693335616 6 IBM||Db2||CICS ?>

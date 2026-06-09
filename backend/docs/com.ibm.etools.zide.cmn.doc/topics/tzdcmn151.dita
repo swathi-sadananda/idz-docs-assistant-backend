@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn151" xml:lang="en-us">
+<title>Customizing build steps</title>
+<?Pub Caret -2?>
+<shortdesc>You can customize the build procedures that are designed by your <tm tmtype="tm"
+trademark="MVS">MVS</tm> system administrator by overriding the default values used in the
+steps.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>build steps<indexterm>customizing</indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>You must know the names of the steps within these build procedures and what values must be
+modified. Your <tm tmtype="tm" trademark="MVS">MVS</tm> system administrator can provide you with
+this information.</prereq>
+<context>You must customize build steps before you attempt to build your COBOL, PL/I, or Assembler
+source code. </context>
+<steps>
+<stepsection rev="803">The following steps can be used to customize a build step for COBOL source
+code, but you can use a similar process to customize a build step for PL/I or Assembler source
+code.</stepsection>
+<step><cmd rev="803">Click the <uicontrol>COBOL</uicontrol>, <uicontrol>PL/I</uicontrol>, or
+<uicontrol>Assembler</uicontrol> tab of the property group editor.</cmd>
+</step>
+<step><cmd>Click <uicontrol>Procedures and Steps</uicontrol>.</cmd>
+</step>
+<step><cmd>For COBOL or PL/I, select the procedure you want to customize in the table and click
+<uicontrol>Enable procedure</uicontrol>.</cmd>
+<info>The procedure must be enabled before you can customize it.</info>
+</step>
+<step><cmd>Click <uicontrol>Add Step</uicontrol>.</cmd><stepresult>The <uicontrol>Add a New
+Step</uicontrol> area opens.</stepresult></step>
+<step><cmd>Type the name of the step you want to customize in the <uicontrol>Step Name</uicontrol>
+field.</cmd><info>
+<note>If no step with the specified name exists in the selected procedure, the build procedure
+returns a JCL error when submitted. You can add only that steps that exist in the procedure that is
+designed by your <tm tmtype="tm" trademark="MVS">MVS</tm> system administrator.</note>
+</info></step>
+<step><cmd>Specify any options that must be passed to the step in the <uicontrol>Options</uicontrol>
+field.</cmd></step>
+<step><cmd>Specify any additional JCL in the <uicontrol>Additional JCL</uicontrol>
+field.</cmd><stepxmp>For example, you might use this field to override any default values defined in
+the step by your <tm tmtype="tm" trademark="MVS">MVS</tm> system administrator.</stepxmp></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd></step>
+</steps>
+<result>The customized build step is added under the selected procedure in the table.</result>
+<postreq>You can now modify the step definition by double-clicking it. You can also change the order
+in which steps are run by selecting a step and clicking <uicontrol>Up</uicontrol> and
+<uicontrol>Down</uicontrol>.</postreq>
+</taskbody>
+<?tm 1435190821 4?>
+</task>
+<?Pub *0000003480?>

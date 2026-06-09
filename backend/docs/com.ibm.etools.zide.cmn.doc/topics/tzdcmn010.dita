@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdcmn010" xml:lang="en-us">
+<title>Setting preferences for <tm tmtype="reg" trademark="z/OS">z/OS</tm> tools</title><?Pub Caret -2?>
+<shortdesc>Several categories of preference settings directly affect <tm trademark="z/OS" tmtype="reg">z/OS</tm> application development in the <tm trademark="z/OS" tmtype="reg">z/OS</tm> Integrated Development Environment. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>setting<indexterm>preferences for z/OS solutions</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>preferences<indexterm>setting for z/OS solutions</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><p>Select the links in this list for more information about preference settings for the <tm trademark="z/OS" tmtype="reg">z/OS</tm> Integrated Development Environment.<ul>
+<li rev="751"><xref format="dita" href="clicert.dita" scope="local" type="task">Client Certificates</xref></li>
+<li>Remote Systems &gt; <tm trademark="z/OS" tmtype="reg">z/OS</tm><ul>
+<li><xref format="dita" href="tzdmvspref.dita" scope="local" type="task"><tm tmtype="tm" trademark="MVS">MVS</tm> Files</xref></li>
+</ul></li>
+<li rev="760"><xref href="tzdsetlog.dita" type="task" /></li>
+<li><xref href="tzdzossol.dita" type="reference"><tm tmtype="reg" trademark="z/OS">z/OS</tm>
+Solutions</xref>
+<ul>
+<li><xref href="../../com.ibm.uss.projects.doc/topics/tpftoolkitpreferences_t.dita" /></li>
+</ul></li>
+</ul></p></context>
+</taskbody>
+<related-links>
+<link href="../../com.ibm.etools.getstart.wsentdev.doc/topics/preferences.dita" />
+<link format="html" href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdlpexeditor_preferences.html" scope="peer" type="task" otherprops="IDz">
+<linktext>Setting preferences for the z Systems LPEX Editor</linktext>
+</link>
+<link format="html" href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdcoboleditor_preferences.html" scope="peer" type="concept"><linktext>Setting preferences for the
+COBOL Editor</linktext></link>
+<link format="html" href="../../com.ibm.etools.rdz.language.editors.doc/topics/czdplieditor_preferences.html" scope="peer" type="concept"><linktext>Setting preferences for the
+PL/I Editor</linktext></link>
+</related-links>
+
+</task><?Pub *0000002883?><?tm 1670257713478 7 z/OS||MVS ?>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn048" xml:lang="en-us">
+<title>Deleting a project or subproject</title><?Pub Caret -2?>
+<shortdesc>When you delete a project or subproject, you can delete
+all files and folders in it or you can remove it from the workspace
+but preserve the files and folders.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>project<indexterm>deleting</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>subproject<indexterm>deleting</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><p>The project delete action provides two options for deleting
+a project from a workspace:<ul>
+<li>You can delete the project and all resources (files and folders)
+associated with the project. If you delete a shared resource within
+a project (for example a partitioned data set, partitioned data set
+member, or sequential file that is also in another <tm tmtype="tm"
+trademark="MVS">MVS</tm> project), you are notified that you are about
+to delete a shared resource.</li>
+<li>You can remove the project from the workspace, so that the project's
+resources (folders and files) are no longer associated with the project,
+but choose not to delete the resources themselves.</li>
+</ul></p></context>
+<steps>
+<stepsection>To delete a project or subproject, follow these steps:</stepsection>
+<step><cmd>Switch to the <ph
+conref="zide_conrefs.dita#zide_conrefs/perspective"></ph> perspective.</cmd>
+</step>
+<step><cmd>Select the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</cmd>
+</step>
+<step><cmd>Right-click the project or subproject that you want to
+delete.</cmd></step>
+<step><cmd>Select <uicontrol>Delete</uicontrol>.</cmd><stepresult>The <wintitle>Confirm
+Project Remove</wintitle> window opens. By default, <uicontrol>Do
+not delete contents</uicontrol> is selected. </stepresult></step>
+<step><cmd>Do one of the following steps:</cmd>
+<choices>
+<choice>To remove the project from the workspace without deleting
+the resources, select <uicontrol>Do not delete contents</uicontrol>.</choice>
+<choice>To delete the project and its contents, select <uicontrol>Also
+delete sequential files and members</uicontrol>.</choice>
+</choices>
+</step>
+<step><cmd>Click <uicontrol>Delete</uicontrol>. </cmd><stepresult>The
+project is deleted. </stepresult></step>
+</steps>
+</taskbody>
+<?tm 1435190828 1?>
+</task>
+<?Pub *0000002634?>

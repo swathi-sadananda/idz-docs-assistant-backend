@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--Container topic-->
+<concept id="czdconfigintro" xml:lang="en-us">
+<title>Client configuration</title>
+<shortdesc>System administrators can configure system and global settings
+and distribute these settings throughout the development organization.
+Individual developers can configure the local workbench client.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>configuration<indexterm>client</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>client<indexterm>configuration</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<conbody>
+<section><title>Configuring and distributing system and global settings</title><ul>
+<li><xref format="dita" href="c_planning.dita" scope="local"
+type="concept"></xref></li>
+<li><xref format="dita" href="czdptc.dita" scope="local" type="concept"></xref></li>
+<li><xref format="dita" href="tzdhmcf.dita" scope="local" type="task"></xref></li>
+<li><xref format="dita" href="tzdcfghostbased.dita" scope="local"
+type="task"></xref></li>
+<li><xref format="dita" href="tzdpscreate.dita" scope="local" type="topic"></xref></li>
+<li><xref format="dita" href="tzdcfgpg.dita" scope="local" type="task"></xref></li>
+<li><xref href="tzdexpconfig.dita" type="task"></xref></li>
+</ul></section>
+<section><title>Configuring individual workbench settings</title><ul>
+<li><xref format="dita" href="tzdupdcfg.dita" scope="local" type="task"></xref></li>
+<li><xref href="tzdcmn010.dita" type="task"></xref></li>
+<li otherprops="IDz"><xref href="czdbidi.dita" type="concept"/> (Deprecated)</li>
+<li otherprops="IDz"><xref
+href="../../com.ibm.tpf.toolkit.menumanager.doc/topics/menumanager_c.dita"/></li>
+</ul></section>
+</conbody>
+<?tm 1337269541 0?>
+</concept><?Pub Caret -2?>
+<?Pub *0000002047?>

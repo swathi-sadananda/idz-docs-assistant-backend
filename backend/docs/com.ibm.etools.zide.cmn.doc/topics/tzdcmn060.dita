@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn060" xml:lang="en-us">
+<title>Editing a sequential data set or partitioned data set member</title><?Pub
+Caret -2?>
+<titlealts>
+<searchtitle>Editing a sequential data set or PDS member</searchtitle>
+</titlealts>
+<shortdesc>You can edit a sequential data set or partitioned data
+set member from either the <wintitle>Remote Systems</wintitle> view
+or the <ph conref="zide_conrefs.dita#zide_conrefs/view"></ph> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>z/OS file <indexterm>editing</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<context><note>Opening large files (greater than 2500 kilobytes) can
+cause out-of-memory errors and a forced shutdown of the workbench.
+Use the <uicontrol>Show warning message on opening files</uicontrol> setting
+of the <wintitle>z/OS Solutions</wintitle> preference page to check
+the size of any file that is being opened and display a warning if
+it is larger than the specified threshold.<p>You can check the size
+of a file before you open it by opening the <wintitle>Properties</wintitle> view.
+This view shows the file size for remote resources in bytes (for resources
+that are less than 1000 bytes) or in kilobytes (for resources that
+are greater than or equal to 1000 bytes).</p></note></context>
+<steps>
+<step><cmd>To edit a sequential data set or partitioned data set member, you must first locate the
+member in either the <wintitle>Remote Systems</wintitle> view or the <ph
+conref="zide_conrefs.dita#zide_conrefs/view"/> view: </cmd>
+<choices>
+<choice>In the <wintitle>Remote Systems</wintitle> view, connect to the <tm tmtype="reg"
+trademark="z/OS">z/OS</tm> system and expand the <uicontrol>MVS Files</uicontrol> folder (or any
+other filter that contains the file). Existing data sets associated with the high-level qualifier
+are listed in this folder.</choice>
+<choice>In the <ph conref="zide_conrefs.dita#zide_conrefs/view"/> view, expand the project and
+subproject in which the file is located. If you do not find the data set you want to edit, you can
+add it to a subproject from the <wintitle>Remote Systems</wintitle> view. For instructions, see the
+related tasks.</choice>
+</choices>
+</step>
+<step><cmd>After you locate the sequential data set or partitioned data set member in either view,
+either double-click it or right-click it and select <uicontrol>Open</uicontrol> to begin editing it
+in the default editor.</cmd>
+<stepresult>An outline of the data set contents is also displayed in the
+<wintitle>Outline</wintitle> view.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn049.dita" type="topic"></link>
+<link href="tzdcmn050.dita" type="task"></link>
+<link format="dita" href="tzdzossol.dita" scope="local" type="reference"/>
+</related-links>
+<?tm 1435190834 3?>
+</task>
+<?Pub *0000003261?>

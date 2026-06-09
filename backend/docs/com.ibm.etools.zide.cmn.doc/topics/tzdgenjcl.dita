@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdgenjcl" xml:lang="en-us">
+<title>Generating, submitting, and tracking JCL, and viewing the output</title><?Pub
+Caret -2?>
+<shortdesc>When you want to compile your code, you must generate some
+JCL to run the compilation. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>JCL<indexterm>generating</indexterm><indexterm>tracking</indexterm><indexterm>submitting</indexterm><indexterm>viewing
+output</indexterm></indexterm><indexterm>generating JCL</indexterm>
+<indexterm>submitting JCL</indexterm><indexterm>tracking JCL</indexterm>
+<indexterm>viewing output, JCL</indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<stepsection>To generate, submit, and track JCL, and view the output, do these steps:</stepsection>
+<step><cmd>In the <wintitle>Remote Systems</wintitle> view or the <wintitle>z/OS Projects</wintitle>
+view, right-click the member name of the program you want to compile and click <uicontrol>Generate
+JCL</uicontrol>.</cmd>
+</step>
+<step><cmd>Select <uicontrol>For Compile</uicontrol>. </cmd><stepresult>A
+window opens and prompts you to confirm where to write the generated
+JCL.</stepresult></step>
+<step><cmd>Verify the member name and the data set this member is
+generated to and click <uicontrol>OK.</uicontrol> </cmd><stepresult><ph
+id="jcl_gen_complete">A message window opens when JCL generation is
+complete. This message window includes <uicontrol>Submit</uicontrol> and <uicontrol>Open</uicontrol> buttons
+that you can use to submit the generated JCL or open the JCL in an
+editor session.</ph></stepresult></step>
+<step id="submit_jcl"><cmd>To submit the JCL, click <uicontrol>Submit</uicontrol>.</cmd>
+<stepresult> A job submission confirmation window opens. To locate
+the job ID in the <wintitle>Remote Systems</wintitle> view, click <uicontrol>Locate
+Job</uicontrol>. The job ID is highlighted in the<uicontrol> Retrieved
+Jobs</uicontrol> filter of the JES subsystem.</stepresult></step>
+<step id="open_jcl"><cmd>To open the generated JCL in an editor session,
+click <uicontrol>Open</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdcmn040.dita" type="task"></link>
+<link href="../../com.ibm.etools.zos.subsystem.jes.doc/topics/rzdcmn012.dita" type="reference"/>
+<link href="source_of_generated_jcl_topic.dita" scope="local" type="topic"/>
+</related-links>
+<?tm 1435190837 0?>
+</task>
+<?Pub *0000002516?>

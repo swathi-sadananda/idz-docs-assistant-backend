@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzddebugaix" xml:lang="en-us">
+<?acro_status spelling="3" grammar="0" style="5" terminology="0" terminologyAdmitted="0" reuse="0" total="8" score="289" status="red" ?>
+<title>Debugging COBOL and <tm tmtype="reg" trademark="CICS">CICS</tm> programs
+on <tm tmtype="reg" trademark="AIX">AIX</tm></title>
+<shortdesc>Follow these steps to debug COBOL and <tm tmtype="reg"
+trademark="CICS">CICS</tm> programs on <tm tmtype="reg" trademark="AIX">AIX</tm></shortdesc>
+<!--This topic was converted from a generic topic to a task topic.-->
+<taskbody>
+<prereq>To debug COBOL and <tm tmtype="reg" trademark="CICS">CICS</tm> programs
+on <tm tmtype="reg" trademark="AIX">AIX</tm> by using the <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> debug
+tools, you must ensure that you have the latest version of COBOL for <tm
+tmtype="reg" trademark="AIX">AIX</tm> and the distributed debugger
+(idebug) for <tm tmtype="reg" trademark="AIX">AIX</tm>. You can obtain
+the latest versions and PTFs from the COBOL for <tm tmtype="reg"
+trademark="AIX">AIX</tm> website.</prereq>
+<steps>
+<step><cmd>Open the <wintitle>Debug</wintitle> perspective and click <image
+href="../images/listen.gif"><alt>Listen </alt></image> to begin listening
+on the <tm tmtype="reg" trademark="AIX">AIX</tm> port. </cmd><info>The
+default port is 8001.</info></step>
+<step><cmd>To debug a <tm tmtype="reg" trademark="CICS">CICS</tm> program
+or transaction, you must enable <tm tmtype="reg" trademark="CICS">CICS</tm> for
+debugging. </cmd></step>
+<step><cmd>Then, connect to <tm tmtype="reg" trademark="CICS">CICS</tm> and
+use the CDCN transaction to note which host and port debugs which
+transaction or program before you start the transaction or program
+to debug.</cmd></step>
+<step><cmd>On the <tm tmtype="reg" trademark="AIX">AIX</tm> workstation,
+start the application by using idebug and indicate which host and
+port to connect to.</cmd></step>
+</steps>
+</taskbody>
+<?tm 1435190864 14?>
+</task><?Pub Caret 0?>
+<?Pub *0000002256?>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="rzdlogicalnot" xml:lang="en-us">
+<title>Specifying an alternative logical NOT symbol</title>
+<?Pub Caret -2?>
+<titlealts>
+<navtitle>Specifying an alternative logical NOT symbol</navtitle>
+<searchtitle>Specifying an alternative logical NOT symbol</searchtitle>
+</titlealts>
+<shortdesc>You can define an alternative logical NOT symbol in a file mapping definition. The
+alternative logical NOT symbol specifies the character that maps to X'5F' on the remote
+system.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>mapping definition<indexterm>logical NOT symbol</indexterm><indexterm>logical NOT
+symbol<indexterm>define an alternative</indexterm></indexterm></indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<prereq>By default, alternative logical NOT symbols are supported for PL/I files only. To enable
+alternative logical NOT symbols for COBOL files, you can set a preference on the <wintitle>MVS
+Files</wintitle> preference page. For more information about this preference, see the related
+topics.</prereq>
+<context>
+<div id="about-alt-logical-not">
+<p><ph id="type_logical_not">The standard logical NOT symbol is ¬, which corresponds to EBCDIC code
+point X'5F'. If you cannot type this symbol on your workstation because your keyboard does not
+contain the ¬ character, then you can define an alternative NOT symbol, such as the exclamation
+point (!) or caret symbol (^). If you configure an alternative NOT symbol such as ! or ^, you must
+ensure that the symbol you configure is not present in another area of the file such as within a
+literal or a comment. </ph></p>
+<p>You can specify an alternative symbol in a file mapping definition. This action causes the
+alternative symbol to map to EBCDIC code point X'5F' on the remote system. It also causes the
+standard NOT symbol to no longer map to X'5F' unless you specify it as the logical NOT symbol in the
+mapping definition. You can specify only one alternative logical NOT symbol. If you define the tilde
+character (~) as the logical NOT symbol in a file mapping definition, for example, then the tilde
+character, rather than the NOT symbol ¬, is mapped to the logical NOT operator X'5F'. </p>
+<p>Specifying an inappropriate alternative logical NOT symbol can produce error CRRZI0487E when you
+edit a file. When you specify an alternative NOT symbol, be careful to choose a character that is
+not already present in your source file. For example, if your remote source file contains one or
+more tilde characters (EBCDIC X'A1'), and you define the tilde character as the logical NOT symbol
+in a file mapping definition, then all X'A1' code points might be changed to X'5F'. To prevent this
+situation, the CRRZI0487E message is displayed, and the file is opened in browse mode so that you
+cannot edit it.</p>
+<note type="other" othertype="Preprocessors"><ph id="preproc_logical_not">When you run a
+preprocessor against a PL/I source file, the product translates the preprocessed file into the UTF-8
+code page, which is an ASCII-character code page. If the source file is encoded in EBCDIC and it
+contains the EBCDIC character ¬ (X'5F'), then that character is translated to the ASCII character ¬
+(X'C2AC'). Because the ASCII character for the PL/I NOT symbol is ^ (X'5E'), the preprocessor does
+not recognize ¬ and returns an error message. To solve this issue define an alternative NOT symbol
+by selecting <uicontrol>Other</uicontrol> and specifying ^. This definition results in the EBCDIC
+character ¬ (X'5F') being correctly translated to ^ X'5E' in UTF-8. Any changes to the file are
+correctly translated back to ¬ on the remote system.</ph></note>
+<note>Any alternative NOT symbol that you define must not be a double-byte character. The PL/I
+language requires that the NOT symbol be a single-byte character.</note>
+</div>
+</context>
+<steps-unordered>
+<stepsection>You can set an alternative logical not symbol on the <wintitle>Properties</wintitle>
+page of a data set, on the <wintitle>Properties</wintitle> page of the <tm tmtype="tm"
+trademark="MVS">MVS</tm> Files subsystem, or in the <wintitle>Edit Data Set Mapping</wintitle> or
+<wintitle>Add Data Set Mapping</wintitle> windows.</stepsection>
+<step><cmd>From the <wintitle>Properties</wintitle> page of a data set:</cmd>
+<substeps>
+<substep><cmd>In the <wintitle>Remote Systems</wintitle> view, select a data set or partitioned data
+set member and select <uicontrol>Properties</uicontrol>.</cmd>
+</substep>
+<substep><cmd>Select <uicontrol>Mapping</uicontrol> from the list of property
+categories.</cmd></substep>
+<substep><cmd>In the <uicontrol>PL/I logical NOT symbol</uicontrol> or <uicontrol>Logical NOT
+symbol</uicontrol> group box, click <uicontrol>Other</uicontrol> and type the alternative symbol in
+the field.</cmd></substep>
+</substeps>
+</step>
+<step><cmd>From the <wintitle>Properties</wintitle> page of the <tm tmtype="tm" trademark="MVS"
+>MVS</tm> Files subsystem:</cmd>
+<substeps>
+<substep><cmd>In the <wintitle>Remote Systems</wintitle> view, select <uicontrol>MVS
+Files</uicontrol> and then select <uicontrol>Properties</uicontrol>.</cmd>
+</substep>
+<substep><cmd>Select <uicontrol>Code Pages</uicontrol> from the list of property
+categories.</cmd></substep>
+<substep><cmd>In the <uicontrol>PL/I logical NOT symbol</uicontrol> or <uicontrol>Logical NOT
+symbol</uicontrol> field, type an alternative symbol.</cmd>
+</substep>
+</substeps>
+</step>
+<step><cmd>From the <wintitle>Edit Data Set Mapping</wintitle> or <wintitle>Add Data Set
+Mapping</wintitle> windows:</cmd>
+<substeps>
+<substep><cmd>In the <wintitle>z/OS File System Mapping</wintitle> view, select a PL/I or COBOL
+mapping.</cmd></substep>
+<substep><cmd>From the menu, select <uicontrol>Edit</uicontrol> or to create a mapping, select
+<uicontrol>Add Data Set Mapping</uicontrol>.</cmd>
+<stepresult>The <wintitle>Edit Data Set Mapping</wintitle> or <wintitle>Add Data Set
+Mapping</wintitle> window opens.</stepresult></substep>
+<substep><cmd>In the <uicontrol>PL/I logical NOT symbol</uicontrol> or <uicontrol>Logical NOT
+symbol</uicontrol> group box, click <uicontrol>Other</uicontrol> and type the alternative symbol in
+the field.</cmd></substep>
+</substeps>
+</step>
+</steps-unordered>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdmvspref.dita" scope="local" type="task"/>
+</related-links>
+<?tm 1435190793 2?>
+</task>
+<?Pub *0000005458?>

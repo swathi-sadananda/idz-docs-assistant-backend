@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_export_search_results" xml:lang="en-us">
+<title>Exporting search results</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Exporting search results</navtitle>
+<searchtitle>Exporting z/OS search results</searchtitle>
+</titlealts>
+<shortdesc>You can export <tm tmtype="reg" trademark="z/OS">z/OS</tm> search
+results to a text file, which you can then import into a spreadsheet
+program.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>search results<indexterm>export</indexterm></indexterm>
+</keywords>
+<keywords><indexterm>export<indexterm>search results</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must be connected to a remote system and complete a Remote <tm
+tmtype="reg" trademark="z/OS">z/OS</tm> Search operation that populates
+the <wintitle>Remote z/OS Search</wintitle> results view.</prereq>
+<context>The export operation exports the contents of the <wintitle>Remote
+z/OS Search</wintitle> view. If you click the export icon before the
+search results view is fully populated, then not all search results
+are included in the export file. To ensure that you export all search
+results, wait until the view is fully populated before you click the
+export icon.<note type="restriction">The search result export wizard
+places some restrictions on the content you can export. If the <wintitle>Remote
+z/OS Search</wintitle> view contains a list of partitioned data sets
+and data set members, then you can export only the file information
+about the partitioned data sets. You cannot export file information
+about the data set members. If you select data set members in the <wintitle>Remote
+z/OS Search</wintitle> view and click the export icon, a warning message
+is displayed.</note><!--<p>Some options in the <wintitle>Export Search Results</wintitle> wizard
+are enabled only under certain conditions:<table><title>Availability
+of Export Search Results options</title><desc></desc>
+<tgroup cols="3"><colspec colname="col1"/><colspec colname="col2"/>
+<colspec colname="col3"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Page</entry>
+<entry colname="col2">Option</entry>
+<entry colname="col3">How to Enable</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1" morerows="2"><wintitle>Define the Export File</wintitle></entry>
+<entry colname="col2"><uicontrol>Selected results only</uicontrol></entry>
+<entry colname="col3">Select one or more search results in the Remote
+z/OS Search results view.</entry>
+</row>
+<row>
+<entry colname="col2"><uicontrol>Export file information and content
+strings</uicontrol></entry>
+<entry colname="col3">When you request a search, specify a value in
+the <uicontrol>Content string</uicontrol> field of the <wintitle>Remote
+z/OS Search</wintitle> window.</entry>
+</row>
+<row>
+<entry colname="col2"><uicontrol>Surround fields with quotes</uicontrol></entry>
+<entry colname="col3">Select the <uicontrol>Header and data</uicontrol> or <uicontrol>Data
+only</uicontrol> option.</entry>
+</row>
+<row>
+<entry colname="col1" morerows="1">Select Fields to Export</entry>
+<entry colname="col2"><uicontrol>Label</uicontrol></entry>
+<entry colname="col3">Select the <uicontrol>Key and value</uicontrol> or <uicontrol>Header
+and data</uicontrol> option on the <wintitle>Define the Export File</wintitle> page.</entry>
+</row>
+<row>
+<entry colname="col2"><uicontrol>Line</uicontrol> and <uicontrol>Text</uicontrol> fields</entry>
+<entry>Select the <uicontrol>Export file information and content strings</uicontrol> option
+on the one <wintitle>Define the Export File</wintitle> page.</entry>
+</row>
+</tbody>
+</tgroup>
+</table></p>--></context>
+</taskbody>
+<task id="exportingallresults" xml:lang="en-us">
+<title>Exporting all results</title>
+<taskbody>
+<steps>
+<step>
+<cmd>In the <wintitle>Remote z/OS Search</wintitle> results view, click <image
+href="../images/exporticon.gif" placement="inline">
+<alt>Export to file</alt>
+</image>
+<uicontrol>Export to file</uicontrol>.</cmd>
+<stepresult>The <wintitle>Export Search Results</wintitle> window opens. In the Results to include
+section, <uicontrol>All results</uicontrol> is selected by default.</stepresult>
+</step>
+<step>
+<cmd>In the Destination section, type a path name for the export file or click
+<uicontrol>Browse</uicontrol> to select a location.</cmd>
+<info>You can save the export file to a local or remote location. The output file is a text-format
+file. You can use any file name extension, such as <filepath>.txt</filepath> or
+<filepath>.csv</filepath>.</info>
+</step>
+<step id="chooseoptions" importance="optional">
+<cmd>In the Data to export section, choose data selection options.</cmd>
+<info>If you accept the defaults for data selection and formatting, the wizard generates an export
+file with the following data and format:<ul>
+<li><uicontrol>File information only</uicontrol>: Only file information is exported.</li>
+<li><uicontrol>File information and content strings</uicontrol>: Both file information and content
+strings are exported. If the search results do not include content strings, only file information is
+exported. This option is selected by default.</li>
+<li><uicontrol>File information, content strings, and preview lines</uicontrol>: File information is
+exported with preview lines and matched content strings. This option is disabled when the search
+type is dataset or member name search.</li>
+</ul></info>
+</step>
+<step importance="optional">
+<cmd>In the Data formatting options, choose data formatting options.</cmd>
+<info><ul>
+<li><uicontrol>Key and value</uicontrol>: The exported file contains only keys and matched values
+from each result.</li>
+<li><uicontrol>Header and data</uicontrol>: The exported file contains one line that lists the field
+labels and one line of data for each result.</li>
+<li><uicontrol>Data only</uicontrol>: The exported file contains only data from each result.</li>
+</ul>For more information about selecting other data and formatting options, see <xref format="dita"
+href="t_export_search_results.dita#formattinganexportfile" scope="local" type="task"/>.</info>
+</step>
+<step importance="optional">
+<cmd>Choose CSV file format options section.</cmd>
+<info>
+<ul>
+<li><uicontrol>File encoding</uicontrol>: Select <codeph>UTF-16LE</codeph> or
+<codeph>UTF-8</codeph>. <codeph>UTF-8</codeph> is selected by default.</li>
+<li><uicontrol>Delimiter</uicontrol>: <codeph>Tab</codeph> is selected by default.</li>
+</ul>
+</info>
+</step>
+<step importance="optional">
+<cmd><uicontrol>Surround fields with quotes (")</uicontrol>: Select this option to surround each
+output field with quotation marks.</cmd>
+</step>
+<step id="finish">
+<cmd>To export the search results, click <uicontrol>Finish</uicontrol>. </cmd>
+<info>You can click <uicontrol>Restore Defaults</uicontrol> to restore the default settings.</info>
+</step>
+</steps>
+</taskbody>
+</task>
+<task id="exportingselectedresults" xml:lang="en-us">
+<title>Exporting selected results</title>
+<taskbody>
+<steps>
+<step><cmd>In the <wintitle>Remote z/OS Search</wintitle> results
+view, select one or more rows.</cmd><info>For search results that
+contain content strings, you can select file results or content string
+results, or both. For search results that contain partitioned data
+sets and data set members, you can export file information for the
+partitioned data sets only. If you select data set members, a warning
+message is displayed.</info></step>
+<step><cmd>Click <image href="../images/exporticon.gif"
+placement="inline"><alt>Export to file</alt></image> <uicontrol>Export
+to file</uicontrol>.</cmd><stepresult>The <wintitle>Export Search
+Results</wintitle> window opens.</stepresult></step>
+<step><cmd>Click <uicontrol>Selected results only</uicontrol>.</cmd>
+</step>
+<step
+conref="t_export_search_results.dita#exportingallresults/chooseoptions">
+<cmd></cmd></step>
+<step conref="t_export_search_results.dita#exportingallresults/finish">
+<cmd></cmd></step>
+</steps>
+</taskbody>
+</task>
+<task id="formattinganexportfile" xml:lang="en-us">
+<title>Formatting an export file</title>
+<taskbody>
+<steps>
+<stepsection>To change the default data selection and format options
+for a search result export file:</stepsection>
+<step><cmd>Choose the search result data to export:</cmd>
+<choices>
+<choice><uicontrol>File information only</uicontrol> exports only
+information about data sets or data set members in the search results.</choice>
+<choice><uicontrol>File information and content strings</uicontrol> exports
+information about data sets and data members and the content strings
+in the search results. This option is available only if the search
+results contain content strings.</choice>
+</choices>
+<stepxmp>The following image illustrates file information and content
+strings in search results:<image
+href="../images/fileinfocontentstrings.gif" placement="break" scale=".75">
+<alt>File information and content strings in search results</alt>
+</image></stepxmp></step>
+<step><cmd>Choose how to format the exported search results:</cmd>
+<choices>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/exsr0001_kav"
+/><codeblock>File name:HLQ.SOURCE.COBOL/MYFILE.cbl Extension:cbl Lock owner:userid
+File name:HLQ.SOURCE.PLI/YOURFILE.pli Extension:pli Lock owner:userid2
+File name:HLQ.SOURCE.COBOL/FILE3.cbl Extension:cbl Lock owner:null</codeblock><note
+type="tip">The label for the key is specified on the next page of the wizard. You can use the
+default labels or create your own labels.</note></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/exsr0001_had"
+/> If you choose this format and select the <uicontrol>Surround fields with quotes</uicontrol>
+option, the export file is formatted like this
+example:<codeblock>"File name" "Extension" "Lock owner"
+"HLQ.SOURCE.COBOL/MYFILE.cbl" "cbl" "userid1"
+"HLQ.SOURCE.PLI/YOURFILE.pli" "pli" "userid2"
+"HLQ.SOURCE.COBOL/FILE3.cbl" "cbl" ""
+</codeblock></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/exsr0001_do"
+/> If you choose this format and select the <uicontrol>Surround fields with quotes</uicontrol>
+option, the export file is formatted like this
+example:<codeblock>"HLQ.SOURCE.COBOL/MYFILE.cbl" "cbl" "userid1"
+"HLQ.SOURCE.PLI/YOURFILE.pli" "pli" "userid2"
+"HLQ.SOURCE.COBOL/FILE3.cbl" "cbl" ""
+</codeblock></choice>
+</choices>
+</step>
+<step><cmd>Choose how to format the export file:</cmd>
+<choices>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/exsr0001_fe"
+/></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/exsr0001_d"
+/></choice>
+<choice><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/exsr0001_sf"
+/></choice>
+</choices>
+</step>
+<step><cmd>To choose the data fields to include in the export file
+or to change the field labels, click <uicontrol>Next</uicontrol>.</cmd>
+<substeps>
+<substep><cmd>On the <wintitle>Select Fields to Export</wintitle> page,
+select the fields to include in the export file, or clear fields to
+exclude them.</cmd><info>The <uicontrol>Line number</uicontrol> and <uicontrol>Line
+text</uicontrol> fields are available only when the search results
+include content strings.</info></substep>
+<substep><cmd>To change the field labels that are used for the <uicontrol>Key
+and value</uicontrol> and <uicontrol>Header and data</uicontrol> file
+format options, type a label in the <uicontrol>Label</uicontrol> field.</cmd>
+<info>If you choose the <uicontrol>Data only</uicontrol> file format,
+then the <uicontrol>Label</uicontrol> fields are disabled.</info>
+</substep>
+</substeps>
+</step>
+</steps>
+<result>The following example illustrates an export file that contains file information with default
+data selection and export file format options. The first row is the header row and the remaining
+three rows contain search result
+data.<codeblock>"File name" "Extension" "Lock owner"
+"HLQ.SOURCE.COBOL/MYFILE.cbl" "cbl" "userid1"
+"HLQ.SOURCE.PLI/YOURFILE.pli" "pli" "userid2"
+"HLQ.SOURCE.COBOL/FILE3.cbl" "cbl" ""
+</codeblock>The
+following example illustrates an export file that contains content strings with default data
+selection and export file format options. The first row is the header row and the remaining three
+rows contain search result
+data.<codeblock>"Name"	"Extension"	"Transfer" "Line" "Text"
+"USER33.ZUNIT.PLI/PLITC001.pli"	"pli"	"text"	"7"	"| Component: IBM ZUnit (z/OS Automated Unit Testing Framework)    |"
+"USER33.ZUNIT.PLI/PLITC001.pli"	"pli"	"text"	"9"	"| File: Enterprise PL/I ZUnit Test Case                           |"</codeblock>The
+following example illustrates an export file that contains file information, content strings, and
+preview
+lines.<codeblock>"Name" "Extension" "Line" "Text"
+"HLQ.SOURCE.COBOL/FILE4.cbl" "cbl" "text" "50" "500   ---MATCHED CONTENT STRING LINE---                                   "
+# 470   ---LINE BEFORE THE MATCHED LINE---                                 
+# 480   ---LINE BEFORE THE MATCHED LINE---                                 
+# 490   ---LINE BEFORE THE MATCHED LINE---                                 
+#> 500   ---MATCHED CONTENT STRING LINE---                                  
+# 510   ---LINE AFTER THE MATCHED LINE---                                  
+# 520   ---LINE AFTER THE MATCHED LINE---                                  
+# 530   ---LINE AFTER THE MATCHED LINE--- </codeblock></result>
+</taskbody>
+</task>
+<?tm 1435190809 2?>
+</task>
+<?Pub *0000011690?>

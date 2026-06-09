@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="editor_options" translate="yes" xml:lang="en-us">
+<!--Created in RDz 8.0.3 from hlasmeditorproperties.odt, subordinate to tpfhlasmparser_c.dita-->
+<?Pub Caret -2?>
+<title>Defining macro files for Assembler programs (<tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor)</title>
+<titlealts>
+<navtitle>Defining macro files for Assembler programs (LPEX)</navtitle>
+<searchtitle>Defining macro files for Assembler programs (LPEX)</searchtitle>
+</titlealts>
+<abstract><shortdesc>You can define macro files for remote Assembler resources that are open in the <tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor in a remote property group or on the <wintitle>HLASM Parser</wintitle>
+preference page. For local Assembler resources, you must define them in the <wintitle>HLASM
+Parser</wintitle> preference page.</shortdesc> This topic describes how the <tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor locates macro files. <ph id="hlasm-lpex-libs">For High Level Assembler files, the HLASM Editor and the <tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor locate and support copy and macro files differently. For a summary of defining libraries for the two editors, see <xref href="../../com.ibm.etools.rdz.language.editors.doc/topics/locating_copy_macro_assembler.dita" />.</ph></abstract>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>user macro file</indexterm>
+<indexterm>base macro file</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context>You can define the location of <tm trademark="IBM" tmtype="reg">IBM</tm> supplied base
+macro files and user macro files in two locations:<ul>
+<li>In a remote property group that is associated with a resource.</li>
+<li>In the <wintitle>HLASM Parser</wintitle> preference page. For more information about this
+preference page, see <xref href="../../com.ibm.cdz.remote.doc/topics/settinghlasmparserpreferences_t.dita#settinghlasmparserpreferences_t" scope="peer">Setting HLASM Parser preferences</xref>.</li>
+</ul>You can use a user macro file to hide the <tm tmtype="reg" trademark="IBM">IBM</tm> shipped
+macros defined in the base macro file from the HLASM parser or to define custom macro syntax to the
+parser. <note type="important">User macro file definitions in remote property groups take precedence
+over the user macro definitions on the <wintitle>HLASM Parser</wintitle> preference page. If an
+Assembler resource has a remote property group associated with it, but the user macro file is not
+defined in the property group, then no user macro file is used.</note></context>
+<steps>
+<stepsection>To define macro files in a remote property group:</stepsection>
+<step>
+<cmd>Open a remote property group and click the <uicontrol>Assembler</uicontrol> tab.</cmd>
+<stepresult>The <wintitle>Assembler Settings</wintitle> page opens.</stepresult>
+</step>
+<step>
+<cmd>Click <uicontrol>Editor Options</uicontrol> in the navigation pane.</cmd>
+<stepresult>The <wintitle>Editor Options</wintitle> page opens.</stepresult>
+</step>
+<step>
+<cmd>To specify the macro file that stores the <tm trademark="IBM" tmtype="reg">IBM</tm>-supplied
+macro definitions, in the <uicontrol>Base Macro File</uicontrol> field, click
+<uicontrol>Browse</uicontrol> to navigate to the location of the macro file, or type the fully
+qualified name of the file by using a drive letter or UNC path. You can use environment variables
+such as <userinput>%ENVVARS%\tpfhlasm.dat</userinput>, where <userinput>%ENVVARS%</userinput> points
+to the location of the file. You can also specify a partitioned data set member or a sequential data
+set.</cmd>
+</step>
+<step>
+<cmd>To specify a user macro file that stores user macro definitions, do these steps:</cmd>
+<substeps>
+<substep>
+<cmd>Create a user macro file with any file-name extension.</cmd>
+</substep>
+<substep>
+<cmd>In the <uicontrol>User Macro File</uicontrol> field, click <uicontrol>Browse</uicontrol> to
+navigate to the location of the macro file, or type the fully qualified path of the file, for
+example, <filepath>\\HOSTNAME\MyFolder\my_macro_file.dat</filepath>. You can use environment
+variables such as <userinput>%ENVVARS%\tpfhlasm.dat</userinput>, where
+<userinput>%ENVVARS%</userinput> points to the location of the file. You can also specify a
+partitioned data set member or a sequential data set.</cmd><info>
+<p>
+<note>In order for custom macros to be resolved in the <uicontrol>LPEX Editor</uicontrol>, they must
+be defined in a <filepath>.dat</filepath> file. If not defined, syntax warnings are displayed the
+<uicontrol>LPEX Editor</uicontrol>. </note>
+</p>
+</info>
+</substep>
+</substeps>
+</step>
+<step><cmd>Optionally, specify the <tm tmtype="reg" trademark="CICS">CICS</tm> level that the HLASM
+parser is to use when <codeph>EXEC CICS</codeph> statements are encountered.</cmd></step>
+<step>
+<cmd>Press Ctrl+S to save your changes.</cmd>
+</step>
+</steps>
+<postreq>
+<p>If you modify the base macro file, you need to reload it in the editor by doing one of these steps:<ul>
+<li>Type the following command in the editor command
+line:<codeblock>reloadTPFMacrosFile</codeblock></li>
+<li>Right-click in the editor and select <uicontrol>Reload Base Macros File</uicontrol>.</li>
+</ul></p>
+<p>To reload a user macro in the <tm trademark="z Systems" tmtype="reg">z Systems</tm> LPEX Editor,
+do one of these steps:<ul>
+<li>Type the following command in the editor command
+line:<codeblock> reloadUserMacrosFile</codeblock></li>
+<li>Right-click in the editor and select <uicontrol>Reload User Macros File</uicontrol>.</li>
+</ul></p>
+</postreq>
+</taskbody>
+<!--Rels.ditamap controls the related links.-->
+</task><?Pub *0000007570?><?tm 1697035909069 9 z Systems||IBM||CICS ?>

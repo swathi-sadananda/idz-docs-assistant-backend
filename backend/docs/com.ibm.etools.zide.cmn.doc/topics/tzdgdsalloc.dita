@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdgdsalloc" rev="751" xml:lang="en-us">
+<title>Allocating a generation data set</title><?Pub Caret -2?>
+<shortdesc>You can allocate a new generation data set in a GDG from
+the <wintitle>Remote Systems</wintitle> view.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>generation data set<indexterm>allocating</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>You must connect to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+and define a generation data group.</prereq>
+<steps>
+<stepsection>To allocate a new generation data set in the <wintitle>Remote
+Systems</wintitle> view, do these steps:</stepsection>
+<step><cmd>In the <uicontrol>MVS Files</uicontrol> note of the <wintitle>Remote
+Systems</wintitle> view, select a generation data group and then click <uicontrol>New
+&gt; Allocate Generation Data Set</uicontrol> on the menu.</cmd>
+<stepresult>The <wintitle>Allocate Generation Data Set</wintitle> wizard
+opens.</stepresult></step>
+<step><cmd>Complete the fields on this wizard as follows:</cmd><info><dl>
+<dlentry>
+<dt><uicontrol>Connection Name</uicontrol></dt>
+<dd>Shows the name of the remote system to which you are connected.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Generation Data Group</uicontrol></dt>
+<dd>Shows the name of the generation data group in which the new data
+set is allocated.</dd>
+</dlentry><dlentry>
+<dt><uicontrol>Generation Data Set</uicontrol></dt>
+<dd>Specify either a relative generation number in the form of (+n)
+or the absolute generation number in the form of G<varname>xxxx</varname>V<varname>yy</varname>.
+The default is (+1).<p><uicontrol>Relative:</uicontrol> To create
+a relative GDS name, select this option and type a generation number
+in the field.</p><p><uicontrol>Absolute:</uicontrol> To create an
+absolute GDS name, select this option and then type the generation
+number in the <uicontrol>G</uicontrol> field and a version number
+in the <uicontrol>V</uicontrol> field. </p></dd>
+</dlentry></dl>              </info></step>
+<step><cmd>Click <uicontrol>Next</uicontrol> to specify data set allocation
+characteristics. </cmd></step>
+<step><cmd>On the <wintitle>Data Set Allocation</wintitle> page, you
+indicate one of three ways to begin specifying allocation values such
+as record format, record length, and block size. You select one of
+three options: </cmd>
+<choices>
+<choice>If you select <uicontrol>Copy characteristics from an existing
+generation data set</uicontrol>, click <uicontrol>Browse</uicontrol>.
+In the window, expand the entry that identifies the high-level qualifier,
+then click the name of a data set that can act as a model for your
+new data set. To return to the <wintitle>Data Set Allocation</wintitle> page,
+click <uicontrol>OK</uicontrol> or <uicontrol>Cancel</uicontrol>: <ul>
+<li>To retain the name of the model data set, click <uicontrol>OK</uicontrol>;
+or</li>
+<li>To avoid retaining any name when you return to the <wintitle>Data
+Set Allocation</wintitle> page, click <uicontrol>Cancel</uicontrol>.</li>
+</ul></choice>
+<choice>If you select <uicontrol>Specify characteristics by usage
+type</uicontrol>, you select a value from each of two list boxes: <ul>
+<li>The <uicontrol>Category</uicontrol> list box indicates a type
+of content: Source, Listing, or Other</li>
+<li>The <uicontrol>Type</uicontrol> list box gives a further categorization;
+within Source, for example, are COBOL, PL/I, ASM, <tm tmclass="IGNORE" tmtype="tm" trademark="REXX">REXX</tm>, and JCL</li>
+</ul></choice>
+<choice>If you select <uicontrol>Specify characteristics (advanced
+allocation)</uicontrol>, the allocation values for you to customize
+are the values that were most recently in place. Use this selection
+after you allocate the first in a series of equivalently structured
+data sets.</choice>
+</choices>
+</step>
+<step><cmd>To open the <wintitle>Data Set Characteristics</wintitle> page
+(where you set the actual allocation values), click <uicontrol>Next</uicontrol>.</cmd>
+</step>
+<step><cmd>Specify the allocation values.</cmd><info>For details on
+what values are required for different uses, contact your <tm tmtype="reg" trademark="z/OS">z/OS</tm> system administrator. The
+administrator can also inform you whether you must to click <uicontrol>System
+Managed Storage</uicontrol> to assign a data set to a particular class. <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> enforces
+certain rules for record format (RECFM), record length (LRECL), and
+block size (BLKSIZE). For more information, see <xref href="rzddsa.dita" type="reference" />.</info></step>
+<step><cmd>Click <uicontrol>Finish</uicontrol> to allocate the new
+generation data set.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="tzdgdg.dita" type="task" />
+<link href="tzdgdgview.dita" type="task" />
+<link href="tzdgdgdef.dita" type="task" />
+</related-links>
+
+</task><?Pub *0000005172?><?tm 1665694014095 3 z/OS||REXX ?>

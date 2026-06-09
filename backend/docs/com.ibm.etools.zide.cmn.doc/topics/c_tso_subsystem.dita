@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN"
+ "ibm-concept.dtd">
+<?Pub Inc?>
+<concept id="c_tso_subsystem" xml:lang="en-us">
+<title>TSO subsystem</title>
+<titlealts>
+<navtitle>TSO subsystem</navtitle>
+<searchtitle>TSO subsystem</searchtitle>
+</titlealts>
+<shortdesc>Use the TSO subsystem to submit TSO commands to the remote
+system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>TSO subsystem</indexterm></keywords><?Pub Caret 14?>
+</metadata></prolog>
+<conbody></conbody>
+</concept>
+<?Pub *0000000606?>

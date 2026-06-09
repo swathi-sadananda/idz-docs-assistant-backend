@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="tzdbidiedit" xml:lang="en-us">
+<title>Editing bidirectional data</title><?Pub Caret -2?>
+<shortdesc>You can edit bidirectional text in the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX editor in a special <term>visual
+line</term>. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bidirectional support<indexterm>z Systems LPEX
+editor</indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<context>To access the visual line, open the <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX editor and click <menucascade>
+<uicontrol>Source</uicontrol><uicontrol>Visual line</uicontrol>
+</menucascade> from the menu or press Alt+=.  Bidirectional text editing
+in a visual line is visual (similar to a host editor). You can find
+more information about <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor and its bidirectional support in <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor help. In the visual
+line, you can do the following editing tasks: </context>
+<steps-unordered>
+<step><cmd>Press Alt+P to toggle Autopush mode.</cmd><info>By default,
+you are editing in <term>Autopush</term> mode, which simulates logical-like
+typing. </info></step>
+<step><cmd>Right-click to open the visual line menu.</cmd></step>
+<step><cmd>Press the up and down arrow keys to navigate to other text
+segments that include bidirectional text.</cmd></step>
+<step><cmd>Press Enter, change focus, or press an arrow key to save
+data that is entered in the visual line in smart logical layout.</cmd>
+</step>
+<step><cmd>Press <uicontrol>Esc</uicontrol> to clear the visual line
+without saving data that is entered into it.</cmd><stepresult>Any
+data that you entered is lost.</stepresult></step>
+</steps-unordered>
+<postreq><xref href="tzdbidifs.dita" /></postreq>
+</taskbody>
+
+</task><?Pub *0000002075?><?tm 1670257712809 4 z Systems ?>

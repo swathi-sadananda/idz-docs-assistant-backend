@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="t_retrieveds_remove" xml:lang="en-us">
+<title>Removing files from the Retrieved Data Sets filter</title>
+<?Pub Caret -2?>
+<shortdesc>You can add data sets to or remove data sets from the <uicontrol>Retrieved Data
+Sets</uicontrol> folder of <uicontrol>MVS Files</uicontrol> and set the maximum number of data sets
+for this filter. Removing a data set from <uicontrol>Retrieved Data Sets</uicontrol> does not delete
+the data set.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>Retrieved Data Sets<indexterm>remove a data set</indexterm></indexterm>
+</keywords>
+<keywords>
+<indexterm>remove a data set from Retrieved Data Sets</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<taskbody>
+<context><ph conref="tzdretrieveds.dita#tzdretrieveds/retrieved_data_sets"/></context>
+<steps>
+<step conref="tzdretrieveds.dita#tzdretrieveds/remove">
+<cmd/>
+</step>
+<step><cmd>To manage the <uicontrol>Retrieved Data Sets</uicontrol> filter, select it, and then
+right-click and select <uicontrol>Manage</uicontrol> from the menu.</cmd>
+<substeps>
+<substep><cmd><ph
+conref="../../com.ibm.etools.zoside.infopop/zide_cshelp_conrefs.dita#zidecshelpconrefs/mand0001_remove"
+/></cmd>
+</substep>
+<substep><cmd>To set the maximum number of data sets that are displayed in this filter, in the
+<uicontrol>Maximum number of data sets shown in this filter</uicontrol> field, specify a number 1 -
+999999999.</cmd>
+</substep>
+</substeps>
+</step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="tzdretrieveds.dita" scope="local" type="task"/>
+</related-links>
+<?tm 1435190811 0?>
+</task>
+<?Pub *0000001915?>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//IBM//DTD DITA IBM Topic//EN"  "ibm-topic.dtd">
+<topic id="local_compiler_options" xml:lang="en-us">
+<title>Local Compiler Options</title>
+<shortdesc
+conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#prwp0003/prwp0003_shortdesc"/>
+<body>
+<div conref="../../com.ibm.etools.zoside.infopop/PropertyGroupContexts.dita#prwp0003/prwp0003_body"
+/>
+</body>
+<related-links>
+<link format="html" href="https://mywiki.wooledge.org/glob" scope="external"><linktext>Bash glob
+features</linktext></link>
+</related-links>
+</topic>

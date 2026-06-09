@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcopysubproject" xml:lang="en-us">
+<title>Copying a subproject</title>
+<shortdesc>Follow these steps to copy a subproject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>subproject<indexterm>copying</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<taskbody>
+<steps>
+<step><cmd>Select the subproject that you want to copy. Right-click
+the subproject and select <uicontrol>Copy</uicontrol>.</cmd></step><?Pub
+Caret -2?>
+<step><cmd>Locate and select the destination project.</cmd><info>You
+can copy a subproject into the same project or into a different project.</info>
+</step>
+<step><cmd>Right-click the destination project and select <uicontrol>Paste</uicontrol>.</cmd>
+<stepresult>The new subproject is created in the destination project
+with the same name and same properties. If you copy a subproject into
+the same project, <keyword
+conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam"></keyword> prompts
+you to rename the copy.</stepresult></step>
+</steps>
+</taskbody>
+<?tm 1337269575 0?>
+</task>
+<?Pub *0000001282?>

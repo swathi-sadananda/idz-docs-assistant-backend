@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN" "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><task id="t_copy_remote_files" xml:lang="en-us">
+<title>Copying remote files</title><?Pub Caret -2?>
+<titlealts>
+<navtitle>Copying remote files</navtitle>
+<searchtitle>Copying remote files</searchtitle>
+</titlealts>
+<shortdesc>You can copy and paste files within a remote system, from
+one remote system to another, or between different views of a remote
+system.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>copying remote files</indexterm></keywords>
+<keywords><indexterm>remote files<indexterm>copy<indexterm>on the
+same remote system</indexterm><indexterm>from one MVS system to another</indexterm><indexterm>to
+local system</indexterm><indexterm>between views in one remote system</indexterm><indexterm>between
+user IDs within one MVS system</indexterm></indexterm></indexterm>
+</keywords>
+<keywords><indexterm>local system<indexterm>copy<indexterm>to remote
+system</indexterm></indexterm></indexterm></keywords>
+</metadata></prolog>
+<taskbody>
+<prereq>Connect to a remote system. If you are copying between two
+remote systems, connect to both systems.</prereq>
+<context>You can use several methods to copy and paste files from
+one location to another:<ul>
+<li>Select a file and use the <uicontrol>Copy</uicontrol> and <uicontrol>Paste</uicontrol> menu
+actions to copy it from one location to another.</li>
+<li>Drag a file from one location and drop it to another.</li>
+<li>Edit a file and use the <uicontrol>Save as</uicontrol> menu action
+to save it to another location.</li>
+</ul><p>The default product configuration grants permission to copy
+remote files from one location to another in a remote system or between
+systems. If you notice that the <uicontrol>Copy</uicontrol>, <uicontrol>Paste</uicontrol>,
+drag, and <uicontrol>Save as</uicontrol> actions are disabled on a
+remote system, then that system might be configured to deny copy and
+paste permission. Consult your systems administrator if you have questions
+about copy and paste permissions on a remote system.</p><p>For instructions
+for copying files, see these topics:<ul>
+<li><xref format="dita" href="t_copy_remote_files.dita#pds" scope="local" type="task" /></li>
+<li><xref format="dita" href="t_copy_remote_files.dita#mem" scope="local" type="task" /></li>
+<li><xref format="dita" href="t_copy_remote_files.dita#seq" scope="local" type="task" /></li>
+</ul></p></context>
+</taskbody>
+<task id="pds" xml:lang="en-us">
+<title>Partitioned data set</title>
+<taskbody>
+<context><p>You can copy partitioned data sets:<ul>
+<li>From one data set to another on the same remote system.</li>
+<li>Between different views of the same remote system, for example,
+between the <wintitle>z/OS Projects</wintitle> view and the <wintitle>Remote
+Systems</wintitle> view.</li>
+<li>From one user ID to another on the same remote system. Be sure that you have <tm tmtype="reg"
+trademark="RACF">RACF</tm> permission for both the source user ID and the destination user ID.</li>
+<li>From one remote system to another.</li>
+<li>From a remote system to the workstation or to a <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> system.</li>
+</ul></p><p>You cannot copy partitioned data sets from a file on the workstation or a <tm tmtype="reg"
+trademark="z/OS">z/OS</tm>
+<tm tmtype="reg" trademark="UNIX">UNIX</tm> system to a data set on a remote system.</p></context>
+<steps>
+<step><cmd>Select the partitioned data set that you want to copy. </cmd>
+</step>
+<step><cmd>Right-click the partitioned data set and click <uicontrol>Copy</uicontrol>.</cmd>
+</step>
+<step><cmd>Select the destination container.</cmd></step>
+<step><cmd>Click <uicontrol>Paste</uicontrol>. </cmd><stepresult>If
+a data set with the same name exists in the destination container,
+you are prompted to overwrite or rename the destination data set. </stepresult>
+</step>
+<step><cmd>If prompted, click <uicontrol>Overwrite</uicontrol>; or
+click <uicontrol>Rename</uicontrol>, type a new name, and click <uicontrol>OK</uicontrol>.</cmd>
+<stepresult>The new partitioned data set is created with the same
+data set characteristics as the source data set. All members in the
+source data set are copied to the destination data set. A progress
+window opens to report the status of the member copy operation.<image href="../images/memberCopyProgress.gif" placement="break"><alt>Progress
+window for partitioned data set copy operation</alt></image></stepresult>
+</step>
+</steps>
+</taskbody>
+</task>
+<task id="mem" xml:lang="en-us">
+<title>Partitioned data set member</title>
+<taskbody>
+<context>You can copy partitioned data set members:<ul>
+<li>From one data set to another on the same remote system.</li>
+<li>Between different views of the same remote system, for example,
+between the <wintitle>z/OS Projects</wintitle> view and the <wintitle>Remote
+Systems</wintitle> view.</li>
+<li>From one user ID to another on the same remote system. Be sure that you have <tm tmtype="reg"
+trademark="RACF">RACF</tm> permission for both the source user ID and the destination user ID.</li>
+<li>From one remote system to another.</li>
+<li>From a file on the workstation or a <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> system to a data set on a remote
+system. You must be sure that the file does not violate the logical
+record length (LRECL) or record format (RECFM) of the destination
+data set. The copy does not take place if the LRECL and RECFM on the
+remote system are violated.</li>
+<li>From a remote system to the workstation or to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> system.</li>
+</ul></context>
+<steps>
+<step><cmd>Select the member or file that you want to copy.</cmd></step>
+<step><cmd>Right-click the file and select <uicontrol>Copy</uicontrol>.</cmd>
+</step>
+<step><cmd>Select the destination container.</cmd></step>
+<step><cmd>Select <uicontrol>Paste</uicontrol>.</cmd><stepresult>The
+new member is created in the destination with the same member name
+and the same properties.</stepresult></step>
+</steps>
+</taskbody>
+</task>
+<task id="seq" xml:lang="en-us">
+<title>Sequential data set</title>
+<taskbody>
+<context>You can copy sequential data sets:<ul>
+<li>From one data set to another on the same remote system.</li>
+<li>Between different views of the same remote system, for example,
+between the <wintitle>z/OS Projects</wintitle> view and the <wintitle>Remote
+Systems</wintitle> view.</li>
+<li>From one user ID to another on the same remote system.  Be sure
+that you have <tm tmtype="reg" trademark="RACF">RACF</tm> permission
+for both the source user ID and the destination user ID.</li>
+<li>From one remote system to another.</li>
+<li>From a file on the workstation or a <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> system to a data set on a remote
+system. You must be sure that the file does not violate the logical
+record length (LRECL) or record format (RECFM) of the destination
+data set. The copy does not take place if the LRECL and RECFM on the
+remote system are violated.</li>
+<li>From a remote system to the workstation or to a <tm tmtype="reg" trademark="z/OS">z/OS</tm> <tm tmtype="reg" trademark="UNIX">UNIX</tm> system.</li>
+</ul></context>
+<steps>
+<step><cmd>Select the data set you want to copy.</cmd></step>
+<step><cmd>Select a destination filter or folder.</cmd></step>
+<step><cmd>Select <uicontrol>Paste</uicontrol>. </cmd><stepresult>If
+the destination is on the same remote system, you are prompted to
+name the copy.</stepresult></step>
+<step><cmd>If you are prompted, type a name.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd><stepresult>The new
+data set is created on the remote system.</stepresult></step>
+</steps>
+</taskbody>
+<related-links>
+<link format="dita" href="c_file_trans_code_page.dita" scope="local" type="concept" />
+<link format="dita" href="czdcopyundef.dita" scope="local" type="concept">
+</link>
+<link href="tzdcmn074.dita" type="task" />
+<link href="tzdcmn075.dita" type="task" />
+<link format="dita" href="tzdcopylmod.dita" scope="local" type="task">
+</link>
+</related-links>
+</task>
+
+</task><?Pub *0000008469?><?tm 1665694005531 15 z/OS||UNIX||RACF ?>

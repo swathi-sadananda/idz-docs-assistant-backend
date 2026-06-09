@@ -245,8 +245,37 @@ Please provide:
   /**
    * Generate fallback response when AI service is unavailable
    */
-  generateFallbackResponse(userMessage, messages) {
+  async generateFallbackResponse(userMessage, messages) {
     const systemMessage = messages.find(m => m.role === 'system')?.content || '';
+    
+    // Try to search documentation files
+    try {
+      const DITAParser = require('../parsers/dita-parser');
+      const parser = new DITAParser();
+      const path = require('path');
+      const docsPath = path.join(__dirname, '../docs');
+      
+      // Search for relevant DITA files based on user message keywords
+      const keywords = this.extractKeywords(userMessage);
+      const relevantDocs = await parser.searchDocs(docsPath, keywords);
+      
+      if (relevantDocs && relevantDocs.length > 0) {
+        const doc = relevantDocs[0];
+        return `Based on the IDz documentation about "${doc.title}":
+
+${doc.content.substring(0, 400)}...
+
+**Key Points:**
+${this.extractKeyPoints(doc.content)}
+
+**Related Topics:**
+${relevantDocs.slice(1, 3).map(d => `- ${d.title}`).join('\n') || '- Check the full documentation for more details'}
+
+Would you like me to explain any specific part in more detail?`;
+      }
+    } catch (error) {
+      console.log('Fallback doc search failed:', error.message);
+    }
     
     // Extract documentation context from system message
     const hasContext = systemMessage.includes('Documentation Context:');
@@ -286,6 +315,19 @@ Common topics include:
 - Integration with z/OS
 
 What specific aspect would you like to learn more about?`;
+  }
+
+  extractKeywords(text) {
+    // Extract meaningful keywords from user message
+    const stopWords = ['what', 'is', 'the', 'how', 'do', 'i', 'can', 'you', 'tell', 'me', 'about', 'a', 'an', 'and', 'or', 'but'];
+    const words = text.toLowerCase().split(/\W+/).filter(w => w.length > 2 && !stopWords.includes(w));
+    return words.slice(0, 5); // Top 5 keywords
+  }
+
+  extractKeyPoints(content) {
+    // Extract first few sentences as key points
+    const sentences = content.match(/[^.!?]+[.!?]+/g) || [];
+    return sentences.slice(0, 3).map((s, i) => `${i + 1}. ${s.trim()}`).join('\n') || 'See documentation for details';
   }
 
   /**

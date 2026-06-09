@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdbidiwhy" xml:lang="en-us">
+<title>Why special tools are required by smart logical layout</title><?Pub Caret -2?>
+<shortdesc>To support correct processing of bidirectional data that
+contains marks, special handling was added to <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX Editor, file search windows,
+the text compare window, and compilers.</shortdesc>
+<conbody>
+<p><keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> bidirectional
+users who are working on program development with remote visual files
+have the following options:<ul>
+<li>Use smart logical conversion for visual data (visual-to-logical
+conversion with marks) and use special tools for handling smart logical
+data. The advantage of this approach is that data display and editing
+in <tm tmtype="reg" trademark="z Systems">z Systems</tm> LPEX editor
+is identical to the data display and editing on the visual <tm tmclass="IGNORE" tmtype="reg" trademark="zSeries">zSeries</tm> system.
+Search and compare of smart logical files is supported as well. The
+disadvantage of this approach is that not all tools were adapted to
+support smart logical data.</li>
+<li>Use standard visual-to-logical conversion (without marks) and
+use standard Eclipse tools. The advantage of this approach is that
+all standard Eclipse tools support logical data without marks. The
+disadvantages of this approach are that in some cases logical data
+is displayed differently from how it is displayed on visual system,
+and there is potential for data corruption when multiple conversions
+are performed or data is edited on a logical system. </li>
+<li>Use files in visual layout. Visual layout, although sparsely supported
+by Eclipse, might be useful for special needs.</li>
+</ul>A special <term>Change bidirectional format</term> conversion
+utility allows conversion of files from one bidirectional layout to
+another inside the Eclipse workspace.</p>
+</conbody>
+
+</concept><?Pub *0000002240?><?tm 1670257711339 3 zSeries||z Systems ?>

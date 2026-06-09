@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002--><!DOCTYPE concept PUBLIC "-//IBM//DTD DITA IBM Concept//EN" "ibm-concept.dtd">
+<?Pub Sty _display FontColor="red"?><?Pub Inc?><concept id="czdptc" xml:lang="en-us">
+<title>Distributing updates by using push-to-client</title>
+<titlealts>
+<navtitle>Distributing updates by using push-to-client</navtitle>
+<searchtitle>Distributing updates by using push-to-client</searchtitle>
+</titlealts>
+<shortdesc>You can configure <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> to automatically
+distribute updates to configuration files, preference settings, and remote system connections when
+client workstations connect to a remote system. This feature is called <term>push-to-client</term>.
+By using it, you can store workspace configurations in a central location and push them to client
+workstations so that your developers have a consistent workspace environment.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<indexterm>distributing product and configuration updates</indexterm>
+<indexterm>push-to-client</indexterm>
+</keywords>
+<keywords>
+<indexterm>push-to-client</indexterm>
+</keywords>
+</metadata>
+</prolog>
+<conbody>
+<section>
+<title id="ptcoverview">Push-to-client overview</title>
+<p>Implementing a push-to-client environment involves several tasks: some on the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system and some on a client workstation. The following is an overview of
+how to implement a push-to-client environment. It defines some of the terms and resources that are
+used in this environment. The details for implementing push-to-client are described in
+subtopics.</p>
+<ol>
+<li>Configure push-to-client on <tm tmtype="reg" trademark="z/OS">z/OS</tm>.<p>Each remote system
+from which you intend to distribute product updates and configurations must be set up to support
+push-to-client.</p><ol>
+<li>One <tm tmtype="reg" trademark="z/OS">z/OS</tm> system must be defined as the
+<term>primary</term> system. The primary system is the controlling system in a push-to-client
+environment. Only one <tm tmtype="reg" trademark="z/OS">z/OS</tm> system can be defined as primary.
+The primary system stores global configuration files, which apply to all systems in the
+push-to-client environment, and system configuration files, which apply only to the primary system
+itself. The global configurations are product updates, Eclipse preferences, <ph otherprops="IDz">Menu Manager files, </ph>and remote system connections.</li>
+<li>Other <tm tmtype="reg" trademark="z/OS">z/OS</tm> systems can be enabled for push-to-client as
+non-primary systems. Non-primary systems define only system configurations, which apply only to the
+non-primary system itself. System configurations are <ph otherprops="IDz">host-based projects,</ph>
+property groups, default values, file mappings, and remote index search.</li>
+</ol><p>The starting point for configuring push-to-client on a <tm tmtype="reg" trademark="z/OS">z/OS</tm> system is a root file that is called <filepath>pushtoclient.properties</filepath>, which
+is in the <filepath>/etc/zexpl/</filepath> directory on the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system. This file contains entries that specify configuration parameters, such as:<ul>
+<li otherprops="IDz">Whether the function is enabled for product updates: indicated by setting
+<codeph>product.enabled=true</codeph>.</li>
+<li>Whether the function is enabled for configuration updates: indicated by setting
+<codeph>config.enabled=true</codeph>.</li>
+<li>Whether the current system is the primary system, that is, the system that controls the
+push-to-client feature: indicated by specifying <codeph>primary.system=true|false</codeph>.</li>
+<li>Where to find the main configuration file, <filepath>keymapping.xml</filepath>: indicated by
+setting <codeph>pushtoclient.folder=/var/zexpl/pushtoclient</codeph>, the default location. The key
+mapping file contains pointers to a set of files that contain the application-related settings.
+These pointers are created from a <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> client as part of
+the configuration file export process, described in step <xref href="#czdptc/export" />.</li>
+<li rev="803">Whether group-level control of <ph otherprops="IDz">product and </ph>configuration
+updates is enabled: indicated by setting an access control attribute for certain configuration
+parameters in the <filepath>pushtoclient.properties</filepath> file. This feature allows a system
+administrator to create client groups and provide updates that are specific to each group. For
+example, to enable group control of configuration updates through <tm tmtype="reg" trademark="RACF">RACF</tm>, specify <codeph>config.enabled=saf</codeph>. To enable group control of configuration
+updates through LDAP, specify <codeph>config.enabled=ldap</codeph>. In the directory identified by
+the setting of pushtoclient.folder=/var/zexpl/pushtoclient, you must also create a folder named
+<filepath>grouping</filepath>. In the grouping folder, you must create a folder for each <tm trademark="RACF" tmtype="reg">RACF</tm> or LDAP security group that is defined for use. The folder name must match the name of the security group exactly.</li>
+</ul></p><p id="groups_info">For information about setting up LDAP access groups and SAF-based
+access groups, see <ph otherprops="Wazi"><xref href="../../com.ibm.guide.hostconfig.reference.doc/topics/pushtoclient_consider.dita" /> in</ph> the
+Host Configuration Reference.</p></li>
+<li>Configure a model workspace with settings that you want to push out to other workspaces when
+access groups, see <ph otherprops="Wazi"><xref href="../../com.ibm.guide.hostconfig.reference.doc/topics/pushtoclient_consider.dita" /> in</ph> the
+Host Configuration Reference.</li>
+<li>Configure a model workspace with settings that you want to push out to other workspaces when
+they connect to the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system.<p>After the remote system is
+set up, you can begin configuring the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> settings you want
+to push out to the rest of the organization. For most settings, such as Eclipse preferences, remote
+system connections, property groups, and file system mappings, this task is accomplished by updating
+the settings locally on a client. Some settings, such as <ph otherprops="IDz">product updates,
+host-based projects, and </ph> default values, must be configured manually on the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system.</p><p conref="zide_conrefs.dita#zide_conrefs/ptcmaster" /></li>
+<li id="export">Export the workspace settings to the <tm tmtype="reg" trademark="z/OS">z/OS</tm>
+system by using the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> configuration
+export wizard.<p>The export wizard uploads the local configuration files (Eclipse preferences,
+remote system connections, property groups, and file system mappings) from the model workspace to
+the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system. Only users who have authority to write files
+to the folder that contains the key mapping file on the remote system can export settings. After the
+settings are exported, users who connect to the <tm tmtype="reg" trademark="z/OS">z/OS</tm> system
+are prompted to update their workspaces with these settings.</p></li>
+</ol>
+<p>For information about configuring and exporting the <keyword conref="../../com.ibm.wsentdev.doc/topics/prodnames.dita#auroraproducts/RDZ_fam" /> settings you want
+to push out to client workstations, see the remaining topics that are linked to in this section.</p>
+</section>
+</conbody>
+
+</concept><?Pub *0000009232?><?tm 1665693491579 15 z/OS||RACF ?>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE task PUBLIC "-//IBM//DTD DITA IBM Task//EN"
+ "ibm-task.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<task id="tzdcmn075" xml:lang="en-us">
+<title>Copying a remote file from one subproject to another subproject</title><?Pub
+Caret -2?>
+<titlealts>
+<navtitle>Copying a remote file from one subproject to another subproject</navtitle>
+</titlealts>
+<shortdesc>You can copy a partitioned data set member or sequential
+data set from one subproject to another.</shortdesc>
+<taskbody>
+<prereq><p><indexterm>remote file<indexterm>Copying<indexterm>from
+one subproject to another subproject</indexterm></indexterm></indexterm></p>You
+must first be connected to the <tm tmtype="tm" trademark="MVS">MVS</tm> system.</prereq>
+<steps>
+<step><cmd>Select the partitioned data set member or data set you
+want to copy. </cmd></step>
+<step><cmd>Select <uicontrol>Add To Another Subproject</uicontrol>.</cmd>
+<stepresult>A window opens showing a list of subprojects.</stepresult>
+</step>
+<step><cmd>Select the destination subproject.</cmd></step>
+<step><cmd>Click <uicontrol>OK</uicontrol>.</cmd></step>
+</steps>
+</taskbody>
+<related-links>
+<link href="t_copy_remote_files.dita" type="task"></link>
+<link href="tzdcmn074.dita" type="task"></link>
+</related-links>
+<?tm 1435190834 1?>
+</task>
+<?Pub *0000001392?>
